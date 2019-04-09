@@ -7,8 +7,8 @@ public class MoveScript : MonoBehaviour
     private CharacterController characterController;
     private Vector3 toMove = Vector3.zero;
     private bool onGround = true;
-    private float gravity = 9;
-    private float speed = 10;
+    private float gravity = 5;
+    private float speed = 5;
     private float verticalSpeed = 0;
 
     private void Start()
@@ -23,6 +23,18 @@ public class MoveScript : MonoBehaviour
     {
         ResetVectorToMove();
         CheckGravity();
+        //Para testear, quitar en un futuro
+        ///*
+        if (Input.GetKey(KeyCode.W))
+            AddVectorToMove(Vector3.forward);
+        if (Input.GetKey(KeyCode.S))
+            AddVectorToMove(Vector3.back);
+        if (Input.GetKey(KeyCode.D))
+            AddVectorToMove(Vector3.right);
+        if (Input.GetKey(KeyCode.A))
+            AddVectorToMove(Vector3.left);
+
+        //*/
     }
 
     private void LateUpdate()
