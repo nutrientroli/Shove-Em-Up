@@ -6,7 +6,7 @@ public class MoveScript : MonoBehaviour
 {
     private CharacterController characterController;
     private Vector3 toMove = Vector3.zero;
-    private Vector3 rotation = Vector3.zero;
+    private Vector3 rotation = Vector3.forward;
     private bool onGround = true;
     private float gravity = 2;
     private float speed = 10;
