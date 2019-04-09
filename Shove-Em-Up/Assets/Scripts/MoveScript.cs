@@ -5,9 +5,10 @@ using UnityEngine;
 public class MoveScript : MonoBehaviour
 {
     private CharacterController characterController;
-    private Vector3 toMove;
+    private Vector3 toMove = Vector3.zero;
+    private Vector3 rotation = Vector3.forward;
     private bool onGround = true;
-    private float gravity = 9;
+    private float gravity = 2;
     private float speed = 10;
     private float verticalSpeed = 0;
 
@@ -23,11 +24,23 @@ public class MoveScript : MonoBehaviour
     {
         ResetVectorToMove();
         CheckGravity();
+        //Para testear, quitar en un futuro
+        ///*
+        if (Input.GetKey(KeyCode.W))
+            AddVectorToMove(Vector3.forward);
+        if (Input.GetKey(KeyCode.S))
+            AddVectorToMove(Vector3.back);
+        if (Input.GetKey(KeyCode.D))
+            AddVectorToMove(Vector3.right);
+        if (Input.GetKey(KeyCode.A))
+            AddVectorToMove(Vector3.left);
+
+        //*/
     }
 
     private void LateUpdate()
     {
-        MoveCharacer(Time.deltaTime);
+        MoveCharacter(Time.deltaTime);
     }
 
     public void SetSpeed(float _speed)
@@ -55,12 +68,16 @@ public class MoveScript : MonoBehaviour
 
     public void AddVectorToMove(Vector3 _toMove)
     {
-        toMove += _toMove;
+        Debug.Log(_toMove * speed);
+        toMove += _toMove * speed;
+        rotation = new Vector3(toMove.x, 0, toMove.z).normalized;
     }
 
-    private void MoveCharacer(float _time)
+    private void MoveCharacter(float _time)
     {
-        toMove.y += verticalSpeed * _time;
+        toMove.y += verticalSpeed;
+        toMove *= _time;
+        gameObject.transform.forward = rotation;
         CollisionFlags collisionFlags = characterController.Move(toMove);
 
         if ((collisionFlags & CollisionFlags.Below) != 0)

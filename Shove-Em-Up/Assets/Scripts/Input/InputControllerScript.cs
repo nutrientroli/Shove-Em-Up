@@ -7,28 +7,34 @@ public class InputControllerScript : MonoBehaviour
     private CharacterControllerScript characterController;
 
     [SerializeField] private int numberOfPlayer = 1;
-    [SerializeField] private string horizontalAxis;
-    [SerializeField] private string verticalAxis;
-    [SerializeField] private string rtButton;
-    [SerializeField] private string ltButton;
+    private string horizontalAxis = "Horizontal_P";
+    private string verticalAxis = "Vertical_P";
+    private string aButton = "A_P";
 
-    private void Awake()
-    {
+    private void Awake() {
         characterController = gameObject.GetComponent<CharacterControllerScript>();
         if (!characterController) Debug.LogError("Error. Input Controller without Character Controller.");
     }
 
-    private void CheckMoveAxis()
-    {
-        float h = Input.GetAxis(horizontalAxis);
-        float v = Input.GetAxis(verticalAxis);
-        if(h != 0 || v != 0) characterController.Move(h, v);
+    private void Start() {
+        horizontalAxis += numberOfPlayer;
+        verticalAxis += numberOfPlayer;
+        aButton += numberOfPlayer;
     }
 
-    private void CheckButtons()
-    {
-        if (Input.GetButtonDown(rtButton)) characterController.ChargePush();
-        if (Input.GetButtonUp(rtButton)) characterController.Push();
-        if (Input.GetButton(ltButton)) characterController.Hability();
+    private void Update() {
+        CheckMoveAxis();
+        CheckButtons();
+    }
+
+    private void CheckMoveAxis() {
+        float h = Input.GetAxis(horizontalAxis);
+        float v = Input.GetAxis(verticalAxis);
+        if(h !=0 || v!=0) characterController.Move(h, v);
+    }
+
+    private void CheckButtons() {
+        if (Input.GetButtonDown(aButton)) characterController.ChargePush();
+        if (Input.GetButtonUp(aButton)) characterController.Push();
     }
 }
