@@ -7,7 +7,7 @@ public class KnockbackScript : MonoBehaviour
     private float timeStopKnockback = 0;
     private float timeRelativeWithForce = 1;
 
-    private bool cantStop = true;
+    private bool canStop = true;
 
     private void Update()
     {
@@ -17,18 +17,18 @@ public class KnockbackScript : MonoBehaviour
     public void StartKnockback(float _currentForce, float _forceBase)
     {
         timeStopKnockback = (_currentForce / _forceBase) * timeRelativeWithForce;
-        cantStop = false;
+        canStop = false;
     }
 
     private void UpdateTimeKnockback(float _time)
     {
-        if(!cantStop)
+        if(!canStop)
         {
             timeStopKnockback -= _time;
             if(timeStopKnockback <= 0)
             {
                 timeStopKnockback = 0;
-                cantStop = true;
+                canStop = true;
             }
         }
     }
