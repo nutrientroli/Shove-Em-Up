@@ -26,7 +26,7 @@ public class PlayerScript : MonoBehaviour
 
     public void Movement(Vector3 VectorToMove)
     {
-        Debug.Log(VectorToMove);
+        //Debug.Log(VectorToMove);
         //Movimiento en base de los Axis del input.
         moveScript.AddVectorToMove(VectorToMove);
     }

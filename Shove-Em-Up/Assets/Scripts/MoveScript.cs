@@ -68,6 +68,7 @@ public class MoveScript : MonoBehaviour
 
     public void AddVectorToMove(Vector3 _toMove)
     {
+        Debug.Log(_toMove * speed);
         toMove += _toMove * speed;
         rotation = new Vector3(toMove.x, 0, toMove.z).normalized;
     }

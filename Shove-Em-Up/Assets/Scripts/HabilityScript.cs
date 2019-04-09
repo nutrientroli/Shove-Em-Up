@@ -32,7 +32,7 @@ public class HabilityScript : MonoBehaviour
     private void IncrementEnergy(float _energy)
     {
         currentEnergy += _energy;
-        print(currentEnergy);
+        //print(currentEnergy);
     }
 
     public void UseHability()
