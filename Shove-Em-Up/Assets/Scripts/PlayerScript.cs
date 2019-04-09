@@ -6,6 +6,7 @@ public class PlayerScript : MonoBehaviour
 {
     //Push
     private PushScript pushScript;
+    private MoveScript moveScript;
 
     //Hability
     private float currentEnergy = 0;
@@ -16,12 +17,18 @@ public class PlayerScript : MonoBehaviour
         pushScript = GetComponent<PushScript>();
         if (pushScript == null)
             pushScript = gameObject.AddComponent<PushScript>();
+
+        moveScript = GetComponent<MoveScript>();
+        if (moveScript == null)
+            moveScript = gameObject.AddComponent<MoveScript>();
     }
 
 
     public void Movement(Vector3 VectorToMove)
     {
+        Debug.Log(VectorToMove);
         //Movimiento en base de los Axis del input.
+        moveScript.AddVectorToMove(VectorToMove);
     }
 
     public void ChargePush(float _time)

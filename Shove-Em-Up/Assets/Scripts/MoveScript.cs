@@ -5,7 +5,7 @@ using UnityEngine;
 public class MoveScript : MonoBehaviour
 {
     private CharacterController characterController;
-    private Vector3 toMove;
+    private Vector3 toMove = Vector3.zero;
     private bool onGround = true;
     private float gravity = 9;
     private float speed = 10;
