@@ -6,9 +6,10 @@ public class MoveScript : MonoBehaviour
 {
     private CharacterController characterController;
     private Vector3 toMove = Vector3.zero;
+    private Vector3 rotation = Vector3.zero;
     private bool onGround = true;
-    private float gravity = 5;
-    private float speed = 5;
+    private float gravity = 2;
+    private float speed = 10;
     private float verticalSpeed = 0;
 
     private void Start()
@@ -39,7 +40,7 @@ public class MoveScript : MonoBehaviour
 
     private void LateUpdate()
     {
-        MoveCharacer(Time.deltaTime);
+        MoveCharacter(Time.deltaTime);
     }
 
     public void SetSpeed(float _speed)
@@ -67,12 +68,15 @@ public class MoveScript : MonoBehaviour
 
     public void AddVectorToMove(Vector3 _toMove)
     {
-        toMove += _toMove;
+        toMove += _toMove * speed;
+        rotation = new Vector3(toMove.x, 0, toMove.z).normalized;
     }
 
-    private void MoveCharacer(float _time)
+    private void MoveCharacter(float _time)
     {
-        toMove.y += verticalSpeed * _time;
+        toMove.y += verticalSpeed;
+        toMove *= _time;
+        gameObject.transform.forward = rotation;
         CollisionFlags collisionFlags = characterController.Move(toMove);
 
         if ((collisionFlags & CollisionFlags.Below) != 0)
