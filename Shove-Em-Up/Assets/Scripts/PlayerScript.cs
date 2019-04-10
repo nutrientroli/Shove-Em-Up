@@ -8,6 +8,7 @@ public class PlayerScript : MonoBehaviour
     public State currentState;
     private float forcePush = 0;
     private float currentTime = 0;
+    private float timeToPush = 0.25f;
     private MoveScript moveScript;
     private PushScript pushScript;
     private KnockbackScript knockbackScript;
@@ -33,9 +34,9 @@ public class PlayerScript : MonoBehaviour
             case State.CHARGING:
                 break;
             case State.PUSHING:
-                moveScript.PushCharacter(Time.deltaTime);
+                moveScript.PushCharacter(Time.deltaTime, forcePush);
                 currentTime += Time.deltaTime;
-                if (currentTime >= forcePush)
+                if (currentTime >= timeToPush)
                     ChangeState(State.MOVING);
                 break;
             case State.KNOCKBACK:
@@ -97,7 +98,7 @@ public class PlayerScript : MonoBehaviour
 
     public void Push()
     {
-        if (pushScript.CanPush())
+        if (pushScript.CanPush() && currentState == State.CHARGING)
             ChangeState(State.PUSHING);
     }
 

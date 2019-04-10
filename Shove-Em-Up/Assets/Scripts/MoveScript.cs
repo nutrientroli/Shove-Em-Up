@@ -10,11 +10,11 @@ public class MoveScript : MonoBehaviour
     private Vector3 forward = Vector3.forward;
     private bool onGround = true;
     private float gravity = 2;
-    private float speed = 10;
-    private float speedPush = 20;
+    private float speed = 7;
+    private float speedPush = 17;
     private float verticalSpeed = 0;
     private float multiplyCharge = 1;
-    private float maxMultiplayCharge = 0.25f;
+    private float maxMultiplayCharge = 0.5f;
     private bool isMovible = true;
 
     private void Start()
@@ -115,9 +115,9 @@ public class MoveScript : MonoBehaviour
                 onGround = false;
     }
 
-    public void PushCharacter(float _time)
+    public void PushCharacter(float _time, float _force)
     {
-        CollisionFlags collisionFlags = characterController.Move(forward * _time * speedPush);
+        CollisionFlags collisionFlags = characterController.Move(forward * _time * (speedPush * _force));
 
     }
 }

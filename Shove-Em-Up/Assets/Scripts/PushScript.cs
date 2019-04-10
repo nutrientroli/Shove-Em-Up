@@ -6,11 +6,13 @@ public class PushScript : MonoBehaviour
 {
     private PlayerScript player;
     private float timeChargePush = 0;
-    private float maxTimeChargePush = 1;
+    private float maxTimeChargePush = 1f;
     private float timeCurrentCoolDownPush = 0;
     private float maxCoolDownPush = 0.5f;
 
-    private float forceBase = 0.15f;
+    private float forceBase = 1f;
+    private float exponentBase = 4f;
+    private float dividentBase = 7f;
     private float currentForce = 0;
 
     private bool canPush = true;
@@ -42,7 +44,10 @@ public class PushScript : MonoBehaviour
 
     public float Push()
     {
-        currentForce = (1 + timeChargePush / (maxTimeChargePush - maxTimeChargePush/4)) * forceBase;
+        
+        currentForce = (Mathf.Pow(timeChargePush / (maxTimeChargePush - maxTimeChargePush/dividentBase), exponentBase));
+        if (currentForce < forceBase)
+            currentForce = forceBase;
         canPush = false;
         timeChargePush = 0;
         return currentForce;
