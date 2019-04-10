@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class MoveScript : MonoBehaviour
 {
+    private PlayerScript player;
     private CharacterController characterController;
     private Vector3 toMove = Vector3.zero;
     private Vector3 rotation = Vector3.forward;
@@ -11,6 +12,7 @@ public class MoveScript : MonoBehaviour
     private float gravity = 2;
     private float speed = 10;
     private float verticalSpeed = 0;
+    private bool isMovible = true;
 
     private void Start()
     {
@@ -18,6 +20,11 @@ public class MoveScript : MonoBehaviour
         if (characterController == null)
             characterController = gameObject.AddComponent<CharacterController>();
         toMove = Vector3.zero;
+
+        player = GetComponent<PlayerScript>();
+        if (player == null)
+            Debug.Log("NO TIENE EL SCRIPT PLAYER EL PLAYER");
+        
     }
 
     private void Update()
@@ -53,6 +60,11 @@ public class MoveScript : MonoBehaviour
         gravity = _gravity;
     }
 
+    public void CanMove(bool _canMove)
+    {
+        isMovible = _canMove;   
+    }
+
     private void ResetVectorToMove()
     {
         toMove = Vector3.zero;
@@ -76,16 +88,19 @@ public class MoveScript : MonoBehaviour
 
     private void MoveCharacter(float _time)
     {
-        toMove.y += verticalSpeed;
-        toMove *= _time;
-        gameObject.transform.forward = rotation;
-        CollisionFlags collisionFlags = characterController.Move(toMove);
-
-        if ((collisionFlags & CollisionFlags.Below) != 0)
+        if (isMovible)
         {
-            onGround = true;
+            toMove.y += verticalSpeed;
+            toMove *= _time;
+            gameObject.transform.forward = rotation;
+            CollisionFlags collisionFlags = characterController.Move(toMove);
+
+            if ((collisionFlags & CollisionFlags.Below) != 0)
+            {
+                onGround = true;
+            }
+            else
+                onGround = false;
         }
-        else
-            onGround = false;
     }
 }

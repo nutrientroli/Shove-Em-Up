@@ -4,10 +4,18 @@ using UnityEngine;
 
 public class KnockbackScript : MonoBehaviour
 {
+    private PlayerScript player;
     private float timeStopKnockback = 0;
     private float timeRelativeWithForce = 1;
 
     private bool canStop = true;
+
+    private void Start()
+    {
+        player = GetComponent<PlayerScript>();
+        if (player == null)
+            Debug.Log("NO TIENE EL SCRIPT PLAYER EL PLAYER");
+    }
 
     private void Update()
     {

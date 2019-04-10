@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PushScript : MonoBehaviour
 {
+    private PlayerScript player;
     private float timeChargePush = 0;
     private float maxTimeChargePush = 1;
     private float timeCurrentCoolDownPush = 0;
@@ -13,6 +14,13 @@ public class PushScript : MonoBehaviour
     private float currentForce = 0;
 
     private bool canPush = true;
+
+    private void Start()
+    {
+        player = GetComponent<PlayerScript>();
+        if (player == null)
+            Debug.Log("NO TIENE EL SCRIPT PLAYER EL PLAYER");
+    }
 
     private void Update()
     {
@@ -32,6 +40,7 @@ public class PushScript : MonoBehaviour
     public void Push()
     {
         currentForce = forceBase * (1 + timeChargePush / maxTimeChargePush);
+        player.Push(currentForce);
         canPush = false;
     }
 

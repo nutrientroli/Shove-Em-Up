@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class HabilityScript : MonoBehaviour
 {
+    private PlayerScript player;
     private float maxEnergy = 100;
     private float currentEnergy = 0;
     private float incrementEnergyPerSecond = 1;
@@ -22,6 +23,10 @@ public class HabilityScript : MonoBehaviour
             currentTime--;
             IncrementEnergy(incrementEnergyPerSecond);
         }
+
+        player = GetComponent<PlayerScript>();
+        if(player == null)
+            Debug.Log("NO TIENE EL SCRIPT PLAYER EL PLAYER");
     }
 
     protected void SetMaxEnergy(float _energy)

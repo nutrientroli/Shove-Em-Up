@@ -4,54 +4,83 @@ using UnityEngine;
 
 public class PlayerScript : MonoBehaviour
 {
-    //Push
-    private PushScript pushScript;
+    public enum State {MOVING, CHARGING, PUSHING, KNOCKBACK, HABILITY };
+    public State currentState;
+    private float forcePush = 0;
+    private bool pushing = false;
     private MoveScript moveScript;
-
-    //Hability
-    private float currentEnergy = 0;
-    private float energyToHability = 1;
 
     private void Start()
     {
-        pushScript = GetComponent<PushScript>();
-        if (pushScript == null)
-            pushScript = gameObject.AddComponent<PushScript>();
-
         moveScript = GetComponent<MoveScript>();
         if (moveScript == null)
             moveScript = gameObject.AddComponent<MoveScript>();
+        currentState = State.MOVING;
     }
 
-
-    public void Movement(Vector3 VectorToMove)
+    private void Update()
     {
-        //Debug.Log(VectorToMove);
-        //Movimiento en base de los Axis del input.
-        moveScript.AddVectorToMove(VectorToMove);
+        switch(currentState)
+        {
+            case State.MOVING:
+                break;
+            case State.CHARGING:
+                break;
+            case State.PUSHING:
+                break;
+            case State.KNOCKBACK:
+                break;
+            case State.HABILITY:
+                break;
+        }
     }
 
-    public void ChargePush(float _time)
+    public void ChangeState(State _newState)
     {
-        pushScript.ChargePush(_time);
-        //irá aumentando el valor del tiempo mientras siga llamando a la función
+        switch(currentState)
+        {
+            case State.MOVING:
+                break;
+            case State.CHARGING:
+                break;
+            case State.PUSHING:
+                break;
+            case State.KNOCKBACK:
+                break;
+            case State.HABILITY:
+                break;
+        }
+
+        switch(_newState)
+        {
+            case State.MOVING:
+                moveScript.CanMove(true);
+                break;
+            case State.CHARGING:
+                break;
+            case State.PUSHING:
+                break;
+            case State.KNOCKBACK:
+                break;
+            case State.HABILITY:
+                break;
+        }
+
+        currentState = _newState;
     }
 
-    public void Push()
+    public void Push(float _force)
     {
-        //la fuerza de empuje tendrá de referencia el timepo cargado en la función ChargePush
-        pushScript.Push();
+        forcePush = _force;
+        pushing = true;
+        ChangeState(State.PUSHING); //provisional
     }
 
-    private bool CanPush()
+    public void Charge()
     {
-        bool report = pushScript.CanPush();
-        //if(report && !)
-        //Comprueba que esté en el suelo, que no este siendo empujado ni empujando...
-        return report;
+        ChangeState(State.CHARGING);
     }
 
 
-        
 
 }
