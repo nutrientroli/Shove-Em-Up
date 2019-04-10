@@ -15,7 +15,7 @@ public class CharacterControllerScript : MonoBehaviour
     
     public void ChargePush()
     {
-        player.ChargePush(Time.deltaTime);
+        player.Charge(Time.deltaTime);
         Debug.Log("Charge Input");
     }
 

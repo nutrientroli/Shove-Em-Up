@@ -7,14 +7,20 @@ public class PlayerScript : MonoBehaviour
     public enum State {MOVING, CHARGING, PUSHING, KNOCKBACK, HABILITY };
     public State currentState;
     private float forcePush = 0;
-    private bool pushing = false;
+    private float currentTime = 0;
     private MoveScript moveScript;
+    private PushScript pushScript;
+    private KnockbackScript knockbackScript;
 
     private void Start()
     {
         moveScript = GetComponent<MoveScript>();
         if (moveScript == null)
             moveScript = gameObject.AddComponent<MoveScript>();
+        if (pushScript == null)
+            pushScript = gameObject.AddComponent<PushScript>();
+        if (knockbackScript == null)
+            knockbackScript = gameObject.AddComponent<KnockbackScript>();
         currentState = State.MOVING;
     }
 
@@ -27,12 +33,23 @@ public class PlayerScript : MonoBehaviour
             case State.CHARGING:
                 break;
             case State.PUSHING:
+                moveScript.PushCharacter(Time.deltaTime);
+                currentTime += Time.deltaTime;
+                if (currentTime >= forcePush)
+                    ChangeState(State.MOVING);
                 break;
             case State.KNOCKBACK:
                 break;
             case State.HABILITY:
                 break;
         }
+
+        if (Input.GetKeyDown(KeyCode.P))
+            Charge(Time.deltaTime);                 //PARA PROBAR, QUITAR EN UN FUTURO
+        if (Input.GetKeyUp(KeyCode.P))
+            Push();
+
+
     }
 
     public void ChangeState(State _newState)
@@ -40,10 +57,15 @@ public class PlayerScript : MonoBehaviour
         switch(currentState)
         {
             case State.MOVING:
+                moveScript.CanMove(false);
                 break;
             case State.CHARGING:
+                moveScript.CanMove(false);
+                moveScript.Charging(false);
                 break;
             case State.PUSHING:
+                forcePush = 0;
+                currentTime = 0;
                 break;
             case State.KNOCKBACK:
                 break;
@@ -55,10 +77,14 @@ public class PlayerScript : MonoBehaviour
         {
             case State.MOVING:
                 moveScript.CanMove(true);
+                moveScript.Charging(false);
                 break;
             case State.CHARGING:
+                moveScript.CanMove(true);
+                moveScript.Charging(true);
                 break;
             case State.PUSHING:
+                forcePush = pushScript.Push();
                 break;
             case State.KNOCKBACK:
                 break;
@@ -69,16 +95,27 @@ public class PlayerScript : MonoBehaviour
         currentState = _newState;
     }
 
-    public void Push(float _force)
+    public void Push()
     {
-        forcePush = _force;
-        pushing = true;
-        ChangeState(State.PUSHING); //provisional
+        if (pushScript.CanPush())
+            ChangeState(State.PUSHING);
     }
 
-    public void Charge()
+    public void Charge(float _time)
     {
-        ChangeState(State.CHARGING);
+        if (pushScript.CanPush() && currentState != State.CHARGING)
+        {
+            pushScript.ChargePush(_time);
+            ChangeState(State.CHARGING);
+        }
+        
+    }
+
+    public void Movement(Vector3 _vector)
+    {
+        moveScript.AddVectorToMove(_vector);
+        if (currentState != State.MOVING)
+            ChangeState(State.MOVING);
     }
 
 
