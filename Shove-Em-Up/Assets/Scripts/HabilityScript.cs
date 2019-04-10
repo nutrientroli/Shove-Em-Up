@@ -13,7 +13,7 @@ public class HabilityScript : MonoBehaviour
 
 
     // Update is called once per frame
-    void Update()
+    protected void Update()
     {
         if(currentEnergy < maxEnergy)
             currentTime += Time.deltaTime;
@@ -24,7 +24,7 @@ public class HabilityScript : MonoBehaviour
         }
     }
 
-    public void SetMaxEnergy(float _energy)
+    protected void SetMaxEnergy(float _energy)
     {
         maxEnergy = _energy;
     }
@@ -35,7 +35,7 @@ public class HabilityScript : MonoBehaviour
         //print(currentEnergy);
     }
 
-    public void UseHability()
+    protected void UseHability()
     {
         currentEnergy = 0;
         currentTime = 0;
