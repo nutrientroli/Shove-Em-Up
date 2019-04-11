@@ -33,6 +33,5 @@ public class CharacterControllerScript : MonoBehaviour
     public void Move(float _h, float _v)
     {
         player.Movement(new Vector3(_h, 0, _v));
-
     }
 }

@@ -128,7 +128,6 @@ public class PlayerScript : MonoBehaviour
     public void StopKnockback()
     {
         ChangeState(State.MOVING);
-
     }
 
 

@@ -10,7 +10,5 @@
         index = _index;
         type = TypeGamePad.XBOX_ONE;
         SetConfiguration(defaultConfig, _index);
-
-
     }
 }
