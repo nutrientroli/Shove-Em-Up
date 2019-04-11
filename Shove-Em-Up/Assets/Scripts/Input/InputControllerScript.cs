@@ -28,13 +28,20 @@ public class InputControllerScript : MonoBehaviour
     }
 
     private void CheckMoveAxis() {
-        float h = Input.GetAxis(horizontalAxis);
-        float v = Input.GetAxis(verticalAxis);
-        if(h !=0 || v!=0) characterController.Move(h, v);
+        float h = CheckSensibility(Input.GetAxis(horizontalAxis));
+        float v = CheckSensibility(Input.GetAxis(verticalAxis));
+        //Debug.Log("InputController: " + h + ", "+ v);
+        characterController.Move(h, v * -1);
     }
 
     private void CheckButtons() {
         if (Input.GetButtonDown(aButton)) characterController.ChargePush();
         if (Input.GetButtonUp(aButton)) characterController.Push();
+    }
+
+    private float CheckSensibility(float _value, float _sensibility = 0.0f)
+    {
+        if (_value >= _sensibility || _value <= (-_sensibility)) return _value;
+        return 0.0f;
     }
 }
