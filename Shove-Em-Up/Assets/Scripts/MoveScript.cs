@@ -4,13 +4,17 @@ using UnityEngine;
 
 public class MoveScript : MonoBehaviour
 {
+    private PlayerScript player;
     private CharacterController characterController;
     private Vector3 toMove = Vector3.zero;
-    private Vector3 rotation = Vector3.forward;
+    private Vector3 forward = Vector3.forward;
     private bool onGround = true;
     private float gravity = 2;
-    private float speed = 10;
+    private float speed = 7;
     private float verticalSpeed = 0;
+    private float multiplyCharge = 1;
+    private float maxMultiplayCharge = 0.5f;
+    private bool isMovible = true;
 
     private void Start()
     {
@@ -18,6 +22,11 @@ public class MoveScript : MonoBehaviour
         if (characterController == null)
             characterController = gameObject.AddComponent<CharacterController>();
         toMove = Vector3.zero;
+
+        player = GetComponent<PlayerScript>();
+        if (player == null)
+            Debug.Log("NO TIENE EL SCRIPT PLAYER EL PLAYER");
+        
     }
 
     private void Update()
@@ -53,9 +62,22 @@ public class MoveScript : MonoBehaviour
         gravity = _gravity;
     }
 
+    public void CanMove(bool _canMove)
+    {
+        isMovible = _canMove;   
+    }
+
+    public void Charging(bool _charging)
+    {
+        if (_charging)
+            multiplyCharge = maxMultiplayCharge;
+        else
+            multiplyCharge = 1;
+    }
+
     private void ResetVectorToMove()
     {
-        toMove = Vector3.zero;
+        toMove = new Vector3(0, toMove.y, 0);
     }
 
     private void CheckGravity()
@@ -68,24 +90,29 @@ public class MoveScript : MonoBehaviour
 
     public void AddVectorToMove(Vector3 _toMove)
     {
-        toMove += _toMove * speed;
-        if(new Vector3( toMove.x, 0, toMove.z) != Vector3.zero)
-            rotation = new Vector3(toMove.x, 0, toMove.z).normalized;
+        if (isMovible)
+        {
+            toMove += _toMove * speed * multiplyCharge;
+            if (new Vector3(toMove.x, 0, toMove.z) != Vector3.zero)
+                forward = new Vector3(toMove.x, 0, toMove.z).normalized;
+        }
 
     }
 
     private void MoveCharacter(float _time)
     {
-        toMove.y += verticalSpeed;
-        toMove *= _time;
-        gameObject.transform.forward = rotation;
-        CollisionFlags collisionFlags = characterController.Move(toMove);
+            toMove.y += verticalSpeed;
+            toMove *= _time;
+            gameObject.transform.forward = forward;
+            CollisionFlags collisionFlags = characterController.Move(toMove);
 
-        if ((collisionFlags & CollisionFlags.Below) != 0)
-        {
-            onGround = true;
-        }
-        else
-            onGround = false;
+            if ((collisionFlags & CollisionFlags.Below) != 0)
+            {
+                onGround = true;
+            }
+            else
+                onGround = false;
+
     }
+
 }

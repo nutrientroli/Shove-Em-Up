@@ -15,7 +15,7 @@ public class CharacterControllerScript : MonoBehaviour
     
     public void ChargePush()
     {
-        player.ChargePush(Time.deltaTime);
+        player.Charge(Time.deltaTime);
         Debug.Log("Charge Input");
     }
 
@@ -33,5 +33,6 @@ public class CharacterControllerScript : MonoBehaviour
     public void Move(float _h, float _v)
     {
         player.Movement(new Vector3(_h, 0, _v));
+
     }
 }
