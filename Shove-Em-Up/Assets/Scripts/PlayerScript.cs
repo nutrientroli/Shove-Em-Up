@@ -6,6 +6,7 @@ public class PlayerScript : MonoBehaviour
 {
     public enum State {MOVING, CHARGING, PUSHING, KNOCKBACK, HABILITY };
     public State currentState;
+    private float forcePush = 0;
     private float currentTime = 0;
     private float timeToPush = 0.25f;
     private MoveScript moveScript;
@@ -33,7 +34,7 @@ public class PlayerScript : MonoBehaviour
             case State.CHARGING:
                 break;
             case State.PUSHING:
-                pushScript.PushCharacter(Time.deltaTime);
+                moveScript.PushCharacter(Time.deltaTime, forcePush);
                 currentTime += Time.deltaTime;
                 if (currentTime >= timeToPush)
                     ChangeState(State.MOVING);
@@ -44,14 +45,12 @@ public class PlayerScript : MonoBehaviour
                 break;
         }
 
-        ///*
         if (Input.GetKeyDown(KeyCode.P))
             Charge(Time.deltaTime);                 //PARA PROBAR, QUITAR EN UN FUTURO
         if (Input.GetKeyUp(KeyCode.P))
             Push();
-        if (Input.GetKeyDown(KeyCode.K))
-            Knockback();
-        //*/
+
+
     }
 
     public void ChangeState(State _newState)
@@ -66,6 +65,7 @@ public class PlayerScript : MonoBehaviour
                 moveScript.Charging(false);
                 break;
             case State.PUSHING:
+                forcePush = 0;
                 currentTime = 0;
                 break;
             case State.KNOCKBACK:
@@ -85,10 +85,9 @@ public class PlayerScript : MonoBehaviour
                 moveScript.Charging(true);
                 break;
             case State.PUSHING:
-                pushScript.Push();
+                forcePush = pushScript.Push();
                 break;
             case State.KNOCKBACK:
-                pushScript.PushSomeone(gameObject, -gameObject.transform.forward); //cambiar en un futuro
                 break;
             case State.HABILITY:
                 break;
@@ -120,15 +119,6 @@ public class PlayerScript : MonoBehaviour
             ChangeState(State.MOVING);
     }
 
-    public void Knockback()
-    {
-        ChangeState(State.KNOCKBACK);
-    }
-
-    public void StopKnockback()
-    {
-        ChangeState(State.MOVING);
-    }
 
 
 }

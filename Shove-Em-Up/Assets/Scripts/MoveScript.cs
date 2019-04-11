@@ -11,6 +11,7 @@ public class MoveScript : MonoBehaviour
     private bool onGround = true;
     private float gravity = 2;
     private float speed = 7;
+    private float speedPush = 17;
     private float verticalSpeed = 0;
     private float multiplyCharge = 1;
     private float maxMultiplayCharge = 0.5f;
@@ -114,4 +115,9 @@ public class MoveScript : MonoBehaviour
                 onGround = false;
     }
 
+    public void PushCharacter(float _time, float _force)
+    {
+        CollisionFlags collisionFlags = characterController.Move(forward * _time * (speedPush * _force));
+
+    }
 }
