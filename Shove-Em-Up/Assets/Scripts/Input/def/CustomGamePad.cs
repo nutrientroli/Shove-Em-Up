@@ -84,5 +84,6 @@ public class CustomGamePad
         config.button_7 += _player;
         config.button_8 += _player;
         config.button_9 += _player;
+
     }
 }

@@ -98,6 +98,7 @@ public class PushScript : MonoBehaviour
             //calcular el angulo con el que toca el player en un futuro
             Vector3 direction = (hit.gameObject.transform.position - gameObject.transform.position).normalized;
             PushSomeone(hit.gameObject, direction);
+
         }
     }
 }

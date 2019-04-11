@@ -44,6 +44,7 @@ public class HabilityScript : MonoBehaviour
     {
         currentEnergy = 0;
         currentTime = 0;
+
     }
 
 }

@@ -112,6 +112,7 @@ public class MoveScript : MonoBehaviour
             }
             else
                 onGround = false;
+
     }
 
 }

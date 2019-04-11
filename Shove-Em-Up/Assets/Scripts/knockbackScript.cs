@@ -62,6 +62,7 @@ public class KnockbackScript : MonoBehaviour
                 timeStopKnockback = 0;
                 canStop = true;
                 player.StopKnockback();
+
             }
         }
     }
