@@ -14,22 +14,46 @@ public class InputManager
     #endregion
 
     #region Attributes
-    private ArrayList listPlayersControllers = new ArrayList();
+    private Hashtable listPlayersControllers = new Hashtable();
     #endregion
 
     #region Methods
-    private void AddPlayer(int _player, ArrayList _listControllers = null)
+    public void AddPlayer(int _player)
     {
-        if (_listControllers == null) _listControllers = new ArrayList();
-        listPlayersControllers.Insert(_player, _listControllers);
+        //Debug.Log("Hola " + _player);
+        string[] joys = Input.GetJoystickNames();
+
+        //Debug.Log("Hola " + _player + " " + joys.Length);
+        if (joys.Length > 0 && _player <= joys.Length && _player > 0) {
+            CustomGamePad gamepad;
+            string name = joys[_player-1];
+            if (IsXboxController(name)) gamepad = new XboxCustomGamePad(name, _player - 1, _player);
+            else gamepad = new Ps4CustomGamePad(name, _player - 1, _player);
+            listPlayersControllers.Add(_player - 1, gamepad);
+        } else {
+            Debug.LogWarning("Player : " + _player + " - No tiene controllador disponible");
+        }
     }
 
-    private void AddController(int _player, CustomGamePad _controller)
-    {
-        ((ArrayList)listPlayersControllers[_player-1]).Add(_controller);
+    public void AddController(int _player, CustomGamePad _controller) {
+        listPlayersControllers.Add(_player - 1, _controller);
     }
 
+    public CustomGamePad GetController(int _player) {
+        return (CustomGamePad)listPlayersControllers[_player - 1];
+    }
 
+    public void ShowPlayersControllers() {
+        for(int i = 0; i<listPlayersControllers.Count; i++) {
+            //for (int j = 0; j < ((ArrayList)listPlayersControllers[i]).Count; j++) {
+                Debug.Log(i+1 + " :: " + listPlayersControllers[i]);
+            //}
+        }
+    }
+
+    public bool IsXboxController(string _name) {
+        return _name.Contains("Xbox");
+    }
     #endregion
 
 

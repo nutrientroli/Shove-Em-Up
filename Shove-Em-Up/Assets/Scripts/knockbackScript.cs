@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class KnockbackScript : MonoBehaviour
-{
-
+{ 
     private PlayerScript player;
     private CharacterController characterController;
 
@@ -57,7 +56,7 @@ public class KnockbackScript : MonoBehaviour
                 direction.y -= hight * _time / 2;
 
 
-            timeStopKnockback -= _time;
+            timeStopKnockback -= _time; 
             if (timeStopKnockback <= 0)
             {
                 timeStopKnockback = 0;

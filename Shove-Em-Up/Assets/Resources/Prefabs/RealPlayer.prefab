@@ -292,7 +292,10 @@ PrefabInstance:
       propertyPath: canvasPush
       value: 
       objectReference: {fileID: 3479358540098840546}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8782431468899111529, guid: d8b71e1decf7a13478055c3d587393ed, type: 3}
+    - {fileID: 8782431468899111506, guid: d8b71e1decf7a13478055c3d587393ed, type: 3}
+    - {fileID: 8782431468899111507, guid: d8b71e1decf7a13478055c3d587393ed, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: d8b71e1decf7a13478055c3d587393ed, type: 3}
 --- !u!1 &2580746286257731272 stripped
 GameObject:

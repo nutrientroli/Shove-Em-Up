@@ -48,7 +48,7 @@ public class PlayerScript : MonoBehaviour
 
         ///*
         if (Input.GetKeyDown(KeyCode.P))
-            Charge(Time.deltaTime);                 //PARA PROBAR, QUITAR EN UN FUTURO
+            Charge();                 //PARA PROBAR, QUITAR EN UN FUTURO
         if (Input.GetKeyUp(KeyCode.P))
             Push();
         if (Input.GetKeyDown(KeyCode.K))
@@ -104,11 +104,11 @@ public class PlayerScript : MonoBehaviour
             ChangeState(State.PUSHING);
     }
 
-    public void Charge(float _time)
+    public void Charge()
     {
         if (pushScript.CanPush() && currentState != State.CHARGING)
         {
-            pushScript.ChargePush(_time);
+            pushScript.ChargePush(Time.deltaTime);
             ChangeState(State.CHARGING);
         }
         

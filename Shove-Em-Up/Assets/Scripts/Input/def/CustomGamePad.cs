@@ -8,40 +8,40 @@ public struct CustomGamePadConfiguration
     public string verticalRightAxis;
     public string triggerLeftAxis;
     public string triggerRightAxis;
-    public string button_0;
-    public string button_1;
-    public string button_2;
-    public string button_3;
-    public string button_4;
-    public string button_5;
-    public string button_6;
-    public string button_7;
-    public string button_8;
-    public string button_9;
+    public string button_A;
+    public string button_B;
+    public string button_X;
+    public string button_Y;
+    public string button_LB;
+    public string button_RB;
+    public string button_Select;
+    public string button_Start;
+    public string button_LeftStickPush;
+    public string button_RightStickPush;
 
     public CustomGamePadConfiguration(string _horizontalLeftAxis, string _verticalLeftAxis, 
         string _horizontalRightAxis, string _verticalRightAxis, string _triggerLeftAxis, 
-        string _triggerRightAxis, string _button_0, string _button_1, string _button_2,
-        string _button_3, string _button_4, string _button_5, string _button_6, string _button_7,
-        string _button_8, string _button_9
+        string _triggerRightAxis, string _button_a, string _button_b, string _button_x,
+        string _button_y, string _button_lb, string _button_rb, string _button_select, string _button_start,
+        string _button_leftStick, string _button_rightStick
         )
     {
         horizontalLeftAxis = _horizontalLeftAxis;
-        verticalLeftAxis = _horizontalLeftAxis;
-        horizontalRightAxis = _horizontalLeftAxis;
-        verticalRightAxis = _horizontalLeftAxis;
-        triggerLeftAxis = _horizontalLeftAxis;
-        triggerRightAxis = _horizontalLeftAxis;
-        button_0 = _horizontalLeftAxis;
-        button_1 = _horizontalLeftAxis;
-        button_2 = _horizontalLeftAxis;
-        button_3 = _horizontalLeftAxis;
-        button_4 = _horizontalLeftAxis;
-        button_5 = _horizontalLeftAxis;
-        button_6 = _horizontalLeftAxis;
-        button_7 = _horizontalLeftAxis;
-        button_8 = _horizontalLeftAxis;
-        button_9 = _horizontalLeftAxis;
+        verticalLeftAxis = _verticalLeftAxis;
+        horizontalRightAxis = _horizontalRightAxis;
+        verticalRightAxis = _verticalRightAxis;
+        triggerLeftAxis = _triggerLeftAxis;
+        triggerRightAxis = _triggerRightAxis;
+        button_A = _button_a;
+        button_B = _button_b;
+        button_X = _button_x;
+        button_Y = _button_y;
+        button_LB = _button_lb;
+        button_RB = _button_rb;
+        button_Select = _button_select;
+        button_Start = _button_start;
+        button_LeftStickPush = _button_leftStick;
+        button_RightStickPush = _button_rightStick;
     }
 }
 
@@ -53,15 +53,15 @@ public class CustomGamePad
     public TypeGamePad type;
     public CustomGamePadConfiguration config;
 
-    private bool GetButtonDown(string _button) {
+    public bool GetButtonDown(string _button) {
         return Input.GetButtonDown(_button);
     }
 
-    private bool GetButtonUp(string _button) {
+    public bool GetButtonUp(string _button) {
         return Input.GetButtonUp(_button);
     }
 
-    private float GetAxis(string _axis) {
+    public float GetAxis(string _axis) {
         return Input.GetAxis(_axis);
     }
 
@@ -74,16 +74,19 @@ public class CustomGamePad
         config.verticalRightAxis += _player;
         config.triggerLeftAxis += _player;
         config.triggerRightAxis += _player;
-        config.button_0 += _player;
-        config.button_1 += _player;
-        config.button_2 += _player;
-        config.button_3 += _player;
-        config.button_4 += _player;
-        config.button_5 += _player;
-        config.button_6 += _player;
-        config.button_7 += _player;
-        config.button_8 += _player;
-        config.button_9 += _player;
+        config.button_A += _player;
+        config.button_B += _player;
+        config.button_X += _player;
+        config.button_Y += _player;
+        config.button_LB += _player;
+        config.button_RB += _player;
+        config.button_Select += _player;
+        config.button_Start += _player;
+        config.button_LeftStickPush += _player;
+        config.button_RightStickPush += _player;
+    }
 
+    public bool IsXboxController(string _name) {
+        return _name.Contains("Xbox");
     }
 }
