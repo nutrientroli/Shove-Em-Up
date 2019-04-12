@@ -17,8 +17,10 @@ public class PlayerScript : MonoBehaviour
         moveScript = GetComponent<MoveScript>();
         if (moveScript == null)
             moveScript = gameObject.AddComponent<MoveScript>();
+        pushScript = GetComponent<PushScript>();
         if (pushScript == null)
             pushScript = gameObject.AddComponent<PushScript>();
+        knockbackScript = GetComponent<KnockbackScript>();
         if (knockbackScript == null)
             knockbackScript = gameObject.AddComponent<KnockbackScript>();
         currentState = State.MOVING;
@@ -93,7 +95,6 @@ public class PlayerScript : MonoBehaviour
             case State.HABILITY:
                 break;
         }
-
         currentState = _newState;
     }
 

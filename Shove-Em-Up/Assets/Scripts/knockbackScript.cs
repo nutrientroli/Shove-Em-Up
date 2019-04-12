@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class KnockbackScript : MonoBehaviour
 {
+
     private PlayerScript player;
     private CharacterController characterController;
 
@@ -47,7 +48,7 @@ public class KnockbackScript : MonoBehaviour
 
     private void UpdateTimeKnockback(float _time)
     {
-        if(!canStop)
+        if (!canStop)
         {
             CollisionFlags collisionFlags = characterController.Move(direction * _time * force);
             if (direction.y <= 0)
@@ -57,7 +58,7 @@ public class KnockbackScript : MonoBehaviour
 
 
             timeStopKnockback -= _time;
-            if(timeStopKnockback <= 0)
+            if (timeStopKnockback <= 0)
             {
                 timeStopKnockback = 0;
                 canStop = true;
@@ -65,5 +66,4 @@ public class KnockbackScript : MonoBehaviour
             }
         }
     }
-
 }
