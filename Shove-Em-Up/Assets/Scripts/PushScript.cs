@@ -17,6 +17,7 @@ public class PushScript : MonoBehaviour
     private float speedPush = 17;
 
     private CharacterController characterController;
+    public CanvasPush canvasPush;
 
 
     private bool canPush = true;
@@ -56,6 +57,7 @@ public class PushScript : MonoBehaviour
             currentForce = forceBase;
         canPush = false;
         timeChargePush = 0;
+        canvasPush.StartBar(this);
     }
 
     private void UpdateCoolDownPush(float _time)
@@ -100,4 +102,16 @@ public class PushScript : MonoBehaviour
             PushSomeone(hit.gameObject, direction);
         }
     }
+
+    public float GetMaxCoolDownPush()
+    {
+        return maxCoolDownPush;
+    }
+
+    public float GetCurrentCoolDownPush()
+    {
+        return timeCurrentCoolDownPush;
+    }
+
+
 }
