@@ -131,7 +131,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &3479358540128428191
 RectTransform:
   m_ObjectHideFlags: 0
@@ -292,10 +292,17 @@ PrefabInstance:
       propertyPath: canvasPush
       value: 
       objectReference: {fileID: 3479358540098840546}
-    m_RemovedComponents:
-    - {fileID: 8782431468899111529, guid: d8b71e1decf7a13478055c3d587393ed, type: 3}
-    - {fileID: 8782431468899111506, guid: d8b71e1decf7a13478055c3d587393ed, type: 3}
-    - {fileID: 8782431468899111507, guid: d8b71e1decf7a13478055c3d587393ed, type: 3}
+    - target: {fileID: 4906287110289511302, guid: d8b71e1decf7a13478055c3d587393ed,
+        type: 3}
+      propertyPath: player
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8782431469717840940, guid: d8b71e1decf7a13478055c3d587393ed,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d8b71e1decf7a13478055c3d587393ed, type: 3}
 --- !u!1 &2580746286257731272 stripped
 GameObject:

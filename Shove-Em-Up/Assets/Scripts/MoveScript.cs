@@ -31,11 +31,11 @@ public class MoveScript : MonoBehaviour
 
     private void Update()
     {
-        //ResetVectorToMove();
+ 
         CheckGravity();
         //Para testear, quitar en un futuro
         ///*
-        /*if (Input.GetKey(KeyCode.W))
+        if (Input.GetKey(KeyCode.W))
             AddVectorToMove(Vector3.forward);
         if (Input.GetKey(KeyCode.S))
             AddVectorToMove(Vector3.back);
@@ -43,7 +43,7 @@ public class MoveScript : MonoBehaviour
             AddVectorToMove(Vector3.right);
         if (Input.GetKey(KeyCode.A))
             AddVectorToMove(Vector3.left);
-        */
+        
         //*/
     }
 
@@ -90,7 +90,6 @@ public class MoveScript : MonoBehaviour
 
     public void AddVectorToMove(Vector3 _toMove)
     {
-        //Debug.Log(_toMove + " " + isMovible + " " + speed + " " + multiplyCharge);
         if (isMovible)
         {
             toMove += _toMove * speed * multiplyCharge;
@@ -107,17 +106,17 @@ public class MoveScript : MonoBehaviour
 
     private void MoveCharacter(float _time)
     {
-            toMove.y += verticalSpeed;
-            toMove *= _time;
-            gameObject.transform.forward = forward;
-            CollisionFlags collisionFlags = characterController.Move(toMove);
-            //Debug.Log(toMove + " " + _time);
-            if ((collisionFlags & CollisionFlags.Below) != 0)
-            {
-                onGround = true;
-            }
-            else
-                onGround = false;
+        toMove.y += verticalSpeed;
+        toMove *= _time;
+        gameObject.transform.forward = forward;
+        CollisionFlags collisionFlags = characterController.Move(toMove);
+        ResetVectorToMove();
+        if ((collisionFlags & CollisionFlags.Below) != 0)
+        {
+            onGround = true;
+        }
+        else
+            onGround = false;
     }
 
 }

@@ -8,7 +8,7 @@ public class PushScript : MonoBehaviour
     private float timeChargePush = 0;
     private float maxTimeChargePush = 1f;
     private float timeCurrentCoolDownPush = 0;
-    private float maxCoolDownPush = 0.5f;
+    private float maxCoolDownPush = 0.75f;
 
     private float forceBase = 1f;
     private float exponentBase = 4f;
