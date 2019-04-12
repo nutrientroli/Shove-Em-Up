@@ -18,7 +18,7 @@ public class InputPlayer : MonoBehaviour
 
     void Update()
     {
-        InputManager.GetInstance().ShowPlayersControllers();
+        //InputManager.GetInstance().ShowPlayersControllers();
         CheckMoveAxis();
         CheckButtons();
     }
