@@ -117,8 +117,6 @@ public class PlayerScript : MonoBehaviour
     public void Movement(Vector3 _vector)
     {
         moveScript.AddVectorToMove(_vector);
-        if (currentState != State.MOVING)
-            ChangeState(State.MOVING);
     }
 
     public void Knockback()
