@@ -54,6 +54,11 @@ public class InputManager
     public bool IsXboxController(string _name) {
         return _name.Contains("Xbox");
     }
+
+    public bool CanCheckInputs(int _player)
+    {
+        return listPlayersControllers.ContainsKey(_player -1);
+    }
     #endregion
 
 
