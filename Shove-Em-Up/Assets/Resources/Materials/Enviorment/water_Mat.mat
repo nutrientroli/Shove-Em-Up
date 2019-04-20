@@ -70,7 +70,7 @@ Material:
     - _DetailNormalMapScale: 1
     - _DistortStrength: 3.1
     - _DstBlend: 0
-    - _ExtraHeight: 0.36
+    - _ExtraHeight: -0.32
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
