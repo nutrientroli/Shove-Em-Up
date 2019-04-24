@@ -8,7 +8,7 @@ public class KnockbackScript : MonoBehaviour
     private CharacterController characterController;
 
     private float timeStopKnockback = 0;
-    private float timeRelativeWithForce = 0.25f;
+    private float timeRelativeWithForce = 0.3f;
     private float force = 0;
     private float maxForce = 20f;
     private float hight = 5f;

@@ -69,6 +69,7 @@ public class PlayerScript : MonoBehaviour
             case State.CHARGING:
                 moveScript.CanMove(false);
                 moveScript.Charging(false);
+                pushScript.RestartCharge();
                 break;
             case State.PUSHING:
                 currentTime = 0;
