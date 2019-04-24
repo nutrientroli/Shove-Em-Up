@@ -56,8 +56,13 @@ public class PushScript : MonoBehaviour
         if (currentForce < forceBase)
             currentForce = forceBase;
         canPush = false;
-        timeChargePush = 0;
+        RestartCharge();
         canvasPush.StartBar(this);
+    }
+
+    public void RestartCharge()
+    {
+        timeChargePush = 0;
     }
 
     private void UpdateCoolDownPush(float _time)
