@@ -119,4 +119,24 @@ public class MoveScript : MonoBehaviour
             onGround = false;
     }
 
+    public Vector3 GetMoveVector()
+    {
+        return toMove;
+    }
+
+    public void InvertMovement(float _time)
+    {
+        toMove.y += verticalSpeed;
+        toMove *= _time;
+        gameObject.transform.forward = forward;
+        CollisionFlags collisionFlags = characterController.Move(toMove * -1);
+        ResetVectorToMove();
+        if ((collisionFlags & CollisionFlags.Below) != 0)
+        {
+            onGround = true;
+        }
+        else
+            onGround = false;
+    }
+
 }

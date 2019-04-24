@@ -136,6 +136,11 @@ public class PlayerScript : MonoBehaviour
         moveScript.AddVectorToMove(_vector);
     }
 
+    public MoveScript GetMovement()
+    {
+        return moveScript;
+    }
+
     public void Knockback()
     {
         ChangeState(State.KNOCKBACK);

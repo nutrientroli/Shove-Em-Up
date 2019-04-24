@@ -28,10 +28,11 @@ public class HabilityScript : MonoBehaviour
 
     private void Start()
     {
+        
         canvasPush.StartBarHability(this);
     }
     // Update is called once per frame
-    protected void Update()
+    protected virtual void Update()
     {
         if (!active) {
             if (currentEnergy < maxEnergy)
@@ -39,7 +40,7 @@ public class HabilityScript : MonoBehaviour
                 IncrementEnergy(Time.deltaTime);
             }
             else {
-                Debug.Log("Habilidad Posible");
+                //Debug.Log("Habilidad Posible");
             }
         } else {
             currentTime += Time.deltaTime;
