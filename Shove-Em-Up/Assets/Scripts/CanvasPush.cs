@@ -21,18 +21,21 @@ public class CanvasPush : MonoBehaviour
     void Update()
     {
         gameObject.transform.position = parent.transform.position + positionRelativePJ;
-        coolDownImage.fillAmount = pushScript.GetCurrentCoolDownPush() / pushScript.GetMaxCoolDownPush();
-        forceCharge.fillAmount = pushScript.GetCurrentForce() / pushScript.GetMaxForce();
-
-        if (coolDownImage.fillAmount == 1)
+        if (pushScript != null)
         {
-            coolDownImage.enabled = false;
-        }
+            coolDownImage.fillAmount = pushScript.GetCurrentCoolDownPush() / pushScript.GetMaxCoolDownPush();
+            forceCharge.fillAmount = pushScript.GetCurrentForce() / pushScript.GetMaxForce();
 
-        if(forceCharge.fillAmount == 1 || pushScript.GetCurrentForce() == 0)
-        {
-            forceCharge.enabled = false;
+            if (coolDownImage.fillAmount == 1)
+            {
+                coolDownImage.enabled = false;
+            }
 
+            if (forceCharge.fillAmount == 1 || pushScript.GetCurrentForce() == 0)
+            {
+                forceCharge.enabled = false;
+
+            }
         }
 
     }

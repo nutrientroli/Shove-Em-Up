@@ -76,7 +76,6 @@ public class PlayerScript : MonoBehaviour
             case State.CHARGING:
                 moveScript.CanMove(false);
                 moveScript.Charging(false);
-                pushScript.RestartCharge();
                 break;
             case State.PUSHING:
                 currentTime = 0;
@@ -101,7 +100,7 @@ public class PlayerScript : MonoBehaviour
                 pushScript.Push();
                 break;
             case State.KNOCKBACK:
-                pushScript.PushSomeone(gameObject, -gameObject.transform.forward); //cambiar en un futuro
+                pushScript.RestartCharge();
                 break;
             case State.HABILITY:
                 break;

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ModifierScript
+public class ModifierScript:MonoBehaviour
 {
     protected float currentTime = 0;
     protected float maxTime = 3;
