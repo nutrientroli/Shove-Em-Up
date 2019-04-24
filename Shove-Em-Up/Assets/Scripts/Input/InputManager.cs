@@ -20,18 +20,24 @@ public class InputManager
     #region Methods
     public void AddPlayer(int _player)
     {
-        //Debug.Log("Hola " + _player);
-        string[] joys = Input.GetJoystickNames();
+        if (!CanCheckInputs(_player))
+        {
+            //Debug.Log("Hola " + _player);
+            string[] joys = Input.GetJoystickNames();
 
-        //Debug.Log("Hola " + _player + " " + joys.Length);
-        if (joys.Length > 0 && _player <= joys.Length && _player > 0) {
-            CustomGamePad gamepad;
-            string name = joys[_player-1];
-            if (IsXboxController(name)) gamepad = new XboxCustomGamePad(name, _player - 1, _player);
-            else gamepad = new Ps4CustomGamePad(name, _player - 1, _player);
-            listPlayersControllers.Add(_player - 1, gamepad);
-        } else {
-            Debug.LogWarning("Player : " + _player + " - No tiene controllador disponible");
+            //Debug.Log("Hola " + _player + " " + joys.Length);
+            if (joys.Length > 0 && _player <= joys.Length && _player > 0)
+            {
+                CustomGamePad gamepad;
+                string name = joys[_player - 1];
+                if (IsXboxController(name)) gamepad = new XboxCustomGamePad(name, _player - 1, _player);
+                else gamepad = new Ps4CustomGamePad(name, _player - 1, _player);
+                listPlayersControllers.Add(_player - 1, gamepad);
+            }
+            else
+            {
+                Debug.LogWarning("Player : " + _player + " - No tiene controllador disponible");
+            }
         }
     }
 
