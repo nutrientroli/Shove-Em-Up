@@ -17,8 +17,9 @@ public class FallDownEventPlatform : EventPlatformScript
     public override void Init() {
         base.Init();
         type = TypeEvent.TIME;
-        int len = (tier1Pieces.Count + tier2Pieces.Count + tier3Pieces.Count) * 2;
-        for (int i = 0; i < len; i++) {
+        int len = (tier1Pieces.Count + tier2Pieces.Count + tier3Pieces.Count) * 2 + 1;
+        listEvent.Add(Wait);
+        for (int i = 1; i < len; i++) {
             if(i%2 == 0) listEvent.Add(FallDownFeedBack);
             else listEvent.Add(FallDown);
         }
@@ -49,6 +50,11 @@ public class FallDownEventPlatform : EventPlatformScript
 
     private float FallDown() {
         Destroy(randomPiece);
+        return timetoFallDown * adjustTimer;
+    }
+
+    private float Wait()
+    {
         return timetoFallDown * adjustTimer;
     }
 }

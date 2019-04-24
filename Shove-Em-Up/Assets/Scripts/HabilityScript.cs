@@ -4,29 +4,39 @@ using UnityEngine;
 
 public class HabilityScript : MonoBehaviour
 {
-    private PlayerScript player;
-    private float maxEnergy = 100;
+    //Energy System
+    [SerializeField] private float maxEnergy = 100;
     private float currentEnergy = 0;
     private float incrementEnergyPerSecond = 1;
     private float incrementEnergyPerPush = 20;
     private float incrementEnergyPerItem = 50;
-    private float currentTime = 0;
 
+    //Time System
+    private float currentTime = 0;
+    private float duration = 5;
+
+    //Utils
+    protected bool active = false;
 
     // Update is called once per frame
     protected void Update()
     {
-        if(currentEnergy < maxEnergy)
+        if (!active) {
+            if (currentEnergy < maxEnergy)
+            {
+                currentTime += Time.deltaTime;
+            }else {
+                Debug.Log("Habilidad Posible");
+            }
+            while (currentTime >= 1) {
+                //No es lo mismo que multiplicar por deltaTime el incremento? Asi no hacemos el while.
+                currentTime--;
+                IncrementEnergy(incrementEnergyPerSecond);
+            }
+        } else {
             currentTime += Time.deltaTime;
-        while(currentTime >= 1)
-        {
-            currentTime--;
-            IncrementEnergy(incrementEnergyPerSecond);
+            if (currentTime >= duration) DeactiveHability();
         }
-
-        player = GetComponent<PlayerScript>();
-        if(player == null)
-            Debug.Log("NO TIENE EL SCRIPT PLAYER EL PLAYER");
     }
 
     protected void SetMaxEnergy(float _energy)
@@ -37,13 +47,25 @@ public class HabilityScript : MonoBehaviour
     private void IncrementEnergy(float _energy)
     {
         currentEnergy += _energy;
-        //print(currentEnergy);
+       // print(currentEnergy);
     }
 
-    protected void UseHability()
+    public virtual void UseHability()
     {
         currentEnergy = 0;
         currentTime = 0;
+        active = true;
+    }
+
+    public virtual void DeactiveHability()
+    {
+        currentTime = 0;
+        active = false;
+    }
+
+    public bool CanUseHability()
+    {
+        return !active && currentEnergy == maxEnergy;
     }
 
 }

@@ -11,6 +11,7 @@ public class PlayerScript : MonoBehaviour
     private MoveScript moveScript;
     private PushScript pushScript;
     private KnockbackScript knockbackScript;
+    public HabilityScript habilityScript;
 
     private void Start()
     {
@@ -23,6 +24,8 @@ public class PlayerScript : MonoBehaviour
         knockbackScript = GetComponent<KnockbackScript>();
         if (knockbackScript == null)
             knockbackScript = gameObject.AddComponent<KnockbackScript>();
+        if (habilityScript == null)
+            habilityScript = gameObject.AddComponent<ShieldHabilityScript>();
         currentState = State.MOVING;
     }
 
@@ -129,5 +132,13 @@ public class PlayerScript : MonoBehaviour
         ChangeState(State.MOVING);
     }
 
+    public void Hability()
+    {
+        /*if (pushScript.CanPush() && currentState == State.CHARGING)
+            ChangeState(State.PUSHING);*/
+        
+        //Retocar!!
+        if (habilityScript.CanUseHability()) habilityScript.UseHability();
+    }
 
 }
