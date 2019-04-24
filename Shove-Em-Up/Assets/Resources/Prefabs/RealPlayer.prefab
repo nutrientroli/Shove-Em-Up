@@ -128,6 +128,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parent: {fileID: 2580746286257731272}
   coolDownImage: {fileID: 3479358540128428190}
+  forceCharge: {fileID: 1954592158842620627}
 --- !u!1 &3479358540128428188
 GameObject:
   m_ObjectHideFlags: 0
@@ -400,8 +401,7 @@ PrefabInstance:
       propertyPath: habilityScript
       value: 
       objectReference: {fileID: 2066691808}
-    m_RemovedComponents:
-    - {fileID: 8782431468899111508, guid: d8b71e1decf7a13478055c3d587393ed, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d8b71e1decf7a13478055c3d587393ed, type: 3}
 --- !u!1 &2580746286257731272 stripped
 GameObject:
