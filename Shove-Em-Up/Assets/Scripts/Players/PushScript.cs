@@ -99,13 +99,14 @@ public class PushScript : MonoBehaviour
         _player.GetComponent<KnockbackScript>().StartKnockback(currentForce, forceBase, totalSpeedPush, _direction);
     }
 
-
+    
     void OnControllerColliderHit(ControllerColliderHit hit)
     {
         if (hit.gameObject.tag == "Player")
         {
             if (player.currentState == PlayerScript.State.PUSHING)
             {
+
                 //calcular el angulo con el que toca el player en un futuro
                 Vector3 direction = (hit.gameObject.transform.position - gameObject.transform.position).normalized;
                 PushSomeone(hit.gameObject, direction);
