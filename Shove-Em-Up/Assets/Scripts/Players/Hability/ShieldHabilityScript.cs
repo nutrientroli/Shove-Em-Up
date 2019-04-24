@@ -18,13 +18,14 @@ public class ShieldHabilityScript : HabilityScript
     public override void UseHability()
     {
         base.UseHability();
+        modToMe = gameObject.AddComponent<ShieldModifierScript>();
         shield.SetActive(true);
         shield.transform.position = transform.position;
     }
 
-    public override void DeactiveHability()
+    public override void DesactiveHability()
     {
-        base.DeactiveHability();
+        base.DesactiveHability();
         shield.SetActive(false);
     }
 

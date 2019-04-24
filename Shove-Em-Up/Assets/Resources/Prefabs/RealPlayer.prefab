@@ -86,7 +86,7 @@ GameObject:
   - component: {fileID: 1474110812}
   - component: {fileID: 1474110811}
   m_Layer: 5
-  m_Name: Text
+  m_Name: ConfusedText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -153,7 +153,7 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: CONFUSED
---- !u!114 &1289537068
+--- !u!114 &782689185
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -162,10 +162,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 2580746286257731272}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b38a471bfa977ca46972e4bd487040d6, type: 3}
+  m_Script: {fileID: 11500000, guid: 790379a817dc7754db64b4395589f1f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isMovible: 0
+  maxEnergy: 10
+  modToOthers: {fileID: 0}
+  modToMe: {fileID: 0}
+  canvasPush: {fileID: 3479358540098840546}
+  prefabGas: {fileID: 7151812866455021912, guid: 004b0a77dde5a4a4db99de477bd0ad4e,
+    type: 3}
 --- !u!114 &2066691808
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -173,15 +178,17 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2580746286257731272}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7404acaa0b671554689798d33c37ef3a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxEnergy: 50
-  modToOthers: {fileID: 1289537068}
-  modToMe: {fileID: 1289537068}
+  maxEnergy: 10
+  modToOthers: {fileID: 0}
+  modToMe: {fileID: 0}
   canvasPush: {fileID: 3479358540098840546}
+  prefabShield: {fileID: 8325591016434020391, guid: 253b2866afda0774fa8adb45b3e9bc28,
+    type: 3}
 --- !u!1 &3479358540098840551
 GameObject:
   m_ObjectHideFlags: 0
@@ -301,6 +308,7 @@ MonoBehaviour:
   coolDownImage: {fileID: 3479358540128428190}
   forceCharge: {fileID: 1954592158842620627}
   TimeChargeHability: {fileID: 547697530}
+  confused: {fileID: 1474110811}
 --- !u!1 &3479358540128428188
 GameObject:
   m_ObjectHideFlags: 0
@@ -562,13 +570,13 @@ PrefabInstance:
         type: 3}
       propertyPath: habilityScript
       value: 
-      objectReference: {fileID: 2066691808}
-    - target: {fileID: 8782431468899111505, guid: d8b71e1decf7a13478055c3d587393ed,
+      objectReference: {fileID: 782689185}
+    - target: {fileID: 8782431468899111504, guid: d8b71e1decf7a13478055c3d587393ed,
         type: 3}
-      propertyPath: canvasPush
+      propertyPath: canvasPlayer
       value: 
       objectReference: {fileID: 3479358540098840546}
-    - target: {fileID: 8782431468899111508, guid: d8b71e1decf7a13478055c3d587393ed,
+    - target: {fileID: 8782431468899111505, guid: d8b71e1decf7a13478055c3d587393ed,
         type: 3}
       propertyPath: canvasPush
       value: 
@@ -578,7 +586,14 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 8782431469717840940, guid: d8b71e1decf7a13478055c3d587393ed,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 3939046258170255839, guid: d8b71e1decf7a13478055c3d587393ed, type: 3}
+    - {fileID: 237416505253851146, guid: d8b71e1decf7a13478055c3d587393ed, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: d8b71e1decf7a13478055c3d587393ed, type: 3}
 --- !u!1 &2580746286257731272 stripped
 GameObject:

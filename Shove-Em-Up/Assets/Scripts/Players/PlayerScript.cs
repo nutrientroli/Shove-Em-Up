@@ -12,9 +12,12 @@ public class PlayerScript : MonoBehaviour
     private PushScript pushScript;
     private KnockbackScript knockbackScript;
     public HabilityScript habilityScript;
+    public CanvasPush canvasPlayer;
 
     //Gestion de modificadores
     private List<ModifierScript> listMods;
+
+    private bool inverted = false;
 
     //Eliminar en un futuro
     public KeyCode Up = KeyCode.W;
@@ -34,6 +37,11 @@ public class PlayerScript : MonoBehaviour
         knockbackScript = GetComponent<KnockbackScript>();
         if (knockbackScript == null)
             knockbackScript = gameObject.AddComponent<KnockbackScript>();
+        foreach(HabilityScript hab in GetComponents<HabilityScript>())
+        {
+            if (hab.enabled == true)
+                habilityScript = hab;
+        }
         if (habilityScript == null)
             habilityScript = gameObject.AddComponent<ShieldHabilityScript>();
         currentState = State.MOVING;
@@ -133,7 +141,11 @@ public class PlayerScript : MonoBehaviour
 
     public void Movement(Vector3 _vector)
     {
-        moveScript.AddVectorToMove(_vector);
+        canvasPlayer.StatusConfused(inverted);
+        if (inverted)
+            moveScript.AddVectorToMove(-_vector);
+        else
+            moveScript.AddVectorToMove(_vector);
     }
 
     public MoveScript GetMovement()
@@ -166,31 +178,47 @@ public class PlayerScript : MonoBehaviour
         if (habilityScript.CanUseHability())
         {
             habilityScript.UseHability();
-            listMods.Add(habilityScript.modToMe);
+            if(habilityScript.modToMe != null)
+                listMods.Add(habilityScript.modToMe);
         }
+    }
+
+    public void AddOtherMod(ModifierScript _mod)
+    {
+        listMods.Add(_mod);
     }
 
     private void CheckMods(float _deltaTime) {
         List<ModifierScript> listRemoveMods = new List<ModifierScript>();
         foreach(ModifierScript mod in listMods) {
-            if (mod.CheckModifier(_deltaTime)) listRemoveMods.Add(mod);
+            if (mod.CheckModifier(_deltaTime))
+            {
+                listRemoveMods.Add(mod);
+            }
         }
         foreach (ModifierScript mod in listRemoveMods) {
             listMods.Remove(mod);
+            Destroy(mod);
         }
-
+        Modification();
     }
 
     private void Modification()
     {
         ResetValues();
         foreach (ModifierScript mod in listMods) {
-            moveScript.isMovible = mod.isMovible;
+            if(!mod.isMovible)
+                moveScript.isMovible = mod.isMovible;
+            if(mod.inverted)
+                inverted = mod.inverted;
         }
     }
 
     private void ResetValues()
     {
+        inverted = false;
+        if(currentState == State.MOVING || currentState == State.CHARGING)
+            moveScript.isMovible = true;
         //Para que cuando se acabe un modificador tenga los valores por defecto.
         //Hay que vigilar los estados actuales.
         //Los suyo seria que hubiera una variable de modificacion por cada variable real.

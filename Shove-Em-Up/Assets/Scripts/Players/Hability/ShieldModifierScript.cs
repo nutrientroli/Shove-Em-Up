@@ -1,6 +1,7 @@
 ﻿public class ShieldModifierScript : ModifierScript {
-    protected override void Init() {
+    protected void Start() {
         maxTime = 5;
         isMovible = false;
+        inverted = false;
     }
 }

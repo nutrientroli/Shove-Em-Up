@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 790379a817dc7754db64b4395589f1f6
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - modToOthers: {instanceID: 0}
+  - modToMe: {instanceID: 0}
+  - canvasPush: {instanceID: 0}
+  - prefabGas: {fileID: 7151812866455021912, guid: 004b0a77dde5a4a4db99de477bd0ad4e,
+      type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

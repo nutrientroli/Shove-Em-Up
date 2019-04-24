@@ -17,8 +17,9 @@ GameObject:
   - component: {fileID: 8782431468899111505}
   - component: {fileID: 8782431468899111504}
   - component: {fileID: 8782431468899111535}
-  - component: {fileID: 8782431468899111508}
   - component: {fileID: 1933419415313470929}
+  - component: {fileID: 3939046258170255839}
+  - component: {fileID: 237416505253851146}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -158,6 +159,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentState: 0
+  habilityScript: {fileID: 0}
+  canvasPlayer: {fileID: 0}
+  Up: 119
+  Down: 115
+  Right: 100
+  Left: 97
+  PushCode: 112
 --- !u!114 &8782431468899111535
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -170,18 +178,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00545bcbb17796041a8e191dc4dfd451, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &8782431468899111508
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8782431468899111528}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1e455930ddfc1cd4f90cc714ef984f70, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  isMovible: 1
 --- !u!114 &1933419415313470929
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -194,6 +191,42 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24c843a9a931b6a43911893042334725, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &3939046258170255839
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8782431468899111528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 790379a817dc7754db64b4395589f1f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxEnergy: 10
+  modToOthers: {fileID: 0}
+  modToMe: {fileID: 0}
+  canvasPush: {fileID: 0}
+  prefabGas: {fileID: 7151812866455021912, guid: 004b0a77dde5a4a4db99de477bd0ad4e,
+    type: 3}
+--- !u!114 &237416505253851146
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8782431468899111528}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7404acaa0b671554689798d33c37ef3a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxEnergy: 10
+  modToOthers: {fileID: 0}
+  modToMe: {fileID: 0}
+  canvasPush: {fileID: 0}
+  prefabShield: {fileID: 8325591016434020391, guid: 253b2866afda0774fa8adb45b3e9bc28,
+    type: 3}
 --- !u!1 &8782431469717840939
 GameObject:
   m_ObjectHideFlags: 0

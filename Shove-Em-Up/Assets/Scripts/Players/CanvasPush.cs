@@ -11,6 +11,7 @@ public class CanvasPush : MonoBehaviour
     public Image coolDownImage;
     public Image forceCharge;
     public Image TimeChargeHability;
+    public Text confused;
     private PushScript pushScript;
     private HabilityScript habilityScript;
     private Color firstColor;
@@ -73,6 +74,11 @@ public class CanvasPush : MonoBehaviour
             habilityScript = _habilityScript;
             TimeChargeHability.enabled = true;
         }
+    }
+
+    public void StatusConfused(bool _confused)
+    {
+        confused.enabled = _confused;
     }
 
 }

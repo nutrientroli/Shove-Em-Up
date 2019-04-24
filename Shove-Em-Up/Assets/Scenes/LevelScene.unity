@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1676436887}
-  m_IndirectSpecularColor: {r: 0.3479522, g: 0.5528841, b: 0.834713, a: 1}
+  m_IndirectSpecularColor: {r: 0.34795222, g: 0.5528841, b: 0.834713, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -304,6 +304,10 @@ PrefabInstance:
         type: 3}
       propertyPath: PushCode
       value: 48
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474110811, guid: 898bffa22539ae147ac8089cfcfa149a, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2066691808, guid: 898bffa22539ae147ac8089cfcfa149a, type: 3}
@@ -1308,27 +1312,7 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 710200656}
-    - target: {fileID: 2066691808, guid: 898bffa22539ae147ac8089cfcfa149a, type: 3}
-      propertyPath: shield
-      value: 
-      objectReference: {fileID: 8325591016434020391, guid: 253b2866afda0774fa8adb45b3e9bc28,
-        type: 3}
-    - target: {fileID: 2066691808, guid: 898bffa22539ae147ac8089cfcfa149a, type: 3}
-      propertyPath: prefabShield
-      value: 
-      objectReference: {fileID: 8325591016434020391, guid: 253b2866afda0774fa8adb45b3e9bc28,
-        type: 3}
-    - target: {fileID: 2066691808, guid: 898bffa22539ae147ac8089cfcfa149a, type: 3}
-      propertyPath: maxEnergy
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 2580746284927484044, guid: 898bffa22539ae147ac8089cfcfa149a,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 2580746286257731316, guid: 898bffa22539ae147ac8089cfcfa149a, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 898bffa22539ae147ac8089cfcfa149a, type: 3}
 --- !u!1 &1614068998
 GameObject:

@@ -28,7 +28,6 @@ public class HabilityScript : MonoBehaviour
 
     private void Start()
     {
-        
         canvasPush.StartBarHability(this);
     }
     // Update is called once per frame
@@ -44,7 +43,7 @@ public class HabilityScript : MonoBehaviour
             }
         } else {
             currentTime += Time.deltaTime;
-            if (currentTime >= duration) DeactiveHability();
+            if (currentTime >= duration) DesactiveHability();
         }
 
         if (coolDownIncrementImpact > 0)
@@ -72,12 +71,12 @@ public class HabilityScript : MonoBehaviour
         active = true;
     }
 
-    public virtual void DeactiveHability()
+    public virtual void DesactiveHability()
     {
         currentTime = 0;
         active = false;
     }
-
+    
     public bool CanUseHability()
     {
         return !active && currentEnergy == maxEnergy;
