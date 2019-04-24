@@ -139,6 +139,12 @@ public class PlayerScript : MonoBehaviour
         ChangeState(State.MOVING);
     }
 
+    public void PushSomeoneOther()
+    {
+        habilityScript.IncrementPerImpact();
+        print("veces entrado");
+    }
+
     public void Hability()
     {
         /*if (pushScript.CanPush() && currentState == State.CHARGING)

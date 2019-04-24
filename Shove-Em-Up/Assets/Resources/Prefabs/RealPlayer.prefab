@@ -99,7 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7404acaa0b671554689798d33c37ef3a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxEnergy: 10
+  maxEnergy: 50
   modToOthers: {fileID: 1289537068}
   modToMe: {fileID: 1289537068}
   canvasPush: {fileID: 3479358540098840546}

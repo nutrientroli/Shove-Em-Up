@@ -7,11 +7,13 @@ public class HabilityScript : MonoBehaviour
     //Energy System
     [SerializeField] private float maxEnergy = 100;
     private float currentEnergy = 0;
-    private float incrementEnergyPerPush = 20;
-    private float incrementEnergyPerItem = 50;
+    private float incrementEnergyPerPush = 5;
+    private float incrementEnergyPerItem = 20;
 
     //Time System
     private float currentTime = 0;
+    private float coolDownIncrementImpact = 0;
+    private float durationIncrementImpact = 0.5f;
     private float duration = 5;
 
     //Utils
@@ -34,15 +36,18 @@ public class HabilityScript : MonoBehaviour
         if (!active) {
             if (currentEnergy < maxEnergy)
             {
-                currentTime += Time.deltaTime;
-            }else {
+                IncrementEnergy(Time.deltaTime);
+            }
+            else {
                 Debug.Log("Habilidad Posible");
             }
-            IncrementEnergy(Time.deltaTime);
         } else {
             currentTime += Time.deltaTime;
             if (currentTime >= duration) DeactiveHability();
         }
+
+        if (coolDownIncrementImpact > 0)
+            coolDownIncrementImpact -= Time.deltaTime;
     }
 
     protected void SetMaxEnergy(float _energy)
@@ -75,6 +80,17 @@ public class HabilityScript : MonoBehaviour
     public bool CanUseHability()
     {
         return !active && currentEnergy == maxEnergy;
+    }
+
+    public void IncrementPerImpact()
+    {
+        if (coolDownIncrementImpact <= 0)
+        {
+            coolDownIncrementImpact = durationIncrementImpact;
+            currentEnergy += incrementEnergyPerPush;
+            if (currentEnergy > maxEnergy)
+                currentEnergy = maxEnergy;
+        }
     }
 
     public float GetMaxEnergy()
