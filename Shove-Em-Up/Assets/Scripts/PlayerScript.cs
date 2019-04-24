@@ -13,6 +13,9 @@ public class PlayerScript : MonoBehaviour
     private KnockbackScript knockbackScript;
     public HabilityScript habilityScript;
 
+    //Gestion de modificadores
+    private List<ModifierScript> listMods;
+
     private void Start()
     {
         moveScript = GetComponent<MoveScript>();
@@ -27,11 +30,15 @@ public class PlayerScript : MonoBehaviour
         if (habilityScript == null)
             habilityScript = gameObject.AddComponent<ShieldHabilityScript>();
         currentState = State.MOVING;
+        listMods = new List<ModifierScript>();
     }
 
     private void Update()
     {
-        switch(currentState)
+        //Modificadores Por habilidades
+        CheckMods(Time.deltaTime);
+
+        switch (currentState)
         {
             case State.MOVING:
                 break;
@@ -137,9 +144,39 @@ public class PlayerScript : MonoBehaviour
     {
         /*if (pushScript.CanPush() && currentState == State.CHARGING)
             ChangeState(State.PUSHING);*/
-        
+
         //Retocar!!
-        if (habilityScript.CanUseHability()) habilityScript.UseHability();
+        if (habilityScript.CanUseHability())
+        {
+            habilityScript.UseHability();
+            listMods.Add(habilityScript.modToMe);
+        }
+    }
+
+    private void CheckMods(float _deltaTime) {
+        List<ModifierScript> listRemoveMods = new List<ModifierScript>();
+        foreach(ModifierScript mod in listMods) {
+            if (mod.CheckModifier(_deltaTime)) listRemoveMods.Add(mod);
+        }
+        foreach (ModifierScript mod in listRemoveMods) {
+            listMods.Remove(mod);
+        }
+
+    }
+
+    private void Modification()
+    {
+        ResetValues();
+        foreach (ModifierScript mod in listMods) {
+            moveScript.isMovible = mod.isMovible;
+        }
+    }
+
+    private void ResetValues()
+    {
+        //Para que cuando se acabe un modificador tenga los valores por defecto.
+        //Hay que vigilar los estados actuales.
+        //Los suyo seria que hubiera una variable de modificacion por cada variable real.
     }
 
 }

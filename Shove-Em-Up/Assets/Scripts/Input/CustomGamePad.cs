@@ -57,6 +57,11 @@ public class CustomGamePad
         return Input.GetButtonDown(_button);
     }
 
+    public bool GetButton(string _button)
+    {
+        return Input.GetButton(_button);
+    }
+
     public bool GetButtonUp(string _button) {
         return Input.GetButtonUp(_button);
     }

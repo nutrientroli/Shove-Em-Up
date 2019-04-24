@@ -38,7 +38,7 @@ public class InputPlayer : MonoBehaviour
     {
         if (InputManager.GetInstance().CanCheckInputs(player))
         {
-            if (InputManager.GetInstance().GetController(player).GetButtonDown(InputManager.GetInstance().GetController(player).config.button_A)) playerScript.Charge();
+            if (InputManager.GetInstance().GetController(player).GetButton(InputManager.GetInstance().GetController(player).config.button_A)) playerScript.Charge();
             if (InputManager.GetInstance().GetController(player).GetButtonUp(InputManager.GetInstance().GetController(player).config.button_A)) playerScript.Push();
             if (InputManager.GetInstance().GetController(player).GetButtonDown(InputManager.GetInstance().GetController(player).config.button_B)) playerScript.Hability();
         }
