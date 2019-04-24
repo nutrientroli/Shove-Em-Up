@@ -13,7 +13,7 @@ public class ShieldScript : MonoBehaviour
             //Invertir Movimiento
             //Debug.Log("Hola  :: " + direction);
             Vector3 direction = (player.gameObject.transform.position - me.gameObject.transform.position).normalized;
-            //Parar Push del player entrante
+            player.ChangeState(PlayerScript.State.MOVING);
             player.GetComponent<KnockbackScript>().StartKnockback(20.0f, 20.0f, 20.0f, direction);
         }
     }
