@@ -35,13 +35,13 @@ public class MoveScript : MonoBehaviour
         CheckGravity();
         //Para testear, quitar en un futuro
         ///*
-        if (Input.GetKey(KeyCode.W))
+        if (Input.GetKey(GetComponent<PlayerScript>().Up))
             AddVectorToMove(Vector3.forward);
-        if (Input.GetKey(KeyCode.S))
+        if (Input.GetKey(GetComponent<PlayerScript>().Down))
             AddVectorToMove(Vector3.back);
-        if (Input.GetKey(KeyCode.D))
+        if (Input.GetKey(GetComponent<PlayerScript>().Right))
             AddVectorToMove(Vector3.right);
-        if (Input.GetKey(KeyCode.A))
+        if (Input.GetKey(GetComponent<PlayerScript>().Left))
             AddVectorToMove(Vector3.left);
         
         //*/

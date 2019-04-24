@@ -16,6 +16,13 @@ public class PlayerScript : MonoBehaviour
     //Gestion de modificadores
     private List<ModifierScript> listMods;
 
+    //Eliminar en un futuro
+    public KeyCode Up = KeyCode.W;
+    public KeyCode Down = KeyCode.S;
+    public KeyCode Right = KeyCode.D;
+    public KeyCode Left = KeyCode.A;
+    public KeyCode PushCode = KeyCode.P;
+
     private void Start()
     {
         moveScript = GetComponent<MoveScript>();
@@ -57,9 +64,9 @@ public class PlayerScript : MonoBehaviour
         }
 
         ///*
-        if (Input.GetKeyDown(KeyCode.P))
+        if (Input.GetKey(PushCode))
             Charge();                 //PARA PROBAR, QUITAR EN UN FUTURO
-        if (Input.GetKeyUp(KeyCode.P))
+        if (Input.GetKeyUp(PushCode))
             Push();
         if (Input.GetKeyDown(KeyCode.K))
             Knockback();
