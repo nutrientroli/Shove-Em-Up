@@ -280,6 +280,31 @@ PrefabInstance:
       propertyPath: player
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 2580746286257731312, guid: 898bffa22539ae147ac8089cfcfa149a,
+        type: 3}
+      propertyPath: Up
+      value: 48
+      objectReference: {fileID: 0}
+    - target: {fileID: 2580746286257731312, guid: 898bffa22539ae147ac8089cfcfa149a,
+        type: 3}
+      propertyPath: Down
+      value: 47
+      objectReference: {fileID: 0}
+    - target: {fileID: 2580746286257731312, guid: 898bffa22539ae147ac8089cfcfa149a,
+        type: 3}
+      propertyPath: Right
+      value: 47
+      objectReference: {fileID: 0}
+    - target: {fileID: 2580746286257731312, guid: 898bffa22539ae147ac8089cfcfa149a,
+        type: 3}
+      propertyPath: Left
+      value: 48
+      objectReference: {fileID: 0}
+    - target: {fileID: 2580746286257731312, guid: 898bffa22539ae147ac8089cfcfa149a,
+        type: 3}
+      propertyPath: PushCode
+      value: 48
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 898bffa22539ae147ac8089cfcfa149a, type: 3}
 --- !u!1 &535769633 stripped
