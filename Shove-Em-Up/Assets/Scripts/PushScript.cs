@@ -106,10 +106,11 @@ public class PushScript : MonoBehaviour
         {
             if (player.currentState == PlayerScript.State.PUSHING)
             {
-                player.PushSomeoneOther();
                 //calcular el angulo con el que toca el player en un futuro
                 Vector3 direction = (hit.gameObject.transform.position - gameObject.transform.position).normalized;
                 PushSomeone(hit.gameObject, direction);
+                player.PushSomeoneOther();
+                player.ChangeState(PlayerScript.State.MOVING);
             }
         }
     }
