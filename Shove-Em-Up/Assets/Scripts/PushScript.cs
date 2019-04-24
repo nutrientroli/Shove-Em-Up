@@ -41,6 +41,7 @@ public class PushScript : MonoBehaviour
 
     public void ChargePush(float _time)
     {
+        canvasPush.StartBarForceCharge(this);
         if (timeChargePush < maxTimeChargePush)
         {
             timeChargePush += _time;
@@ -57,7 +58,7 @@ public class PushScript : MonoBehaviour
             currentForce = forceBase;
         canPush = false;
         RestartCharge();
-        canvasPush.StartBar(this);
+        canvasPush.StartBarCoolDown(this);
     }
 
     public void RestartCharge()
@@ -120,6 +121,16 @@ public class PushScript : MonoBehaviour
     public float GetCurrentCoolDownPush()
     {
         return timeCurrentCoolDownPush;
+    }
+
+    public float GetMaxForce()
+    {
+        return maxTimeChargePush;
+    }
+
+    public float GetCurrentForce()
+    {
+        return timeChargePush;
     }
 
 

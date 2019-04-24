@@ -9,8 +9,8 @@ public class CanvasPush : MonoBehaviour
     private Vector3 positionRelativePJ;
     public GameObject parent;
     public Image coolDownImage;
+    public Image forceCharge;
     private PushScript pushScript;
-    private bool start = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,22 +20,33 @@ public class CanvasPush : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(start)
+        gameObject.transform.position = parent.transform.position + positionRelativePJ;
+        coolDownImage.fillAmount = pushScript.GetCurrentCoolDownPush() / pushScript.GetMaxCoolDownPush();
+        forceCharge.fillAmount = pushScript.GetCurrentForce() / pushScript.GetMaxForce();
+
+        if (coolDownImage.fillAmount == 1)
         {
-            gameObject.transform.position = parent.transform.position + positionRelativePJ;
-            coolDownImage.fillAmount = pushScript.GetCurrentCoolDownPush() / pushScript.GetMaxCoolDownPush();
-            if (coolDownImage.fillAmount == 1)
-            {
-                start = false;
-                coolDownImage.enabled = false;
-            }
+            coolDownImage.enabled = false;
         }
+
+        if(forceCharge.fillAmount == 1 || pushScript.GetCurrentForce() == 0)
+        {
+            forceCharge.enabled = false;
+
+        }
+
     }
 
-    public void StartBar(PushScript _pushScript)
+    public void StartBarCoolDown(PushScript _pushScript)
     {
         pushScript = _pushScript;
         coolDownImage.enabled = true;
-        start = true;
     }
+
+    public void StartBarForceCharge(PushScript _pushScript)
+    {
+        pushScript = _pushScript;
+        forceCharge.enabled = true;
+    }
+
 }

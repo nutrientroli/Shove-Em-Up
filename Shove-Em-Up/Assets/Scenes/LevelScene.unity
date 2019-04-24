@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1676436887}
-  m_IndirectSpecularColor: {r: 0.3479522, g: 0.5528841, b: 0.834713, a: 1}
+  m_IndirectSpecularColor: {r: 0.34795222, g: 0.5528841, b: 0.834713, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1159,43 +1159,7 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 710200656}
-    - target: {fileID: 3479358540128428188, guid: 898bffa22539ae147ac8089cfcfa149a,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2172832684682721062, guid: 898bffa22539ae147ac8089cfcfa149a,
-        type: 3}
-      propertyPath: player
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2580746286257731275, guid: 898bffa22539ae147ac8089cfcfa149a,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 8037e41f0a2dc37459ece4def470bb7f, type: 2}
-    - target: {fileID: 3479358540098840550, guid: 898bffa22539ae147ac8089cfcfa149a,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -1.34
-      objectReference: {fileID: 0}
-    - target: {fileID: 3479358540098840550, guid: 898bffa22539ae147ac8089cfcfa149a,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2580746286257731272, guid: 898bffa22539ae147ac8089cfcfa149a,
-        type: 3}
-      propertyPath: m_TagString
-      value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 2580746286257731312, guid: 898bffa22539ae147ac8089cfcfa149a,
-        type: 3}
-      propertyPath: habilityScript
-      value: 
-      objectReference: {fileID: 2066691808}
-    m_RemovedComponents:
-    - {fileID: 2580746286257731316, guid: 898bffa22539ae147ac8089cfcfa149a, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 898bffa22539ae147ac8089cfcfa149a, type: 3}
 --- !u!1 &1614068998
 GameObject:
@@ -1472,25 +1436,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300006, guid: 36a1ce19217c6d6438e55bd76d1bf86e, type: 3}
---- !u!1 &2066691796 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2580746286257731272, guid: 898bffa22539ae147ac8089cfcfa149a,
-    type: 3}
-  m_PrefabInstance: {fileID: 1584820558}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &2066691808
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2066691796}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7404acaa0b671554689798d33c37ef3a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxEnergy: 10
 --- !u!1001 &2073285664
 PrefabInstance:
   m_ObjectHideFlags: 0
