@@ -12,7 +12,7 @@ public class LevelSceneControlScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(LevelManagerScript.players <= 1) {
+        if(LevelManagerScript.players <= 1 || Input.GetKeyDown(KeyCode.R)) {
             LevelManagerScript.Restart();
         }
     }
