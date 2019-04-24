@@ -7,7 +7,6 @@ public class HabilityScript : MonoBehaviour
     //Energy System
     [SerializeField] private float maxEnergy = 100;
     private float currentEnergy = 0;
-    private float incrementEnergyPerSecond = 1;
     private float incrementEnergyPerPush = 20;
     private float incrementEnergyPerItem = 50;
 
@@ -22,6 +21,13 @@ public class HabilityScript : MonoBehaviour
     public ModifierScript modToOthers;
     public ModifierScript modToMe;
 
+    //Script provisional
+    public CanvasPush canvasPush;
+
+    private void Start()
+    {
+        canvasPush.StartBarHability(this);
+    }
     // Update is called once per frame
     protected void Update()
     {
@@ -32,11 +38,7 @@ public class HabilityScript : MonoBehaviour
             }else {
                 Debug.Log("Habilidad Posible");
             }
-            while (currentTime >= 1) {
-                //No es lo mismo que multiplicar por deltaTime el incremento? Asi no hacemos el while.
-                currentTime--;
-                IncrementEnergy(incrementEnergyPerSecond);
-            }
+            IncrementEnergy(Time.deltaTime);
         } else {
             currentTime += Time.deltaTime;
             if (currentTime >= duration) DeactiveHability();
@@ -50,8 +52,11 @@ public class HabilityScript : MonoBehaviour
 
     private void IncrementEnergy(float _energy)
     {
-        currentEnergy += _energy;
-       // print(currentEnergy);
+        if(currentEnergy < maxEnergy)
+            currentEnergy += _energy;
+
+        if (currentEnergy > maxEnergy)
+            currentEnergy = maxEnergy;
     }
 
     public virtual void UseHability()
@@ -70,6 +75,16 @@ public class HabilityScript : MonoBehaviour
     public bool CanUseHability()
     {
         return !active && currentEnergy == maxEnergy;
+    }
+
+    public float GetMaxEnergy()
+    {
+        return maxEnergy;
+    }
+
+    public float GetCurrentEnergy()
+    {
+        return currentEnergy;
     }
 
 }
