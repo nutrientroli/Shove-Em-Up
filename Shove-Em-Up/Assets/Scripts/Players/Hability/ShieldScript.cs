@@ -14,7 +14,7 @@ public class ShieldScript : MonoBehaviour
             //Debug.Log("Hola  :: " + direction);
             Vector3 direction = (player.gameObject.transform.position - me.gameObject.transform.position).normalized;
             player.ChangeState(PlayerScript.State.MOVING);
-            player.GetComponent<KnockbackScript>().StartKnockback(20.0f, 20.0f, 20.0f, direction);
+            other.GetComponent<KnockbackScript>().StartKnockback(20.0f, 20.0f, 20.0f, direction);
         }
     }
 }
