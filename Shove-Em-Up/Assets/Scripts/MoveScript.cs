@@ -14,7 +14,7 @@ public class MoveScript : MonoBehaviour
     private float verticalSpeed = 0;
     private float multiplyCharge = 1;
     private float maxMultiplayCharge = 0.5f;
-    private bool isMovible = true;
+    public bool isMovible = true;
 
     private void Start()
     {
