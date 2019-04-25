@@ -5,17 +5,17 @@ using UnityEngine;
 public class ModifierScript:MonoBehaviour
 {
     protected float currentTime = 0;
-    protected float maxTime;
-    public bool isMovible;
-    public bool inverted;
-    public bool isPushable;
+    protected float maxTime = 3;
+    public bool isMovible = true;
+    public bool inverted = false;
+    public bool isPushable = true;
 
     protected virtual void Init()
     {
-        maxTime = 3;
-        isMovible = true;
-        inverted = false;
-        isPushable = true;
+        //maxTime = 3;
+        //isMovible = true;
+        //inverted = false;
+        //isPushable = true;
     }
 
 

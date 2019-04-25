@@ -79,7 +79,7 @@ public class PlayerScript : MonoBehaviour
             Charge();                 //PARA PROBAR, QUITAR EN UN FUTURO
         if (Input.GetKeyUp(PushCode))
             Push();
-        if (Input.GetKeyDown(KeyCode.K))
+       /* if (Input.GetKeyDown(KeyCode.K))
             Knockback();
         //*/
     }
