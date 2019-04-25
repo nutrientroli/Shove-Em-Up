@@ -34,15 +34,18 @@ public class KnockbackScript : MonoBehaviour
 
     public void StartKnockback(float _currentForce, float _forceBase, float _speed, Vector3 _direction)
     {
-        timeStopKnockback = (_currentForce / _forceBase) * timeRelativeWithForce;
-        force = (_currentForce / _forceBase) * _speed / 2;
+        if (player.Knockback())
+        {
+            timeStopKnockback = (_currentForce / _forceBase) * timeRelativeWithForce;
+            force = (_currentForce / _forceBase) * _speed / 2;
 
-        if (force > maxForce)
-            force = maxForce;
+            if (force > maxForce)
+                force = maxForce;
 
-        direction = _direction.normalized;
-        direction.y += timeStopKnockback * hight / 2;
-        canStop = false;
+            direction = _direction.normalized;
+            direction.y += timeStopKnockback * hight / 2;
+            canStop = false;
+        }
     }
 
     private void UpdateTimeKnockback(float _time)

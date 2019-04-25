@@ -7,6 +7,7 @@ public class ToxicityScript : MonoBehaviour
     private float currentTime = 0;
     private float maxTime = 10;
     private float timeToStart = 1;
+    public GameObject alert;
     private bool exit = false;
 
     // Update is called once per frame
@@ -15,6 +16,8 @@ public class ToxicityScript : MonoBehaviour
         currentTime += Time.deltaTime;
         if(currentTime > timeToStart && !exit)
         {
+            if (alert != null)
+                Destroy(alert);
             gameObject.transform.localScale += new Vector3(0.2f,0.1f,0.2f);
             if (gameObject.transform.localScale.x > 7)
                 gameObject.transform.localScale = new Vector3(7, gameObject.transform.localScale.y, 7);

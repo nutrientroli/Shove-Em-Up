@@ -18,6 +18,7 @@ public class PlayerScript : MonoBehaviour
     private List<ModifierScript> listMods;
 
     private bool inverted = false;
+    private bool isPushable = true;
 
     //Eliminar en un futuro
     public KeyCode Up = KeyCode.W;
@@ -52,6 +53,7 @@ public class PlayerScript : MonoBehaviour
     {
         //Modificadores Por habilidades
         CheckMods(Time.deltaTime);
+        canvasPlayer.StatusConfused(inverted);
 
         switch (currentState)
         {
@@ -125,13 +127,13 @@ public class PlayerScript : MonoBehaviour
 
     public void Push()
     {
-        if (pushScript.CanPush() && currentState == State.CHARGING)
+        if (pushScript.CanPush() && currentState == State.CHARGING && isPushable)
             ChangeState(State.PUSHING);
     }
 
     public void Charge()
     {
-        if (pushScript.CanPush() && currentState != State.CHARGING)
+        if (pushScript.CanPush() && currentState != State.CHARGING && isPushable)
         {
             pushScript.ChargePush(Time.deltaTime);
             ChangeState(State.CHARGING);
@@ -141,7 +143,6 @@ public class PlayerScript : MonoBehaviour
 
     public void Movement(Vector3 _vector)
     {
-        canvasPlayer.StatusConfused(inverted);
         if (inverted)
             moveScript.AddVectorToMove(-_vector);
         else
@@ -153,9 +154,14 @@ public class PlayerScript : MonoBehaviour
         return moveScript;
     }
 
-    public void Knockback()
+    public bool Knockback()
     {
-        ChangeState(State.KNOCKBACK);
+        if (isPushable)
+        {
+            ChangeState(State.KNOCKBACK);
+            return true;
+        }
+        else return false;
     }
 
     public void StopKnockback()
@@ -211,12 +217,15 @@ public class PlayerScript : MonoBehaviour
                 moveScript.isMovible = mod.isMovible;
             if(mod.inverted)
                 inverted = mod.inverted;
+            if (!mod.isPushable)
+                isPushable = mod.isPushable;
         }
     }
 
     private void ResetValues()
     {
         inverted = false;
+        isPushable = true;
         if(currentState == State.MOVING || currentState == State.CHARGING)
             moveScript.isMovible = true;
         //Para que cuando se acabe un modificador tenga los valores por defecto.
