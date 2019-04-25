@@ -17,6 +17,11 @@ public class DashHabilityScript : HabilityScript
         characterController = gameObject.GetComponent<CharacterController>();
         player = GetComponent<PlayerScript>();
         pushScript = GetComponent<PushScript>();
+    }
+
+    protected override void Start()
+    {
+        base.Start();
         canvasPush.SetDashHability();
     }
 

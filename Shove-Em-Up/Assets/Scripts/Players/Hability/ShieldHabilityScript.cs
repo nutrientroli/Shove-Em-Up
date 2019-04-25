@@ -14,8 +14,14 @@ public class ShieldHabilityScript : HabilityScript
         shield.GetComponent<ShieldScript>().me = gameObject.GetComponent<PlayerScript>();
         shield.transform.position = transform.position;
         shield.SetActive(false);
+    }
+
+    protected override void Start()
+    {
+        base.Start();
         canvasPush.SetShieldHability();
     }
+
     public override void UseHability()
     {
         base.UseHability();

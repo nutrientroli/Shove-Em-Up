@@ -26,7 +26,7 @@ public class HabilityScript : MonoBehaviour
     //Script provisional
     public CanvasPush canvasPush;
 
-    protected void Start()
+    virtual protected void Start()
     {
         canvasPush.StartBarHability(this);
     }
