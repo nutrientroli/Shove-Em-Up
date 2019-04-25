@@ -11,10 +11,12 @@ public class CanvasPush : MonoBehaviour
     public Image coolDownImage;
     public Image forceCharge;
     public Image TimeChargeHability;
+    public Image hability;
     public Text confused;
     private PushScript pushScript;
     private HabilityScript habilityScript;
     private Color firstColor;
+    public List<Sprite> sprites;
     // Start is called before the first frame update
     void Start()
     {
@@ -79,6 +81,24 @@ public class CanvasPush : MonoBehaviour
     public void StatusConfused(bool _confused)
     {
         confused.enabled = _confused;
+    }
+
+    public void SetDashHability()
+    {
+        if (sprites.Count >= 1)
+            hability.sprite = sprites[0];
+    }
+
+    public void SetToxicityHability()
+    {
+        if (sprites.Count >= 2)
+            hability.sprite = sprites[1];
+    }
+
+    public void SetShieldHability()
+    {
+        if (sprites.Count >= 3)
+            hability.sprite = sprites[2];
     }
 
 }

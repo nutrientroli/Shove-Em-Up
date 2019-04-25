@@ -6,6 +6,11 @@ public class ToxicityHabilityScript : HabilityScript
 {
     public GameObject prefabGas;
 
+    private void Awake()
+    {
+        canvasPush.SetToxicityHability();
+    }
+
     public override void UseHability()
     {
         base.UseHability();

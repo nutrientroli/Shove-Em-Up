@@ -5,6 +5,7 @@
         maxTime = 5;
         inverted = true;
         isMovible = true;
+        isPushable = true;
 
     }
 }

@@ -45,6 +45,7 @@ public class PlayerScript : MonoBehaviour
         }
         if (habilityScript == null)
             habilityScript = gameObject.AddComponent<ShieldHabilityScript>();
+
         currentState = State.MOVING;
         listMods = new List<ModifierScript>();
     }
