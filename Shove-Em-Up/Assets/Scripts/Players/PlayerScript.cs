@@ -138,6 +138,10 @@ public class PlayerScript : MonoBehaviour
             pushScript.ChargePush(Time.deltaTime);
             ChangeState(State.CHARGING);
         }
+        else if(!isPushable)
+        {
+            pushScript.RestartCharge();
+        }
         
     }
 

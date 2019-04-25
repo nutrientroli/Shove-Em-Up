@@ -153,25 +153,7 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: CONFUSED
---- !u!114 &782689185
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2580746286257731272}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 790379a817dc7754db64b4395589f1f6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxEnergy: 10
-  modToOthers: {fileID: 0}
-  modToMe: {fileID: 0}
-  canvasPush: {fileID: 3479358540098840546}
-  prefabGas: {fileID: 7151812866455021912, guid: 004b0a77dde5a4a4db99de477bd0ad4e,
-    type: 3}
---- !u!114 &2066691808
+--- !u!114 &9049514978460973965
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -180,15 +162,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 2580746286257731272}
   m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7404acaa0b671554689798d33c37ef3a, type: 3}
+  m_Script: {fileID: 11500000, guid: 24efba60b14fa334dbda861ec1b67247, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   maxEnergy: 10
   modToOthers: {fileID: 0}
   modToMe: {fileID: 0}
   canvasPush: {fileID: 3479358540098840546}
-  prefabShield: {fileID: 8325591016434020391, guid: 253b2866afda0774fa8adb45b3e9bc28,
-    type: 3}
 --- !u!1 &3479358540098840551
 GameObject:
   m_ObjectHideFlags: 0
@@ -565,12 +545,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 8037e41f0a2dc37459ece4def470bb7f, type: 2}
-    - target: {fileID: 8782431468899111504, guid: d8b71e1decf7a13478055c3d587393ed,
-        type: 3}
-      propertyPath: habilityScript
-      value: 
-      objectReference: {fileID: 782689185}
+      objectReference: {fileID: 2100000, guid: ae0a6dafc3efd45478b313cab9c26b28, type: 2}
     - target: {fileID: 8782431468899111504, guid: d8b71e1decf7a13478055c3d587393ed,
         type: 3}
       propertyPath: canvasPlayer
@@ -591,9 +566,17 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 3939046258170255839, guid: d8b71e1decf7a13478055c3d587393ed, type: 3}
-    - {fileID: 237416505253851146, guid: d8b71e1decf7a13478055c3d587393ed, type: 3}
+    - target: {fileID: 3939046258170255839, guid: d8b71e1decf7a13478055c3d587393ed,
+        type: 3}
+      propertyPath: canvasPush
+      value: 
+      objectReference: {fileID: 3479358540098840546}
+    - target: {fileID: 237416505253851146, guid: d8b71e1decf7a13478055c3d587393ed,
+        type: 3}
+      propertyPath: canvasPush
+      value: 
+      objectReference: {fileID: 3479358540098840546}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d8b71e1decf7a13478055c3d587393ed, type: 3}
 --- !u!1 &2580746286257731272 stripped
 GameObject:

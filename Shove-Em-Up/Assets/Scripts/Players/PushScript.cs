@@ -13,7 +13,7 @@ public class PushScript : MonoBehaviour
     private float forceBase = 1f;
     private float exponentBase = 4f;
     private float dividentBase = 7f;
-    private float currentForce = 1.4f;
+    private float currentForce = 0f;
     private float speedPush = 17;
 
     private CharacterController characterController;
@@ -95,6 +95,8 @@ public class PushScript : MonoBehaviour
 
     public void PushSomeone(GameObject _player, Vector3 _direction)
     {
+        if (currentForce == 0)
+            currentForce = forceBase * 1.5f;
         float totalSpeedPush = speedPush * currentForce;
         _player.GetComponent<KnockbackScript>().StartKnockback(currentForce, forceBase, totalSpeedPush, _direction);
     }
