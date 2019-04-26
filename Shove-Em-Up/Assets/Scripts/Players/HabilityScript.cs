@@ -5,7 +5,7 @@ using UnityEngine;
 public class HabilityScript : MonoBehaviour
 {
     //Energy System
-    [SerializeField] private float maxEnergy = 100;
+    public  float maxEnergy = 100;
     private float currentEnergy = 0;
     private float incrementEnergyPerPush = 5;
     private float incrementEnergyPerItem = 20;

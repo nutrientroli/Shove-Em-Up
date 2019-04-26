@@ -10,14 +10,6 @@ public class ModifierScript:MonoBehaviour
     public bool inverted = false;
     public bool isPushable = true;
 
-    protected virtual void Init()
-    {
-        //maxTime = 3;
-        //isMovible = true;
-        //inverted = false;
-        //isPushable = true;
-    }
-
 
     public bool CheckModifier(float _deltaTime)
     {

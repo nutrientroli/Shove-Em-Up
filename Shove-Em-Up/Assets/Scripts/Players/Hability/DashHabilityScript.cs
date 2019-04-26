@@ -6,7 +6,7 @@ public class DashHabilityScript : HabilityScript
 {
     private Vector3 forward;
     private float speed = 1.2f;
-    private float currentTime = 0;
+    private float dashTime = 0;
     private bool usada = false;
     private CharacterController characterController;
     private PlayerScript player;
@@ -43,14 +43,14 @@ public class DashHabilityScript : HabilityScript
         base.Update();
         if (usada)
         {
-            currentTime += Time.deltaTime;
-            if (currentTime <= 0.2f)
+            dashTime += Time.deltaTime;
+            if (dashTime <= 0.2f)
             {
                 CollisionFlags collisionFlags = characterController.Move(gameObject.transform.forward.normalized * speed);
             }
             else
             {
-                currentTime = 0;
+                dashTime = 0;
                 DesactiveHability();
                 usada = false;
             }
@@ -68,7 +68,7 @@ public class DashHabilityScript : HabilityScript
                 pushScript.PushSomeone(hit.gameObject, direction);
                 player.PushSomeoneOther();
                 player.ChangeState(PlayerScript.State.MOVING);
-                currentTime = 0;
+                dashTime = 0;
                 DesactiveHability();
                 usada = false;
             }
