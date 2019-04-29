@@ -12,7 +12,7 @@ public class PushScript : MonoBehaviour
 
     private float forceBase = 1f;
     private float exponentBase = 4f;
-    private float dividentBase = 7f;
+    private float dividentBase = 4f;
     private float currentForce = 0f;
     private float speedPush = 17;
 

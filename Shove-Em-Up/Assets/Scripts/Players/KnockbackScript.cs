@@ -10,7 +10,7 @@ public class KnockbackScript : MonoBehaviour
     private float timeStopKnockback = 0;
     private float timeRelativeWithForce = 0.3f;
     private float force = 0;
-    private float maxForce = 20f;
+    private float maxForce = 12f;
     private float hight = 4f;
     private Vector3 direction = Vector3.zero;
 

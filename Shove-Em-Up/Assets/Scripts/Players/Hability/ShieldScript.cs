@@ -10,11 +10,9 @@ public class ShieldScript : MonoBehaviour
     {
         PlayerScript player = other.gameObject.GetComponent<PlayerScript>();
         if (player != null && player != me) {
-            //Invertir Movimiento
-            //Debug.Log("Hola  :: " + direction);
             Vector3 direction = (player.gameObject.transform.position - me.gameObject.transform.position).normalized;
-            player.ChangeState(PlayerScript.State.MOVING);
-            other.GetComponent<KnockbackScript>().StartKnockback(20.0f, 20.0f, 20.0f, direction);
+            PushScript otherPush = other.gameObject.GetComponent<PushScript>();
+            otherPush.PushSomeone(other.gameObject, direction * 1.2f);
         }
     }
 }
