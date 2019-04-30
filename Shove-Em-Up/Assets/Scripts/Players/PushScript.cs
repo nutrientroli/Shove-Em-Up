@@ -96,13 +96,14 @@ public class PushScript : MonoBehaviour
     public void PushSomeone(GameObject _player, Vector3 _direction)
     {
         if (currentForce == 0)
-            currentForce = forceBase * 1.5f;
+            currentForce = forceBase * 3.5f;
         float totalSpeedPush = speedPush * currentForce;
+        print(currentForce);
         _player.GetComponent<KnockbackScript>().StartKnockback(currentForce, forceBase, totalSpeedPush, _direction);
     }
 
     
-    void OnControllerColliderHit(ControllerColliderHit hit)
+    /*void OnControllerColliderHit(ControllerColliderHit hit)
     {
         if (hit.gameObject.tag == "Player")
         {
@@ -116,7 +117,7 @@ public class PushScript : MonoBehaviour
                 player.ChangeState(PlayerScript.State.MOVING);
             }
         }
-    }
+    }*/
 
     private void OnTriggerEnter(Collider other)
     {

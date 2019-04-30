@@ -189,7 +189,7 @@ public class PlayerScript : MonoBehaviour
     public void PushSomeoneOther()
     {
         habilityScript.IncrementPerImpact();
-        print("veces entrado");
+
     }
 
     public void Hability()
