@@ -118,6 +118,22 @@ public class PushScript : MonoBehaviour
         }
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Player" && other.gameObject != gameObject)
+        {
+            if (player.currentState == PlayerScript.State.PUSHING)
+            {
+
+                //calcular el angulo con el que toca el player en un futuro
+                Vector3 direction = (other.gameObject.transform.position - gameObject.transform.position).normalized;
+                PushSomeone(other.gameObject, direction);
+                player.PushSomeoneOther();
+                player.ChangeState(PlayerScript.State.MOVING);
+            }
+        }
+    }
+
     public float GetMaxCoolDownPush()
     {
         return maxCoolDownPush;

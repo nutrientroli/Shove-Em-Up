@@ -13,6 +13,10 @@ public class PlayerScript : MonoBehaviour
     private KnockbackScript knockbackScript;
     public HabilityScript habilityScript;
     public CanvasPush canvasPlayer;
+    public ParticleSystem particlesDash;
+
+    private CapsuleCollider capsuleCollider;
+    private float radiusCapsule;
 
     //Gestion de modificadores
     private List<ModifierScript> listMods;
@@ -29,6 +33,8 @@ public class PlayerScript : MonoBehaviour
 
     private void Start()
     {
+        capsuleCollider = GetComponent<CapsuleCollider>();
+        radiusCapsule = capsuleCollider.radius;
         moveScript = GetComponent<MoveScript>();
         if (moveScript == null)
             moveScript = gameObject.AddComponent<MoveScript>();
@@ -96,6 +102,8 @@ public class PlayerScript : MonoBehaviour
                 moveScript.Charging(false);
                 break;
             case State.PUSHING:
+                capsuleCollider.radius = radiusCapsule;
+                particlesDash.Stop();
                 currentTime = 0;
                 break;
             case State.KNOCKBACK:
@@ -107,6 +115,7 @@ public class PlayerScript : MonoBehaviour
         switch(_newState)
         {
             case State.MOVING:
+                capsuleCollider.radius = radiusCapsule;
                 moveScript.CanMove(true);
                 moveScript.Charging(false);
                 break;
@@ -115,6 +124,9 @@ public class PlayerScript : MonoBehaviour
                 moveScript.Charging(true);
                 break;
             case State.PUSHING:
+                capsuleCollider.radius = radiusCapsule * 2f;
+                particlesDash.gameObject.transform.position = capsuleCollider.transform.position + transform.forward * capsuleCollider.radius;
+                particlesDash.Play();
                 pushScript.Push();
                 break;
             case State.KNOCKBACK:
@@ -197,6 +209,11 @@ public class PlayerScript : MonoBehaviour
     public void AddOtherMod(ModifierScript _mod)
     {
         listMods.Add(_mod);
+    }
+
+    public float GetRealCapsuleRadius()
+    {
+        return radiusCapsule;
     }
 
     private void CheckMods(float _deltaTime) {
