@@ -98,7 +98,7 @@ public class PushScript : MonoBehaviour
         if (currentForce == 0)
             currentForce = forceBase * 3.5f;
         float totalSpeedPush = speedPush * currentForce;
-        print(currentForce);
+
         _player.GetComponent<KnockbackScript>().StartKnockback(currentForce, forceBase, totalSpeedPush, _direction);
     }
 
@@ -125,12 +125,15 @@ public class PushScript : MonoBehaviour
         {
             if (player.currentState == PlayerScript.State.PUSHING)
             {
-
-                //calcular el angulo con el que toca el player en un futuro
                 Vector3 direction = (other.gameObject.transform.position - gameObject.transform.position).normalized;
-                PushSomeone(other.gameObject, direction);
-                player.PushSomeoneOther();
-                player.ChangeState(PlayerScript.State.MOVING);
+                float rotation = Quaternion.Angle(Quaternion.Euler(gameObject.transform.forward), Quaternion.Euler(direction));
+                if (rotation < 1.3f)
+                {
+                    //calcular el angulo con el que toca el player en un futuro
+                    PushSomeone(other.gameObject, direction);
+                    player.PushSomeoneOther();
+                    player.ChangeState(PlayerScript.State.MOVING);
+                }
             }
         }
     }

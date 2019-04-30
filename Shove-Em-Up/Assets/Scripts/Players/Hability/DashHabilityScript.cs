@@ -84,14 +84,18 @@ public class DashHabilityScript : HabilityScript
         {
             if (usada)
             {
-                //calcular el angulo con el que toca el player en un futuro
                 Vector3 direction = (other.gameObject.transform.position - gameObject.transform.position).normalized;
-                pushScript.PushSomeone(other.gameObject, direction * 10f);
-                player.PushSomeoneOther();
-                player.ChangeState(PlayerScript.State.MOVING);
-                dashTime = 0;
-                DesactiveHability();
-                usada = false;
+                float rotation = Quaternion.Angle(Quaternion.Euler(gameObject.transform.forward), Quaternion.Euler(direction));
+                if (rotation < 1.3f)
+                {
+                    //calcular el angulo con el que toca el player en un futuro
+                    pushScript.PushSomeone(other.gameObject, direction * 10f);
+                    player.PushSomeoneOther();
+                    player.ChangeState(PlayerScript.State.MOVING);
+                    dashTime = 0;
+                    DesactiveHability();
+                    usada = false;
+                }
             }
 
         }
