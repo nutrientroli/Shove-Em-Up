@@ -14,7 +14,7 @@ public class HabilityScript : MonoBehaviour
     private float currentTime = 0;
     private float coolDownIncrementImpact = 0;
     private float durationIncrementImpact = 0.5f;
-    private float duration = 5;
+    protected float duration = 5;
 
     //Utils
     protected bool active = false;

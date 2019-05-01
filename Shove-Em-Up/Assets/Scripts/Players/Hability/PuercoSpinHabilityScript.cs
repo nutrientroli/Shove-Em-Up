@@ -16,6 +16,7 @@ public class PuercoSpinHabilityScript : HabilityScript
     protected override void Start()
     {
         base.Start();
+        duration = 0.5f;
         characterController = GetComponent<CharacterController>();
         player = GetComponent<PlayerScript>();
         pushScript = GetComponent<PushScript>();

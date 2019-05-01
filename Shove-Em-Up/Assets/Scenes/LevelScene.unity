@@ -165,7 +165,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 187326579}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 220325e1f24b78c4d88d1e1dfb94430c, type: 3}
   m_Name: 
@@ -176,6 +176,25 @@ MonoBehaviour:
   canvasPush: {fileID: 1503764653}
   particlesSpins: {fileID: 1037876753945929827, guid: f89e0e0d87fe9d44aa7c72d1e57691b9,
     type: 3}
+--- !u!114 &187326594
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 187326579}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1fb48faa43f179e4eb17e2a847525bb5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxEnergy: 10
+  modToOthers: {fileID: 0}
+  modToMe: {fileID: 0}
+  canvasPush: {fileID: 1503764653}
+  bananaPrefab: {fileID: 2249302945462548048, guid: 9720b0f36b9acd1439a61d5bd54ae3ba,
+    type: 3}
+  bananas: []
 --- !u!1 &360294597 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100018, guid: 36a1ce19217c6d6438e55bd76d1bf86e,

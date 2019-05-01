@@ -173,12 +173,9 @@ public class PlayerScript : MonoBehaviour
 
     public bool Knockback()
     {
-        if (isPushable)
-        {
-            ChangeState(State.KNOCKBACK);
-            return true;
-        }
-        else return false;
+
+        ChangeState(State.KNOCKBACK);
+        return true;
     }
 
     public void StopKnockback()
@@ -198,7 +195,7 @@ public class PlayerScript : MonoBehaviour
             ChangeState(State.PUSHING);*/
 
         //Retocar!!
-        if (habilityScript.CanUseHability())
+        if (habilityScript.CanUseHability() && currentState == State.MOVING)
         {
             habilityScript.UseHability();
             if(habilityScript.modToMe != null)
