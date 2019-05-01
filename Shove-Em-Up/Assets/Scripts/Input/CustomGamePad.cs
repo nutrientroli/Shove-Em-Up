@@ -54,6 +54,7 @@ public class CustomGamePad
     public CustomGamePadConfiguration config;
 
     public bool GetButtonDown(string _button) {
+        //Debug.Log(index+1 +" Press Button " + Input.GetButtonDown(_button));
         return Input.GetButtonDown(_button);
     }
 
