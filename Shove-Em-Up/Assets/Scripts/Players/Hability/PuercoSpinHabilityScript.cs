@@ -10,6 +10,8 @@ public class PuercoSpinHabilityScript : HabilityScript
     private PlayerScript player;
     private PushScript pushScript;
     private SphereCollider sphereCollider;
+    public ParticleSystem particlesSpins;
+    private ParticleSystem ourParticles;
 
     protected override void Start()
     {
@@ -20,21 +22,34 @@ public class PuercoSpinHabilityScript : HabilityScript
         canvasPush.SetDashHability();
         sphereCollider = gameObject.AddComponent<SphereCollider>();
         sphereCollider.transform.position = gameObject.transform.position;
-        sphereCollider.radius = 3;
+        sphereCollider.radius = 4;
         sphereCollider.isTrigger = true;
         sphereCollider.enabled = false;
+        if (particlesSpins != null)
+        {
+            ourParticles = Instantiate(particlesSpins, gameObject.transform.position, particlesSpins.transform.rotation);
+            ourParticles.transform.parent = gameObject.transform;
+        }
     }
 
     public override void UseHability()
     {
         base.UseHability();
         modToMe = gameObject.AddComponent<PuercoSpinModifierScript>();
+        if (ourParticles != null)
+            ourParticles.Play();
+        sphereCollider.enabled = true;
         usada = true;
     }
 
     public override void DesactiveHability()
     {
         base.DesactiveHability();
+        sphereCollider.enabled = false;
+        if(ourParticles != null)
+            ourParticles.Stop();
+        
+
 
     }
 
@@ -65,10 +80,8 @@ public class PuercoSpinHabilityScript : HabilityScript
                 float rotation = Quaternion.Angle(Quaternion.Euler(gameObject.transform.forward), Quaternion.Euler(direction));
 
                 //calcular el angulo con el que toca el player en un futuro
-                pushScript.PushSomeone(other.gameObject, direction * (distance / sphereCollider.radius));
-                player.PushSomeoneOther();
-                usada = false;
-                
+                pushScript.PushSomeone(other.gameObject, direction, sphereCollider.radius / distance);
+                player.PushSomeoneOther();                
             }
 
         }

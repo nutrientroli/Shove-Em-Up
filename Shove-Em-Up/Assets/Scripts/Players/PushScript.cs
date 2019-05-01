@@ -93,13 +93,13 @@ public class PushScript : MonoBehaviour
     }
 
 
-    public void PushSomeone(GameObject _player, Vector3 _direction)
+    public void PushSomeone(GameObject _player, Vector3 _direction, float _force = 0)
     {
-        if (currentForce == 0)
-            currentForce = forceBase * 3.5f;
-        float totalSpeedPush = speedPush * currentForce;
+        if (_force == 0)
+            _force = forceBase * 3.5f;
+        float totalSpeedPush = speedPush * _force;
 
-        _player.GetComponent<KnockbackScript>().StartKnockback(currentForce, forceBase, totalSpeedPush, _direction);
+        _player.GetComponent<KnockbackScript>().StartKnockback(_force, forceBase, totalSpeedPush, _direction);
     }
 
     
@@ -130,7 +130,7 @@ public class PushScript : MonoBehaviour
                 if (rotation < 1.3f)
                 {
                     //calcular el angulo con el que toca el player en un futuro
-                    PushSomeone(other.gameObject, direction);
+                    PushSomeone(other.gameObject, direction, currentForce);
                     player.PushSomeoneOther();
                     player.ChangeState(PlayerScript.State.MOVING);
                 }
