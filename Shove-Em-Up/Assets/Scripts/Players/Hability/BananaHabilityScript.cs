@@ -16,12 +16,15 @@ public class BananaHabilityScript : HabilityScript
     public override void UseHability()
     {
         base.UseHability();
-        for (int i = 0; i < 1; i++)
+        for (int i = 0; i < 8; i++)
         {
             bananas.Add(Instantiate(bananaPrefab, transform.position, bananaPrefab.transform.rotation));
             bananas[bananas.Count - 1].GetComponent<BananaScript>().SetMyPlayer(gameObject);
-            bananas[bananas.Count - 1].GetComponent<BananaScript>().SetForward(gameObject.transform.forward);
-            bananas[bananas.Count - 1].GetComponent<BananaScript>().SetSpeed(20);
+            Vector3 forward;
+            float angle = 45;
+            forward = new Vector3(Mathf.Cos(Mathf.PI * 2 * (i - 1) / 360 * angle),0, Mathf.Sin(Mathf.PI * 2 * (i - 1) / 360 * angle));
+            bananas[bananas.Count - 1].GetComponent<BananaScript>().SetForward((forward).normalized);
+            bananas[bananas.Count - 1].GetComponent<BananaScript>().SetSpeed(15);
         }
     }
 
