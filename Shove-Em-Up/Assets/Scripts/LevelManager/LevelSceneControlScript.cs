@@ -4,16 +4,21 @@ using UnityEngine;
 
 public class LevelSceneControlScript : MonoBehaviour
 {
+    [SerializeField] private int maxPlayersWin = 1;
+
+
+    //Clase que gestionará las vidas de cada player.
+
     // Start is called before the first frame update
     void Start() {
-        LevelManagerScript.Init();
+        LevelManager.GetInstance().Start();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(LevelManagerScript.players <= 1 || Input.GetKeyDown(KeyCode.R)) {
-            LevelManagerScript.Restart();
+        if(LevelManager.GetInstance().players <= maxPlayersWin) {
+            LevelManager.GetInstance().FinnishGame();
         }
     }
 }

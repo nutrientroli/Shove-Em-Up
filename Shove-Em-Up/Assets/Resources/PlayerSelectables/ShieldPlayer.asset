@@ -10,8 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: de24322f62f166f4fb855640516139c2, type: 3}
-  m_Name: TestPlayer
+  m_Name: ShieldPlayer
   m_EditorClassIdentifier: 
-  geometry: {fileID: 100000, guid: 07ab2b4a264bd3543aca7079fbe7c64e, type: 3}
-  name: Test
-  description: "Su habilidad hace muchas cosas y m\xE1s!"
+  geometry: {fileID: 100008, guid: 64d3e85fe8cf3214c9ed9d3c73d86667, type: 3}
+  name: Shield Name
+  description: "Crea un escudo que te protege de los dem\xE1s empujones! Pero no podr\xE1s
+    moverte..."
+  type: 0

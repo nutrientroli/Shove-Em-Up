@@ -8,7 +8,7 @@ public class PlayerSelectionScript : MonoBehaviour
     [Header("Player Configuration")]
     [SerializeField] private int player;
     [SerializeField] private int defaultData;
-    [SerializeField] private List<PlayerData> listData = new List<PlayerData>();
+    [SerializeField] private List<PlayerSelectData> listData = new List<PlayerSelectData>();
     private bool activePlayer = false;
     private bool readyPlayer = false;
 
@@ -19,7 +19,8 @@ public class PlayerSelectionScript : MonoBehaviour
     [SerializeField] private TextMeshProUGUI descriptionSelect;
     [SerializeField] private GameObject mesh;
     private GameObject obj;
-    private Vector3 scaleMesh = new Vector3(70, 70, 70);
+    private Vector3 scaleMesh = new Vector3(15000, 15000, 15000);
+    private Vector3 rotationMesh = new Vector3(-90, 180, 0);
 
     private float currentTime = 0;
     private float waitTime = 0.5f;
@@ -51,6 +52,7 @@ public class PlayerSelectionScript : MonoBehaviour
         if (obj != null) Destroy(obj);
         obj = Instantiate(mesh, transform, false);
         obj.transform.localScale = scaleMesh;
+        obj.transform.localRotation = Quaternion.Euler(rotationMesh);
     }
 
     private void LeftSelection() {
