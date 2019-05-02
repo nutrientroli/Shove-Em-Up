@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using UnityEngine.SceneManagement;
-using UnityEngine.UI;
 
 public class PlayerSelectionScript : MonoBehaviour
 {
@@ -35,6 +31,7 @@ public class PlayerSelectionScript : MonoBehaviour
     public void Show() {
         nameSelect.text = listData[defaultData].name;
         descriptionSelect.text = listData[defaultData].description;
+        mesh = listData[defaultData].geometry;
         if (obj != null) Destroy(obj);
         obj = Instantiate(mesh, transform, false);
         obj.transform.localScale = scaleMesh;
@@ -49,8 +46,6 @@ public class PlayerSelectionScript : MonoBehaviour
                 currentTime = 0;
             }
         }
-        //Debug.Log("Player " + player + InputManager.GetInstance().CanCheckInputs(player));
-        //InputManager.GetInstance().ShowPlayersControllers();
     }
 
     private void CheckButtons() {
@@ -85,7 +80,7 @@ public class PlayerSelectionScript : MonoBehaviour
     private void Back() {
         if (readyPlayer) readyPlayer = false;
         else if (activePlayer) activePlayer = false;
-        else SceneManager.LoadScene(0);
+        else ScenesManager.ChangeScene(ScenesManager.SceneCode.MENU);
         UpdateStates();
     }
 

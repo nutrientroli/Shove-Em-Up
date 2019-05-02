@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de24322f62f166f4fb855640516139c2, type: 3}
   m_Name: TestPlayer2
   m_EditorClassIdentifier: 
-  geometry: {fileID: 100000, guid: 07ab2b4a264bd3543aca7079fbe7c64e, type: 3}
-  name: Test2
+  geometry: {fileID: 150059382541785946, guid: 507e49866bdb84d4ea8c0b0cb40a71bd, type: 3}
+  name: Test2FDGDFGDFGDFG
   description: "Sxxxxxxxxxxxxxxxxxxxxxu habilidad hace muchas cosas y m\xE1s!"

@@ -1,8 +1,6 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class CheckAllReadyScript : MonoBehaviour
 {
@@ -24,8 +22,7 @@ public class CheckAllReadyScript : MonoBehaviour
             UpdateCountDown(Time.deltaTime);
         }
     }
-    private void StopReady()
-    {
+    private void StopReady() {
         allready = false;
         counter.gameObject.SetActive(false);
     }
@@ -46,13 +43,12 @@ public class CheckAllReadyScript : MonoBehaviour
     private void UpdateCountDown(float _time) {
         currentTime -= _time;
         counter.text = textCounter + currentTime.ToString("0");
-        if (currentTime <= 0) SceneManager.LoadScene(2);
+        if (currentTime <= 0) ScenesManager.ChangeScene(ScenesManager.SceneCode.GAME);
     }
 
     private bool CheckReadyTest() {
         int check = 0;
-        for (int i = 0; i < listOfPlayers.Count; i++)
-        {
+        for (int i = 0; i < listOfPlayers.Count; i++) {
             if (listOfPlayers[i].GetReady()) check++;
         }
         return check >= playerToReady;

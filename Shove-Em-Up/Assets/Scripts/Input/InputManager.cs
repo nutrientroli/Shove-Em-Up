@@ -18,31 +18,30 @@ public class InputManager
     #endregion
 
     #region Methods
-    public void AddPlayer(int _player)
-    {
-        if (!CanCheckInputs(_player))
-        {
-            //Debug.Log("Hola " + _player);
+    public void AddPlayer(int _player) {
+        if (!CanCheckInputs(_player)) {
             string[] joys = Input.GetJoystickNames();
-
-            //Debug.Log("Hola " + _player + " " + joys.Length);
-            if (joys.Length > 0 && _player <= joys.Length && _player > 0)
-            {
-                CustomGamePad gamepad;
-                string name = joys[_player - 1];
-                if (IsXboxController(name)) gamepad = new XboxCustomGamePad(name, _player - 1, _player);
-                else gamepad = new Ps4CustomGamePad(name, _player - 1, _player);
-                listPlayersControllers.Add(_player - 1, gamepad);
-            }
-            else
-            {
+            if (joys.Length > 0 && _player <= joys.Length && _player > 0) {
+                //Segundo parametro "_player-1" porque no hacemos control de si hay problemas 
+                //con los mandos. En futuras versiones, se puede controlar facilmente. 
+                //Requeriria hacer gestion de player-index una hashtable por ejemplo...
+                AddController(_player, _player - 1, joys);
+            } else {
                 Debug.LogWarning("Player : " + _player + " - No tiene controllador disponible");
             }
         }
     }
 
-    public void AddController(int _player, CustomGamePad _controller) {
-        listPlayersControllers.Add(_player - 1, _controller);
+    public void AddGamepad(int _index, CustomGamePad _gamepad) {
+        listPlayersControllers.Add(_index, _gamepad);
+    }
+
+    public void AddController(int _player, int _index, string[] joys) {
+        CustomGamePad gamepad;
+        string name = joys[_index];
+        if (IsXboxController(name)) gamepad = new XboxCustomGamePad(name, _index, _player);
+        else gamepad = new Ps4CustomGamePad(name, _index, _player);
+        AddGamepad(_index, gamepad);
     }
 
     public CustomGamePad GetController(int _player) {
@@ -51,9 +50,7 @@ public class InputManager
 
     public void ShowPlayersControllers() {
         for(int i = 0; i<listPlayersControllers.Count; i++) {
-            //for (int j = 0; j < ((ArrayList)listPlayersControllers[i]).Count; j++) {
-                Debug.Log(i+1 + " :: " + listPlayersControllers[i]);
-            //}
+            Debug.Log(i+1 + " :: " + listPlayersControllers[i]);
         }
     }
 
@@ -61,11 +58,9 @@ public class InputManager
         return _name.Contains("Xbox");
     }
 
-    public bool CanCheckInputs(int _player)
-    {
+    public bool CanCheckInputs(int _player) {
         return listPlayersControllers.ContainsKey(_player -1);
     }
     #endregion
-
 
 }

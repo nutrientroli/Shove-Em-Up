@@ -27,10 +27,11 @@ public class JoystickTesterScript : MonoBehaviour
             i++;
         }
 
-        sticks += "\nXbox_LeftHorizontal_P1: " + Input.GetAxis("Xbox_LeftHorizontal_P1");
-        sticks += "\nXbox_LeftVertical_P1: " + Input.GetAxis("Xbox_LeftVertical_P1");
-        sticks += "\nXbox_button_0_P1: " + Input.GetButton("Xbox_button_0_P1");
-        sticks += "\nXbox_button_1_P1: " + Input.GetButton("Xbox_button_1_P1");
+        //sticks += "\nXbox_LeftHorizontal_P1: " + Input.GetAxis("Xbox_LeftHorizontal_P1");
+        //sticks += "\nXbox_LeftVertical_P1: " + Input.GetAxis("Xbox_LeftVertical_P1");
+        //sticks += "\nXbox_button_0_P1: " + Input.GetButton("Xbox_button_0_P1");
+        //sticks += "\nXbox_button_1_P1: " + Input.GetButton("Xbox_button_1_P1");
+
         joysticks.text = sticks;
     }
 

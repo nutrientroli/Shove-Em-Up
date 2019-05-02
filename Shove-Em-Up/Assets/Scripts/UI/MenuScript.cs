@@ -1,16 +1,11 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.SceneManagement;
+﻿using UnityEngine;
 
-public class MenuScript : MonoBehaviour
-{
+public class MenuScript : MonoBehaviour {
     public void OnButtonPlayPress() {
-        SceneManager.LoadScene(1);
+        ScenesManager.ChangeScene(ScenesManager.SceneCode.CHARACTER_SELECTOR);
     }
 
-    public void OnButtonQuitPress()
-    {
+    public void OnButtonQuitPress() {
         Debug.Log("Quit Game");
     }
 }
