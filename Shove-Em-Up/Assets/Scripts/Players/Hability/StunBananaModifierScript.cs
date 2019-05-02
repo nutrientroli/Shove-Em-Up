@@ -6,6 +6,7 @@
         isMovible = false;
         inverted = false;
         isPushable = false;
+        isKnockable = true;
     }
 }
 

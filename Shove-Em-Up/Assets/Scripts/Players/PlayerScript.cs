@@ -23,6 +23,7 @@ public class PlayerScript : MonoBehaviour
 
     private bool inverted = false;
     private bool isPushable = true;
+    private bool isKnockable = true;
 
     //Eliminar en un futuro
     public KeyCode Up = KeyCode.W;
@@ -173,9 +174,12 @@ public class PlayerScript : MonoBehaviour
 
     public bool Knockback()
     {
-
-        ChangeState(State.KNOCKBACK);
-        return true;
+        if (isKnockable)
+        {
+            ChangeState(State.KNOCKBACK);
+            return isKnockable;
+        }
+        else return isKnockable;
     }
 
     public void StopKnockback()
@@ -238,6 +242,8 @@ public class PlayerScript : MonoBehaviour
                 inverted = mod.inverted;
             if (!mod.isPushable)
                 isPushable = mod.isPushable;
+            if (!mod.isKnockable)
+                isKnockable = mod.isKnockable;
         }
     }
 
@@ -245,6 +251,7 @@ public class PlayerScript : MonoBehaviour
     {
         inverted = false;
         isPushable = true;
+        isKnockable = true;
         if(currentState == State.MOVING || currentState == State.CHARGING)
             moveScript.isMovible = true;
         //Para que cuando se acabe un modificador tenga los valores por defecto.

@@ -2,10 +2,11 @@
 {
     protected void Start()
     {
-        maxTime = 0.5f;
+        maxTime = 0.8f;
         isMovible = false;
         inverted = false;
         isPushable = false;
+        isKnockable = true;
     }
 }
 

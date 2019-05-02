@@ -22,9 +22,8 @@ public class BananaHabilityScript : HabilityScript
             bananas[bananas.Count - 1].GetComponent<BananaScript>().SetMyPlayer(gameObject);
             Vector3 forward;
             float angle = 45;
-            float myAngle = Quaternion.ToEulerAngles(gameObject.transform.rotation).y * 57.15f;
             forward = new Vector3(Mathf.Cos(Mathf.PI * 2 * (i - 1) / 360 * angle + Mathf.PI/2),0, Mathf.Sin(Mathf.PI * 2 * (i - 1) / 360 * angle + Mathf.PI / 2));
-            forward = Quaternion.AngleAxis(myAngle, Vector3.up) * forward;
+            forward = gameObject.transform.rotation* forward;
             bananas[bananas.Count - 1].GetComponent<BananaScript>().SetForward((forward).normalized);
             bananas[bananas.Count - 1].GetComponent<BananaScript>().SetSpeed(20);
         }

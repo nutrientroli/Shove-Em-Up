@@ -9,6 +9,7 @@ public class ModifierScript:MonoBehaviour
     public bool isMovible = true;
     public bool inverted = false;
     public bool isPushable = true;
+    public bool isKnockable = false;
 
 
     public bool CheckModifier(float _deltaTime)

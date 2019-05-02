@@ -11,11 +11,6 @@ public class BananaScript : MonoBehaviour
     public float timeToDisapear = 1.5f;
     private GameObject myPlayer;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
 
     // Update is called once per frame
     void Update()
@@ -53,10 +48,7 @@ public class BananaScript : MonoBehaviour
         if (other.gameObject.tag == "Player" && other.gameObject != myPlayer)
         {
             PlayerScript player = other.gameObject.GetComponent<PlayerScript>();
-            if(other.gameObject.GetComponent<StunBananaModifierScript>() == null)
-            {
-                player.AddOtherMod(player.gameObject.AddComponent<StunBananaModifierScript>());
-            }
+            player.AddOtherMod(player.gameObject.AddComponent<StunBananaModifierScript>());
             Destroy(gameObject);
         }
     }
