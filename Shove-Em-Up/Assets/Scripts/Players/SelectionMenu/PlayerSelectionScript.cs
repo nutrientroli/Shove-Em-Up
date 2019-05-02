@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerSelectionScript : MonoBehaviour
 {
+    #region Attributes
     [Header("Player Configuration")]
     [SerializeField] private int player;
     [SerializeField] private int defaultData;
@@ -22,22 +23,15 @@ public class PlayerSelectionScript : MonoBehaviour
 
     private float currentTime = 0;
     private float waitTime = 0.5f;
+    #endregion
 
+    #region MonoBehaviour Methods
     private void Start() {
         Show();
         InputManager.GetInstance().AddPlayer(player);
     }
 
-    public void Show() {
-        nameSelect.text = listData[defaultData].name;
-        descriptionSelect.text = listData[defaultData].description;
-        mesh = listData[defaultData].geometry;
-        if (obj != null) Destroy(obj);
-        obj = Instantiate(mesh, transform, false);
-        obj.transform.localScale = scaleMesh;
-    }
-
-    void Update() {
+    private void Update() {
         CheckButtons();
         currentTime += Time.deltaTime;
         if (activePlayer && !readyPlayer) {
@@ -47,22 +41,16 @@ public class PlayerSelectionScript : MonoBehaviour
             }
         }
     }
+    #endregion
 
-    private void CheckButtons() {
-        if (InputManager.GetInstance().CanCheckInputs(player)) {
-            if (InputManager.GetInstance().GetController(player).GetButtonDown(InputManager.GetInstance().GetController(player).config.button_A)) Confirm();
-            if (InputManager.GetInstance().GetController(player).GetButtonDown(InputManager.GetInstance().GetController(player).config.button_B)) Back();
-        }
-    }
-
-    private void CheckAxis() {
-        if (InputManager.GetInstance().CanCheckInputs(player)) {
-            float scroll = InputManager.GetInstance().GetController(player).GetAxis(InputManager.GetInstance().GetController(player).config.horizontalLeftAxis);
-            if(scroll != 0) {
-                if (scroll > 0) RightSelection();
-                else LeftSelection();
-            }
-        }
+    #region Selection Methods
+    public void Show() {
+        nameSelect.text = listData[defaultData].name;
+        descriptionSelect.text = listData[defaultData].description;
+        mesh = listData[defaultData].geometry;
+        if (obj != null) Destroy(obj);
+        obj = Instantiate(mesh, transform, false);
+        obj.transform.localScale = scaleMesh;
     }
 
     private void LeftSelection() {
@@ -112,4 +100,24 @@ public class PlayerSelectionScript : MonoBehaviour
     public bool GetReady() {
         return readyPlayer;
     }
+    #endregion
+
+    #region Input Methods
+    private void CheckButtons() {
+        if (InputManager.GetInstance().CanCheckInputs(player)) {
+            if (InputManager.GetInstance().GetController(player).GetButtonDown(InputManager.GetInstance().GetController(player).config.button_A)) Confirm();
+            if (InputManager.GetInstance().GetController(player).GetButtonDown(InputManager.GetInstance().GetController(player).config.button_B)) Back();
+        }
+    }
+
+    private void CheckAxis() {
+        if (InputManager.GetInstance().CanCheckInputs(player)) {
+            float scroll = InputManager.GetInstance().GetController(player).GetAxis(InputManager.GetInstance().GetController(player).config.horizontalLeftAxis);
+            if (scroll != 0) {
+                if (scroll > 0) RightSelection();
+                else LeftSelection();
+            }
+        }
+    }
+    #endregion
 }

@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class CheckAllReadyScript : MonoBehaviour
 {
-    [Header("Test Value")] [SerializeField] private int playerToReady;
+    #region Attributes
+    [Header("Test Value")] [SerializeField] private int playerToReady = 1;
 
     [Header("Configuration")]
     [SerializeField] private List<PlayerSelectionScript> listOfPlayers;
@@ -13,7 +14,9 @@ public class CheckAllReadyScript : MonoBehaviour
     [SerializeField] private string textCounter;
     [SerializeField] private float timeToStart = 3;
     private float currentTime;
+    #endregion
 
+    #region MonoBehaviour Methods
     private void Update() {
         if (!allready) {
             if (/*CheckReady() ||*/ CheckReadyTest()) AllReady();
@@ -22,10 +25,14 @@ public class CheckAllReadyScript : MonoBehaviour
             UpdateCountDown(Time.deltaTime);
         }
     }
+    #endregion
+
+    #region CheckAllReady Methods
     private void StopReady() {
         allready = false;
         counter.gameObject.SetActive(false);
     }
+
     private void AllReady() {
         allready = true;
         currentTime = timeToStart;
@@ -53,4 +60,5 @@ public class CheckAllReadyScript : MonoBehaviour
         }
         return check >= playerToReady;
     }
+    #endregion
 }
