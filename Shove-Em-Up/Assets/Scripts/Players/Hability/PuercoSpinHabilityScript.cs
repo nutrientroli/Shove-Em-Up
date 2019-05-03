@@ -5,7 +5,7 @@ using UnityEngine;
 public class PuercoSpinHabilityScript : HabilityScript
 {
     private float habilityTime = 0;
-    private bool usada = false;
+    public bool usada = false;
     private bool firstTime = true;
     private CharacterController characterController;
     private PlayerScript player;

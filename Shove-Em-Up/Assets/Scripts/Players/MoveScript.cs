@@ -109,8 +109,13 @@ public class MoveScript : MonoBehaviour
         toMove.y += verticalSpeed;
         toMove *= _time;
         gameObject.transform.forward = forward;
-        if (player.GetRalenticed() && player.GetKnockable() && player.currentState != PlayerScript.State.KNOCKBACK)
+        if (player.GetRalenticed() && player.currentState != PlayerScript.State.KNOCKBACK && player.GetKnockable())
             toMove *= 0.2f;
+        else if(player.GetRalenticed() && !player.GetKnockable())
+        {
+            toMove *= 0.4f;
+        }
+
         CollisionFlags collisionFlags = characterController.Move(toMove);
         ResetVectorToMove();
         if ((collisionFlags & CollisionFlags.Below) != 0)

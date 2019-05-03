@@ -12,7 +12,7 @@ public class PushScript : MonoBehaviour
 
     private float forceBase = 1f;
     private float exponentBase = 4f;
-    private float dividentBase = 4f;
+    private float dividentBase = 6f;
     private float currentForce = 0f;
     private float speedPush = 17;
 
@@ -58,7 +58,7 @@ public class PushScript : MonoBehaviour
         if (currentForce < forceBase)
             currentForce = forceBase;
         if (player.GetRalenticed())
-            currentForce *= 0.3f;
+            currentForce *= 0.5f;
         canPush = false;
         RestartCharge();
         canvasPush.StartBarCoolDown(this);

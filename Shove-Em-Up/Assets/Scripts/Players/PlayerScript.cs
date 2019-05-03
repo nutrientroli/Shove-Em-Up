@@ -213,6 +213,23 @@ public class PlayerScript : MonoBehaviour
         listMods.Add(_mod);
     }
 
+    public void RemoveMod(ModifierScript _mod)
+    {
+        List<ModifierScript> listRemoveMods = new List<ModifierScript>();
+        foreach (ModifierScript mod in listMods)
+        {
+            if (_mod == mod)
+            {
+                listRemoveMods.Add(mod);
+            }
+        }
+        foreach (ModifierScript mod in listRemoveMods)
+        {
+            listMods.Remove(mod);
+            Destroy(mod);
+        }
+    }
+
     public float GetRealCapsuleRadius()
     {
         return radiusCapsule;

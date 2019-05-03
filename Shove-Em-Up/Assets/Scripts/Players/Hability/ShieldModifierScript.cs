@@ -1,10 +1,10 @@
 ﻿public class ShieldModifierScript : ModifierScript {
     protected void Start() {
         maxTime = 5;
-        isMovible = false;
+        isMovible = true;
         inverted = false;
         isPushable = false;
         isKnockable = false;
-        honeyRalenticed = false;
+        honeyRalenticed = true;
     }
 }
