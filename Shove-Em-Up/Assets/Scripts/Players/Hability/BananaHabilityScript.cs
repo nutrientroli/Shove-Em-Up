@@ -21,7 +21,7 @@ public class BananaHabilityScript : HabilityScript
             bananas.Add(Instantiate(bananaPrefab, transform.position, bananaPrefab.transform.rotation));
             bananas[bananas.Count - 1].GetComponent<BananaScript>().SetMyPlayer(gameObject);
             Vector3 forward;
-            float angle = 45;
+            float angle = 15;
             forward = new Vector3(Mathf.Cos(Mathf.PI * 2 * (i - 1) / 360 * angle + Mathf.PI/2),0, Mathf.Sin(Mathf.PI * 2 * (i - 1) / 360 * angle + Mathf.PI / 2));
             forward = gameObject.transform.rotation* forward;
             bananas[bananas.Count - 1].GetComponent<BananaScript>().SetForward((forward).normalized);

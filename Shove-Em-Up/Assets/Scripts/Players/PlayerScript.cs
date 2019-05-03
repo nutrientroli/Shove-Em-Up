@@ -24,7 +24,7 @@ public class PlayerScript : MonoBehaviour
     private bool inverted = false;
     private bool isPushable = true;
     private bool isKnockable = true;
-    public bool ralenticed = false;
+    private bool ralenticed = false;
 
     //Eliminar en un futuro
     public KeyCode Up = KeyCode.W;
@@ -148,7 +148,7 @@ public class PlayerScript : MonoBehaviour
 
     public void Charge()
     {
-        if (pushScript.CanPush() && currentState != State.CHARGING && isPushable)
+        if (pushScript.CanPush() && currentState != State.CHARGING && isPushable && currentState != State.KNOCKBACK)
         {
             pushScript.ChargePush(Time.deltaTime);
             ChangeState(State.CHARGING);
@@ -263,4 +263,13 @@ public class PlayerScript : MonoBehaviour
         //Los suyo seria que hubiera una variable de modificacion por cada variable real.
     }
 
+    public bool GetKnockable()
+    {
+        return isKnockable;
+    }
+
+    public bool GetRalenticed()
+    {
+        return ralenticed;
+    }
 }

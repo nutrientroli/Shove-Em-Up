@@ -72,7 +72,8 @@ public class HoneyScript : MonoBehaviour
             if (other.gameObject.GetComponent<HoneyModifierScript>() == null)
             {
                 PlayerScript player = other.gameObject.GetComponent<PlayerScript>();
-                player.AddOtherMod(player.gameObject.AddComponent<HoneyModifierScript>());
+                if(player.GetKnockable())
+                    player.AddOtherMod(player.gameObject.AddComponent<HoneyModifierScript>());
             }
 
         }
