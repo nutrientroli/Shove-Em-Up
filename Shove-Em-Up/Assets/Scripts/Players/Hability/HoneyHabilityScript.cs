@@ -20,7 +20,7 @@ public class HoneyHabilityScript : HabilityScript
         honey = Instantiate(honeyPrefab, transform.position + transform.forward, honeyPrefab.transform.rotation);
         honey.GetComponent<HoneyScript>().SetMyPlayer(gameObject);
         honey.GetComponent<HoneyScript>().SetForward(gameObject.transform.forward);
-        honey.GetComponent<HoneyScript>().SetSpeed(5);
+        honey.GetComponent<HoneyScript>().SetSpeed(7);
         
     }
 

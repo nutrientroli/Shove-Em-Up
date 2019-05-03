@@ -24,7 +24,7 @@ public class HoneyScript : MonoBehaviour
         gameObject.transform.position += forward * Time.deltaTime * speed;
         currentTime += Time.deltaTime;
         gameObject.transform.Rotate(Vector3.right, rotationSpeed * Time.deltaTime);
-        gameObject.transform.localScale -= Time.deltaTime * Vector3.one / 1.25f;
+        gameObject.transform.localScale -= Time.deltaTime * Vector3.one * 1.2f;
 
         RaycastHit rayHit;
         if (Physics.Raycast(gameObject.transform.position, Vector3.down, out rayHit, collider.radius * 1.5f, layerMask))
@@ -39,7 +39,7 @@ public class HoneyScript : MonoBehaviour
         else
             gameObject.transform.position += forward * Time.deltaTime * speed;
 
-        if (gameObject.transform.localScale.x <= 0.5f)
+        if (gameObject.transform.localScale.x <= 0.75f)
             Destroy(gameObject);
     }
 
