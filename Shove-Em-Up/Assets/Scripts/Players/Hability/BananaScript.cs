@@ -48,9 +48,21 @@ public class BananaScript : MonoBehaviour
         if (other.gameObject.tag == "Player" && other.gameObject != myPlayer)
         {
             PlayerScript player = other.gameObject.GetComponent<PlayerScript>();
-            if(player.GetKnockable())
+            if (player.GetKnockable())
+            {
+                if (player.currentState != PlayerScript.State.KNOCKBACK)
+                    player.ChangeState(PlayerScript.State.MOVING);
                 player.AddOtherMod(player.gameObject.AddComponent<StunBananaModifierScript>());
+            }
             Destroy(gameObject);
         }
+       /* if(other.gameObject.GetComponent<BananaScript>() != null)
+        {
+            if (other.gameObject.GetComponent<BananaScript>().myPlayer != myPlayer)
+            {
+                Destroy(other.gameObject);
+                Destroy(gameObject);
+            }
+        }*/
     }
 }

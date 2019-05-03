@@ -57,6 +57,8 @@ public class PushScript : MonoBehaviour
         currentForce = (Mathf.Pow(timeChargePush / (maxTimeChargePush - maxTimeChargePush / dividentBase), exponentBase));
         if (currentForce < forceBase)
             currentForce = forceBase;
+        if (player.GetRalenticed())
+            currentForce *= 0.3f;
         canPush = false;
         RestartCharge();
         canvasPush.StartBarCoolDown(this);
