@@ -7,5 +7,6 @@
         isMovible = true;
         isPushable = true;
         isKnockable = true;
+        honeyRalenticed = false;
     }
 }

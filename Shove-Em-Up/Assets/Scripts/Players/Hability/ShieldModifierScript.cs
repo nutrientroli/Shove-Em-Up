@@ -5,5 +5,6 @@
         inverted = false;
         isPushable = false;
         isKnockable = false;
+        honeyRalenticed = false;
     }
 }

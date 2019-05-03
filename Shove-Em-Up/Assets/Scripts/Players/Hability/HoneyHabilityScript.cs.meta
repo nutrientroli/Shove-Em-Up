@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 18f9253f7f4c3b84a87aa2da6606d15e
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - modToOthers: {instanceID: 0}
+  - modToMe: {instanceID: 0}
+  - canvasPush: {instanceID: 0}
+  - honeyPrefab: {fileID: 5368674562452623096, guid: 3a28f25adcf97124bbde59e08aea6c8e,
+      type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

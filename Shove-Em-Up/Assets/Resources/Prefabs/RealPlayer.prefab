@@ -4925,6 +4925,43 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: CONFUSED
+--- !u!114 &187326581
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2580746286257731272}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 220325e1f24b78c4d88d1e1dfb94430c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxEnergy: 10
+  modToOthers: {fileID: 0}
+  modToMe: {fileID: 0}
+  canvasPush: {fileID: 3479358540098840546}
+  particlesSpins: {fileID: 1037876753945929827, guid: f89e0e0d87fe9d44aa7c72d1e57691b9,
+    type: 3}
+--- !u!114 &187326594
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2580746286257731272}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1fb48faa43f179e4eb17e2a847525bb5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxEnergy: 10
+  modToOthers: {fileID: 0}
+  modToMe: {fileID: 0}
+  canvasPush: {fileID: 3479358540098840546}
+  bananaPrefab: {fileID: 2249302945462548048, guid: 9720b0f36b9acd1439a61d5bd54ae3ba,
+    type: 3}
+  bananas: []
 --- !u!114 &9049514978460973965
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4941,6 +4978,24 @@ MonoBehaviour:
   modToOthers: {fileID: 0}
   modToMe: {fileID: 0}
   canvasPush: {fileID: 3479358540098840546}
+--- !u!114 &187326580
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2580746286257731272}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18f9253f7f4c3b84a87aa2da6606d15e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxEnergy: 10
+  modToOthers: {fileID: 0}
+  modToMe: {fileID: 0}
+  canvasPush: {fileID: 3479358540098840546}
+  honeyPrefab: {fileID: 5368674562452623096, guid: 3a28f25adcf97124bbde59e08aea6c8e,
+    type: 3}
 --- !u!1 &3479358540098840551
 GameObject:
   m_ObjectHideFlags: 0
@@ -5344,11 +5399,6 @@ PrefabInstance:
       propertyPath: canvasPush
       value: 
       objectReference: {fileID: 3479358540098840546}
-    - target: {fileID: 237416505253851146, guid: d8b71e1decf7a13478055c3d587393ed,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 237416505253851146, guid: d8b71e1decf7a13478055c3d587393ed,
         type: 3}
       propertyPath: canvasPush

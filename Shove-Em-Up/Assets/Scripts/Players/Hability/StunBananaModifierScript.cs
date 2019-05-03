@@ -2,11 +2,12 @@
 {
     protected void Start()
     {
-        maxTime = 2f;
+        maxTime = 1.5f;
         isMovible = false;
         inverted = false;
         isPushable = false;
         isKnockable = true;
+        honeyRalenticed = false;
     }
 }
 
