@@ -5,7 +5,7 @@ public static class ScenesManager {
     public enum SceneCode {
         MENU = 0,
         CHARACTER_SELECTOR = 1,
-        GAME = 2,
+        GAME = 4,
         ENDGAME = 3
     }
 

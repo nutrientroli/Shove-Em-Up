@@ -4,6 +4,12 @@ using UnityEngine;
 
 public class PlayersManager {
 
+    //TO DO
+    //Asignar color en base al número de jugador.
+    //Asignar prefab.
+
+
+
     #region Singleton Pattern
     private static PlayersManager instance;
     private PlayersManager() { }
@@ -13,29 +19,47 @@ public class PlayersManager {
     }
     #endregion
 
-    private List<PlayerData> listPlayers = new List<PlayerData>();
-    private Hashtable tableSelectPlayers = new Hashtable();
+    private Hashtable tableOfPlayerData = new Hashtable();
+    private Hashtable tableOfCharacters = new Hashtable();
+    private Hashtable tableOfSelectPlayers = new Hashtable();
 
-    public void Dead(int _player) {
-        //eliminar vida jugador
-        //si tiene 0 o menos que no respawnee y eliminamos un player del LevelManager.
+    #region Selectable Methods
+    public void AddPlayerSelect(int _player, PlayerSelectData _selection) {
+        if (!tableOfSelectPlayers.ContainsKey(_player)) tableOfSelectPlayers.Add(_player, _selection);
+        else tableOfSelectPlayers[_player] = _selection;
     }
+    #endregion
 
-    public void Respawn(int _player) {
-        //Teleport a posicion.
+    #region InGame Methods
+    public void SetListOfCharacters(List<GameObject> _listOfCharacters) {
+        foreach(GameObject _obj in _listOfCharacters) {
+            if (!tableOfCharacters.ContainsKey(_obj.name)) tableOfCharacters.Add(_obj.name, _obj);
+        }
     }
 
     public void Init() {
-        //recorrer lista de players asignando vidas, energy a 0, ...
-        //LevelManager -> Init
+        for (int i=1; i<=tableOfSelectPlayers.Count; i++) {
+            GameObject prefab = ((GameObject)tableOfCharacters[((PlayerSelectData)tableOfSelectPlayers[i]).name]);
+            GameObject obj = GameObject.Instantiate(prefab);
+            PlayerData objData = obj.GetComponentInChildren<PlayerData>();
+            //objData. meter valores iniciales.
+            objData.SetPlayer(i);
+            objData.GetComponent<Renderer>().material = ((PlayerSelectData)tableOfSelectPlayers[i]).material;
+            tableOfPlayerData.Add(i, objData);
+            Respawn(i);
+        }
     }
 
-    public void AddPlayer(PlayerData _player) {
-        if(!listPlayers.Contains(_player)) listPlayers.Add(_player);
+    public void Dead(int _player) {
+        PlayerData data = (PlayerData)tableOfPlayerData[_player];
+        data.SetLives(data.GetLives() - 1);
+        if (data.GetLives() > 0) Respawn(_player);
+        else LevelManager.GetInstance().players--;
     }
 
-    public void AddPlayerSelect(int _player, PlayerSelectData _selection) {
-        if (!tableSelectPlayers.ContainsKey(_player)) tableSelectPlayers.Add(_player, _selection);
-        else tableSelectPlayers[_player] = _selection;
+    public void Respawn(int _player) {
+        //Que se aleatoria la posición?
+        ((PlayerData)tableOfPlayerData[_player]).transform.parent.position = new Vector3(0, 50, 0);
     }
+    #endregion
 }

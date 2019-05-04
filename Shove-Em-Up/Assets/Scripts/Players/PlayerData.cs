@@ -16,10 +16,6 @@ public class PlayerData : MonoBehaviour {
     private int lives;
     private PlayerType typePlayer;
 
-    private void Start() {
-        PlayersManager.GetInstance().AddPlayer(this);
-    }
-
     public void SetPlayer(int _player) {
         player = _player;
     }

@@ -11,6 +11,7 @@ public class PlayerSelectionScript : MonoBehaviour
     [SerializeField] private List<PlayerSelectData> listData = new List<PlayerSelectData>();
     private bool activePlayer = false;
     private bool readyPlayer = false;
+    [SerializeField] private List<Material> listMaterial = new List<Material>();
 
     [Header("Panel Configuration")]
     [SerializeField] private GameObject readyPanel;
@@ -53,6 +54,8 @@ public class PlayerSelectionScript : MonoBehaviour
         obj = Instantiate(mesh, transform, false);
         obj.transform.localScale = scaleMesh;
         obj.transform.localRotation = Quaternion.Euler(rotationMesh);
+        obj.GetComponent<Renderer>().material = listMaterial[player - 1];
+        listData[defaultData].material = listMaterial[player - 1];
     }
 
     private void LeftSelection() {
@@ -82,6 +85,8 @@ public class PlayerSelectionScript : MonoBehaviour
 
     private void Ready() {
         readyPlayer = true;
+        //listData[defaultData].material = 
+        PlayersManager.GetInstance().AddPlayerSelect(player, listData[defaultData]);
     }
 
     private void ActivePlayer() {
