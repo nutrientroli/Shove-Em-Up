@@ -86,19 +86,19 @@ public class CanvasPush : MonoBehaviour
     public void SetDashHability()
     {
         if (sprites.Count >= 1)
-            hability.sprite = sprites[0];
+            if(hability != null) hability.sprite = sprites[0];
     }
 
     public void SetToxicityHability()
     {
         if (sprites.Count >= 2)
-            hability.sprite = sprites[1];
+            if (hability != null) hability.sprite = sprites[1];
     }
 
     public void SetShieldHability()
     {
         if (sprites.Count >= 3)
-            hability.sprite = sprites[2];
+            if (hability != null) hability.sprite = sprites[2];
     }
 
 }
