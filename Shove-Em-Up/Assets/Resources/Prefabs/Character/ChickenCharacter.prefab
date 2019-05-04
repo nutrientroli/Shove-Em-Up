@@ -5059,6 +5059,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3762885387357585470}
+  - component: {fileID: 2003036322598918353}
   - component: {fileID: 3762885387357585471}
   - component: {fileID: 3762885387357585464}
   - component: {fileID: 3762885387357585465}
@@ -5092,6 +5093,18 @@ Transform:
   m_Father: {fileID: 616914924458598977}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2003036322598918353
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3762885387357585467}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c40bc64639a2d543a9d44a284b98ab7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!33 &3762885387357585471
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -5257,7 +5270,7 @@ MonoBehaviour:
   maxEnergy: 10
   modToOthers: {fileID: 0}
   modToMe: {fileID: 0}
-  canvasPush: {fileID: 0}
+  canvasPush: {fileID: 2855837864622149905}
   prefabShield: {fileID: 8325591016434020391, guid: 253b2866afda0774fa8adb45b3e9bc28,
     type: 3}
   materials:

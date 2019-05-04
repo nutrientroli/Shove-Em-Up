@@ -12,6 +12,7 @@ public class InputPlayer : MonoBehaviour
 
     private void Start()
     {
+        player = GetComponent<PlayerData>().GetPlayer();
         InputManager.GetInstance().AddPlayer(player);
     }
 
