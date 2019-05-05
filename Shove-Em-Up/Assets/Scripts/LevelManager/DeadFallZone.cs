@@ -2,7 +2,9 @@
 
 public class DeadFallZone : MonoBehaviour {
     private void OnTriggerEnter(Collider other) {
-        if (other.tag.Equals("Player")) LevelManager.GetInstance().players--;
-        //Obtener Vidas del player
+        if (other.tag.Equals("Player")) {
+            PlayerData data = other.GetComponentInChildren<PlayerData>();
+            if (data != null) PlayersManager.GetInstance().Dead(data.GetPlayer());
+        }
     }
 }

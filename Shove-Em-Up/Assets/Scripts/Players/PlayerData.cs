@@ -13,7 +13,7 @@ public class PlayerData : MonoBehaviour {
     //Clase que se rellena con el Scriptable Object.
 
     private int player;
-    private int lives;
+    private int lives = 3;
     private PlayerType typePlayer;
 
     public void SetPlayer(int _player) {

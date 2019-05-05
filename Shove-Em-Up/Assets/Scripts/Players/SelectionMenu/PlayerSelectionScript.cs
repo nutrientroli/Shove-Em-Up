@@ -55,7 +55,6 @@ public class PlayerSelectionScript : MonoBehaviour
         obj.transform.localScale = scaleMesh;
         obj.transform.localRotation = Quaternion.Euler(rotationMesh);
         obj.GetComponent<Renderer>().material = listMaterial[player - 1];
-        listData[defaultData].material = listMaterial[player - 1];
     }
 
     private void LeftSelection() {
@@ -85,8 +84,8 @@ public class PlayerSelectionScript : MonoBehaviour
 
     private void Ready() {
         readyPlayer = true;
-        //listData[defaultData].material = 
-        PlayersManager.GetInstance().AddPlayerSelect(player, listData[defaultData]);
+        listData[defaultData].material = listMaterial[player - 1];
+        PlayersManager.GetInstance().AddPlayerSelect(player, PlayerSelectData.CreateInstance(listData[defaultData]));
     }
 
     private void ActivePlayer() {
