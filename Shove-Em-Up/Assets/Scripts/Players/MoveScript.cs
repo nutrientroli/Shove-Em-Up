@@ -11,7 +11,7 @@ public class MoveScript : MonoBehaviour
     private bool onGround = true;
     private float gravity = 2;
     private float speed = 7;
-    private float speedAir = 4;
+    private float speedAir = 20;
     private float verticalSpeed = 0;
     private float multiplyCharge = 1;
     private float maxMultiplayCharge = 0.5f;
@@ -95,10 +95,10 @@ public class MoveScript : MonoBehaviour
         {
             toMove += _toMove * speed * multiplyCharge;
           
-            if (new Vector3(toMove.x, 0, toMove.z) != Vector3.zero)
+            if (new Vector3(_toMove.x, 0, _toMove.z) != Vector3.zero)
             {
                
-                forward = new Vector3(toMove.x, 0, toMove.z).normalized;
+                forward = new Vector3(_toMove.x, 0, _toMove.z).normalized;
                
             }
         }else if(_air)
