@@ -17,7 +17,7 @@ public class MoveScript : MonoBehaviour
     private float maxMultiplayCharge = 0.5f;
     public bool isMovible = true;
 
-    private void Start()
+    private void Awake()
     {
         characterController = GetComponent<CharacterController>();
         if (characterController == null)
@@ -148,6 +148,20 @@ public class MoveScript : MonoBehaviour
         }
         else
             onGround = false;
+    }
+
+    public void ResetMove()
+    {
+        toMove = Vector3.zero;
+    }
+
+    public void RestartPosition()
+    {
+        characterController.enabled = false;
+        transform.parent.position = new Vector3(0, 50, 0);
+        transform.localPosition = Vector3.zero;
+        ResetMove();
+        characterController.enabled = true;
     }
 
 }
