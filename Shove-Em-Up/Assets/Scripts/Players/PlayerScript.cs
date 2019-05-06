@@ -160,12 +160,19 @@ public class PlayerScript : MonoBehaviour
         
     }
 
-    public void Movement(Vector3 _vector)
+    public void Movement(Vector3 _vector, bool _air = false)
     {
-        if (inverted)
-            moveScript.AddVectorToMove(-_vector);
+        if (!_air)
+        {
+            if (inverted)
+                moveScript.AddVectorToMove(-_vector);
+            else
+                moveScript.AddVectorToMove(_vector);
+        }
         else
-            moveScript.AddVectorToMove(_vector);
+        {
+            moveScript.AddVectorToMove(_vector, _air);
+        }
     }
 
     public MoveScript GetMovement()
