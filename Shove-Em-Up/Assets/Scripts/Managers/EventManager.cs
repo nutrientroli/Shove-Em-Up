@@ -4,15 +4,16 @@ using UnityEngine;
 
 public class EventManager : MonoBehaviour {
 
-    private List<EventPlatformScript> listEvents = new List<EventPlatformScript>();
+    [SerializeField] private List<EventPlatformScript> listEvents = new List<EventPlatformScript>();
+    [SerializeField] private int indexEvent = 0;
     EventPlatformScript eventPlatform;
 
     private void Awake() {
-        eventPlatform = gameObject.GetComponent<EventPlatformScript>();
-        if (eventPlatform == null) Debug.LogError("No hay evento!");
+
     }
 
     private void Start() {
+        eventPlatform = listEvents[0];
         eventPlatform.Init();
     }
 
