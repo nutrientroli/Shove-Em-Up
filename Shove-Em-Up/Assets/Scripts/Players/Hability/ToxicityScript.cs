@@ -19,12 +19,12 @@ public class ToxicityScript : MonoBehaviour
             if (alert != null)
                 Destroy(alert);
             gameObject.transform.localScale += new Vector3(0.2f,0.1f,0.2f);
-            if (gameObject.transform.localScale.x > 7)
+            if (gameObject.transform.localScale.x > 20)
                 gameObject.transform.localScale = new Vector3(7, gameObject.transform.localScale.y, 7);
             if (gameObject.transform.localScale.y > 3)
                 gameObject.transform.localScale = new Vector3(gameObject.transform.localScale.x, 3, gameObject.transform.localScale.z);
 
-            if (gameObject.transform.localScale == new Vector3(7, 3, 7))
+            if (gameObject.transform.localScale == new Vector3(20, 3, 20))
             {
                 exit = true;
                 gameObject.GetComponent<SphereCollider>().enabled = true;

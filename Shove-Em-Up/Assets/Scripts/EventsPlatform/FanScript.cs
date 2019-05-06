@@ -6,6 +6,12 @@ public class FanScript : MonoBehaviour
 {
     private List<PlayerScript> players = new List<PlayerScript>();
     private List<bool> enters = new List<bool>();
+    private float rotationSpeed = 20;
+    private float currentTime = 2.5f;
+    private float totalTime = 0;
+    private float maxTimeToOtherSide = 5;
+    private float side = 1;
+    public float timeToDisapear = 20;
 
     // Start is called before the first frame update
     void Start()
@@ -16,6 +22,15 @@ public class FanScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        currentTime += Time.deltaTime;
+        totalTime += Time.deltaTime;
+        gameObject.transform.Rotate(Vector3.up, rotationSpeed * Time.deltaTime * side);
+        if (currentTime >= maxTimeToOtherSide)
+        {
+            side *= -1;
+            currentTime = 0;
+        }
+
         for(int i = 0; i < players.Count; i++)
         {
             if(enters[i])
@@ -23,6 +38,9 @@ public class FanScript : MonoBehaviour
                 players[i].Movement(gameObject.transform.forward, true);
             }
         }
+        if (totalTime >= timeToDisapear)
+            Destroy(gameObject);
+
     }
 
     private void OnTriggerEnter(Collider other)

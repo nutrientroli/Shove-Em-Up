@@ -125,7 +125,7 @@ public class PushScript : MonoBehaviour
     {
         if (other.gameObject.tag == "Player" && other.gameObject != gameObject)
         {
-            if (player.currentState == PlayerScript.State.PUSHING)
+            if (player != null && player.currentState == PlayerScript.State.PUSHING)
             {
                 Vector3 direction = (other.gameObject.transform.position - gameObject.transform.position).normalized;
                 float rotation = Quaternion.Angle(Quaternion.Euler(gameObject.transform.forward), Quaternion.Euler(direction));

@@ -38,6 +38,7 @@ public class PlayersManager {
     }
 
     public void Init() {
+        tableOfPlayerData.Clear();
         for (int i=1; i<=tableOfSelectPlayers.Count; i++) {
             PlayerSelectData selectData = (PlayerSelectData)tableOfSelectPlayers[i];
             GameObject prefab = ((GameObject)tableOfCharacters[selectData.name]);
@@ -51,17 +52,18 @@ public class PlayersManager {
 
     public void Dead(int _player) {
         PlayerData data = (PlayerData)tableOfPlayerData[_player];
-        data.SetLives(data.GetLives() - 1);
-        if (data.GetLives() > 0) Respawn(_player);
-        else LevelManager.GetInstance().players--;
-        Debug.Log("Dead "+ _player + data.GetLives());
+        if (data != null) {
+            data.SetLives(data.GetLives() - 1);
+            if (data.GetLives() > 0) Respawn(_player);
+            else LevelManager.GetInstance().LessPlayer();
+        }
     }
 
     public void Respawn(int _player) {
-        Debug.Log("Respawn " + _player);
         PlayerData data = ((PlayerData)tableOfPlayerData[_player]);
-        data.transform.parent.position = new Vector3(0, 50, 0);
-        //data.transform.position = new Vector3(0, 0, 0);
+        MoveScript moveScript = null;
+        if(data != null) moveScript = data.gameObject.GetComponent<MoveScript>();
+        if (moveScript != null) moveScript.RestartPosition();
     }
 
     private PlayerData ResetValuesPlayerData(int _player, PlayerData _data, PlayerSelectData _select) {

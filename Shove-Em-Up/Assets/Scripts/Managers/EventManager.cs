@@ -1,6 +1,10 @@
-﻿using UnityEngine;
+﻿
+using System.Collections.Generic;
+using UnityEngine;
 
 public class EventManager : MonoBehaviour {
+
+    private List<EventPlatformScript> listEvents = new List<EventPlatformScript>();
     EventPlatformScript eventPlatform;
 
     private void Awake() {
