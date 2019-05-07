@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2042461b00af32438eb6e103c3fad6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxTimeSpawn: 10
+  maxTimeSpawn: 1
   item: {fileID: 150059383035218508}
   rotationSpeed: 4
 --- !u!65 &150059382541785943

@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Gas
   - Map
+  - ImpactMeteor
   layers:
   - Default
   - TransparentFX
