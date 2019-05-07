@@ -70,7 +70,7 @@ public class PlayersManager {
         _data.SetPlayer(_player);
         _data.SetLives(3);
         _data.SetTypePlayer(_select.type);
-        _data.GetComponent<Renderer>().material = _select.material;
+        _data.GetComponentInChildren<Renderer>().material = _select.material;
         return _data;
     }
     #endregion

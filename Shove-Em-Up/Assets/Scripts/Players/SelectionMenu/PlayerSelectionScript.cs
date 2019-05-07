@@ -20,7 +20,7 @@ public class PlayerSelectionScript : MonoBehaviour
     [SerializeField] private TextMeshProUGUI descriptionSelect;
     [SerializeField] private GameObject mesh;
     private GameObject obj;
-    private Vector3 scaleMesh = new Vector3(15000, 15000, 15000);
+    private Vector3 scaleMesh = new Vector3(150, 150, 150);
     private Vector3 rotationMesh = new Vector3(-90, 180, 0);
 
     private float currentTime = 0;
@@ -54,7 +54,7 @@ public class PlayerSelectionScript : MonoBehaviour
         obj = Instantiate(mesh, transform, false);
         obj.transform.localScale = scaleMesh;
         obj.transform.localRotation = Quaternion.Euler(rotationMesh);
-        obj.GetComponent<Renderer>().material = listMaterial[player - 1];
+        obj.GetComponentInChildren<Renderer>().material = listMaterial[player - 1];
     }
 
     private void LeftSelection() {
