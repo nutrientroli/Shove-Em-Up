@@ -852,15 +852,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 1765142482}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 38bac00922c5d2d4ea6d2ba736232924, type: 3}
+  m_Script: {fileID: 11500000, guid: 2f2d8fb2e3d1b2e41abd720f1c1c93e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   type: 0
   execute: 0
-  prefabSmoke: {fileID: 7151812866455021912, guid: 004b0a77dde5a4a4db99de477bd0ad4e,
+  prefabItem: {fileID: 150059382541785946, guid: 507e49866bdb84d4ea8c0b0cb40a71bd,
     type: 3}
   waitTime: 2
-  timeToAction: 10
+  timeToAction: 5
   timeVariaton: 1
 --- !u!114 &1765142486
 MonoBehaviour:
