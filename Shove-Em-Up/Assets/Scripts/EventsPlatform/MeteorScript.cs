@@ -21,7 +21,6 @@ public class MeteorScript : MonoBehaviour
         collider.enabled = false;
         collider.radius = 2;
         posInitial = transform.position;
-        Active();
     }
 
     // Update is called once per frame
@@ -61,7 +60,6 @@ public class MeteorScript : MonoBehaviour
         gameObject.GetComponent<MeshRenderer>().enabled = true;
         posImpact.GetComponent<MeshRenderer>().enabled = true;
         currentTime = 0;
-        gameObject.SetActive(false);
     }
 
     public void Active(float _delay = 2)
@@ -74,7 +72,7 @@ public class MeteorScript : MonoBehaviour
 
         if (Physics.Raycast(ray, out rayHit, 50, layerMask.value))
         {
-            posImpact.transform.position = rayHit.point + new Vector3(0, 0.05f, 0);
+            posImpact.transform.position = rayHit.point + new Vector3(0, 0.1f, 0);
             posImpact.transform.parent = null;
         }
         activate = true;

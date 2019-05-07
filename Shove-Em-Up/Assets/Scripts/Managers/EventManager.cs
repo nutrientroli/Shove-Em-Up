@@ -13,7 +13,7 @@ public class EventManager : MonoBehaviour {
     }
 
     private void Start() {
-        eventPlatform = listEvents[0];
+        eventPlatform = listEvents[indexEvent];
         eventPlatform.Init();
     }
 
