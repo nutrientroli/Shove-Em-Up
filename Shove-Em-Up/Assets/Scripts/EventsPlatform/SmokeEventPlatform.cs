@@ -7,8 +7,9 @@ public class SmokeEventPlatform : EventPlatformScript
 
     #region Variables
     [Header("Objects Configuration")] //Crear Tipo de objeto con el GameObject y tier?
-    
-    
+    [SerializeField] private GameObject prefabSmoke;
+    private GameObject smoke;
+
 
     [Header("Event Configuration")]
     [SerializeField] private float waitTime = 2.0f;
@@ -23,22 +24,26 @@ public class SmokeEventPlatform : EventPlatformScript
     {
         base.Init();
         type = TypeEvent.TIME;
-        listEvent.Add(Wait);
-        listEvent.Add(Action);
-        
+        listEvent.Add(StartSmoke);
+        listEvent.Add(EndSmoke);
     }
     #endregion
 
     #region EventFunctions
-    private float FeedBack()
+    private float StartSmoke()
     {
-        //randomPiece.GetComponent<Renderer>().material.color = Color.red;
+        Debug.Log("Start");
+        smoke = Instantiate(prefabSmoke);
+        smoke.transform.position = Vector3.zero;
+        
         return timeToAction * timeVariaton;
     }
 
-    private float Action()
+    private float EndSmoke()
     {
-        //Destroy(randomPiece);
+        Debug.Log("End");
+        ToxicityScript script = smoke.GetComponent<ToxicityScript>();
+        if(script != null) script.exit = true;
         return timeToAction * timeVariaton;
     }
 

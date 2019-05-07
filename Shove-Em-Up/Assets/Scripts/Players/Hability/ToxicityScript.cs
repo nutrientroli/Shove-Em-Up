@@ -4,45 +4,26 @@ using UnityEngine;
 
 public class ToxicityScript : MonoBehaviour
 {
-    private float currentTime = 0;
-    private float maxTime = 10;
-    private float timeToStart = 1;
-    public GameObject alert;
-    private bool exit = false;
+    public bool exit = false;
+    private Vector3 scaleVector = new Vector3(0.2f, 0, 0.2f);
+    private float maxY = 3;
+    private float maxX = 30;
 
-    // Update is called once per frame
-    void Update()
-    {
-        currentTime += Time.deltaTime;
-        if(currentTime > timeToStart && !exit)
-        {
-            if (alert != null)
-                Destroy(alert);
-            gameObject.transform.localScale += new Vector3(0.2f,0.1f,0.2f);
-            if (gameObject.transform.localScale.x > 20)
-                gameObject.transform.localScale = new Vector3(7, gameObject.transform.localScale.y, 7);
-            if (gameObject.transform.localScale.y > 3)
-                gameObject.transform.localScale = new Vector3(gameObject.transform.localScale.x, 3, gameObject.transform.localScale.z);
-
-            if (gameObject.transform.localScale == new Vector3(20, 3, 20))
-            {
-                exit = true;
-                gameObject.GetComponent<SphereCollider>().enabled = true;
-            }
+    void Update() {
+        if(!exit) {
+            if (gameObject.transform.localScale.x < maxX || gameObject.transform.localScale.y < maxY) gameObject.transform.localScale += scaleVector;
+            if (gameObject.transform.localScale.x > maxX) gameObject.transform.localScale = new Vector3(maxX, gameObject.transform.localScale.y, maxX);
+            if (gameObject.transform.localScale.y > maxY) gameObject.transform.localScale = new Vector3(gameObject.transform.localScale.x, maxY, gameObject.transform.localScale.z);
         }
 
-        if(currentTime >= maxTime)
-        {
-            gameObject.transform.localScale -= new Vector3(0.2f, 0.1f, 0.2f);
-            if (gameObject.transform.localScale.x <= 0)
-                Destroy(gameObject);
+        if(exit) {
+            gameObject.transform.localScale -= scaleVector;
+            if (gameObject.transform.localScale.x <= 5) Destroy(gameObject);
         }
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.tag == "Player")
-        {
+    private void OnTriggerEnter(Collider other) {
+        if (other.gameObject.tag == "Player") {
             PlayerScript player = other.gameObject.GetComponent<PlayerScript>();
             if(player != null && other.gameObject.GetComponent<ToxicityModifierScript>() == null)
                 player.AddOtherMod(player.gameObject.AddComponent<ToxicityModifierScript>());
