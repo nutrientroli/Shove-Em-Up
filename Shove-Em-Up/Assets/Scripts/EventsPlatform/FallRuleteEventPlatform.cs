@@ -8,7 +8,7 @@ public class FallRuleteEventPlatform : EventPlatformScript
     [SerializeField] private List<PieceRuleteScript> pieces = new List<PieceRuleteScript>();
     private int randomNum = 0;
     [Header("Event Configuration")]
-    [SerializeField] private float waitTime = 0.3f;
+    [SerializeField] private float waitTime = 1.5f;
     [SerializeField] private float timeToAction = 2f;
     [Header("Extra Configuration")]
     public float timeVariaton = 1.5f;
@@ -25,6 +25,7 @@ public class FallRuleteEventPlatform : EventPlatformScript
         pool = pieces.Count;
         type = TypeEvent.TIME;
 
+        listEvent.Add(Wait);
         listEvent.Add(Action);
         listEvent.Add(Restart);
 

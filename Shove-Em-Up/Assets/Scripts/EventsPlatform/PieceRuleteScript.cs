@@ -6,7 +6,7 @@ public class PieceRuleteScript : MonoBehaviour
 {
     private bool active = false;
     private bool revert = false;
-    private float speed = 70;
+    private float speed = 60;
     private Vector3 startPos;
     // Start is called before the first frame update
     void Start()
@@ -40,7 +40,7 @@ public class PieceRuleteScript : MonoBehaviour
 
     public void Reverted()
     {
-        gameObject.transform.position = new Vector3(gameObject.transform.position.x, 50, gameObject.transform.position.z);
+        //gameObject.transform.position = new Vector3(gameObject.transform.position.x, 50, gameObject.transform.position.z);
         active = false;
         revert = true;
     }

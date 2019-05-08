@@ -9,10 +9,10 @@ public class MeteoritesEventPlatform : EventPlatformScript
     [SerializeField] private GameObject feedback;
     private List<bool> poolMeteors = new List<bool>();
     [Header("Event Configuration")]
-    [SerializeField] private float waitTime = 0.3f;
-    [SerializeField] private float timeToAction = 0f;
+    [SerializeField] private float waitTime = 0.5f;
+    [SerializeField] private float timeToAction = 0.1f;
     [Header("Extra Configuration")]
-    public float timeVariaton = 0f;
+    public float timeVariaton = 0.2f;
     [SerializeField] private int pool = 5;
     #endregion
 
@@ -39,7 +39,10 @@ public class MeteoritesEventPlatform : EventPlatformScript
 
         listEvent.Add(FeedBack);
         for (int i = 0; i < pool; i++) {
+            listEvent.Add(Wait);
             listEvent.Add(Action);
+            listEvent.Add(Wait);
+
         }
         listEvent.Add(Restart);
     }
@@ -69,16 +72,13 @@ public class MeteoritesEventPlatform : EventPlatformScript
     }
 
     private float Action() {
-        int num = 0;
         for(int i = 0; i < meteors.Count; i++)
         {
             if(!poolMeteors[i])
             {
-                num++;
                 meteors[i].Active(2f);
                 poolMeteors[i] = true;
-                if (num >= 2)
-                    break;
+                break;
             }
         }
 
