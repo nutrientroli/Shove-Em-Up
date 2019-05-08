@@ -44,7 +44,8 @@ public class MeteoritesEventPlatform : EventPlatformScript
             listEvent.Add(Wait);
 
         }
-        listEvent.Add(Restart);
+        //listEvent.Add(Restart);
+        listEvent.Add(End);
     }
     #endregion
 
@@ -91,6 +92,11 @@ public class MeteoritesEventPlatform : EventPlatformScript
 
     private float Restart() {
         return -2;
+    }
+
+    private float End()
+    {
+        return -1;
     }
     #endregion
 }

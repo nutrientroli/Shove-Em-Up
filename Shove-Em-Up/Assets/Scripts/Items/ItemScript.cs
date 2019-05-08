@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ItemScript : MonoBehaviour
 {
-    private bool active = false;
+    private bool active = true;
     private float currentTime = 0;
     [SerializeField] private float maxTimeSpawn = 20;
     public GameObject item;
@@ -12,8 +12,7 @@ public class ItemScript : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag.Equals("Player"))
-        {
+        if (other.tag.Equals("Player")) {
             active = false;
             SetActive();
             currentTime = 0;
@@ -40,16 +39,16 @@ public class ItemScript : MonoBehaviour
         {
             item.transform.Rotate(Vector3.up, rotationSpeed);
         }
-        else
-        {
-            currentTime += Time.deltaTime;
-            if (currentTime >= maxTimeSpawn)
-            {
-                currentTime = 0;
-                active = true;
-                SetActive();
-            }
-        }
+        //else
+        //{
+        //    currentTime += Time.deltaTime;
+        //    if (currentTime >= maxTimeSpawn)
+        //    {
+        //        currentTime = 0;
+        //        active = true;
+        //        SetActive();
+        //    }
+        //}
 
         item.transform.Rotate(Vector3.up, rotationSpeed);
     }

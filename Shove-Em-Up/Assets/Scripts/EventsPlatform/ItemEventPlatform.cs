@@ -13,8 +13,8 @@ public class ItemEventPlatform : EventPlatformScript
 
 
     [Header("Event Configuration")]
-    [SerializeField] private float waitTime = 2.0f;
-    [SerializeField] private float timeToAction = 5.0f;
+    [SerializeField] private float waitTime = 1.0f;
+    [SerializeField] private float timeToAction = 2.0f;
 
     [Header("Extra Configuration")]
     public float timeVariaton = 1.0f;
@@ -30,6 +30,7 @@ public class ItemEventPlatform : EventPlatformScript
             if(i%2==0) listEvent.Add(SpawnItem);
             else listEvent.Add(Wait);
         }
+        listEvent.Add(End);
     }
     #endregion
 
@@ -50,6 +51,10 @@ public class ItemEventPlatform : EventPlatformScript
     private float Wait()
     {
         return waitTime;
+    }
+    private float End()
+    {
+        return -1;
     }
     #endregion
 
@@ -74,11 +79,17 @@ public class ItemEventPlatform : EventPlatformScript
         Vector3 report = Vector3.zero;
         bool check = false;
         while (!check) {
-            int random = Random.Range(0, 8);
-            if (!listRandomPositionsOcuped[random]) {
-                check = true;
-                report = listRandomPositions[random];
-                listRandomPositionsOcuped[random] = true;
+            int iCheck = 1;
+            foreach (bool pos in listRandomPositionsOcuped) {
+                if (pos) iCheck++;
+            }
+            if (iCheck < listRandomPositionsOcuped.Count) {
+                int random = Random.Range(0, 8);
+                if (!listRandomPositionsOcuped[random]) {
+                    check = true;
+                    report = listRandomPositions[random];
+                    listRandomPositionsOcuped[random] = true;
+                }
             }
         }
         return report;

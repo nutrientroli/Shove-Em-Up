@@ -26,6 +26,7 @@ public class FanEventPlatform : EventPlatformScript
         type = TypeEvent.TIME;
         listEvent.Add(FeedBack);
         listEvent.Add(Action);
+        listEvent.Add(End);
     }
     #endregion
 
@@ -39,6 +40,10 @@ public class FanEventPlatform : EventPlatformScript
     {
         fan = Instantiate(ventiladorPrefab, posToInstiantiate);
         return timeToAction * timeVariaton;
+    }
+    private float End()
+    {
+        return -1;
     }
     #endregion
 

@@ -8,6 +8,7 @@ public class EventPlatformScript : MonoBehaviour
     [Header("Parent Class Configuration")]
     public TypeEvent type;
     public bool execute = false;
+    public bool active = false;
     public delegate float MethodEvent();
     public List<MethodEvent> listEvent = new List<MethodEvent>();
 
@@ -18,6 +19,7 @@ public class EventPlatformScript : MonoBehaviour
     public virtual void Init() {
         List<MethodEvent> listEvent = new List<MethodEvent>();
         execute = true;
+        active = true;
     }
 
     public void Finnish() {

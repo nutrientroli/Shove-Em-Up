@@ -26,6 +26,7 @@ public class SmokeEventPlatform : EventPlatformScript
         type = TypeEvent.TIME;
         listEvent.Add(StartSmoke);
         listEvent.Add(EndSmoke);
+        listEvent.Add(End);
     }
     #endregion
 
@@ -51,9 +52,13 @@ public class SmokeEventPlatform : EventPlatformScript
     {
         return waitTime;
     }
+    private float End()
+    {
+        return -1;
+    }
     #endregion
 
     #region CustomFunctions
-    
+
     #endregion
 }

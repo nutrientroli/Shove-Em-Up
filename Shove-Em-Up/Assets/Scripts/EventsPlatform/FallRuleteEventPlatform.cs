@@ -28,7 +28,15 @@ public class FallRuleteEventPlatform : EventPlatformScript
         listEvent.Add(Wait);
         listEvent.Add(Action);
         listEvent.Add(Restart);
+        listEvent.Add(Wait);
+        listEvent.Add(Action);
+        listEvent.Add(Restart);
+        listEvent.Add(Wait);
+        listEvent.Add(Action);
+        listEvent.Add(Restart);
 
+
+        listEvent.Add(End);
     }
     #endregion
 
@@ -60,6 +68,9 @@ public class FallRuleteEventPlatform : EventPlatformScript
         }
 
         return -2;
+    }
+    private float End() {
+        return -1;
     }
     #endregion
 }

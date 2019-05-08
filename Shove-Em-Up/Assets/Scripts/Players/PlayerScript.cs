@@ -33,7 +33,7 @@ public class PlayerScript : MonoBehaviour
     public KeyCode Left = KeyCode.A;
     public KeyCode PushCode = KeyCode.P;
 
-    private void Start()
+    private void Awake()
     {
         capsuleCollider = GetComponent<CapsuleCollider>();
         radiusCapsule = capsuleCollider.radius;
