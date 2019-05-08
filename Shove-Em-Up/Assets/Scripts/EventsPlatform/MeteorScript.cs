@@ -75,7 +75,7 @@ public class MeteorScript : MonoBehaviour
 
         if (Physics.Raycast(ray, out rayHit, 50, layerMask.value))
         {
-            posImpact.transform.position = rayHit.point + new Vector3(0, 0.1f, 0);
+            posImpact.transform.position = rayHit.point + new Vector3(0, 0.06f, 0);
             posImpact.transform.parent = null;
         }
         activate = true;
