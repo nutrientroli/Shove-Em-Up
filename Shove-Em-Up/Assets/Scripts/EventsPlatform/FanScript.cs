@@ -11,7 +11,8 @@ public class FanScript : MonoBehaviour
     private float totalTime = 0;
     private float maxTimeToOtherSide = 5;
     private float side = 1;
-    public float timeToDisapear = 20;
+    public float timeToDisapear = 12.5f;
+    public ParticleSystem particles;
 
     // Start is called before the first frame update
     void Start()
@@ -38,6 +39,13 @@ public class FanScript : MonoBehaviour
                 players[i].Movement(gameObject.transform.forward, true);
             }
         }
+        if(totalTime >= timeToDisapear -1.5f)
+        {
+            gameObject.GetComponent<BoxCollider>().enabled = false;
+            gameObject.GetComponent<Renderer>().enabled = false;
+            particles.Stop();
+        }
+
         if (totalTime >= timeToDisapear)
             Destroy(gameObject);
 

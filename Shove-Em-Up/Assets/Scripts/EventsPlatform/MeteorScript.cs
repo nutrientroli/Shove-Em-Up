@@ -7,6 +7,7 @@ public class MeteorScript : MonoBehaviour
     public GameObject posImpact;
     public float speed = 30;
     public LayerMask layerMask;
+    public ParticleSystem particles;
     private bool activate = false;
     private bool explosion = false;
     private float delay = 0;
@@ -39,10 +40,12 @@ public class MeteorScript : MonoBehaviour
                     currentTime = 0;
                     gameObject.GetComponent<MeshRenderer>().enabled = false;
                     posImpact.GetComponent<MeshRenderer>().enabled = false;
+                    if (particles != null)
+                        particles.Play();
                 }
 
             }
-            if(explosion && currentTime >= 0.5f)
+            if(explosion && currentTime >= 0.3f)
             {
                 Restart();
             }
