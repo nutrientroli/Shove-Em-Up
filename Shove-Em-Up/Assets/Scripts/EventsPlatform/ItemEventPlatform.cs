@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -10,6 +11,7 @@ public class ItemEventPlatform : EventPlatformScript
     [SerializeField] private GameObject prefabItem;
     private List<Vector3> listRandomPositions = new List<Vector3>();
     private List<bool> listRandomPositionsOcuped = new List<bool>();
+    private List<GameObject> listItems = new List<GameObject>();
 
 
     [Header("Event Configuration")]
@@ -24,6 +26,7 @@ public class ItemEventPlatform : EventPlatformScript
     public override void Init()
     {
         base.Init();
+        ClearData();
         AddPositions();
         type = TypeEvent.TIME;
         for (int i=0; i<16; i++) {
@@ -31,6 +34,13 @@ public class ItemEventPlatform : EventPlatformScript
             else listEvent.Add(Wait);
         }
         listEvent.Add(End);
+    }
+
+    private void ClearData()
+    {
+        listRandomPositions.Clear();
+        listRandomPositionsOcuped.Clear();
+        listItems.Clear();
     }
     #endregion
 
@@ -41,6 +51,7 @@ public class ItemEventPlatform : EventPlatformScript
         if(vector != Vector3.zero) {
             GameObject item = Instantiate(prefabItem);
             item.transform.position = vector;
+            listItems.Add(item);
         }
 
         return timeToAction * timeVariaton;
@@ -52,8 +63,12 @@ public class ItemEventPlatform : EventPlatformScript
     {
         return waitTime;
     }
-    private float End()
-    {
+    private float End() {
+        for (int i = 0; i< listItems.Count; i++) {
+            if (listItems[i] != null) {
+                Destroy(listItems[i]);
+            }
+        }
         return -1;
     }
     #endregion
@@ -78,19 +93,21 @@ public class ItemEventPlatform : EventPlatformScript
     {
         Vector3 report = Vector3.zero;
         bool check = false;
-        while (!check) {
+        int icheck = 0;
+        while (!check && icheck<=listRandomPositions.Count) {
             int iCheck = 1;
             foreach (bool pos in listRandomPositionsOcuped) {
                 if (pos) iCheck++;
             }
-            if (iCheck < listRandomPositionsOcuped.Count) {
-                int random = Random.Range(0, 8);
+            if (iCheck < (listRandomPositionsOcuped.Count * 3)) {
+                int random = UnityEngine.Random.Range(0, 8);
                 if (!listRandomPositionsOcuped[random]) {
                     check = true;
                     report = listRandomPositions[random];
                     listRandomPositionsOcuped[random] = true;
                 }
             }
+            icheck++;
         }
         return report;
     }

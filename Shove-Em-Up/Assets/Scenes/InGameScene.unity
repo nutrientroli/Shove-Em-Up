@@ -5062,7 +5062,7 @@ MonoBehaviour:
   prefabItem: {fileID: 150059382541785946, guid: 507e49866bdb84d4ea8c0b0cb40a71bd,
     type: 3}
   waitTime: 2
-  timeToAction: 5
+  timeToAction: 1
   timeVariaton: 1
 --- !u!114 &1765142486
 MonoBehaviour:
