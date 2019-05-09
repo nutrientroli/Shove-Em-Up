@@ -6,6 +6,7 @@ public class FallRuleteEventPlatform : EventPlatformScript
     #region Variables
     [Header("Objects Configuration")]
     [SerializeField] private List<PieceRuleteScript> pieces = new List<PieceRuleteScript>();
+    private List<Renderer> listRenderPieces = new List<Renderer>();
     private int randomNum = 0;
     [Header("Event Configuration")]
     [SerializeField] private float waitTime = 1.5f;
@@ -19,7 +20,14 @@ public class FallRuleteEventPlatform : EventPlatformScript
     public override void Init()
     {
         base.Init();
+
+        for (int i=0; i<pieces.Count; i++) {
+            Renderer ren = pieces[i].GetComponent<Renderer>();
+            if(ren != null) listRenderPieces.Add(ren);
+        }
+
         randomNum = Random.Range(0, pieces.Count - 1);
+        //(Renderer)listRenderPieces[randomNum].material.;
         pool = pieces.Count;
         type = TypeEvent.TIME;
 
@@ -32,8 +40,7 @@ public class FallRuleteEventPlatform : EventPlatformScript
         listEvent.Add(Wait);
         listEvent.Add(Action);
         listEvent.Add(Restart);
-
-
+        listEvent.Add(Wait);
         listEvent.Add(End);
     }
     #endregion
@@ -68,6 +75,7 @@ public class FallRuleteEventPlatform : EventPlatformScript
         return -2;
     }
     private float End() {
+        
         return -1;
     }
     #endregion

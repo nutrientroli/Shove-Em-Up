@@ -44,6 +44,7 @@ public class MeteoritesEventPlatform : EventPlatformScript
             listEvent.Add(Wait);
 
         }
+        listEvent.Add(Wait);
         //listEvent.Add(Restart);
         listEvent.Add(End);
     }
