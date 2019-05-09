@@ -14,7 +14,7 @@ public class CombinateEventPlatform : EventPlatformScript
     private int maxState = 3;
     private List<bool> poolMeteors = new List<bool>();
     [Header("Event Configuration")]
-    [SerializeField] private float waitTime = 0.7f;
+    [SerializeField] private float waitTime = 0.25f;
     [SerializeField] private float timeToAction = 0.2f;
     [Header("Extra Configuration")]
     public float timeVariaton = 1f;
@@ -94,7 +94,7 @@ public class CombinateEventPlatform : EventPlatformScript
             {
                 if (!poolMeteors[i])
                 {
-                    meteors[i].Active(2f);
+                    meteors[i].Active(1f);
                     poolMeteors[i] = true;
                     break;
                 }

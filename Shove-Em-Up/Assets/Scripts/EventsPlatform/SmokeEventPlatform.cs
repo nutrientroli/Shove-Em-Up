@@ -42,7 +42,6 @@ public class SmokeEventPlatform : EventPlatformScript
 
     private float EndSmoke()
     {
-        Debug.Log("End");
         ToxicityScript script = smoke.GetComponent<ToxicityScript>();
         if(script != null) script.exit = true;
         return timeToAction * timeVariaton;

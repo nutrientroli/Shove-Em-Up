@@ -13,7 +13,7 @@ public class FanEventPlatform : EventPlatformScript
 
     [Header("Event Configuration")]
     [SerializeField] private float waitTime = 1.0f;
-    [SerializeField] private float timeToAction = 10.0f;
+    [SerializeField] private float timeToAction = 8.0f;
 
     [Header("Extra Configuration")]
     public float timeVariaton = 1.0f;

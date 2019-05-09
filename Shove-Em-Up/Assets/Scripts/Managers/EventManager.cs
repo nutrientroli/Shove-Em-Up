@@ -75,7 +75,6 @@ public class EventManager : MonoBehaviour {
     {
         eventPlatform.active = false;
         eventPlatform = null;
-        Debug.Log("Finnish");
     }
 
     private void StartSelectEvent() {

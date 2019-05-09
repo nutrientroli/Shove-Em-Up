@@ -78,7 +78,7 @@ public class MeteoritesEventPlatform : EventPlatformScript
         {
             if(!poolMeteors[i])
             {
-                meteors[i].Active(2f);
+                meteors[i].Active(1f);
                 poolMeteors[i] = true;
                 break;
             }

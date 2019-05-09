@@ -25,7 +25,6 @@ public class CanvasHudScript : MonoBehaviour
         if (!used)
         {
             GameObject[] playersGo = GameObject.FindGameObjectsWithTag("Player");
-            print(playersGo.Length);
             for (int i = 0; i < playersGo.Length; i++)
             {
                 playersData.Add(playersGo[i].GetComponent<PlayerData>());
