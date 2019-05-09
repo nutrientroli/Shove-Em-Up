@@ -15,6 +15,6 @@ MonoBehaviour:
   geometry: {fileID: 3136033018580642016, guid: 19934940af49aa54dacde8278d87f885,
     type: 3}
   name: BullCharacter
-  description: 
+  description: Hace un dash de muy larga distancia y fuerte potencia.
   type: 1
   material: {fileID: 2100000, guid: de6eaa30d6219d3479fa2cf54a4398a8, type: 2}

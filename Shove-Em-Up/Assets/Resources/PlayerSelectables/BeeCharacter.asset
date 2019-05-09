@@ -15,6 +15,6 @@ MonoBehaviour:
   geometry: {fileID: 1822028592178203197, guid: 7ca7eed20aad3ee4f9aa5fe941696a59,
     type: 3}
   name: BeeCharacter
-  description: 
+  description: Por decidir
   type: 3
   material: {fileID: 2100000, guid: ae0a6dafc3efd45478b313cab9c26b28, type: 2}

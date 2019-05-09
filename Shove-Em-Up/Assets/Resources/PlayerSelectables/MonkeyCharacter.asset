@@ -15,6 +15,7 @@ MonoBehaviour:
   geometry: {fileID: 8506658240134258179, guid: a299dd745c9e96f4b9460f0a2256245b,
     type: 3}
   name: MonkeyCharacter
-  description: 
+  description: Lanza un cono de 3 platanos, si impacta alguno con alguien, lo estunea
+    durante un periodo de tiempo.
   type: 2
   material: {fileID: 2100000, guid: ae0a6dafc3efd45478b313cab9c26b28, type: 2}
