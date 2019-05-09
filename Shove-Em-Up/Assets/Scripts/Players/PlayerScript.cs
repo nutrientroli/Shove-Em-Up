@@ -311,6 +311,16 @@ public class PlayerScript : MonoBehaviour
         return isKnockable;
     }
 
+    public bool GetIsMovible()
+    {
+        return moveScript.isMovible;
+    }
+
+    public bool GetPushable()
+    {
+        return isPushable;
+    }
+
     public bool GetRalenticed()
     {
         return ralenticed;
