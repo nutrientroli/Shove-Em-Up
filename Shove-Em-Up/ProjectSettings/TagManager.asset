@@ -8,6 +8,10 @@ TagManager:
   - Map
   - ImpactMeteor
   - Meteor
+  - P1Hud
+  - P2Hud
+  - P3Hud
+  - P4Hud
   layers:
   - Default
   - TransparentFX

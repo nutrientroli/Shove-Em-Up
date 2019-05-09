@@ -6,13 +6,13 @@ public class PushScript : MonoBehaviour
 {
     private PlayerScript player;
     private float timeChargePush = 0;
-    private float maxTimeChargePush = 1f;
+    private float maxTimeChargePush = 0.5f;
     private float timeCurrentCoolDownPush = 0;
-    private float maxCoolDownPush = 0.75f;
+    private float maxCoolDownPush = 0.5f;
 
-    private float forceBase = 1f;
+    private float forceBase = 1.1f;
     private float exponentBase = 4f;
-    private float dividentBase = 6f;
+    private float dividentBase = 5f;
     private float currentForce = 0f;
     private float speedPush = 17;
 

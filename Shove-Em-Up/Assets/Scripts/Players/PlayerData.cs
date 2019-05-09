@@ -1,4 +1,7 @@
-﻿using UnityEngine;
+﻿using UnityEngine.UI;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
 public enum PlayerType
 {
@@ -14,6 +17,8 @@ public class PlayerData : MonoBehaviour {
 
     private int player;
     private int lives = 3;
+    private bool hudPuesto = false;
+    public CanvasHudScript canvas;
     private PlayerType typePlayer;
 
     public void SetPlayer(int _player) {
@@ -26,6 +31,7 @@ public class PlayerData : MonoBehaviour {
 
     public void SetLives(int _lives) {
         lives = _lives;
+        canvas.ChangeHud(this);
     }
 
     public int GetLives() {

@@ -58,6 +58,25 @@ public class PlayerScript : MonoBehaviour
         listMods = new List<ModifierScript>();
     }
 
+    private void Start()
+    {
+        switch(gameObject.GetComponent<PlayerData>().GetPlayer())
+        {
+            case 1:
+                particlesDash.startColor = Color.red;
+                break;
+            case 2:
+                particlesDash.startColor = Color.blue;
+                break;
+            case 3:
+                particlesDash.startColor = Color.green;
+                break;
+            case 4:
+                particlesDash.startColor = Color.yellow;
+                break;
+        }
+    }
+
     private void Update()
     {
         //Modificadores Por habilidades

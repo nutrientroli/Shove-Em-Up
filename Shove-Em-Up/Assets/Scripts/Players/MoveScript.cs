@@ -10,7 +10,7 @@ public class MoveScript : MonoBehaviour
     private Vector3 forward = Vector3.forward;
     private bool onGround = true;
     private float gravity = 2;
-    private float speed = 7;
+    private float speed = 10;
     private float speedAir = 20;
     private float verticalSpeed = 0;
     private float multiplyCharge = 1;
