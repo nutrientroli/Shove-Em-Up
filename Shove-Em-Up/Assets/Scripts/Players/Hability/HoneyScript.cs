@@ -39,7 +39,7 @@ public class HoneyScript : MonoBehaviour
         else
             gameObject.transform.position += forward * Time.deltaTime * speed;
 
-        if (gameObject.transform.localScale.x <= 0.75f)
+        if (gameObject.transform.localScale.x <= 0.5f)
             Destroy(gameObject);
     }
 

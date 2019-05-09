@@ -5,7 +5,7 @@ using UnityEngine;
 public class HoneyHabilityScript : HabilityScript
 {
     public GameObject honeyPrefab;
-    private GameObject honey;
+    private List<GameObject> honey = new List<GameObject>();
 
     protected override void Start()
     {
@@ -17,10 +17,18 @@ public class HoneyHabilityScript : HabilityScript
     {
         base.UseHability();
 
-        honey = Instantiate(honeyPrefab, transform.position + transform.forward, honeyPrefab.transform.rotation);
-        honey.GetComponent<HoneyScript>().SetMyPlayer(gameObject);
-        honey.GetComponent<HoneyScript>().SetForward(gameObject.transform.forward);
-        honey.GetComponent<HoneyScript>().SetSpeed(7);
+        float angle = 45;
+        Vector3 forward;
+        for (int i = 0; i < 8; i++)
+        {
+            forward = new Vector3(Mathf.Cos(Mathf.PI * 2 * (i - 1) / 360 * angle + Mathf.PI / 2), 0, Mathf.Sin(Mathf.PI * 2 * (i - 1) / 360 * angle + Mathf.PI / 2));
+            forward = gameObject.transform.rotation * forward;
+            GameObject go = Instantiate(honeyPrefab, transform.position + forward, honeyPrefab.transform.rotation);
+            honey.Add(go);
+            honey[honey.Count - 1].GetComponent<HoneyScript>().SetMyPlayer(gameObject);
+            honey[honey.Count - 1].GetComponent<HoneyScript>().SetForward((forward).normalized);
+            honey[honey.Count - 1].GetComponent<HoneyScript>().SetSpeed(5);
+        }
         
     }
 

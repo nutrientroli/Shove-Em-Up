@@ -22,7 +22,7 @@ public class HabilityScript : MonoBehaviour
     //Modifiers
     public ModifierScript modToOthers;
     public ModifierScript modToMe;
-    private PlayerScript player;
+    protected PlayerScript player;
 
     //Script provisional
     public CanvasPush canvasPush;

@@ -9,7 +9,6 @@ public class DashHabilityScript : HabilityScript
     private float dashTime = 0;
     private bool usada = false;
     private CharacterController characterController;
-    private PlayerScript player;
     private PushScript pushScript;
     private CapsuleCollider capsuleCollider;
 
@@ -18,7 +17,6 @@ public class DashHabilityScript : HabilityScript
         base.Start();
         capsuleCollider = GetComponent<CapsuleCollider>();
         characterController = GetComponent<CharacterController>();
-        player = GetComponent<PlayerScript>();
         pushScript = GetComponent<PushScript>();
         canvasPush.SetDashHability();
     }

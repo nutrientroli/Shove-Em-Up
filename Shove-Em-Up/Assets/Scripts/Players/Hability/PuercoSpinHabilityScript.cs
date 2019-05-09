@@ -8,7 +8,6 @@ public class PuercoSpinHabilityScript : HabilityScript
     public bool usada = false;
     private bool firstTime = true;
     private CharacterController characterController;
-    private PlayerScript player;
     private PushScript pushScript;
     private SphereCollider sphereCollider;
     public ParticleSystem particlesSpins;
@@ -19,7 +18,6 @@ public class PuercoSpinHabilityScript : HabilityScript
         base.Start();
         duration = 0.8f;
         characterController = GetComponent<CharacterController>();
-        player = GetComponent<PlayerScript>();
         pushScript = GetComponent<PushScript>();
         canvasPush.SetDashHability();
         sphereCollider = gameObject.AddComponent<SphereCollider>();
