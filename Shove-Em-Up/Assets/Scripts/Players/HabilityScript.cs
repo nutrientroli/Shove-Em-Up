@@ -22,6 +22,7 @@ public class HabilityScript : MonoBehaviour
     //Modifiers
     public ModifierScript modToOthers;
     public ModifierScript modToMe;
+    private PlayerScript player;
 
     //Script provisional
     public CanvasPush canvasPush;
@@ -29,6 +30,7 @@ public class HabilityScript : MonoBehaviour
     virtual protected void Start()
     {
         canvasPush.StartBarHability(this);
+        player = gameObject.GetComponent<PlayerScript>();
     }
     // Update is called once per frame
     protected virtual void Update()
@@ -79,7 +81,7 @@ public class HabilityScript : MonoBehaviour
     
     public bool CanUseHability()
     {
-        return !active && currentEnergy == maxEnergy;
+        return !active && currentEnergy == maxEnergy && player.GetIsMovible() && player.GetPushable();
     }
 
     public void IncrementPerImpact()
