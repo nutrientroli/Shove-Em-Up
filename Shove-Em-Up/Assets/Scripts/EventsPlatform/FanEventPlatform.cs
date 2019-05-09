@@ -12,8 +12,8 @@ public class FanEventPlatform : EventPlatformScript
     
 
     [Header("Event Configuration")]
-    [SerializeField] private float waitTime = 2.0f;
-    [SerializeField] private float timeToAction = 5.0f;
+    [SerializeField] private float waitTime = 1.0f;
+    [SerializeField] private float timeToAction = 10.0f;
 
     [Header("Extra Configuration")]
     public float timeVariaton = 1.0f;
@@ -24,16 +24,16 @@ public class FanEventPlatform : EventPlatformScript
     {
         base.Init();
         type = TypeEvent.TIME;
-        listEvent.Add(FeedBack);
+        listEvent.Add(Wait);
         listEvent.Add(Action);
         listEvent.Add(End);
     }
     #endregion
 
     #region EventFunctions
-    private float FeedBack()
+    private float Wait()
     {
-        return timeToAction * timeVariaton;
+        return waitTime;
     }
 
     private float Action()

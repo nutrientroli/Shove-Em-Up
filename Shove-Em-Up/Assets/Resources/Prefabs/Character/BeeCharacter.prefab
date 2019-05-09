@@ -5211,6 +5211,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c40bc64639a2d543a9d44a284b98ab7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canvas: {fileID: 0}
 --- !u!136 &8199751795054882415
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -5221,10 +5222,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
+  m_Radius: 1
+  m_Height: 3
   m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: 0.4, z: 0}
 --- !u!143 &8199751795054882411
 CharacterController:
   m_ObjectHideFlags: 0

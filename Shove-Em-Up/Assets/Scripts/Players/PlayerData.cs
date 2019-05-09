@@ -31,7 +31,8 @@ public class PlayerData : MonoBehaviour {
 
     public void SetLives(int _lives) {
         lives = _lives;
-        canvas.ChangeHud(this);
+        if(canvas != null)
+            canvas.ChangeHud(this);
     }
 
     public int GetLives() {

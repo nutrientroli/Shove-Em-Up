@@ -19,8 +19,6 @@ public class FallRuleteEventPlatform : EventPlatformScript
     public override void Init()
     {
         base.Init();
-        GameObject[] meteorGO;
-        meteorGO = GameObject.FindGameObjectsWithTag("Meteor");
         randomNum = Random.Range(0, pieces.Count - 1);
         pool = pieces.Count;
         type = TypeEvent.TIME;

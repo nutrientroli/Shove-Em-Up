@@ -33,7 +33,6 @@ public class SmokeEventPlatform : EventPlatformScript
     #region EventFunctions
     private float StartSmoke()
     {
-        Debug.Log("Start");
         smoke = Instantiate(prefabSmoke);
         smoke.transform.position = Vector3.zero;
         
