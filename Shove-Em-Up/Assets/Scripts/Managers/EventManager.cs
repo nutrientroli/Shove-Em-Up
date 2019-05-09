@@ -5,7 +5,7 @@ using UnityEngine;
 public class EventManager : MonoBehaviour {
     [SerializeField] private List<Renderer> listPieces = new List<Renderer>();
     [SerializeField] private Material selectedMaterial;
-    [SerializeField] private Material unSelectedMaterial;
+    private Material unSelectedMaterial;
     [SerializeField] private List<EventPlatformScript> listEvents = new List<EventPlatformScript>();
     [SerializeField] private int indexEvent = 0;
     EventPlatformScript eventPlatform;
@@ -23,9 +23,10 @@ public class EventManager : MonoBehaviour {
     private void Start() {
         //eventPlatform = listEvents[indexEvent];
         //eventPlatform.Init();
-        foreach(Renderer ren in listPieces) {
+        /*foreach(Renderer ren in listPieces) {
             ren.material = unSelectedMaterial;
-        }
+        }*/
+        unSelectedMaterial = ((Renderer)listPieces[indexEvent]).material;
     }
 
     private void Update() {
@@ -87,6 +88,7 @@ public class EventManager : MonoBehaviour {
         ((Renderer)listPieces[indexEvent]).material = unSelectedMaterial;
         indexEvent++;
         if (indexEvent >= listEvents.Count) indexEvent = 0;
+        unSelectedMaterial = ((Renderer)listPieces[indexEvent]).material;
         ((Renderer)listPieces[indexEvent]).material = selectedMaterial;
         if (indexIncrement <= 0) wait = true;
     }
