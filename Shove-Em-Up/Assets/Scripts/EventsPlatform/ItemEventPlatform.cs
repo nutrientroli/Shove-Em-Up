@@ -12,6 +12,7 @@ public class ItemEventPlatform : EventPlatformScript
     private List<Vector3> listRandomPositions = new List<Vector3>();
     private List<bool> listRandomPositionsOcuped = new List<bool>();
     private List<GameObject> listItems = new List<GameObject>();
+    [SerializeField] private Transform transInitial;
 
 
     [Header("Event Configuration")]
@@ -76,14 +77,14 @@ public class ItemEventPlatform : EventPlatformScript
     #region CustomFunctions
     private void AddPositions()
     {
-        listRandomPositions.Add(new Vector3(10, 1, 0));
-        listRandomPositions.Add(new Vector3(-10, 1, 0));
-        listRandomPositions.Add(new Vector3(0, 1, 10));
-        listRandomPositions.Add(new Vector3(0, 1, -10));
-        listRandomPositions.Add(new Vector3(7.071f, 1, 7.071f));
-        listRandomPositions.Add(new Vector3(7.071f, 1, -7.071f));
-        listRandomPositions.Add(new Vector3(-7.071f, 1, 7.071f));
-        listRandomPositions.Add(new Vector3(-7.071f, 1, -7.071f));
+        listRandomPositions.Add(new Vector3(transInitial.position.x + 10, transInitial.position.y + 0.5f, 0));
+        listRandomPositions.Add(new Vector3(transInitial.position.x - 10, transInitial.position.y + 0.5f, 0));
+        listRandomPositions.Add(new Vector3(0, transInitial.position.y + 0.5f, transInitial.position.z + 10));
+        listRandomPositions.Add(new Vector3(0, transInitial.position.y + 0.5f, transInitial.position.z - 10));
+        listRandomPositions.Add(new Vector3(transInitial.position.x + 7.071f, transInitial.position.y + 0.5f, transInitial.position.z + 7.071f));
+        listRandomPositions.Add(new Vector3(transInitial.position.x + 7.071f, transInitial.position.y + 0.5f, transInitial.position.z - 7.071f));
+        listRandomPositions.Add(new Vector3(transInitial.position.x - 7.071f, transInitial.position.y + 0.5f, transInitial.position.z + 7.071f));
+        listRandomPositions.Add(new Vector3(transInitial.position.x - 7.071f, transInitial.position.y + 0.5f, transInitial.position.z - 7.071f));
         for (int i=0; i<8; i++) {
             listRandomPositionsOcuped.Add(false);
         }

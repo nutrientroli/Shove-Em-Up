@@ -9,6 +9,7 @@ public class SmokeEventPlatform : EventPlatformScript
     [Header("Objects Configuration")] //Crear Tipo de objeto con el GameObject y tier?
     [SerializeField] private GameObject prefabSmoke;
     private GameObject smoke;
+    [SerializeField] private Transform transfInitial;
 
 
     [Header("Event Configuration")]
@@ -34,7 +35,7 @@ public class SmokeEventPlatform : EventPlatformScript
     private float StartSmoke()
     {
         smoke = Instantiate(prefabSmoke);
-        smoke.transform.position = Vector3.zero;
+        smoke.transform.position = transfInitial.position;
         
         return timeToAction * timeVariaton;
     }
