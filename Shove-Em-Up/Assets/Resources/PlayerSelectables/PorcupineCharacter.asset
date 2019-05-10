@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de24322f62f166f4fb855640516139c2, type: 3}
   m_Name: PorcupineCharacter
   m_EditorClassIdentifier: 
-  geometry: {fileID: 100000, guid: 56926c539d5083242ba8d76d3f89747c, type: 3}
-  name: PorcupineCharacter
+  geometry: {fileID: 3143405826551315993, guid: ce5026333b3da5148974e17d5299e512,
+    type: 3}
+  name: WallrusCharacter
   description: "Hace un \xE1rea, quien haya en ella ser\xE1 empujado, cuanto m\xE1s
     cerca est\xE9 del lanzador, mayor ser\xE1 su potencia. Puede er interrumpido en
     medio del lanzamiento."

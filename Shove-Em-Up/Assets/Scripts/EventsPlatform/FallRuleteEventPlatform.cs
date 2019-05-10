@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class FallRuleteEventPlatform : EventPlatformScript
@@ -7,7 +8,10 @@ public class FallRuleteEventPlatform : EventPlatformScript
     [Header("Objects Configuration")]
     [SerializeField] private List<PieceRuleteScript> pieces = new List<PieceRuleteScript>();
     private List<Renderer> listRenderPieces = new List<Renderer>();
-    private int randomNum = 0;
+    public Material selectMaterialFeedback;
+    private int randomNum1 = 0;
+    private int randomNum2 = 0;
+    private int randomNum3 = 0;
     [Header("Event Configuration")]
     [SerializeField] private float waitTime = 1.5f;
     [SerializeField] private float timeToAction = 2f;
@@ -25,23 +29,35 @@ public class FallRuleteEventPlatform : EventPlatformScript
             Renderer ren = pieces[i].GetComponent<Renderer>();
             if(ren != null) listRenderPieces.Add(ren);
         }
-
-        randomNum = Random.Range(0, pieces.Count - 1);
-        //(Renderer)listRenderPieces[randomNum].material.;
+       
         pool = pieces.Count;
         type = TypeEvent.TIME;
 
+        listEvent.Add(GetNumberRandom);
         listEvent.Add(Wait);
         listEvent.Add(Action);
         listEvent.Add(Restart);
+        listEvent.Add(Restore);
+        listEvent.Add(GetNumberRandom);
         listEvent.Add(Wait);
         listEvent.Add(Action);
         listEvent.Add(Restart);
+        listEvent.Add(Restore);
+        listEvent.Add(GetNumberRandom);
         listEvent.Add(Wait);
         listEvent.Add(Action);
         listEvent.Add(Restart);
+        listEvent.Add(Restore);
         listEvent.Add(Wait);
         listEvent.Add(End);
+    }
+
+    private float Restore()
+    {
+        for (int i = 0; i < pieces.Count; i++) {
+            pieces[i].GetComponent<Renderer>().material = ((PieceRuleteScript)pieces[i]).mat;
+        }
+        return waitTime;
     }
     #endregion
 
@@ -52,7 +68,7 @@ public class FallRuleteEventPlatform : EventPlatformScript
     {
         for (int i = 0; i < pieces.Count; i++)
         {
-            if(i != randomNum)
+            if(i != randomNum1 && i != randomNum2 && i != randomNum3)
                 pieces[i].Activate();
         }
 
@@ -63,12 +79,28 @@ public class FallRuleteEventPlatform : EventPlatformScript
     {
         return waitTime;
     }
+    private float GetNumberRandom()
+    {
+        randomNum1 = UnityEngine.Random.Range(0, pieces.Count - 1);
+        randomNum2 = UnityEngine.Random.Range(0, pieces.Count - 1);
+        randomNum3 = UnityEngine.Random.Range(0, pieces.Count - 1);
 
+        while (randomNum1 == randomNum2) randomNum2 = UnityEngine.Random.Range(0, pieces.Count - 1);
+        while (randomNum1 == randomNum3 && randomNum2 == randomNum3) randomNum3 = UnityEngine.Random.Range(0, pieces.Count - 1);
+
+        for (int i=0; i<pieces.Count; i++) {
+            if(i != randomNum1 && i != randomNum2 && i != randomNum3) pieces[i].GetComponent<Renderer>().material = selectMaterialFeedback;
+        }
+
+        return waitTime;
+    }
     private float Restart()
     {
+
         for (int i = 0; i < pieces.Count; i++)
         {
-            if (i != randomNum)
+            pieces[i].GetComponent<Renderer>().material = ((PieceRuleteScript)pieces[i]).mat;
+            if (i != randomNum1 && i != randomNum2 && i != randomNum3)
                 pieces[i].Reverted();
         }
 
@@ -78,5 +110,6 @@ public class FallRuleteEventPlatform : EventPlatformScript
         
         return -1;
     }
+
     #endregion
 }
