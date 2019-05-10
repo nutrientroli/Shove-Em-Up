@@ -8,9 +8,11 @@ public class PieceRuleteScript : MonoBehaviour
     private bool revert = false;
     private float speed = 60;
     private Vector3 startPos;
+    public Material mat;
     // Start is called before the first frame update
     void Start()
     {
+        mat = GetComponent<Renderer>().material;
         startPos = gameObject.transform.position;
     }
 

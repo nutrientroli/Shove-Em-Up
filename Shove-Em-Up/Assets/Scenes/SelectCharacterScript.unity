@@ -632,12 +632,12 @@ PrefabInstance:
     - target: {fileID: 4435348219928408811, guid: 46da80f7458b9c7498cd296438a38fe4,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -239.29987
+      value: -239.29984
       objectReference: {fileID: 0}
     - target: {fileID: 4435348219827978133, guid: 46da80f7458b9c7498cd296438a38fe4,
         type: 3}
       propertyPath: playerToReady
-      value: 1
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4435348220413988369, guid: 46da80f7458b9c7498cd296438a38fe4,
         type: 3}
