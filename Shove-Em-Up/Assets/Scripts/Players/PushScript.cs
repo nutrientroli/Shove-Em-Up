@@ -132,6 +132,7 @@ public class PushScript : MonoBehaviour
                 if (rotation < 1.3f)
                 {
                     //calcular el angulo con el que toca el player en un futuro
+                    player.SetPlayerPushed(other.gameObject);
                     PushSomeone(other.gameObject, direction, currentForce);
                     player.PushSomeoneOther();
                     player.ChangeState(PlayerScript.State.MOVING);

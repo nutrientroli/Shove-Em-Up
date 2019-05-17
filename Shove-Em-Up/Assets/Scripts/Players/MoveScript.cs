@@ -34,18 +34,6 @@ public class MoveScript : MonoBehaviour
     {
  
         CheckGravity();
-        //Para testear, quitar en un futuro
-        ///*
-        if (Input.GetKey(GetComponent<PlayerScript>().Up))
-            AddVectorToMove(Vector3.forward);
-        if (Input.GetKey(GetComponent<PlayerScript>().Down))
-            AddVectorToMove(Vector3.back);
-        if (Input.GetKey(GetComponent<PlayerScript>().Right))
-            AddVectorToMove(Vector3.right);
-        if (Input.GetKey(GetComponent<PlayerScript>().Left))
-            AddVectorToMove(Vector3.left);
-        
-        //*/
     }
 
     private void LateUpdate()
