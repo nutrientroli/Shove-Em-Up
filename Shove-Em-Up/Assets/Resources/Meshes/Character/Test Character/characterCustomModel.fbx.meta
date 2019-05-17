@@ -211,6 +211,7 @@ ModelImporter:
     100410: DEF-spine.004_end
     100412: DEF-toe.L_end
     100414: DEF-toe.R_end
+    100416: basis
     400000: //RootNode
     400002: baseBody
     400004: DEF-foot.L
@@ -419,14 +420,19 @@ ModelImporter:
     400410: DEF-spine.004_end
     400412: DEF-toe.L_end
     400414: DEF-toe.R_end
+    400416: basis
     2100000: body_Mat
     2100002: common_Mat
+    2100004: peana__Mat
     2300000: //RootNode
     2300002: baseBody
+    2300004: basis
     3300000: //RootNode
     3300002: baseBody
+    3300004: basis
     4300000: body.002
     4300002: baseBody
+    4300004: basis
     7400000: T
     7400002: CHARACTER_iDLE_A
     7400004: CHARACTER_FISTuP
@@ -437,6 +443,7 @@ ModelImporter:
     7400014: rig|rigAction
     7400016: CHARACTER_RUN
     7400018: TPose
+    7400020: CHARACTER_RUN (1)
     9500000: //RootNode
     13700000: baseBody
   externalObjects:
@@ -590,10 +597,10 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: CHARACTER_RUN
-      takeName: TPose
+      name: CHARACTER_RUN (1)
+      takeName: CHARACTER_RUN
       firstFrame: 0
-      lastFrame: 1
+      lastFrame: 12
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -641,7 +648,7 @@ ModelImporter:
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
     useFileScale: 1
-    previousCalculatedGlobalScale: 0.0055
+    previousCalculatedGlobalScale: 0.006
     hasPreviousCalculatedGlobalScale: 1
   tangentSpace:
     normalSmoothAngle: 60
