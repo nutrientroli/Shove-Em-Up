@@ -131,6 +131,8 @@ public class PushScript : MonoBehaviour
                 float rotation = Quaternion.Angle(Quaternion.Euler(gameObject.transform.forward), Quaternion.Euler(direction));
                 if (rotation < 1.3f)
                 {
+                    if (currentForce >= 2)
+                        player.AddScore(1);
                     //calcular el angulo con el que toca el player en un futuro
                     player.SetPlayerPushed(other.gameObject);
                     PushSomeone(other.gameObject, direction, currentForce);

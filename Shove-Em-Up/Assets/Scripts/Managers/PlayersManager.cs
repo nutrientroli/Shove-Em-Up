@@ -84,5 +84,15 @@ public class PlayersManager {
         _data.GetComponentInChildren<Renderer>().material = _select.material;
         return _data;
     }
+
+    public bool PlayerIsAlive(int _player)
+    {
+        foreach(int i in listOfPlayersToRespawnFinnishEvent)
+        {
+            if (i == _player)
+                return false;
+        }
+        return true;
+    }
     #endregion
 }

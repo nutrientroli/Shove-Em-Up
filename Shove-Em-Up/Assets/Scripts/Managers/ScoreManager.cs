@@ -34,6 +34,6 @@ public class ScoreManager
 
     public void SetPoints(int _player, int score)
     {
-        players[_player] = score;
+        players[_player - 1] = score;
     }
 }

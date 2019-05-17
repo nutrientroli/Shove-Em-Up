@@ -48,15 +48,19 @@ public class MeteoritesEventPlatform : EventPlatformScript
         //listEvent.Add(Restart);
         listEvent.Add(End);
     }
+
+    public override void ForceFinnish() {
+        base.ForceFinnish();
+        for(int i=0; i<10; i++) listEvent.Add(Wait);
+        listEvent.Add(End);
+    }
     #endregion
 
     #region EventFunctions
 
-    private float FeedBack()
-    {
+    private float FeedBack() {
         
-        for(int i = 0; i < meteors.Count; i++)
-        {
+        for(int i = 0; i < meteors.Count; i++) {
             MeteorScript suplent;
             int randomNum = Random.Range(0, meteors.Count - 1);
             suplent = meteors[i];

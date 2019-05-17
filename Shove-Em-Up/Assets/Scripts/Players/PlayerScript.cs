@@ -343,5 +343,12 @@ public class PlayerScript : MonoBehaviour
             killer = null;
             timeToKillMe = 0;
         }
+        else
+            AddScore(-1);
+    }
+
+    public void AddScore(int _score = 0)
+    {
+        selfData.AddScore(_score);
     }
 }
