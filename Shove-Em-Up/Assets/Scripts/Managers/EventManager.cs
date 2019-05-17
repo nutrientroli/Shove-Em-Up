@@ -38,16 +38,21 @@ public class EventManager : MonoBehaviour {
         } else {
             if (eventPlatform != null)
             {
-                if(CheckEndEvent()) FinnishEvent();
-                else if (eventPlatform.execute) {
-                    switch (eventPlatform.type) {
+                if (CheckEndEvent()) FinnishEvent();
+                else if (CheckForceEndEvent()) ForceFinnishEvent();
+                else if (eventPlatform.execute)
+                {
+                    switch (eventPlatform.type)
+                    {
                         case EventPlatformScript.TypeEvent.TIME:
                             if (eventPlatform.execute) eventPlatform.Run(Time.deltaTime);
                             break;
                         case EventPlatformScript.TypeEvent.STEP: break;
                         default: break;
                     }
-                } else if (eventPlatform == null) {
+                }
+                else if (eventPlatform == null)
+                {
                     StartSelectEvent();
                 }
             } else {
@@ -56,12 +61,15 @@ public class EventManager : MonoBehaviour {
         }
     }
 
-    private void FinnishEvent()
-    {
+    private void FinnishEvent() {
         eventPlatform.active = false;
         eventPlatform = null;
         LevelManager.GetInstance().SetEventState(false);
         PlayersManager.GetInstance().RespawnFinnishEvent();
+    }
+
+    private void ForceFinnishEvent() {
+        eventPlatform.ForceFinnish();
     }
 
     private void StartSelectEvent() {
@@ -90,6 +98,10 @@ public class EventManager : MonoBehaviour {
 
     public bool CheckEndEvent() {
         return (eventPlatform != null && eventPlatform.active && !eventPlatform.execute);
+    }
+
+    public bool CheckForceEndEvent() {
+        return (PlayersManager.GetInstance().CheckLimitPlayersDeathInEvent() && eventPlatform != null && !eventPlatform.forceFinnish);
     }
     
 }

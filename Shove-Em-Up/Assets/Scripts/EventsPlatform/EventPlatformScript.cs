@@ -9,6 +9,7 @@ public class EventPlatformScript : MonoBehaviour
     public TypeEvent type;
     public bool execute = false;
     public bool active = false;
+    public bool forceFinnish = false;
     public delegate float MethodEvent();
     public List<MethodEvent> listEvent = new List<MethodEvent>();
 
@@ -20,6 +21,7 @@ public class EventPlatformScript : MonoBehaviour
         List<MethodEvent> listEvent = new List<MethodEvent>();
         execute = true;
         active = true;
+        forceFinnish = false;
     }
 
     public void Finnish() {
@@ -43,6 +45,14 @@ public class EventPlatformScript : MonoBehaviour
             }
             else Finnish();
         }
+    }
+
+    public virtual void ForceFinnish() {
+        forceFinnish = true;
+        //Reset Events
+        listEvent = new List<MethodEvent>();
+        step = 0; //Reinicio de eventos.
+        currentTime = actualMaxTime; //Para que se llame al momento.
     }
 
     /*

@@ -29,6 +29,13 @@ public class SmokeEventPlatform : EventPlatformScript
         listEvent.Add(EndSmoke);
         listEvent.Add(End);
     }
+
+    public override void ForceFinnish()
+    {
+        base.ForceFinnish();
+        listEvent.Add(EndSmoke);
+        listEvent.Add(End);
+    }
     #endregion
 
     #region EventFunctions

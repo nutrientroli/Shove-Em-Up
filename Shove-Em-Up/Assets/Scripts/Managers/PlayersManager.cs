@@ -23,6 +23,7 @@ public class PlayersManager {
     private Hashtable tableOfCharacters = new Hashtable();
     private Hashtable tableOfSelectPlayers = new Hashtable();
     private List<int> listOfPlayersToRespawnFinnishEvent = new List<int>();
+    private int limitPlayerDeathInEvent = 1;
 
     #region Selectable Methods
     public void AddPlayerSelect(int _player, PlayerSelectData _selection) {
@@ -52,7 +53,7 @@ public class PlayersManager {
     }
 
     public void Dead(int _player) {
-            Respawn(_player, LevelManager.GetInstance().GetEventState());
+        Respawn(_player, LevelManager.GetInstance().GetEventState());
     }
 
     public void Respawn(int _player, bool _eventActive) {
@@ -71,6 +72,10 @@ public class PlayersManager {
             Respawn(player, false);
         }
         listOfPlayersToRespawnFinnishEvent.Clear();
+    }
+
+    public bool CheckLimitPlayersDeathInEvent() {
+        return (listOfPlayersToRespawnFinnishEvent.Count >= limitPlayerDeathInEvent);
     }
 
     private PlayerData ResetValuesPlayerData(int _player, PlayerData _data, PlayerSelectData _select) {
