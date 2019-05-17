@@ -30,7 +30,6 @@ public class PlayerScript : MonoBehaviour
     private PlayerData killer = null;
     private float timeToKillMe = 0;
 
-
     private void Awake()
     {
         capsuleCollider = GetComponent<CapsuleCollider>();

@@ -5105,6 +5105,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c40bc64639a2d543a9d44a284b98ab7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canvasPoints: {fileID: 2855837864622149908}
   canvas: {fileID: 0}
 --- !u!136 &3762885387357585465
 CapsuleCollider:

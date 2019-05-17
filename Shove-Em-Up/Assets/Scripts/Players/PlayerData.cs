@@ -18,6 +18,7 @@ public class PlayerData : MonoBehaviour {
     private int player;
     private bool hudPuesto = false;
     private int score = 0;
+    public GameObject canvasPoints;
     public CanvasHudScript canvas;
     private PlayerType typePlayer;
 
@@ -37,6 +38,10 @@ public class PlayerData : MonoBehaviour {
     public void AddScore(int _score = 1)
     {
         score += _score;
+        GameObject go;
+        go = Instantiate(canvasPoints, gameObject.transform.position + new Vector3(0, 3.5f, 0), canvasPoints.transform.rotation);
+        go.GetComponent<CanvasPoints>().Init(_score);
+        go.transform.parent = gameObject.transform;
         print("player: " + player + "  Score:  " + score);
         ScoreManager.GetInstance().SetPoints(player, score);
     }
