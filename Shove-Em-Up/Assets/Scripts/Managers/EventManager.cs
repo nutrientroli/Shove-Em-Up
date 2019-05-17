@@ -65,6 +65,7 @@ public class EventManager : MonoBehaviour {
         eventPlatform.active = false;
         eventPlatform = null;
         LevelManager.GetInstance().SetEventState(false);
+        LevelManager.GetInstance().PassEvent();
         PlayersManager.GetInstance().RespawnFinnishEvent();
     }
 
