@@ -39,9 +39,8 @@ public class PlayerData : MonoBehaviour {
     {
         score += _score;
         GameObject go;
-        go = Instantiate(canvasPoints, gameObject.transform.position + new Vector3(0, 3.5f, 0), canvasPoints.transform.rotation);
-        go.GetComponent<CanvasPoints>().Init(_score);
-        go.transform.parent = gameObject.transform;
+        go = Instantiate(canvasPoints, gameObject.transform.position + new Vector3(0, 4f, 0), canvasPoints.transform.rotation);
+        go.GetComponent<CanvasPoints>().Init(_score,gameObject);
         print("player: " + player + "  Score:  " + score);
         ScoreManager.GetInstance().SetPoints(player, score);
     }

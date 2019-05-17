@@ -332,6 +332,7 @@ public class PlayerScript : MonoBehaviour
     public void SetKiller(PlayerData _killer)
     {
         killer = _killer;
+        timeToKillMe = 0;
     }
 
     public void KillerKillMe()
