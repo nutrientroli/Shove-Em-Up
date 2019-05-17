@@ -40,6 +40,7 @@ public class PlayersManager {
     }
 
     public void Init() {
+        limitPlayerDeathInEvent = 0;
         tableOfPlayerData.Clear();
         for (int i=1; i<=tableOfSelectPlayers.Count; i++) {
             PlayerSelectData selectData = (PlayerSelectData)tableOfSelectPlayers[i];
@@ -49,7 +50,9 @@ public class PlayersManager {
             objData = ResetValuesPlayerData(i, objData, selectData);
             tableOfPlayerData.Add(i, objData);
             Respawn(i, false);
+            limitPlayerDeathInEvent++;
         }
+        limitPlayerDeathInEvent--;
     }
 
     public void Dead(int _player) {
