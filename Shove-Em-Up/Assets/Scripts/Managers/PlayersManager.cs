@@ -22,6 +22,7 @@ public class PlayersManager {
     private Hashtable tableOfPlayerData = new Hashtable();
     private Hashtable tableOfCharacters = new Hashtable();
     private Hashtable tableOfSelectPlayers = new Hashtable();
+    private List<int> listOfPlayersToRespawnFinnishEvent = new List<int>();
 
     #region Selectable Methods
     public void AddPlayerSelect(int _player, PlayerSelectData _selection) {
@@ -46,29 +47,34 @@ public class PlayersManager {
             PlayerData objData = obj.GetComponentInChildren<PlayerData>();
             objData = ResetValuesPlayerData(i, objData, selectData);
             tableOfPlayerData.Add(i, objData);
-            Respawn(i);
+            Respawn(i, false);
         }
     }
 
     public void Dead(int _player) {
-        PlayerData data = (PlayerData)tableOfPlayerData[_player];
-        if (data != null) {
-            data.SetLives(data.GetLives() - 1);
-            if (data.GetLives() > 0) Respawn(_player);
-            else LevelManager.GetInstance().LessPlayer();
+            Respawn(_player, LevelManager.GetInstance().GetEventState());
+    }
+
+    public void Respawn(int _player, bool _eventActive) {
+        if (_eventActive) {
+            listOfPlayersToRespawnFinnishEvent.Add(_player);
+        } else {
+            PlayerData data = ((PlayerData)tableOfPlayerData[_player]);
+            MoveScript moveScript = null;
+            if (data != null) moveScript = data.gameObject.GetComponent<MoveScript>();
+            if (moveScript != null) moveScript.RestartPosition();
         }
     }
 
-    public void Respawn(int _player) {
-        PlayerData data = ((PlayerData)tableOfPlayerData[_player]);
-        MoveScript moveScript = null;
-        if(data != null) moveScript = data.gameObject.GetComponent<MoveScript>();
-        if (moveScript != null) moveScript.RestartPosition();
+    public void RespawnFinnishEvent() {
+        foreach(int player in listOfPlayersToRespawnFinnishEvent) {
+            Respawn(player, false);
+        }
+        listOfPlayersToRespawnFinnishEvent.Clear();
     }
 
     private PlayerData ResetValuesPlayerData(int _player, PlayerData _data, PlayerSelectData _select) {
         _data.SetPlayer(_player);
-        _data.SetLives(3);
         _data.SetTypePlayer(_select.type);
         _data.GetComponentInChildren<Renderer>().material = _select.material;
         return _data;

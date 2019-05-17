@@ -11,20 +11,30 @@ public class LevelManager{
     }
     #endregion
 
-    public int players;
-    public int playersToWin;
+    public int currentEvent;
+    public int events;
+    public bool eventActive;
 
     public void Start() {
-        players = 4;
+        events = 4;
     }
 
     public void FinnishGame() {
-        Debug.Log("Finnish");
         ScenesManager.ChangeScene(ScenesManager.SceneCode.ENDGAME);
     }
 
-    public void LessPlayer() {
-        players--;
+    public void PassEvent() {
+        currentEvent++;
         if (players <= playersToWin) FinnishGame();
     }
+
+    public void SetEventState(bool _active) {
+        eventActive = _active;
+    }
+
+    public bool GetEventState() {
+        return eventActive;
+    }
+
+
 }
