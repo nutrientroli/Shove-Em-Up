@@ -26,12 +26,10 @@ public class PlayerScript : MonoBehaviour
     private bool isKnockable = true;
     private bool ralenticed = false;
 
-    //Eliminar en un futuro
-    public KeyCode Up = KeyCode.W;
-    public KeyCode Down = KeyCode.S;
-    public KeyCode Right = KeyCode.D;
-    public KeyCode Left = KeyCode.A;
-    public KeyCode PushCode = KeyCode.P;
+    private PlayerData selfData;
+    private PlayerData killer = null;
+    private float timeToKillMe = 0;
+
 
     private void Awake()
     {
@@ -56,11 +54,12 @@ public class PlayerScript : MonoBehaviour
 
         currentState = State.MOVING;
         listMods = new List<ModifierScript>();
+        selfData = gameObject.GetComponent<PlayerData>();
     }
 
     private void Start()
     {
-        switch(gameObject.GetComponent<PlayerData>().GetPlayer())
+        switch(selfData.GetPlayer())
         {
             case 1:
                 particlesDash.startColor = Color.red;
@@ -82,6 +81,15 @@ public class PlayerScript : MonoBehaviour
         //Modificadores Por habilidades
         CheckMods(Time.deltaTime);
         canvasPlayer.StatusConfused(inverted);
+        if(killer != null)
+        {
+            timeToKillMe += Time.deltaTime;
+            if (timeToKillMe >= 1)
+            {
+                killer = null;
+                timeToKillMe = 0;
+            }
+        }
 
         switch (currentState)
         {
@@ -100,15 +108,6 @@ public class PlayerScript : MonoBehaviour
             case State.HABILITY:
                 break;
         }
-
-        ///*
-        if (Input.GetKey(PushCode))
-            Charge();                 //PARA PROBAR, QUITAR EN UN FUTURO
-        if (Input.GetKeyUp(PushCode))
-            Push();
-       /* if (Input.GetKeyDown(KeyCode.K))
-            Knockback();
-        //*/
     }
 
     public void ChangeState(State _newState)
@@ -324,5 +323,25 @@ public class PlayerScript : MonoBehaviour
     public bool GetRalenticed()
     {
         return ralenticed;
+    }
+
+    public void SetPlayerPushed(GameObject _otherPlayer)
+    {
+        _otherPlayer.GetComponent<PlayerScript>().SetKiller(selfData);
+    }
+
+    public void SetKiller(PlayerData _killer)
+    {
+        killer = _killer;
+    }
+
+    public void KillerKillMe()
+    {
+        if (killer != null)
+        {
+            killer.AddScore(3);
+            killer = null;
+            timeToKillMe = 0;
+        }
     }
 }

@@ -16,8 +16,8 @@ public class PlayerData : MonoBehaviour {
     //Clase que se rellena con el Scriptable Object.
 
     private int player;
-    private int lives = 3;
     private bool hudPuesto = false;
+    private int score = 0;
     public CanvasHudScript canvas;
     private PlayerType typePlayer;
 
@@ -29,15 +29,17 @@ public class PlayerData : MonoBehaviour {
         return player;
     }
 
-    public void SetLives(int _lives) {
-        lives = _lives;
-        if(canvas != null)
-            canvas.ChangeHud(this);
+    public int GetScore()
+    {
+        return score;
+    }
+    
+    public void AddScore(int _score = 1)
+    {
+        score += _score;
+        ScoreManager.GetInstance().SetPoints(player, score);
     }
 
-    public int GetLives() {
-        return lives;
-    }
 
     public void SetTypePlayer(PlayerType _type) {
         typePlayer = _type;
@@ -45,5 +47,10 @@ public class PlayerData : MonoBehaviour {
 
     public PlayerType GetTypePlayer() {
         return typePlayer;
+    }
+
+    private void Update()
+    {
+        print("player: " + player + "  Score:  " + score);
     }
 }
