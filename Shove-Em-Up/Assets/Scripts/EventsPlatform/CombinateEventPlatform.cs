@@ -56,16 +56,22 @@ public class CombinateEventPlatform : EventPlatformScript
                 listEvent.Add(Action);
                 listEvent.Add(Wait);
             }
-            listEvent.Add(Restart);
+            //listEvent.Add(Restart);
             listEvent.Add(End);
         }
+    }
+    public override void ForceFinnish()
+    {
+        base.ForceFinnish();
+        listEvent.Add(DestroyFan);
+        for (int i = 0; i < 7; i++) listEvent.Add(Wait);
+        listEvent.Add(End);
     }
     #endregion
 
     #region EventFunctions
 
-    private float FeedBack()
-    {
+    private float FeedBack() {
 
         for (int i = 0; i < meteors.Count; i++)
         {
@@ -110,6 +116,12 @@ public class CombinateEventPlatform : EventPlatformScript
         {
             fan = Instantiate(ventiladorPrefab, posToInstiantiate);
         }
+        return 0;
+    }
+
+    private float DestroyFan()
+    {
+        if (fan != null) Destroy(fan);
         return 0;
     }
 

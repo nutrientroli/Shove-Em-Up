@@ -24,8 +24,7 @@ public class ItemEventPlatform : EventPlatformScript
     #endregion
 
     #region ParentFunctions
-    public override void Init()
-    {
+    public override void Init() {
         base.Init();
         ClearData();
         AddPositions();
@@ -37,46 +36,44 @@ public class ItemEventPlatform : EventPlatformScript
         listEvent.Add(End);
     }
 
-    private void ClearData()
-    {
-        listRandomPositions.Clear();
-        listRandomPositionsOcuped.Clear();
-        listItems.Clear();
+    public override void ForceFinnish() {
+        base.ForceFinnish();
+        listEvent.Add(Wait);
+        listEvent.Add(End);
     }
     #endregion
 
     #region EventFunctions
-    private float SpawnItem()
-    {
+    private float SpawnItem() {
         Vector3 vector = GetRandomPosition();
         if(vector != Vector3.zero) {
             GameObject item = Instantiate(prefabItem);
             item.transform.position = vector;
             listItems.Add(item);
         }
-
         return timeToAction * timeVariaton;
     }
 
-   
-
-    private float Wait()
-    {
+    private float Wait() {
         return waitTime;
     }
+
     private float End() {
         for (int i = 0; i< listItems.Count; i++) {
-            if (listItems[i] != null) {
-                Destroy(listItems[i]);
-            }
+            if (listItems[i] != null)  Destroy(listItems[i]);
         }
         return -1;
     }
     #endregion
 
     #region CustomFunctions
-    private void AddPositions()
-    {
+    private void ClearData() {
+        listRandomPositions.Clear();
+        listRandomPositionsOcuped.Clear();
+        listItems.Clear();
+    }
+
+    private void AddPositions() {
         listRandomPositions.Add(new Vector3(transInitial.position.x + 10, transInitial.position.y + 0.5f, 0));
         listRandomPositions.Add(new Vector3(transInitial.position.x - 10, transInitial.position.y + 0.5f, 0));
         listRandomPositions.Add(new Vector3(0, transInitial.position.y + 0.5f, transInitial.position.z + 10));
@@ -85,13 +82,10 @@ public class ItemEventPlatform : EventPlatformScript
         listRandomPositions.Add(new Vector3(transInitial.position.x + 7.071f, transInitial.position.y + 0.5f, transInitial.position.z - 7.071f));
         listRandomPositions.Add(new Vector3(transInitial.position.x - 7.071f, transInitial.position.y + 0.5f, transInitial.position.z + 7.071f));
         listRandomPositions.Add(new Vector3(transInitial.position.x - 7.071f, transInitial.position.y + 0.5f, transInitial.position.z - 7.071f));
-        for (int i=0; i<8; i++) {
-            listRandomPositionsOcuped.Add(false);
-        }
+        for (int i=0; i<8; i++)  listRandomPositionsOcuped.Add(false);
     }
 
-    private Vector3 GetRandomPosition()
-    {
+    private Vector3 GetRandomPosition() {
         Vector3 report = Vector3.zero;
         bool check = false;
         int icheck = 0;

@@ -28,21 +28,27 @@ public class FanEventPlatform : EventPlatformScript
         listEvent.Add(Action);
         listEvent.Add(End);
     }
+
+    public override void ForceFinnish()
+    {
+        base.ForceFinnish();
+        listEvent.Add(Wait);
+        listEvent.Add(End);
+    }
     #endregion
 
     #region EventFunctions
-    private float Wait()
-    {
+    private float Wait() {
         return waitTime;
     }
 
-    private float Action()
-    {
+    private float Action() {
         fan = Instantiate(ventiladorPrefab, posToInstiantiate);
         return timeToAction * timeVariaton;
     }
-    private float End()
-    {
+
+    private float End() {
+        Destroy(fan);
         return -1;
     }
     #endregion
