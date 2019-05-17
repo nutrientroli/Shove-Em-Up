@@ -68,7 +68,47 @@ public class PlayersManager {
     }
 
     public void RespawnFinnishEvent() {
-        foreach(int player in listOfPlayersToRespawnFinnishEvent) {
+        bool die = false;
+        PlayerData data;
+        for (int i = 0; i < 4; i++)
+        {
+            die = false;
+            for (int j = 0; j < listOfPlayersToRespawnFinnishEvent.Count; j++)
+            {
+                if (i+1 == listOfPlayersToRespawnFinnishEvent[j])
+                {
+                    die = true;
+                    break;
+                }
+            }
+            if(((PlayerData)tableOfPlayerData[i+1]) != null && !die)
+            {
+                data = ((PlayerData)tableOfPlayerData[i + 1]);
+                data.gameObject.GetComponent<PlayerScript>().AddScore(5);
+            }
+        }
+        for (int j = 0; j < listOfPlayersToRespawnFinnishEvent.Count; j++)
+        {
+            switch(j)
+            {
+                case 0:
+                    break;
+                case 1:
+                    data = ((PlayerData)tableOfPlayerData[j + 1]);
+                    data.gameObject.GetComponent<PlayerScript>().AddScore(1);
+                    break;
+                case 3:
+                    data = ((PlayerData)tableOfPlayerData[j + 1]);
+                    data.gameObject.GetComponent<PlayerScript>().AddScore(3);
+                    break;
+                case 4:
+                    data = ((PlayerData)tableOfPlayerData[j + 1]);
+                    data.gameObject.GetComponent<PlayerScript>().AddScore(5);
+                    break;
+            }
+        }
+
+        foreach (int player in listOfPlayersToRespawnFinnishEvent) {
             Respawn(player, false);
         }
         listOfPlayersToRespawnFinnishEvent.Clear();
@@ -83,16 +123,6 @@ public class PlayersManager {
         _data.SetTypePlayer(_select.type);
         _data.GetComponentInChildren<Renderer>().material = _select.material;
         return _data;
-    }
-
-    public bool PlayerIsAlive(int _player)
-    {
-        foreach(int i in listOfPlayersToRespawnFinnishEvent)
-        {
-            if (i == _player)
-                return false;
-        }
-        return true;
     }
     #endregion
 }
