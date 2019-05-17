@@ -51,18 +51,24 @@ public class FallRuleteEventPlatform : EventPlatformScript
         listEvent.Add(Wait);
         listEvent.Add(End);
     }
-
-    private float Restore()
+    public override void ForceFinnish()
     {
-        for (int i = 0; i < pieces.Count; i++) {
-            pieces[i].GetComponent<Renderer>().material = ((PieceRuleteScript)pieces[i]).mat;
-        }
-        return waitTime;
+        base.ForceFinnish();
+        listEvent.Add(Restart);
+        listEvent.Add(Restore);
+        listEvent.Add(End);
     }
     #endregion
 
     #region EventFunctions
-
+    private float Restore()
+    {
+        for (int i = 0; i < pieces.Count; i++)
+        {
+            pieces[i].GetComponent<Renderer>().material = ((PieceRuleteScript)pieces[i]).mat;
+        }
+        return waitTime;
+    }
 
     private float Action()
     {

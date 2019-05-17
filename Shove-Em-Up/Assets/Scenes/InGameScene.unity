@@ -4122,7 +4122,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4565af0c1e0985e48aefbf3e3abca0b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxPlayersWin: 1
 --- !u!1001 &1400436785
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5016,8 +5015,7 @@ MonoBehaviour:
   - {fileID: 4796688763117138864, guid: d8e204fed254f8c46a2adbea58d9fe03, type: 3}
   - {fileID: 791140442673671975, guid: 6d529bc0f75da1d46a9c6cb8e7ed966c, type: 3}
   - {fileID: 3910046780167907123, guid: 98756b5f5b449cf47a698a4228ed8436, type: 3}
-  playersVictory: 1
-  players: 4
+  eventsToFinnish: 0
 --- !u!4 &1765142484
 Transform:
   m_ObjectHideFlags: 0
@@ -5050,6 +5048,7 @@ MonoBehaviour:
   type: 0
   execute: 0
   active: 0
+  forceFinnish: 0
   prefabItem: {fileID: 150059382541785946, guid: 507e49866bdb84d4ea8c0b0cb40a71bd,
     type: 3}
   transInitial: {fileID: 1911609754}
@@ -5077,12 +5076,12 @@ MonoBehaviour:
   - {fileID: 1866878720}
   selectedMaterial: {fileID: 2100000, guid: 677860f0441bdd342ad084302e12bd2b, type: 2}
   listEvents:
-  - {fileID: 1765142485}
-  - {fileID: 1765142487}
-  - {fileID: 1765142488}
   - {fileID: 1765142489}
-  - {fileID: 1765142490}
-  - {fileID: 1765142491}
+  - {fileID: 1765142489}
+  - {fileID: 1765142489}
+  - {fileID: 1765142489}
+  - {fileID: 1765142489}
+  - {fileID: 1765142489}
   indexEvent: 2
   indexIncrement: 0
 --- !u!114 &1765142487
@@ -5100,6 +5099,7 @@ MonoBehaviour:
   type: 0
   execute: 0
   active: 0
+  forceFinnish: 0
   meteors: []
   feedback: {fileID: 0}
   posToInstiantiate: {fileID: 264365397}
@@ -5124,6 +5124,7 @@ MonoBehaviour:
   type: 0
   execute: 0
   active: 0
+  forceFinnish: 0
   meteors: []
   feedback: {fileID: 0}
   waitTime: 0.3
@@ -5145,6 +5146,7 @@ MonoBehaviour:
   type: 0
   execute: 0
   active: 0
+  forceFinnish: 0
   pieces:
   - {fileID: 1817659800}
   - {fileID: 408203900}
@@ -5173,6 +5175,7 @@ MonoBehaviour:
   type: 0
   execute: 0
   active: 0
+  forceFinnish: 0
   prefabSmoke: {fileID: 7151812866455021912, guid: 004b0a77dde5a4a4db99de477bd0ad4e,
     type: 3}
   transfInitial: {fileID: 1911609754}
@@ -5194,6 +5197,7 @@ MonoBehaviour:
   type: 0
   execute: 0
   active: 0
+  forceFinnish: 0
   posToInstiantiate: {fileID: 264365397}
   ventiladorPrefab: {fileID: 8820070092638018415, guid: 24d76b0b69644404982bb7e0afa70cc2,
     type: 3}

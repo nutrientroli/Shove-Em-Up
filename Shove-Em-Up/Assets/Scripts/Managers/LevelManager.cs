@@ -15,10 +15,6 @@ public class LevelManager{
     public int events;
     public bool eventActive;
 
-    public void Start() {
-        events = 4;
-    }
-
     public void FinnishGame() {
         ScenesManager.ChangeScene(ScenesManager.SceneCode.ENDGAME);
     }
