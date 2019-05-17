@@ -17,6 +17,16 @@ public class CheckAllReadyScript : MonoBehaviour
     #endregion
 
     #region MonoBehaviour Methods
+    private void Start()
+    {
+        if(Input.GetJoystickNames().Length > 0) {
+            playerToReady = Input.GetJoystickNames().Length;
+            if (playerToReady > 4) playerToReady = 4;
+        } else {
+            //No hay mandos conectados.
+        }
+    }
+
     private void Update() {
         if (!allready) {
             if (/*CheckReady() ||*/ CheckReadyTest()) AllReady();
