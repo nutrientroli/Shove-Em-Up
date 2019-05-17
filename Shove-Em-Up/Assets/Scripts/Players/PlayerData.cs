@@ -37,6 +37,7 @@ public class PlayerData : MonoBehaviour {
     public void AddScore(int _score = 1)
     {
         score += _score;
+        print("player: " + player + "  Score:  " + score);
         ScoreManager.GetInstance().SetPoints(player, score);
     }
 
@@ -49,8 +50,4 @@ public class PlayerData : MonoBehaviour {
         return typePlayer;
     }
 
-    private void Update()
-    {
-        print("player: " + player + "  Score:  " + score);
-    }
 }

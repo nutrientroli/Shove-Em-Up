@@ -84,7 +84,7 @@ public class PlayerScript : MonoBehaviour
         if(killer != null)
         {
             timeToKillMe += Time.deltaTime;
-            if (timeToKillMe >= 1)
+            if (timeToKillMe >= 1.5f)
             {
                 killer = null;
                 timeToKillMe = 0;
