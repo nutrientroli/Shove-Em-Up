@@ -25,7 +25,7 @@ public class LevelManager{
 
     public void PassEvent() {
         currentEvent++;
-        if (players <= playersToWin) FinnishGame();
+        if (events <= currentEvent) FinnishGame();
     }
 
     public void SetEventState(bool _active) {
