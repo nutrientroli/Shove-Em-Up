@@ -212,6 +212,79 @@ ModelImporter:
     100412: DEF-toe.L_end
     100414: DEF-toe.R_end
     100416: basis
+    100418: chest_end
+    100420: foot_fk.L_end
+    100422: foot_fk.R_end
+    100424: foot_tweak.L_end
+    100426: foot_tweak.R_end
+    100428: forearm_tweak.L.001_end
+    100430: forearm_tweak.L_end
+    100432: forearm_tweak.R.001_end
+    100434: forearm_tweak.R_end
+    100436: hand_fk.L_end
+    100438: hand_fk.R_end
+    100440: hand_tweak.L_end
+    100442: hand_tweak.R_end
+    100444: hips_end
+    100446: MCH-foot_ik_parent.L_end
+    100448: MCH-foot_ik_parent.R_end
+    100450: MCH-foot_ik_root.L_end
+    100452: MCH-foot_ik_root.R_end
+    100454: MCH-hand_ik_parent.L_end
+    100456: MCH-hand_ik_parent.R_end
+    100458: MCH-hand_ik_root.L_end
+    100460: MCH-hand_ik_root.R_end
+    100462: MCH-heel.02_roll.L_end
+    100464: MCH-heel.02_roll.R_end
+    100466: MCH-thigh_ik.L_end
+    100468: MCH-thigh_ik.R_end
+    100470: MCH-thigh_ik_stretch.L_end
+    100472: MCH-thigh_ik_stretch.R_end
+    100474: MCH-thigh_ik_target.L_end
+    100476: MCH-thigh_ik_target.R_end
+    100478: MCH-upper_arm_ik.L_end
+    100480: MCH-upper_arm_ik.R_end
+    100482: MCH-upper_arm_ik_stretch.L_end
+    100484: MCH-upper_arm_ik_stretch.R_end
+    100486: MCH-upper_arm_ik_target.L_end
+    100488: MCH-upper_arm_ik_target.R_end
+    100490: MCH-WGT-chest_end
+    100492: MCH-WGT-hips_end
+    100494: ORG-heel.02.L_end
+    100496: ORG-heel.02.R_end
+    100498: ORG-spine.001_end
+    100500: ORG-spine.002_end
+    100502: ORG-spine.006_end
+    100504: ORG-toe.L_end
+    100506: ORG-toe.R_end
+    100508: shin_tweak.L.001_end
+    100510: shin_tweak.L_end
+    100512: shin_tweak.R.001_end
+    100514: shin_tweak.R_end
+    100516: shoulder.L_end
+    100518: shoulder.R_end
+    100520: thigh_ik_target.L_end
+    100522: thigh_ik_target.R_end
+    100524: thigh_parent.L_end
+    100526: thigh_parent.R_end
+    100528: thigh_tweak.L.001_end
+    100530: thigh_tweak.L_end
+    100532: thigh_tweak.R.001_end
+    100534: thigh_tweak.R_end
+    100536: toe.L_end
+    100538: toe.R_end
+    100540: upper_arm_ik_target.L_end
+    100542: upper_arm_ik_target.R_end
+    100544: upper_arm_parent.L_end
+    100546: upper_arm_parent.R_end
+    100548: upper_arm_tweak.L.001_end
+    100550: upper_arm_tweak.L_end
+    100552: upper_arm_tweak.R.001_end
+    100554: upper_arm_tweak.R_end
+    100556: VIS_thigh_ik_pole.L_end
+    100558: VIS_thigh_ik_pole.R_end
+    100560: VIS_upper_arm_ik_pole.L_end
+    100562: VIS_upper_arm_ik_pole.R_end
     400000: //RootNode
     400002: baseBody
     400004: DEF-foot.L
@@ -421,6 +494,79 @@ ModelImporter:
     400412: DEF-toe.L_end
     400414: DEF-toe.R_end
     400416: basis
+    400418: chest_end
+    400420: foot_fk.L_end
+    400422: foot_fk.R_end
+    400424: foot_tweak.L_end
+    400426: foot_tweak.R_end
+    400428: forearm_tweak.L.001_end
+    400430: forearm_tweak.L_end
+    400432: forearm_tweak.R.001_end
+    400434: forearm_tweak.R_end
+    400436: hand_fk.L_end
+    400438: hand_fk.R_end
+    400440: hand_tweak.L_end
+    400442: hand_tweak.R_end
+    400444: hips_end
+    400446: MCH-foot_ik_parent.L_end
+    400448: MCH-foot_ik_parent.R_end
+    400450: MCH-foot_ik_root.L_end
+    400452: MCH-foot_ik_root.R_end
+    400454: MCH-hand_ik_parent.L_end
+    400456: MCH-hand_ik_parent.R_end
+    400458: MCH-hand_ik_root.L_end
+    400460: MCH-hand_ik_root.R_end
+    400462: MCH-heel.02_roll.L_end
+    400464: MCH-heel.02_roll.R_end
+    400466: MCH-thigh_ik.L_end
+    400468: MCH-thigh_ik.R_end
+    400470: MCH-thigh_ik_stretch.L_end
+    400472: MCH-thigh_ik_stretch.R_end
+    400474: MCH-thigh_ik_target.L_end
+    400476: MCH-thigh_ik_target.R_end
+    400478: MCH-upper_arm_ik.L_end
+    400480: MCH-upper_arm_ik.R_end
+    400482: MCH-upper_arm_ik_stretch.L_end
+    400484: MCH-upper_arm_ik_stretch.R_end
+    400486: MCH-upper_arm_ik_target.L_end
+    400488: MCH-upper_arm_ik_target.R_end
+    400490: MCH-WGT-chest_end
+    400492: MCH-WGT-hips_end
+    400494: ORG-heel.02.L_end
+    400496: ORG-heel.02.R_end
+    400498: ORG-spine.001_end
+    400500: ORG-spine.002_end
+    400502: ORG-spine.006_end
+    400504: ORG-toe.L_end
+    400506: ORG-toe.R_end
+    400508: shin_tweak.L.001_end
+    400510: shin_tweak.L_end
+    400512: shin_tweak.R.001_end
+    400514: shin_tweak.R_end
+    400516: shoulder.L_end
+    400518: shoulder.R_end
+    400520: thigh_ik_target.L_end
+    400522: thigh_ik_target.R_end
+    400524: thigh_parent.L_end
+    400526: thigh_parent.R_end
+    400528: thigh_tweak.L.001_end
+    400530: thigh_tweak.L_end
+    400532: thigh_tweak.R.001_end
+    400534: thigh_tweak.R_end
+    400536: toe.L_end
+    400538: toe.R_end
+    400540: upper_arm_ik_target.L_end
+    400542: upper_arm_ik_target.R_end
+    400544: upper_arm_parent.L_end
+    400546: upper_arm_parent.R_end
+    400548: upper_arm_tweak.L.001_end
+    400550: upper_arm_tweak.L_end
+    400552: upper_arm_tweak.R.001_end
+    400554: upper_arm_tweak.R_end
+    400556: VIS_thigh_ik_pole.L_end
+    400558: VIS_thigh_ik_pole.R_end
+    400560: VIS_upper_arm_ik_pole.L_end
+    400562: VIS_upper_arm_ik_pole.R_end
     2100000: body_Mat
     2100002: common_Mat
     2100004: peana__Mat
@@ -436,7 +582,7 @@ ModelImporter:
     7400000: T
     7400002: CHARACTER_iDLE_A
     7400004: CHARACTER_FISTuP
-    7400006: CHARACTER_wAVING
+    7400006: CHARACTER_WAVE
     7400008: rig|_PUB_IDLE_B
     7400010: rig|CHARACTER_FISTUP
     7400012: rig|CHARACTER_RUN_A
@@ -444,8 +590,10 @@ ModelImporter:
     7400016: CHARACTER_RUN
     7400018: TPose
     7400020: 'CHARACTER_RUN '
+    7400022: CHARACTER_DASH
     9500000: //RootNode
     13700000: baseBody
+    2186277476908879412: ImportLogs
   externalObjects:
   - first:
       type: UnityEngine:Material
@@ -569,7 +717,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: CHARACTER_wAVING
+      name: CHARACTER_WAVE
       takeName: CHARACTER_wAVING
       firstFrame: 0
       lastFrame: 16
@@ -608,6 +756,34 @@ ModelImporter:
       loop: 0
       hasAdditiveReferencePose: 0
       loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: CHARACTER_DASH
+      takeName: CHARACTER_DASH
+      firstFrame: 0
+      lastFrame: 21
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
