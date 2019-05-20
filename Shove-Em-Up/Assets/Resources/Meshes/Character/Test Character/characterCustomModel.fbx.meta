@@ -599,6 +599,7 @@ ModelImporter:
     7400034: RELAXED_POSE
     7400036: CHARACTER_CAIDA_CAYENDO
     7400038: CHARACTER_CAIDA_CONTACTO
+    7400040: CHARACTER_iDLE_A.001
     9500000: //RootNode
     13700000: baseBody
     2186277476908879412: ImportLogs
@@ -669,8 +670,8 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: CHARACTER_iDLE_A
-      takeName: CHARACTER_iDLE_A
+      name: CHARACTER_iDLE_A.001
+      takeName: CHARACTER_iDLE_A.001
       firstFrame: 0
       lastFrame: 64
       wrapMode: 0
@@ -784,7 +785,7 @@ ModelImporter:
       name: CHARACTER_DASH_LOAD
       takeName: CHARACTER_DASH
       firstFrame: 0
-      lastFrame: 5
+      lastFrame: 7.7
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
