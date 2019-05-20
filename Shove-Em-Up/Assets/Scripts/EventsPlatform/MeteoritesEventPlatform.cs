@@ -83,6 +83,25 @@ public class MeteoritesEventPlatform : EventPlatformScript
         {
             if(!poolMeteors[i])
             {
+
+                int randomNum = 0;
+                bool vivo = true;
+                bool valido = false;
+                int iteraciones = 0;
+                while (!valido)
+                {
+                    iteraciones++;
+                    vivo = true;
+                    randomNum = Random.Range(0, players.Length);
+                    foreach (int j in PlayersManager.GetInstance().listOfPlayersToRespawnFinnishEvent)
+                    {
+                        if (players[randomNum].GetComponent<PlayerData>().GetPlayer() == j)
+                            vivo = false;
+                    }
+                    if (vivo || iteraciones >= 20)
+                        valido = true;
+
+                }
                 meteors[i].gameObject.transform.position = new Vector3(players[Random.Range(0, players.Length)].transform.position.x, meteors[i].transform.position.y, players[Random.Range(0, players.Length)].transform.position.z) ;
                 meteors[i].Active(1f);
                 poolMeteors[i] = true;

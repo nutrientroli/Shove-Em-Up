@@ -22,7 +22,7 @@ public class PlayersManager {
     private Hashtable tableOfPlayerData = new Hashtable();
     private Hashtable tableOfCharacters = new Hashtable();
     private Hashtable tableOfSelectPlayers = new Hashtable();
-    private List<int> listOfPlayersToRespawnFinnishEvent = new List<int>();
+    public List<int> listOfPlayersToRespawnFinnishEvent = new List<int>();
     private int limitPlayerDeathInEvent = 1;
 
     #region Selectable Methods
