@@ -5421,6 +5421,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 754715ff2643c5c438090cbcddb5e847, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 4314742642845943636}
   currentState: 0
   habilityScript: {fileID: 3314620857561567860}
   canvasPlayer: {fileID: 6926705409556270619}
@@ -5611,12 +5612,18 @@ PrefabInstance:
     - target: {fileID: 9500000, guid: 56926c539d5083242ba8d76d3f89747c, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: 026d3bd427cc3214d8c14b3438a75afa, type: 2}
+      objectReference: {fileID: 9100000, guid: 5be135336ac87014aadec1e31d2174cd, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 56926c539d5083242ba8d76d3f89747c, type: 3}
 --- !u!4 &4314742642853734580 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 56926c539d5083242ba8d76d3f89747c,
+    type: 3}
+  m_PrefabInstance: {fileID: 4314742642853343796}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &4314742642845943636 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 9500000, guid: 56926c539d5083242ba8d76d3f89747c,
     type: 3}
   m_PrefabInstance: {fileID: 4314742642853343796}
   m_PrefabAsset: {fileID: 0}

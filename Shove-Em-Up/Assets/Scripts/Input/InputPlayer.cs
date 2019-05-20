@@ -31,7 +31,7 @@ public class InputPlayer : MonoBehaviour
         {
             float h = InputManager.GetInstance().GetController(player).GetAxis(InputManager.GetInstance().GetController(player).config.horizontalLeftAxis);
             float v = InputManager.GetInstance().GetController(player).GetAxis(InputManager.GetInstance().GetController(player).config.verticalLeftAxis);
-            playerScript.Movement(new Vector3(h, 0, v).normalized);
+            playerScript.Movement(new Vector3(h, 0, v));
         }
     }
 

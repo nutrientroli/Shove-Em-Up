@@ -64,6 +64,11 @@ public class MoveScript : MonoBehaviour
             multiplyCharge = 1;
     }
 
+    public bool CheckCharging()
+    {
+        return multiplyCharge != 1;
+    }
+
     private void ResetVectorToMove()
     {
         toMove = new Vector3(0, toMove.y, 0);
@@ -82,12 +87,12 @@ public class MoveScript : MonoBehaviour
         if (isMovible && !_air)
         {
             toMove += _toMove * speed * multiplyCharge;
-          
+
             if (new Vector3(_toMove.x, 0, _toMove.z) != Vector3.zero)
             {
                
                 forward = new Vector3(_toMove.x, 0, _toMove.z).normalized;
-               
+             
             }
         }else if(_air)
         {
@@ -113,6 +118,7 @@ public class MoveScript : MonoBehaviour
         if ((collisionFlags & CollisionFlags.Below) != 0)
         {
             onGround = true;
+            player.StopFall();
         }
         else
             onGround = false;

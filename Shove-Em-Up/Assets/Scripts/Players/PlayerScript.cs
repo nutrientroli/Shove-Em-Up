@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerScript : MonoBehaviour
 {
+    public Animator animator;
     public enum State {MOVING, CHARGING, PUSHING, KNOCKBACK, HABILITY };
     public State currentState;
     private float currentTime = 0;
@@ -124,8 +125,10 @@ public class PlayerScript : MonoBehaviour
                 capsuleCollider.radius = radiusCapsule;
                 particlesDash.Stop();
                 currentTime = 0;
+                animator.SetTrigger("FinnishDash");
                 break;
             case State.KNOCKBACK:
+                animator.SetTrigger("Restore");
                 break;
             case State.HABILITY:
                 break;
@@ -143,12 +146,14 @@ public class PlayerScript : MonoBehaviour
                 moveScript.Charging(true);
                 break;
             case State.PUSHING:
+                animator.SetTrigger("Dash");
                 capsuleCollider.radius = radiusCapsule * 2f;
                 particlesDash.gameObject.transform.position = capsuleCollider.transform.position + transform.forward * capsuleCollider.radius;
                 particlesDash.Play();
                 pushScript.Push();
                 break;
             case State.KNOCKBACK:
+                animator.SetTrigger("Impact");
                 pushScript.RestartCharge();
                 break;
             case State.HABILITY:
@@ -157,10 +162,16 @@ public class PlayerScript : MonoBehaviour
         currentState = _newState;
     }
 
-    public void Push()
-    {
+    public void Push() {
         if (pushScript.CanPush() && currentState == State.CHARGING && isPushable)
             ChangeState(State.PUSHING);
+    }
+
+    public void Fall() {
+        animator.SetBool("Fall", true);
+    }
+    public void StopFall() {
+        animator.SetBool("Fall", false);
     }
 
     public void Charge()
@@ -179,6 +190,7 @@ public class PlayerScript : MonoBehaviour
 
     public void Movement(Vector3 _vector, bool _air = false)
     {
+        _vector = _vector.normalized;
         if (!_air)
         {
             if (inverted)
@@ -190,6 +202,10 @@ public class PlayerScript : MonoBehaviour
         {
             moveScript.AddVectorToMove(_vector, _air);
         }
+        
+        if (_vector.Equals(Vector3.zero)) animator.SetFloat("Speed", 0);
+        else if(moveScript.CheckCharging()) animator.SetFloat("Speed", 0.5f);
+        else animator.SetFloat("Speed", 1);
     }
 
     public MoveScript GetMovement()

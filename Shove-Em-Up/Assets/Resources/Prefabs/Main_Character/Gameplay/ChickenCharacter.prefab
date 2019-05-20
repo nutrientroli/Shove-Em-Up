@@ -5179,6 +5179,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 754715ff2643c5c438090cbcddb5e847, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 1081703371364506778}
   currentState: 0
   habilityScript: {fileID: 3762885387357585446}
   canvasPlayer: {fileID: 2855837864622149905}
@@ -5497,9 +5498,15 @@ PrefabInstance:
     - target: {fileID: 9500000, guid: 56926c539d5083242ba8d76d3f89747c, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: 026d3bd427cc3214d8c14b3438a75afa, type: 2}
+      objectReference: {fileID: 9100000, guid: 5be135336ac87014aadec1e31d2174cd, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 56926c539d5083242ba8d76d3f89747c, type: 3}
+--- !u!95 &1081703371364506778 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 9500000, guid: 56926c539d5083242ba8d76d3f89747c,
+    type: 3}
+  m_PrefabInstance: {fileID: 1081703371357219322}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1081703371356828538 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 56926c539d5083242ba8d76d3f89747c,
@@ -5513,10 +5520,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3762885387357585470}
     m_Modifications:
-    - target: {fileID: 100000, guid: 98b321666071dfb4b8cb3817032bca31, type: 3}
-      propertyPath: m_Name
-      value: accesoriios gallina
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 98b321666071dfb4b8cb3817032bca31, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -5572,6 +5575,10 @@ PrefabInstance:
     - target: {fileID: 400000, guid: 98b321666071dfb4b8cb3817032bca31, type: 3}
       propertyPath: m_LocalScale.z
       value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 98b321666071dfb4b8cb3817032bca31, type: 3}
+      propertyPath: m_Name
+      value: accesoriios gallina
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 98b321666071dfb4b8cb3817032bca31, type: 3}
