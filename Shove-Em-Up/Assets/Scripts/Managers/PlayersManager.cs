@@ -22,7 +22,7 @@ public class PlayersManager {
     private Hashtable tableOfPlayerData = new Hashtable();
     private Hashtable tableOfCharacters = new Hashtable();
     private Hashtable tableOfSelectPlayers = new Hashtable();
-    private List<int> listOfPlayersToRespawnFinnishEvent = new List<int>();
+    public List<int> listOfPlayersToRespawnFinnishEvent = new List<int>();
     private int limitPlayerDeathInEvent = 1;
 
     #region Selectable Methods
@@ -99,15 +99,15 @@ public class PlayersManager {
                 case 1:
                     break;
                 case 2:
-                    data = ((PlayerData)tableOfPlayerData[j + 1]);
+                    data = ((PlayerData)tableOfPlayerData[listOfPlayersToRespawnFinnishEvent[j]]);
                     data.gameObject.GetComponent<PlayerScript>().AddScore(1);
                     break;
                 case 3:
-                    data = ((PlayerData)tableOfPlayerData[j + 1]);
+                    data = ((PlayerData)tableOfPlayerData[listOfPlayersToRespawnFinnishEvent[j]]);
                     data.gameObject.GetComponent<PlayerScript>().AddScore(3);
                     break;
                 case 4:
-                    data = ((PlayerData)tableOfPlayerData[j + 1]);
+                    data = ((PlayerData)tableOfPlayerData[listOfPlayersToRespawnFinnishEvent[j]]);
                     data.gameObject.GetComponent<PlayerScript>().AddScore(5);
                     break;
             }

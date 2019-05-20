@@ -36,4 +36,9 @@ public class ScoreManager
     {
         players[_player - 1] = score;
     }
+
+    public int GetPoints(int _player)
+    {
+        return players[_player - 1];
+    }
 }

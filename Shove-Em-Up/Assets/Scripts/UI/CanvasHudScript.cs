@@ -7,10 +7,8 @@ public class CanvasHudScript : MonoBehaviour
 {
     public List<Image> playersHud = new List<Image>();
     private List<PlayerData> playersData = new List<PlayerData>();
-    public List<Image> player1Live = new List<Image>();
-    public List<Image> player2Live = new List<Image>();
-    public List<Image> player3Live = new List<Image>();
-    public List<Image> player4Live = new List<Image>();
+    public List<Text> playerScore = new List<Text>();
+
     private bool used = false;
 
     // Start is called before the first frame update
@@ -47,5 +45,15 @@ public class CanvasHudScript : MonoBehaviour
             }
             used = true;
         }
+    }
+
+    public void AddScore(int _player, int _score)
+    {
+
+        if (playersHud[_player - 1].gameObject.activeSelf)
+        {
+            playerScore[_player - 1].text = _score.ToString();
+        }
+        
     }
 }
