@@ -11,6 +11,7 @@ public class DashHabilityScript : HabilityScript
     private CharacterController characterController;
     private PushScript pushScript;
     private CapsuleCollider capsuleCollider;
+    private PlayerData playerData;
 
     protected override void Start()
     {
@@ -18,6 +19,7 @@ public class DashHabilityScript : HabilityScript
         capsuleCollider = GetComponent<CapsuleCollider>();
         characterController = GetComponent<CharacterController>();
         pushScript = GetComponent<PushScript>();
+        playerData = GetComponent<PlayerData>();
         canvasPush.SetDashHability();
     }
 
@@ -90,7 +92,7 @@ public class DashHabilityScript : HabilityScript
                     pushScript.PushSomeone(other.gameObject, direction * 10f);
                     player.PushSomeoneOther();
                     player.ChangeState(PlayerScript.State.MOVING);
-                    player.AddScore(1);
+                    other.gameObject.GetComponent<PlayerScript>().SetKiller(playerData);
                     dashTime = 0;
                     DesactiveHability();
                     usada = false;

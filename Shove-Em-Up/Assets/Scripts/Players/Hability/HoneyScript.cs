@@ -83,7 +83,6 @@ public class HoneyScript : MonoBehaviour
     public void Restart()
     {
         gameObject.transform.localScale = firstScale;
-        print(firstScale);
         currentTime = 0;
     }
 

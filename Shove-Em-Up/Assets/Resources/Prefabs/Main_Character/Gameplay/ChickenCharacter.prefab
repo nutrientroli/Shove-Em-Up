@@ -5105,7 +5105,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c40bc64639a2d543a9d44a284b98ab7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvasPoints: {fileID: 2855837864622149908}
+  canvasPoints: {fileID: 1566469445075161920, guid: 166511325aaf22c46aa21b4a8829ede4,
+    type: 3}
   canvas: {fileID: 0}
 --- !u!136 &3762885387357585465
 CapsuleCollider:
@@ -5512,6 +5513,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3762885387357585470}
     m_Modifications:
+    - target: {fileID: 100000, guid: 98b321666071dfb4b8cb3817032bca31, type: 3}
+      propertyPath: m_Name
+      value: accesoriios gallina
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 98b321666071dfb4b8cb3817032bca31, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -5567,10 +5572,6 @@ PrefabInstance:
     - target: {fileID: 400000, guid: 98b321666071dfb4b8cb3817032bca31, type: 3}
       propertyPath: m_LocalScale.z
       value: 1.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 98b321666071dfb4b8cb3817032bca31, type: 3}
-      propertyPath: m_Name
-      value: accesoriios gallina
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 98b321666071dfb4b8cb3817032bca31, type: 3}

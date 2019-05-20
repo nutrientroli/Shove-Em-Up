@@ -9,6 +9,8 @@ public class CombinateEventPlatform : EventPlatformScript
     [SerializeField] private GameObject feedback;
     public Transform posToInstiantiate;
     public GameObject ventiladorPrefab;
+    private GameObject[] players;
+
     private GameObject fan;
     private int state = 0; //Estado 0: Ventilador con meteoritos
     private int maxState = 3;
@@ -32,6 +34,8 @@ public class CombinateEventPlatform : EventPlatformScript
 
             GameObject[] meteorGO;
             meteorGO = GameObject.FindGameObjectsWithTag("Meteor");
+            players = GameObject.FindGameObjectsWithTag("Player");
+
 
             if (meteors.Count == 0)
             {
@@ -100,6 +104,7 @@ public class CombinateEventPlatform : EventPlatformScript
             {
                 if (!poolMeteors[i])
                 {
+                    meteors[i].gameObject.transform.position = new Vector3(players[Random.Range(0, players.Length)].transform.position.x, meteors[i].transform.position.y, players[Random.Range(0, players.Length)].transform.position.z);
                     meteors[i].Active(1f);
                     poolMeteors[i] = true;
                     break;

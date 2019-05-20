@@ -7,6 +7,7 @@ public class MeteoritesEventPlatform : EventPlatformScript
     [Header("Objects Configuration")]
     [SerializeField] private List<MeteorScript> meteors = new List<MeteorScript>();
     [SerializeField] private GameObject feedback;
+    private GameObject[] players;
     private List<bool> poolMeteors = new List<bool>();
     [Header("Event Configuration")]
     [SerializeField] private float waitTime = 0.5f;
@@ -21,7 +22,7 @@ public class MeteoritesEventPlatform : EventPlatformScript
         base.Init();
         GameObject [] meteorGO;
         meteorGO =GameObject.FindGameObjectsWithTag("Meteor");
-
+        players = GameObject.FindGameObjectsWithTag("Player");
         if (meteors.Count == 0)
         {
             for (int i = 0; i < meteorGO.Length; i++)
@@ -82,6 +83,7 @@ public class MeteoritesEventPlatform : EventPlatformScript
         {
             if(!poolMeteors[i])
             {
+                meteors[i].gameObject.transform.position = new Vector3(players[Random.Range(0, players.Length)].transform.position.x, meteors[i].transform.position.y, players[Random.Range(0, players.Length)].transform.position.z) ;
                 meteors[i].Active(1f);
                 poolMeteors[i] = true;
                 break;
