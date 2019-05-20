@@ -33,5 +33,8 @@ public class LevelManager{
         return eventActive;
     }
 
+    public void ResetGame(int _events) {
+        events = _events;
+    }
 
 }

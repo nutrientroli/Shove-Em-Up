@@ -11,6 +11,6 @@ public class LevelScript : MonoBehaviour
     private void Start() {
         PlayersManager.GetInstance().SetListOfCharacters(Characters);
         PlayersManager.GetInstance().Init();
-        LevelManager.GetInstance().events = eventsToFinnish;
+        LevelManager.GetInstance().ResetGame(eventsToFinnish);
     }
 }
