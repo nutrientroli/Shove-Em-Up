@@ -37,10 +37,7 @@ public class PlayerSelectionScript : MonoBehaviour
         CheckButtons();
         currentTime += Time.deltaTime;
         if (activePlayer && !readyPlayer) {
-            if (currentTime >= waitTime) {
-                CheckAxis();
-                currentTime = 0;
-            }
+            CheckAxis(currentTime);
         }
     }
     #endregion
@@ -116,12 +113,17 @@ public class PlayerSelectionScript : MonoBehaviour
         }
     }
 
-    private void CheckAxis() {
+    private void CheckAxis(float _dt) {
         if (InputManager.GetInstance().CanCheckInputs(player)) {
             float scroll = InputManager.GetInstance().GetController(player).GetAxis(InputManager.GetInstance().GetController(player).config.horizontalLeftAxis);
             if (scroll != 0) {
-                if (scroll > 0) RightSelection();
-                else LeftSelection();
+                if (currentTime >= waitTime) {
+                    if (scroll > 0) RightSelection();
+                    else LeftSelection();
+                    currentTime = 0;
+                }
+            } else {
+                currentTime = waitTime;
             }
         }
     }
