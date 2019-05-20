@@ -92,11 +92,13 @@ public class PlayersManager {
         }
         for (int j = 0; j < listOfPlayersToRespawnFinnishEvent.Count; j++)
         {
-            switch(j)
+            switch(j + 4 - listOfPlayersToRespawnFinnishEvent.Count)
             {
                 case 0:
                     break;
                 case 1:
+                    break;
+                case 2:
                     data = ((PlayerData)tableOfPlayerData[j + 1]);
                     data.gameObject.GetComponent<PlayerScript>().AddScore(1);
                     break;

@@ -9,6 +9,7 @@ public class HoneyScript : MonoBehaviour
     private float rotationSpeed = 360;
     private float speed = 5;
     private float currentTime = 0;
+    private Vector3 firstScale;
     private GameObject myPlayer;
     private bool gravity = true;
     public LayerMask layerMask;
@@ -40,7 +41,7 @@ public class HoneyScript : MonoBehaviour
             gameObject.transform.position += forward * Time.deltaTime * speed;
 
         if (gameObject.transform.localScale.x <= 0.5f)
-            Destroy(gameObject);
+            gameObject.SetActive(false);
     }
 
     public void SetForward(Vector3 _forward)
@@ -77,5 +78,17 @@ public class HoneyScript : MonoBehaviour
             }
 
         }
+    }
+
+    public void Restart()
+    {
+        gameObject.transform.localScale = firstScale;
+        print(firstScale);
+        currentTime = 0;
+    }
+
+    public void SetScale(Vector3 _scale)
+    {
+        firstScale = _scale;
     }
 }

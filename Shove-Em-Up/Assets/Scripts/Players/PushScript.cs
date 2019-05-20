@@ -143,6 +143,29 @@ public class PushScript : MonoBehaviour
         }
     }
 
+    private void OnControllerColliderHit(ControllerColliderHit hit)
+    {
+        if (hit.gameObject.tag == "Player" && hit.gameObject != gameObject)
+        {
+            if (player != null && player.currentState == PlayerScript.State.PUSHING)
+            {
+                Vector3 direction = (hit.gameObject.transform.position - gameObject.transform.position).normalized;
+                float rotation = Quaternion.Angle(Quaternion.Euler(gameObject.transform.forward), Quaternion.Euler(direction));
+                if (rotation < 1.3f)
+                {
+                    if (currentForce >= 2)
+                        player.AddScore(1);
+                    //calcular el angulo con el que toca el player en un futuro
+                    player.SetPlayerPushed(hit.gameObject);
+                    PushSomeone(hit.gameObject, direction, currentForce);
+                    player.PushSomeoneOther();
+                    player.ChangeState(PlayerScript.State.MOVING);
+                }
+            }
+        }
+    }
+
+
     public float GetMaxCoolDownPush()
     {
         return maxCoolDownPush;

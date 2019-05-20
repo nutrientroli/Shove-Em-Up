@@ -90,6 +90,7 @@ public class DashHabilityScript : HabilityScript
                     pushScript.PushSomeone(other.gameObject, direction * 10f);
                     player.PushSomeoneOther();
                     player.ChangeState(PlayerScript.State.MOVING);
+                    player.AddScore(1);
                     dashTime = 0;
                     DesactiveHability();
                     usada = false;
