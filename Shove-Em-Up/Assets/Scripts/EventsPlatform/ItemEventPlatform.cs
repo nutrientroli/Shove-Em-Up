@@ -9,6 +9,7 @@ public class ItemEventPlatform : EventPlatformScript
     #region Variables
     [Header("Objects Configuration")] //Crear Tipo de objeto con el GameObject y tier?
     [SerializeField] private GameObject prefabItem;
+    public GameObject HotPoint;
     private List<Vector3> listRandomPositions = new List<Vector3>();
     private List<bool> listRandomPositionsOcuped = new List<bool>();
     private List<GameObject> listItems = new List<GameObject>();
@@ -29,6 +30,7 @@ public class ItemEventPlatform : EventPlatformScript
         ClearData();
         AddPositions();
         type = TypeEvent.TIME;
+        listEvent.Add(Action2);
         for (int i=0; i<16; i++) {
             if(i%2==0) listEvent.Add(SpawnItem);
             else listEvent.Add(Wait);
@@ -54,11 +56,18 @@ public class ItemEventPlatform : EventPlatformScript
         return timeToAction * timeVariaton;
     }
 
+    private float Action2()
+    {
+        HotPoint.SetActive(true);
+        return 0;
+    }
+
     private float Wait() {
         return waitTime;
     }
 
     private float End() {
+        HotPoint.SetActive(false);
         for (int i = 0; i< listItems.Count; i++) {
             if (listItems[i] != null)  Destroy(listItems[i]);
         }
