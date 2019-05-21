@@ -44,6 +44,7 @@ public class KnockbackScript : MonoBehaviour
 
             direction = _direction.normalized;
             direction.y += timeStopKnockback * hight / 2;
+            gameObject.transform.forward = direction * -1;
             canStop = false;
         }
     }
