@@ -6,7 +6,7 @@ public class PushScript : MonoBehaviour
 {
     private PlayerScript player;
     private float timeChargePush = 0;
-    private float maxTimeChargePush = 0.5f;
+    private float maxTimeChargePush = 0.75f;
     private float timeCurrentCoolDownPush = 0;
     private float maxCoolDownPush = 0.5f;
 
@@ -61,6 +61,11 @@ public class PushScript : MonoBehaviour
             currentForce *= 0.5f;
         canPush = false;
         RestartCharge();
+        maxCoolDownPush = currentForce * 0.5f;
+        if (maxCoolDownPush < 0.7f)
+            maxCoolDownPush = 0.7f;
+        else if (maxCoolDownPush > 1.75f)
+            maxCoolDownPush = 1.75f;
         canvasPush.StartBarCoolDown(this);
     }
 

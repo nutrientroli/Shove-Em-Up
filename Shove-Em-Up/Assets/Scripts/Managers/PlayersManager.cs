@@ -69,6 +69,7 @@ public class PlayersManager {
             if (data != null) {
                 moveScript = data.gameObject.GetComponent<MoveScript>();
                 playerSript = data.gameObject.GetComponent<PlayerScript>();
+                data.gameObject.GetComponent<HabilityScript>().RestartHability();
             }
             if (moveScript != null) moveScript.RestartPosition();
             if (playerSript != null) playerSript.Fall();

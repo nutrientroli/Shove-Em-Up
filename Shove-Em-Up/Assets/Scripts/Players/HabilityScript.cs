@@ -114,4 +114,9 @@ public class HabilityScript : MonoBehaviour
         return currentEnergy;
     }
 
+    public void RestartHability()
+    {
+        currentEnergy = 0;
+    }
+
 }
