@@ -51,7 +51,7 @@ public class CanvasPush : MonoBehaviour
         gameObject.transform.position = parent.transform.position + positionRelativePJ;
         if (pushScript != null)
         {
-            coolDownImage.fillAmount = pushScript.GetCurrentCoolDownPush() / pushScript.GetMaxCoolDownPush();
+            coolDownImage.fillAmount =  1 - pushScript.GetCurrentCoolDownPush() / pushScript.GetMaxCoolDownPush();
             forceCharge.fillAmount = pushScript.GetCurrentForce() / pushScript.GetMaxForce();
 
             if (coolDownImage.fillAmount == 1)
