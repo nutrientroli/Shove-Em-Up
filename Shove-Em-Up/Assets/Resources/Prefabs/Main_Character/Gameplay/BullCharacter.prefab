@@ -5529,6 +5529,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: characterCustomModel
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 56926c539d5083242ba8d76d3f89747c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 56926c539d5083242ba8d76d3f89747c, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0
@@ -5604,7 +5608,7 @@ PrefabInstance:
     - target: {fileID: 13700000, guid: 56926c539d5083242ba8d76d3f89747c, type: 3}
       propertyPath: m_Materials.Array.data[1]
       value: 
-      objectReference: {fileID: 2100000, guid: 4889258837717224e8b52d75c0ba4942, type: 2}
+      objectReference: {fileID: 2100000, guid: 2795149506411b7459cda17c4bfbfbd8, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 56926c539d5083242ba8d76d3f89747c, type: 3}
 --- !u!95 &4314742642845943636 stripped
@@ -5626,6 +5630,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6926705409556270623}
     m_Modifications:
+    - target: {fileID: 8845479731522831806, guid: da234fb368b34af4c8758baf4ffd24fc,
+        type: 3}
+      propertyPath: m_Name
+      value: ChargeHability (1)
+      objectReference: {fileID: 0}
     - target: {fileID: 8845479731522831803, guid: da234fb368b34af4c8758baf4ffd24fc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5731,11 +5740,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 8845479731522831806, guid: da234fb368b34af4c8758baf4ffd24fc,
-        type: 3}
-      propertyPath: m_Name
-      value: ChargeHability (1)
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: da234fb368b34af4c8758baf4ffd24fc, type: 3}
 --- !u!224 &1026520108660591719 stripped
@@ -5763,6 +5767,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8338719156207361844}
     m_Modifications:
+    - target: {fileID: 9164087891434669467, guid: 16a40e0f85b683644b5f662b772b5e7a,
+        type: 3}
+      propertyPath: m_Name
+      value: ParticlesChargeHability
+      objectReference: {fileID: 0}
     - target: {fileID: 6145207111222273188, guid: 16a40e0f85b683644b5f662b772b5e7a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5817,11 +5826,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9164087891434669467, guid: 16a40e0f85b683644b5f662b772b5e7a,
-        type: 3}
-      propertyPath: m_Name
-      value: ParticlesChargeHability
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 16a40e0f85b683644b5f662b772b5e7a, type: 3}
