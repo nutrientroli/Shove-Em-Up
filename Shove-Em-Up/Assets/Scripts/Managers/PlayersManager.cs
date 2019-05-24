@@ -132,7 +132,22 @@ public class PlayersManager {
     private PlayerData ResetValuesPlayerData(int _player, PlayerData _data, PlayerSelectData _select) {
         _data.SetPlayer(_player);
         _data.SetTypePlayer(_select.type);
-        _data.GetComponentInChildren<Renderer>().material = _select.material;
+
+        switch(_player)
+        {
+            case 1:
+                _data.GetComponentInChildren<Renderer>().materials[0].color = Color.red;
+                break;
+            case 2:
+                _data.GetComponentInChildren<Renderer>().materials[0].color = Color.blue;
+                break;
+            case 3:
+                _data.GetComponentInChildren<Renderer>().materials[0].color = Color.green;
+                break;
+            case 4:
+                _data.GetComponentInChildren<Renderer>().materials[0].color = Color.yellow;
+                break;
+        }
         return _data;
     }
     #endregion
