@@ -10,6 +10,7 @@ public class ToxicityScript : MonoBehaviour
     private float maxX = 30;
     private List<PlayerScript> players = new List<PlayerScript>();
 
+
     void Update() {
         if(!exit) {
             if (gameObject.transform.localScale.x < maxX || gameObject.transform.localScale.y < maxY) gameObject.transform.localScale += scaleVector;
@@ -19,8 +20,25 @@ public class ToxicityScript : MonoBehaviour
 
         if(exit) {
             gameObject.transform.localScale -= scaleVector;
-            if (gameObject.transform.localScale.x <= 5) Destroy(gameObject);
+            if (gameObject.transform.localScale.x <= 5)
+                Desactive();
         }
+    }
+
+    public void Desactive()
+    {
+        foreach(PlayerScript p in players)
+        {
+            if (p.gameObject.GetComponent<ToxicityModifierScript>() != null)
+                p.RemoveMod(p.gameObject.GetComponent<ToxicityModifierScript>());
+        }
+        players.Clear();
+        gameObject.SetActive(false);
+    }
+
+    public void Active()
+    {
+        exit = false;
     }
 
     private void OnTriggerEnter(Collider other) {
