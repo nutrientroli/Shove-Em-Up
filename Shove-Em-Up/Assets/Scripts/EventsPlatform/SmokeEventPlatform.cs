@@ -7,8 +7,7 @@ public class SmokeEventPlatform : EventPlatformScript
 
     #region Variables
     [Header("Objects Configuration")] //Crear Tipo de objeto con el GameObject y tier?
-    [SerializeField] private GameObject prefabSmoke;
-    private GameObject smoke;
+    [SerializeField] public ToxicityScript smoke;
     [SerializeField] private Transform transfInitial;
 
 
@@ -45,8 +44,9 @@ public class SmokeEventPlatform : EventPlatformScript
     #region EventFunctions
     private float StartSmoke()
     {
-        smoke = Instantiate(prefabSmoke);
         smoke.transform.position = transfInitial.position;
+        smoke.gameObject.SetActive(true);
+        smoke.Active();
         
         return timeToAction * timeVariaton;
     }

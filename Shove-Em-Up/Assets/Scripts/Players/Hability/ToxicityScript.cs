@@ -7,7 +7,7 @@ public class ToxicityScript : MonoBehaviour
     public bool exit = false;
     private Vector3 scaleVector = new Vector3(0.2f, 0, 0.2f);
     private float maxY = 3;
-    private float maxX = 30;
+    private float maxX = 32;
     private List<PlayerScript> players = new List<PlayerScript>();
 
 
