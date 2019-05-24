@@ -1,0 +1,500 @@
+fileFormatVersion: 2
+guid: 81c284ae4aff77541b8584ca82dad08f
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Box002
+    100002: Box003
+    100004: Box004
+    100006: Box005
+    100008: Box006
+    100010: Box007
+    100012: Cylinder001
+    100014: //RootNode
+    100016: Escenario
+    100018: Foco1
+    100020: Foco1 1
+    100022: Foco1 2
+    100024: Foco1 3
+    100026: Foco1 4
+    100028: Foco1 5
+    100030: Foco1 6
+    100032: Foco2
+    100034: Foco2 1
+    100036: Foco2 2
+    100038: Foco2 3
+    100040: Foco2 4
+    100042: Foco2 5
+    100044: Foco2 6
+    100046: Foco3
+    100048: Foco3 1
+    100050: Foco3 2
+    100052: Foco3 3
+    100054: Foco3 4
+    100056: Foco3 5
+    100058: Foco3 6
+    100060: Foco4
+    100062: Foco4 1
+    100064: Foco4 2
+    100066: Foco4 3
+    100068: Foco4 4
+    100070: Foco4 5
+    100072: Foco4 6
+    100074: Foco5
+    100076: Foco5 1
+    100078: Foco5 2
+    100080: Foco5 3
+    100082: Foco5 4
+    100084: Foco5 5
+    100086: Foco5 6
+    100088: Foco6
+    100090: Foco6 1
+    100092: Foco6 2
+    100094: Foco6 3
+    100096: Foco6 4
+    100098: Foco6 5
+    100100: Foco6 6
+    100102: Gradas009
+    100104: Gradas010
+    100106: Gradas012
+    100108: Gradas013
+    100110: Gradas015
+    100112: Gradas016
+    100114: Gradas017
+    100116: Gradas018
+    100118: Gradas019
+    100120: Gradas020
+    100122: Gradas021
+    100124: Gradas1
+    100126: Gradas2
+    100128: Low
+    100130: Low001
+    100132: Object001
+    100134: Object002
+    100136: Object003
+    100138: Object004
+    100140: Object005
+    100142: Object006
+    100144: Object007
+    100146: Object008
+    100148: Object009
+    100150: Object010
+    100152: Object011
+    100154: Pantalla
+    100156: TechoLuces
+    400000: Box002
+    400002: Box003
+    400004: Box004
+    400006: Box005
+    400008: Box006
+    400010: Box007
+    400012: Cylinder001
+    400014: //RootNode
+    400016: Escenario
+    400018: Foco1
+    400020: Foco1 1
+    400022: Foco1 2
+    400024: Foco1 3
+    400026: Foco1 4
+    400028: Foco1 5
+    400030: Foco1 6
+    400032: Foco2
+    400034: Foco2 1
+    400036: Foco2 2
+    400038: Foco2 3
+    400040: Foco2 4
+    400042: Foco2 5
+    400044: Foco2 6
+    400046: Foco3
+    400048: Foco3 1
+    400050: Foco3 2
+    400052: Foco3 3
+    400054: Foco3 4
+    400056: Foco3 5
+    400058: Foco3 6
+    400060: Foco4
+    400062: Foco4 1
+    400064: Foco4 2
+    400066: Foco4 3
+    400068: Foco4 4
+    400070: Foco4 5
+    400072: Foco4 6
+    400074: Foco5
+    400076: Foco5 1
+    400078: Foco5 2
+    400080: Foco5 3
+    400082: Foco5 4
+    400084: Foco5 5
+    400086: Foco5 6
+    400088: Foco6
+    400090: Foco6 1
+    400092: Foco6 2
+    400094: Foco6 3
+    400096: Foco6 4
+    400098: Foco6 5
+    400100: Foco6 6
+    400102: Gradas009
+    400104: Gradas010
+    400106: Gradas012
+    400108: Gradas013
+    400110: Gradas015
+    400112: Gradas016
+    400114: Gradas017
+    400116: Gradas018
+    400118: Gradas019
+    400120: Gradas020
+    400122: Gradas021
+    400124: Gradas1
+    400126: Gradas2
+    400128: Low
+    400130: Low001
+    400132: Object001
+    400134: Object002
+    400136: Object003
+    400138: Object004
+    400140: Object005
+    400142: Object006
+    400144: Object007
+    400146: Object008
+    400148: Object009
+    400150: Object010
+    400152: Object011
+    400154: Pantalla
+    400156: TechoLuces
+    2100000: 10 - Default
+    2100002: 13 - Default
+    2100004: 01 - Default
+    2100006: 02 - Default
+    2100008: 09 - Default
+    2100010: 07 - Default
+    2100012: 19 - Default
+    2100014: 20 - Default
+    2100016: No Name
+    2100018: 03 - Default
+    2100020: 'Material #303'
+    2100022: 'Material #307'
+    2100024: 'Material #306'
+    2100026: 'Material #308'
+    2100028: 'Material #305'
+    2300000: Box002
+    2300002: Box003
+    2300004: Box004
+    2300006: Box005
+    2300008: Box006
+    2300010: Box007
+    2300012: Cylinder001
+    2300014: Escenario
+    2300016: Foco1
+    2300018: Foco1 1
+    2300020: Foco1 2
+    2300022: Foco1 3
+    2300024: Foco1 4
+    2300026: Foco1 5
+    2300028: Foco1 6
+    2300030: Foco2
+    2300032: Foco2 1
+    2300034: Foco2 2
+    2300036: Foco2 3
+    2300038: Foco2 4
+    2300040: Foco2 5
+    2300042: Foco2 6
+    2300044: Foco3
+    2300046: Foco3 1
+    2300048: Foco3 2
+    2300050: Foco3 3
+    2300052: Foco3 4
+    2300054: Foco3 5
+    2300056: Foco3 6
+    2300058: Foco4
+    2300060: Foco4 1
+    2300062: Foco4 2
+    2300064: Foco4 3
+    2300066: Foco4 4
+    2300068: Foco4 5
+    2300070: Foco4 6
+    2300072: Foco5
+    2300074: Foco5 1
+    2300076: Foco5 2
+    2300078: Foco5 3
+    2300080: Foco5 4
+    2300082: Foco5 5
+    2300084: Foco5 6
+    2300086: Foco6
+    2300088: Foco6 1
+    2300090: Foco6 2
+    2300092: Foco6 3
+    2300094: Foco6 4
+    2300096: Foco6 5
+    2300098: Foco6 6
+    2300100: Gradas009
+    2300102: Gradas010
+    2300104: Gradas012
+    2300106: Gradas013
+    2300108: Gradas015
+    2300110: Gradas016
+    2300112: Gradas017
+    2300114: Gradas018
+    2300116: Gradas019
+    2300118: Gradas020
+    2300120: Gradas021
+    2300122: Gradas1
+    2300124: Gradas2
+    2300126: Low
+    2300128: Low001
+    2300130: Object001
+    2300132: Object002
+    2300134: Object003
+    2300136: Object004
+    2300138: Object005
+    2300140: Object006
+    2300142: Object007
+    2300144: Object008
+    2300146: Object009
+    2300148: Object010
+    2300150: Object011
+    2300152: Pantalla
+    2300154: TechoLuces
+    3300000: Box002
+    3300002: Box003
+    3300004: Box004
+    3300006: Box005
+    3300008: Box006
+    3300010: Box007
+    3300012: Cylinder001
+    3300014: Escenario
+    3300016: Foco1
+    3300018: Foco1 1
+    3300020: Foco1 2
+    3300022: Foco1 3
+    3300024: Foco1 4
+    3300026: Foco1 5
+    3300028: Foco1 6
+    3300030: Foco2
+    3300032: Foco2 1
+    3300034: Foco2 2
+    3300036: Foco2 3
+    3300038: Foco2 4
+    3300040: Foco2 5
+    3300042: Foco2 6
+    3300044: Foco3
+    3300046: Foco3 1
+    3300048: Foco3 2
+    3300050: Foco3 3
+    3300052: Foco3 4
+    3300054: Foco3 5
+    3300056: Foco3 6
+    3300058: Foco4
+    3300060: Foco4 1
+    3300062: Foco4 2
+    3300064: Foco4 3
+    3300066: Foco4 4
+    3300068: Foco4 5
+    3300070: Foco4 6
+    3300072: Foco5
+    3300074: Foco5 1
+    3300076: Foco5 2
+    3300078: Foco5 3
+    3300080: Foco5 4
+    3300082: Foco5 5
+    3300084: Foco5 6
+    3300086: Foco6
+    3300088: Foco6 1
+    3300090: Foco6 2
+    3300092: Foco6 3
+    3300094: Foco6 4
+    3300096: Foco6 5
+    3300098: Foco6 6
+    3300100: Gradas009
+    3300102: Gradas010
+    3300104: Gradas012
+    3300106: Gradas013
+    3300108: Gradas015
+    3300110: Gradas016
+    3300112: Gradas017
+    3300114: Gradas018
+    3300116: Gradas019
+    3300118: Gradas020
+    3300120: Gradas021
+    3300122: Gradas1
+    3300124: Gradas2
+    3300126: Low
+    3300128: Low001
+    3300130: Object001
+    3300132: Object002
+    3300134: Object003
+    3300136: Object004
+    3300138: Object005
+    3300140: Object006
+    3300142: Object007
+    3300144: Object008
+    3300146: Object009
+    3300148: Object010
+    3300150: Object011
+    3300152: Pantalla
+    3300154: TechoLuces
+    4300000: Escenario
+    4300002: Cylinder001
+    4300004: Object001
+    4300006: Object002
+    4300008: Object003
+    4300010: Object004
+    4300012: Object005
+    4300014: Object006
+    4300016: Box002
+    4300018: Box003
+    4300020: Box004
+    4300022: Box005
+    4300024: Box006
+    4300026: Box007
+    4300028: Object007
+    4300030: Object008
+    4300032: Object009
+    4300034: Object010
+    4300036: Object011
+    4300038: Gradas1
+    4300040: Gradas2
+    4300042: Pantalla
+    4300044: Foco3
+    4300046: Foco3
+    4300048: Foco3
+    4300050: Foco3
+    4300052: Foco3
+    4300054: Foco3
+    4300056: Foco3
+    4300058: Foco2
+    4300060: Foco2
+    4300062: Foco2
+    4300064: Foco2
+    4300066: Foco2
+    4300068: Foco2
+    4300070: Foco2
+    4300072: Foco5
+    4300074: Foco5
+    4300076: Foco5
+    4300078: Foco5
+    4300080: Foco5
+    4300082: Foco5
+    4300084: Foco5
+    4300086: Foco4
+    4300088: Foco4
+    4300090: Foco4
+    4300092: Foco4
+    4300094: Foco4
+    4300096: Foco4
+    4300098: Foco4
+    4300100: Foco6
+    4300102: Foco6
+    4300104: Foco6
+    4300106: Foco6
+    4300108: Foco6
+    4300110: Foco6
+    4300112: Foco6
+    4300114: Foco1
+    4300116: Foco1
+    4300118: Foco1
+    4300120: Foco1
+    4300122: Foco1
+    4300124: Foco1
+    4300126: Foco1
+    4300128: Low
+    4300130: Low001
+    4300132: TechoLuces
+    4300134: Gradas009
+    4300136: Gradas010
+    4300138: Gradas012
+    4300140: Gradas013
+    4300142: Gradas015
+    4300144: Gradas016
+    4300146: Gradas017
+    4300148: Gradas018
+    4300150: Gradas019
+    4300152: Gradas020
+    4300154: Gradas021
+    7400000: Take 001
+    9500000: //RootNode
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.0254
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
