@@ -102,7 +102,8 @@ public class EventManager : MonoBehaviour {
     }
 
     public bool CheckForceEndEvent() {
-        return (PlayersManager.GetInstance().CheckLimitPlayersDeathInEvent() && eventPlatform != null && !eventPlatform.forceFinnish);
+        //return (PlayersManager.GetInstance().CheckLimitPlayersDeathInEvent() && eventPlatform != null && !eventPlatform.forceFinnish);
+        return false;
     }
     
 }
