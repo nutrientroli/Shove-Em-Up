@@ -14,7 +14,7 @@ public class SmokeEventPlatform : EventPlatformScript
 
     [Header("Event Configuration")]
     [SerializeField] private float waitTime = 2.0f;
-    [SerializeField] private float timeToAction = 5.0f;
+    [SerializeField] private float timeToAction = 1.0f;
 
     [Header("Extra Configuration")]
     public float timeVariaton = 1.0f;
@@ -25,6 +25,10 @@ public class SmokeEventPlatform : EventPlatformScript
     {
         base.Init();
         type = TypeEvent.TIME;
+        listEvent.Add(StartSmoke);
+        listEvent.Add(EndSmoke);
+        listEvent.Add(StartSmoke);
+        listEvent.Add(EndSmoke);
         listEvent.Add(StartSmoke);
         listEvent.Add(EndSmoke);
         listEvent.Add(End);
