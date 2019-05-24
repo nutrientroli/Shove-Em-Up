@@ -19,6 +19,7 @@ public class FanScript : MonoBehaviour
     public ParticleSystem particles;
     public Transform toGo;
     public Transform goBack;
+    public Light light;
 
     // Start is called before the first frame update
     void Start()
@@ -63,11 +64,30 @@ public class FanScript : MonoBehaviour
             }
             else
             {
+                currentTime += Time.deltaTime;
+                if(light.enabled)
+                {
+                    if(currentTime >= 0.2f)
+                    {
+                        currentTime = 0;
+                        light.enabled = false;
+                    }
+                }
+                else
+                {
+                    if (currentTime >= 0.5f)
+                    {
+                        currentTime = 0;
+                        light.enabled = true;
+                    }
+                }
                 transform.position = Vector3.MoveTowards(transform.position, toGo.position, Time.deltaTime * 2.5f);
                 if ((transform.position - toGo.position).magnitude <= 0.01f)
                 {
                     particles.Play();
                     air = true;
+                    currentTime = 0;
+                    light.enabled = false;
                 }
             }
         }else if(air)
