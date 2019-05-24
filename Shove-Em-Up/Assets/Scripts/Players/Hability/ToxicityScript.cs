@@ -8,6 +8,7 @@ public class ToxicityScript : MonoBehaviour
     private Vector3 scaleVector = new Vector3(0.2f, 0, 0.2f);
     private float maxY = 3;
     private float maxX = 30;
+    private List<PlayerScript> players = new List<PlayerScript>();
 
     void Update() {
         if(!exit) {
@@ -23,10 +24,43 @@ public class ToxicityScript : MonoBehaviour
     }
 
     private void OnTriggerEnter(Collider other) {
-        if (other.gameObject.tag == "Player") {
-            PlayerScript player = other.gameObject.GetComponent<PlayerScript>();
-            if(player != null && other.gameObject.GetComponent<ToxicityModifierScript>() == null)
-                player.AddOtherMod(player.gameObject.AddComponent<ToxicityModifierScript>());
+        if (other.gameObject.tag == "Player")
+        {
+            bool inside = false;
+            PlayerScript _player =  other.gameObject.GetComponent<PlayerScript>();
+            foreach(PlayerScript p in players)
+            {
+                if (p == _player)
+                    inside = true;
+            }
+            if (!inside)
+            {
+                players.Add(_player);
+                if (other.gameObject.GetComponent<ToxicityModifierScript>() == null)
+                    _player.AddOtherMod(_player.gameObject.AddComponent<ToxicityModifierScript>());
+            }
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.tag == "Player")
+        {
+            bool inside = false;
+            PlayerScript _player = other.gameObject.GetComponent<PlayerScript>();
+            foreach (PlayerScript p in players)
+            {
+                if (p == _player)
+                    inside = true;
+            }
+            if (inside)
+            {
+                players.Remove(_player);
+                if (other.gameObject.GetComponent<ToxicityModifierScript>() != null)
+                {
+                    _player.RemoveMod(other.gameObject.GetComponent<ToxicityModifierScript>());
+                }
+            }
         }
     }
 }
