@@ -6,9 +6,8 @@ public class FanEventPlatform : EventPlatformScript
     #region Variables
     [Header("Objects Configuration")] //Crear Tipo de objeto con el GameObject y tier?
 
-    public Transform posToInstiantiate;
-    public GameObject ventiladorPrefab;
-    private GameObject fan;
+    public List<FanScript> ventiladores;
+    private int randomNum = 0;
     
 
     [Header("Event Configuration")]
@@ -23,8 +22,8 @@ public class FanEventPlatform : EventPlatformScript
     public override void Init()
     {
         base.Init();
+        randomNum = Random.Range(0, ventiladores.Count);
         type = TypeEvent.TIME;
-        listEvent.Add(Wait);
         listEvent.Add(Action);
         listEvent.Add(End);
     }
@@ -32,7 +31,6 @@ public class FanEventPlatform : EventPlatformScript
     public override void ForceFinnish()
     {
         base.ForceFinnish();
-        listEvent.Add(Wait);
         listEvent.Add(End);
     }
     #endregion
@@ -43,12 +41,12 @@ public class FanEventPlatform : EventPlatformScript
     }
 
     private float Action() {
-        fan = Instantiate(ventiladorPrefab, posToInstiantiate);
+        ventiladores[randomNum].Active();
         return timeToAction * timeVariaton;
     }
 
     private float End() {
-        Destroy(fan);
+        ventiladores[randomNum].Hide();
         return -1;
     }
     #endregion

@@ -4806,6 +4806,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeToDisapear: 12.5
   particles: {fileID: 1263924384512177592}
+  toGo: {fileID: 0}
+  goBack: {fileID: 0}
 --- !u!65 &8820070092638018414
 BoxCollider:
   m_ObjectHideFlags: 0
