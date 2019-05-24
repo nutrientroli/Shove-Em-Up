@@ -153,6 +153,7 @@ public class PlayerScript : MonoBehaviour
                 pushScript.Push();
                 break;
             case State.KNOCKBACK:
+                moveScript.CanMove(false);
                 animator.SetTrigger("Impact");
                 pushScript.RestartCharge();
                 break;

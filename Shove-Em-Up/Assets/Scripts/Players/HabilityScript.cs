@@ -97,7 +97,6 @@ public class HabilityScript : MonoBehaviour
 
     public void IncrementPerItem()
     {
-        Debug.Log("Hola :: " + currentEnergy  + " .. " + incrementEnergyPerItem);
         currentEnergy += incrementEnergyPerItem;
         if (currentEnergy > maxEnergy)
             currentEnergy = maxEnergy;

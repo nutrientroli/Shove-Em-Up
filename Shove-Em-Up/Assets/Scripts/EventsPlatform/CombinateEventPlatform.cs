@@ -6,12 +6,11 @@ public class CombinateEventPlatform : EventPlatformScript
     #region Variables
     [Header("Objects Configuration")]
     [SerializeField] private List<MeteorScript> meteors = new List<MeteorScript>();
-    [SerializeField] private GameObject feedback;
-    public Transform posToInstiantiate;
-    public GameObject ventiladorPrefab;
+    public List<FanScript> ventiladores;
     private GameObject[] players;
 
-    private GameObject fan;
+    private int randomNum = 0;
+
     private int state = 0; //Estado 0: Ventilador con meteoritos
     private int maxState = 3;
     private List<bool> poolMeteors = new List<bool>();
@@ -28,6 +27,7 @@ public class CombinateEventPlatform : EventPlatformScript
     {
         base.Init();
         state = Random.Range(0, maxState);
+        randomNum = Random.Range(0, ventiladores.Count);
         state = 0; //actualmente solo hay 1 combinación
         if (state == 0)
         {
@@ -138,14 +138,14 @@ public class CombinateEventPlatform : EventPlatformScript
     {
         if (state == 0)
         {
-            fan = Instantiate(ventiladorPrefab, posToInstiantiate);
+            ventiladores[randomNum].Active();
         }
         return 0;
     }
 
     private float DestroyFan()
     {
-        if (fan != null) Destroy(fan);
+        ventiladores[randomNum].Hide();
         return 0;
     }
 
@@ -160,6 +160,7 @@ public class CombinateEventPlatform : EventPlatformScript
     }
     private float End()
     {
+        ventiladores[randomNum].Hide();
         return -1;
     }
     #endregion

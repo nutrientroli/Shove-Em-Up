@@ -20,6 +20,7 @@ public class PlayerData : MonoBehaviour {
     private int score = 0;
     public GameObject canvasPoints;
     public CanvasHudScript canvas;
+    public LightPlayer light;
     private PlayerType typePlayer;
 
     public void SetPlayer(int _player) {

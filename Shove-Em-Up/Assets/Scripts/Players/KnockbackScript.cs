@@ -13,11 +13,13 @@ public class KnockbackScript : MonoBehaviour
     private float maxForce = 12f;
     private float hight = 4f;
     private Vector3 direction = Vector3.zero;
+    private MoveScript moveScript;
 
     private bool canStop = true;
 
-    private void Start()
+    private void Awake()
     {
+        moveScript = GetComponent<MoveScript>();
         characterController = GetComponent<CharacterController>();
         if (characterController == null)
             characterController = gameObject.AddComponent<CharacterController>();
@@ -44,7 +46,8 @@ public class KnockbackScript : MonoBehaviour
 
             direction = _direction.normalized;
             direction.y += timeStopKnockback * hight / 2;
-            gameObject.transform.forward = direction * -1;
+            gameObject.transform.forward = new Vector3(-direction.x, 0, -direction.z);
+            moveScript.SetForward(gameObject.transform.forward);
             canStop = false;
         }
     }

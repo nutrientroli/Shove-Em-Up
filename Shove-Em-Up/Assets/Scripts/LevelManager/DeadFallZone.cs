@@ -5,7 +5,11 @@ public class DeadFallZone : MonoBehaviour {
         if (other.tag.Equals("Player")) {
             other.gameObject.GetComponent<PlayerScript>().KillerKillMe();
             PlayerData data = other.GetComponentInChildren<PlayerData>();
-            if (data != null) PlayersManager.GetInstance().Dead(data.GetPlayer());
+            if (data != null)
+            {
+                data.light.RedLight();
+                PlayersManager.GetInstance().Dead(data.GetPlayer());
+            }
         }
     }
 }

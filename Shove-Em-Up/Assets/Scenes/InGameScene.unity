@@ -50,7 +50,7 @@ LightmapSettings:
     m_BounceScale: 1
     m_IndirectOutputScale: 1
     m_AlbedoBoost: 1
-    m_EnvironmentLightingMode: 1
+    m_EnvironmentLightingMode: 0
     m_EnableBakedLightmaps: 1
     m_EnableRealtimeLightmaps: 1
   m_LightmapEditorSettings:
@@ -71,7 +71,7 @@ LightmapSettings:
     m_FinalGatherRayCount: 256
     m_ReflectionCompression: 2
     m_MixedBakeMode: 2
-    m_BakeBackend: 1
+    m_BakeBackend: 2
     m_PVRSampling: 1
     m_PVRDirectSampleCount: 32
     m_PVRSampleCount: 500
@@ -4516,10 +4516,9 @@ MonoBehaviour:
   active: 0
   forceFinnish: 0
   meteors: []
-  feedback: {fileID: 0}
-  posToInstiantiate: {fileID: 0}
-  ventiladorPrefab: {fileID: 8820070092638018415, guid: 24d76b0b69644404982bb7e0afa70cc2,
-    type: 3}
+  ventiladores:
+  - {fileID: 1778507450}
+  - {fileID: 1923135684}
   waitTime: 0.3
   timeToAction: 0
   timeVariaton: 0
@@ -5937,7 +5936,7 @@ PrefabInstance:
     - target: {fileID: 4534227954140067148, guid: d70f9f4ed8099d34393ba8ad46fc8c00,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.99990845
+      value: 0.9998932
       objectReference: {fileID: 0}
     - target: {fileID: 4534227954073672478, guid: d70f9f4ed8099d34393ba8ad46fc8c00,
         type: 3}
