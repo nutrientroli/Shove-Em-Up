@@ -49,7 +49,8 @@ public class CanvasPoints : MonoBehaviour
             if(currentTime >= 0.5f)
             {
                 alpha -= 1 * Time.deltaTime;
-                imagen.color = new Color(255,255,255,alpha);
+                if(imagen != null)
+                    imagen.color = new Color(255,255,255,alpha);
                 if (currentTime >= 1.5f || imagen.color.a <= 0)
                     Destroy(gameObject);
             }
