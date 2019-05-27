@@ -45,14 +45,15 @@ public class CanvasPoints : MonoBehaviour
     {
         if (parent != null)
         {
+            positionRelativePJ += new Vector3(0, 2 * Time.deltaTime, 0);
             currentTime += Time.deltaTime;
             if(currentTime >= 0.5f)
             {
-                alpha -= 1 * Time.deltaTime;
+                alpha -= 1.5f * Time.deltaTime;
                 if (imagen != null)
                 {
                     imagen.color = new Color(255, 255, 255, alpha);
-                    if (currentTime >= 1.5f || imagen.color.a <= 0)
+                    if (currentTime >= 1f || imagen.color.a <= 0)
                         Destroy(gameObject);
                 }
             }
