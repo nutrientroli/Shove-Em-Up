@@ -6,9 +6,11 @@ using UnityEngine.UI;
 public class CanvasPoints : MonoBehaviour
 {
     public List<Image> imagenes;
+    private Image imagen;
     private Vector3 positionRelativePJ;
     private GameObject parent;
-
+    private float currentTime = 0;
+    private float alpha = 1;
     private void Start()
     {
 
@@ -20,12 +22,17 @@ public class CanvasPoints : MonoBehaviour
         {
             case 1:
                 imagenes[0].enabled = true;
+                imagen = imagenes[0];
                 break;
             case 3:
                 imagenes[1].enabled = true;
+                imagen = imagenes[1];
+
                 break;
             case 5:
                 imagenes[2].enabled = true;
+                imagen = imagenes[2];
+
                 break;
         }
         parent = _parent;
@@ -38,11 +45,16 @@ public class CanvasPoints : MonoBehaviour
     {
         if (parent != null)
         {
+            currentTime += Time.deltaTime;
+            if(currentTime >= 0.5f)
+            {
+                alpha -= 1 * Time.deltaTime;
+                imagen.color = new Color(255,255,255,alpha);
+                if (currentTime >= 1.5f || imagen.color.a <= 0)
+                    Destroy(gameObject);
+            }
             gameObject.transform.position = parent.transform.position + positionRelativePJ;
-            gameObject.transform.localScale = new Vector3(gameObject.transform.localScale.x + 0.0001f, gameObject.transform.localScale.y + 0.0001f, gameObject.transform.localScale.z + 0.0001f);
-            //positionRelativePJ += Vector3.forward * Time.deltaTime;
-            if (gameObject.transform.localScale.x >= -0.002)
-                Destroy(gameObject);
+
         }
     }
 }
