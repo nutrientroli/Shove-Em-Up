@@ -151,5 +151,9 @@ public class PlayersManager {
         }
         return _data;
     }
+    public int GetNumberOfPlayers()
+    {
+        return tableOfPlayerData.Count;
+    }
     #endregion
 }

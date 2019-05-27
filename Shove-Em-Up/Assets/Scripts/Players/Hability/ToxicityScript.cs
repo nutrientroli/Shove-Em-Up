@@ -5,17 +5,22 @@ using UnityEngine;
 public class ToxicityScript : MonoBehaviour
 {
     public bool exit = false;
-    private Vector3 scaleVector = new Vector3(0.2f, 0, 0.2f);
-    private float maxY = 3;
-    private float maxX = 32;
+    private Vector3 scaleVector = new Vector3(0.1f, 0.1f, 0.1f);
+    private float maxX = 16;
     private List<PlayerScript> players = new List<PlayerScript>();
+    private ParticleSystem particles;
 
+    private void Awake()
+    {
+        particles = GetComponent<ParticleSystem>();
+    }
 
     void Update() {
         if(!exit) {
-            if (gameObject.transform.localScale.x < maxX || gameObject.transform.localScale.y < maxY) gameObject.transform.localScale += scaleVector;
-            if (gameObject.transform.localScale.x > maxX) gameObject.transform.localScale = new Vector3(maxX, gameObject.transform.localScale.y, maxX);
-            if (gameObject.transform.localScale.y > maxY) gameObject.transform.localScale = new Vector3(gameObject.transform.localScale.x, maxY, gameObject.transform.localScale.z);
+            if (gameObject.transform.localScale.x < maxX)
+                gameObject.transform.localScale += scaleVector;
+            if (gameObject.transform.localScale.x > maxX)
+                gameObject.transform.localScale = new Vector3(maxX,maxX, maxX);
         }
 
         if(exit) {
@@ -39,6 +44,8 @@ public class ToxicityScript : MonoBehaviour
     public void Active()
     {
         exit = false;
+        gameObject.transform.localScale = Vector3.one;
+        particles.Play();
     }
 
     private void OnTriggerEnter(Collider other) {

@@ -24,11 +24,20 @@ public class ScoreManager
     {
         GameObject[] _players;
         _players = GameObject.FindGameObjectsWithTag("Player");
-        
-        foreach(GameObject p in _players)
-        {
-            if(p.GetComponent<PlayerData>() != null)
-                players.Add(0);
+
+        //Mejorar rendimiento. Hastable en PlayersManagers
+
+
+        if (_players != null && _players.Length>0) {
+            foreach (GameObject p in _players) {
+                if (p.GetComponent<PlayerData>() != null) players.Add(0);
+            }
+        } else {
+            //for(int i=0; i<4; i++) players.Add(0);
+            players.Add(5);
+            players.Add(20);
+            players.Add(50);
+            players.Add(17);
         }
     }
 
@@ -39,6 +48,18 @@ public class ScoreManager
 
     public int GetPoints(int _player)
     {
-        return players[_player - 1];
+        int score = 0;
+        if (players != null) score = players[_player - 1];
+        return score;
+    }
+
+    public int GetMaxPoints() {
+        int score = 0;
+        if (players.Count > 0) {
+            for (int i = 0; i < players.Count; i++) {
+                if (score < players[i]) score = players[i];
+            }
+        }
+        return score;
     }
 }
