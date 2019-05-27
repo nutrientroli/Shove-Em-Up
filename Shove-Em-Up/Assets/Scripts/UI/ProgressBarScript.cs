@@ -16,10 +16,16 @@ public class ProgressBarScript : MonoBehaviour
     private float lerpvalue = 0;
 
     void Start() {
-        maxvalue = ScoreManager.GetInstance().GetPoints(player);
-        maxvalueglobal = ScoreManager.GetInstance().GetMaxPoints();
-        bar.color = color;
-        SetProgress(0);
+        if(player <= PlayersManager.GetInstance().GetNumberOfPlayers()) {
+            maxvalue = ScoreManager.GetInstance().GetPoints(player);
+            maxvalueglobal = ScoreManager.GetInstance().GetMaxPoints();
+            bar.color = color;
+            SetProgress(0);
+        }
+        else
+        {
+            gameObject.SetActive(false);
+        }
     }
 
     void Update() {
