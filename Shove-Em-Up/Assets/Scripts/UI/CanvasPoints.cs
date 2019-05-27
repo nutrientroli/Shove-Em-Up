@@ -13,7 +13,7 @@ public class CanvasPoints : MonoBehaviour
     private float alpha = 1;
     private void Start()
     {
-
+        gameObject.transform.forward = Camera.main.transform.position - gameObject.transform.position;
     }
 
     public void Init(int num, GameObject _parent)
@@ -49,10 +49,12 @@ public class CanvasPoints : MonoBehaviour
             if(currentTime >= 0.5f)
             {
                 alpha -= 1 * Time.deltaTime;
-                if(imagen != null)
-                    imagen.color = new Color(255,255,255,alpha);
-                if (currentTime >= 1.5f || imagen.color.a <= 0)
-                    Destroy(gameObject);
+                if (imagen != null)
+                {
+                    imagen.color = new Color(255, 255, 255, alpha);
+                    if (currentTime >= 1.5f || imagen.color.a <= 0)
+                        Destroy(gameObject);
+                }
             }
             gameObject.transform.position = parent.transform.position + positionRelativePJ;
 
