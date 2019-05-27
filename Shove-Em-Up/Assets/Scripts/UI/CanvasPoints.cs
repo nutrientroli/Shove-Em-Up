@@ -40,7 +40,7 @@ public class CanvasPoints : MonoBehaviour
         {
             gameObject.transform.position = parent.transform.position + positionRelativePJ;
             gameObject.transform.localScale = new Vector3(gameObject.transform.localScale.x + 0.0001f, gameObject.transform.localScale.y + 0.0001f, gameObject.transform.localScale.z + 0.0001f);
-            positionRelativePJ += Vector3.forward * Time.deltaTime;
+            //positionRelativePJ += Vector3.forward * Time.deltaTime;
             if (gameObject.transform.localScale.x >= -0.002)
                 Destroy(gameObject);
         }
