@@ -12,5 +12,6 @@ public class LevelScript : MonoBehaviour
         PlayersManager.GetInstance().SetListOfCharacters(Characters);
         PlayersManager.GetInstance().Init();
         LevelManager.GetInstance().ResetGame(eventsToFinnish);
+        SoundManager.GetInstance().PlaySound(SoundManager.SoundEvent.SOUND_1);
     }
 }

@@ -41,6 +41,7 @@ public class SoundManager
 
     public void PlaySound(SoundEvent _event) {
         //llamar a evento del fmod
+        FMODUnity.RuntimeManager.PlayOneShot("event:/Points/GainPoint2");
     }
 
     public void StopSound(SoundEvent _event)

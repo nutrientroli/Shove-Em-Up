@@ -1,0 +1,159 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d32cf7c32a3ed8347bac48ef5ed56d82, type: 3}
+  m_Name: FMODStudioCache
+  m_EditorClassIdentifier: 
+  EditorBanks:
+  - {fileID: 114765505224972242}
+  - {fileID: 114970337020287964}
+  EditorEvents:
+  - {fileID: 114286703242390540}
+  - {fileID: 114027955247945546}
+  - {fileID: 114657422886931850}
+  - {fileID: 114458475957771326}
+  MasterBanks:
+  - {fileID: 114970337020287964}
+  StringsBanks:
+  - {fileID: 114765505224972242}
+  stringsBankWriteTime: 636946853141052951
+  cacheVersion: 3
+--- !u!114 &114027955247945546
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Points/GainPoints1
+  m_EditorClassIdentifier: 
+  Path: event:/Points/GainPoints1
+  guid: 6b367a665aae994e87b6cb58df7db7b7
+  Banks:
+  - {fileID: 114970337020287964}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 277
+--- !u!114 &114286703242390540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Points/GainPoint3
+  m_EditorClassIdentifier: 
+  Path: event:/Points/GainPoint3
+  guid: 68948979e8100046a3a304427e378696
+  Banks:
+  - {fileID: 114970337020287964}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 703
+--- !u!114 &114458475957771326
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Points/GainPoint4
+  m_EditorClassIdentifier: 
+  Path: event:/Points/GainPoint4
+  guid: ff3afc927140934c9685276a17c07e59
+  Banks:
+  - {fileID: 114970337020287964}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 581
+--- !u!114 &114657422886931850
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Points/GainPoint2
+  m_EditorClassIdentifier: 
+  Path: event:/Points/GainPoint2
+  guid: ae12b072e7d67a439eeeb2b28b8db258
+  Banks:
+  - {fileID: 114970337020287964}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 393
+--- !u!114 &114765505224972242
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master Bank.strings.bank
+  m_EditorClassIdentifier: 
+  Path: Assets\Build_FMOD\Desktop\Master Bank.strings.bank
+  lastModified: 636946853141052951
+  LoadResult: 0
+  FileSizes:
+  - Name: 
+    Value: 836
+  Exists: 1
+--- !u!114 &114970337020287964
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master Bank.bank
+  m_EditorClassIdentifier: 
+  Path: D:\Projects\UniversityProjects\Shove-Em-Up-Code\Shove-Em-Up\Assets\Build_FMOD\Desktop\Master
+    Bank.bank
+  lastModified: 636946853141002965
+  LoadResult: 0
+  FileSizes:
+  - Name: 
+    Value: 39168
+  Exists: 1
