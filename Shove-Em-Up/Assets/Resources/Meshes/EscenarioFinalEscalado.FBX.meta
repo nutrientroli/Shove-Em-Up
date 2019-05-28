@@ -1,0 +1,484 @@
+fileFormatVersion: 2
+guid: 72c32d29f7df9bd48b220b26fe80fdd4
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Camara003
+    100002: Camara2
+    100004: Escenario
+    100006: //RootNode
+    100008: Foco1
+    100010: Foco1 1
+    100012: Foco1 2
+    100014: Foco1 3
+    100016: Foco1 4
+    100018: Foco1 5
+    100020: Foco1 6
+    100022: Foco2
+    100024: Foco2 1
+    100026: Foco2 2
+    100028: Foco2 3
+    100030: Foco2 4
+    100032: Foco2 5
+    100034: Foco2 6
+    100036: Foco3
+    100038: Foco3 1
+    100040: Foco3 2
+    100042: Foco3 3
+    100044: Foco3 4
+    100046: Foco3 5
+    100048: Foco3 6
+    100050: Foco4
+    100052: Foco4 1
+    100054: Foco4 2
+    100056: Foco4 3
+    100058: Foco4 4
+    100060: Foco4 5
+    100062: Foco4 6
+    100064: Foco5
+    100066: Foco5 1
+    100068: Foco5 2
+    100070: Foco5 3
+    100072: Foco5 4
+    100074: Foco5 5
+    100076: Foco5 6
+    100078: Foco6
+    100080: Foco6 1
+    100082: Foco6 2
+    100084: Foco6 3
+    100086: Foco6 4
+    100088: Foco6 5
+    100090: Foco6 6
+    100092: Gradas022
+    100094: Gradas023
+    100096: Gradas024
+    100098: Gradas025
+    100100: Gradas026
+    100102: Gradas027
+    100104: Gradas028
+    100106: Gradas029
+    100108: Pantalla
+    100110: Rail1
+    100112: Rail2
+    100114: Rail3
+    100116: Rail4
+    100118: Rail5
+    100120: Rail6
+    100122: Ruleta
+    100124: StraightStair001
+    100126: StraightStair002
+    100128: TechoLuces
+    100130: triangle_low
+    100132: triangle_low001
+    100134: triangle_low002
+    100136: triangle_low003
+    100138: triangle_low004
+    100140: triangle_low005
+    100142: ZonaRoja
+    400000: Camara003
+    400002: Camara2
+    400004: Escenario
+    400006: //RootNode
+    400008: Foco1
+    400010: Foco1 1
+    400012: Foco1 2
+    400014: Foco1 3
+    400016: Foco1 4
+    400018: Foco1 5
+    400020: Foco1 6
+    400022: Foco2
+    400024: Foco2 1
+    400026: Foco2 2
+    400028: Foco2 3
+    400030: Foco2 4
+    400032: Foco2 5
+    400034: Foco2 6
+    400036: Foco3
+    400038: Foco3 1
+    400040: Foco3 2
+    400042: Foco3 3
+    400044: Foco3 4
+    400046: Foco3 5
+    400048: Foco3 6
+    400050: Foco4
+    400052: Foco4 1
+    400054: Foco4 2
+    400056: Foco4 3
+    400058: Foco4 4
+    400060: Foco4 5
+    400062: Foco4 6
+    400064: Foco5
+    400066: Foco5 1
+    400068: Foco5 2
+    400070: Foco5 3
+    400072: Foco5 4
+    400074: Foco5 5
+    400076: Foco5 6
+    400078: Foco6
+    400080: Foco6 1
+    400082: Foco6 2
+    400084: Foco6 3
+    400086: Foco6 4
+    400088: Foco6 5
+    400090: Foco6 6
+    400092: Gradas022
+    400094: Gradas023
+    400096: Gradas024
+    400098: Gradas025
+    400100: Gradas026
+    400102: Gradas027
+    400104: Gradas028
+    400106: Gradas029
+    400108: Pantalla
+    400110: Rail1
+    400112: Rail2
+    400114: Rail3
+    400116: Rail4
+    400118: Rail5
+    400120: Rail6
+    400122: Ruleta
+    400124: StraightStair001
+    400126: StraightStair002
+    400128: TechoLuces
+    400130: triangle_low
+    400132: triangle_low001
+    400134: triangle_low002
+    400136: triangle_low003
+    400138: triangle_low004
+    400140: triangle_low005
+    400142: ZonaRoja
+    2100000: 24 - Default
+    2100002: 10 - Default
+    2100004: 03 - Default
+    2100006: 13 - Default
+    2100008: No Name
+    2100010: 09 - Default
+    2100012: 'Material #303'
+    2100014: 'Material #307'
+    2100016: 'Material #306'
+    2100018: 'Material #308'
+    2100020: 'Material #305'
+    2100022: 23 - Default
+    2100024: 22 - Default
+    2100026: 02 - Default
+    2100028: 01 - Default
+    2100030: 07 - Default
+    2100032: lith_mat
+    2100034: other
+    2100036: selectionMaterial_Mat
+    2300000: Camara003
+    2300002: Camara2
+    2300004: Escenario
+    2300006: Foco1
+    2300008: Foco1 1
+    2300010: Foco1 2
+    2300012: Foco1 3
+    2300014: Foco1 4
+    2300016: Foco1 5
+    2300018: Foco1 6
+    2300020: Foco2
+    2300022: Foco2 1
+    2300024: Foco2 2
+    2300026: Foco2 3
+    2300028: Foco2 4
+    2300030: Foco2 5
+    2300032: Foco2 6
+    2300034: Foco3
+    2300036: Foco3 1
+    2300038: Foco3 2
+    2300040: Foco3 3
+    2300042: Foco3 4
+    2300044: Foco3 5
+    2300046: Foco3 6
+    2300048: Foco4
+    2300050: Foco4 1
+    2300052: Foco4 2
+    2300054: Foco4 3
+    2300056: Foco4 4
+    2300058: Foco4 5
+    2300060: Foco4 6
+    2300062: Foco5
+    2300064: Foco5 1
+    2300066: Foco5 2
+    2300068: Foco5 3
+    2300070: Foco5 4
+    2300072: Foco5 5
+    2300074: Foco5 6
+    2300076: Foco6
+    2300078: Foco6 1
+    2300080: Foco6 2
+    2300082: Foco6 3
+    2300084: Foco6 4
+    2300086: Foco6 5
+    2300088: Foco6 6
+    2300090: Gradas022
+    2300092: Gradas023
+    2300094: Gradas024
+    2300096: Gradas025
+    2300098: Gradas026
+    2300100: Gradas027
+    2300102: Gradas028
+    2300104: Gradas029
+    2300106: Pantalla
+    2300108: Rail1
+    2300110: Rail2
+    2300112: Rail3
+    2300114: Rail4
+    2300116: Rail5
+    2300118: Rail6
+    2300120: Ruleta
+    2300122: StraightStair001
+    2300124: StraightStair002
+    2300126: TechoLuces
+    2300128: triangle_low
+    2300130: triangle_low001
+    2300132: triangle_low002
+    2300134: triangle_low003
+    2300136: triangle_low004
+    2300138: triangle_low005
+    2300140: ZonaRoja
+    3300000: Camara003
+    3300002: Camara2
+    3300004: Escenario
+    3300006: Foco1
+    3300008: Foco1 1
+    3300010: Foco1 2
+    3300012: Foco1 3
+    3300014: Foco1 4
+    3300016: Foco1 5
+    3300018: Foco1 6
+    3300020: Foco2
+    3300022: Foco2 1
+    3300024: Foco2 2
+    3300026: Foco2 3
+    3300028: Foco2 4
+    3300030: Foco2 5
+    3300032: Foco2 6
+    3300034: Foco3
+    3300036: Foco3 1
+    3300038: Foco3 2
+    3300040: Foco3 3
+    3300042: Foco3 4
+    3300044: Foco3 5
+    3300046: Foco3 6
+    3300048: Foco4
+    3300050: Foco4 1
+    3300052: Foco4 2
+    3300054: Foco4 3
+    3300056: Foco4 4
+    3300058: Foco4 5
+    3300060: Foco4 6
+    3300062: Foco5
+    3300064: Foco5 1
+    3300066: Foco5 2
+    3300068: Foco5 3
+    3300070: Foco5 4
+    3300072: Foco5 5
+    3300074: Foco5 6
+    3300076: Foco6
+    3300078: Foco6 1
+    3300080: Foco6 2
+    3300082: Foco6 3
+    3300084: Foco6 4
+    3300086: Foco6 5
+    3300088: Foco6 6
+    3300090: Gradas022
+    3300092: Gradas023
+    3300094: Gradas024
+    3300096: Gradas025
+    3300098: Gradas026
+    3300100: Gradas027
+    3300102: Gradas028
+    3300104: Gradas029
+    3300106: Pantalla
+    3300108: Rail1
+    3300110: Rail2
+    3300112: Rail3
+    3300114: Rail4
+    3300116: Rail5
+    3300118: Rail6
+    3300120: Ruleta
+    3300122: StraightStair001
+    3300124: StraightStair002
+    3300126: TechoLuces
+    3300128: triangle_low
+    3300130: triangle_low001
+    3300132: triangle_low002
+    3300134: triangle_low003
+    3300136: triangle_low004
+    3300138: triangle_low005
+    3300140: ZonaRoja
+    4300000: Escenario
+    4300002: Ruleta
+    4300004: Rail6
+    4300006: Rail5
+    4300008: Rail4
+    4300010: Rail3
+    4300012: Rail2
+    4300014: Rail1
+    4300016: Pantalla
+    4300018: Foco3
+    4300020: Foco3
+    4300022: Foco3
+    4300024: Foco3
+    4300026: Foco3
+    4300028: Foco3
+    4300030: Foco3
+    4300032: Foco2
+    4300034: Foco2
+    4300036: Foco2
+    4300038: Foco2
+    4300040: Foco2
+    4300042: Foco2
+    4300044: Foco2
+    4300046: Foco5
+    4300048: Foco5
+    4300050: Foco5
+    4300052: Foco5
+    4300054: Foco5
+    4300056: Foco5
+    4300058: Foco5
+    4300060: Foco4
+    4300062: Foco4
+    4300064: Foco4
+    4300066: Foco4
+    4300068: Foco4
+    4300070: Foco4
+    4300072: Foco4
+    4300074: Foco6
+    4300076: Foco6
+    4300078: Foco6
+    4300080: Foco6
+    4300082: Foco6
+    4300084: Foco6
+    4300086: Foco6
+    4300088: Foco1
+    4300090: Foco1
+    4300092: Foco1
+    4300094: Foco1
+    4300096: Foco1
+    4300098: Foco1
+    4300100: Foco1
+    4300102: TechoLuces
+    4300104: ZonaRoja
+    4300106: Camara2
+    4300108: Gradas022
+    4300110: Gradas023
+    4300112: Gradas024
+    4300114: Gradas025
+    4300116: triangle_low
+    4300118: triangle_low001
+    4300120: triangle_low002
+    4300122: triangle_low003
+    4300124: triangle_low004
+    4300126: triangle_low005
+    4300128: Gradas026
+    4300130: Gradas027
+    4300132: Gradas028
+    4300134: Gradas029
+    4300136: StraightStair001
+    4300138: StraightStair002
+    4300140: Camara003
+    7400000: Take 001
+    9500000: //RootNode
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lith_mat
+    second: {fileID: 2100000, guid: 690c989ac59749348b8186c4cb10bc57, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: other
+    second: {fileID: 2100000, guid: 2334c5b2c176b88418fc32f086cb666a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: selectionMaterial_Mat
+    second: {fileID: 2100000, guid: 68460d9f9db27da4d80041c672a714b2, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 100
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 2.54
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
