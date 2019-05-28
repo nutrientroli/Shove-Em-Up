@@ -46,7 +46,6 @@ public class EventManager : MonoBehaviour {
                 else if (CheckForceEndEvent()) ForceFinnishEvent();
                 else if (eventPlatform.execute) {
                     if (!eventPlatform.counterIsShow) {
-                        Debug.Log("Event finnish Counter");
                         switch (eventPlatform.type) {
                             case EventPlatformScript.TypeEvent.TIME:
                                 if (eventPlatform.execute) eventPlatform.Run(Time.deltaTime);
@@ -55,7 +54,6 @@ public class EventManager : MonoBehaviour {
                             default: break;
                         }
                     } else {
-                        Debug.Log("Event show Counter");
                         ShowNumberCounter(Time.deltaTime);
                     }
                 }
@@ -115,12 +113,9 @@ public class EventManager : MonoBehaviour {
         return false;
     }
 
-    public void ShowNumberCounter(float _dt)
-    {
+    public void ShowNumberCounter(float _dt) {
         timeCounter += _dt;
-
         if (counter.IsActive()) {
-            Debug.Log("IsActive Counter");
             if (timeCounter < 1) counter.text = "3";
             else if (timeCounter >= 1 && timeCounter < 2) counter.text = "2";
             else if (timeCounter >= 2 && timeCounter < 3)  counter.text = "1";
@@ -131,7 +126,6 @@ public class EventManager : MonoBehaviour {
                 counter.gameObject.SetActive(false);
             }
         } else {
-            Debug.Log("Active Counter");
             counter.gameObject.SetActive(true);
         }
 
