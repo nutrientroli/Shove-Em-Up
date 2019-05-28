@@ -1293,7 +1293,7 @@ Light:
   serializedVersion: 8
   m_Type: 3
   m_Color: {r: 0.55724543, g: 0.51998043, b: 0.8962264, a: 1}
-  m_Intensity: 3
+  m_Intensity: 5
   m_Range: 10
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -2020,7 +2020,7 @@ Light:
   serializedVersion: 8
   m_Type: 3
   m_Color: {r: 0.55724543, g: 0.51998043, b: 0.8962264, a: 1}
-  m_Intensity: 3
+  m_Intensity: 5
   m_Range: 10
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -2401,7 +2401,7 @@ Light:
   serializedVersion: 8
   m_Type: 3
   m_Color: {r: 0.55724543, g: 0.51998043, b: 0.8962264, a: 1}
-  m_Intensity: 3
+  m_Intensity: 5
   m_Range: 10
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -4179,7 +4179,7 @@ Light:
   serializedVersion: 8
   m_Type: 3
   m_Color: {r: 0.55724543, g: 0.51998043, b: 0.8962264, a: 1}
-  m_Intensity: 3
+  m_Intensity: 5
   m_Range: 10
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -5866,7 +5866,7 @@ Light:
   serializedVersion: 8
   m_Type: 3
   m_Color: {r: 0.55724543, g: 0.51998043, b: 0.8962264, a: 1}
-  m_Intensity: 3
+  m_Intensity: 5
   m_Range: 10
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -6538,7 +6538,7 @@ Light:
   serializedVersion: 8
   m_Type: 3
   m_Color: {r: 0.55724543, g: 0.51998043, b: 0.8962264, a: 1}
-  m_Intensity: 3
+  m_Intensity: 5
   m_Range: 10
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -7738,6 +7738,7 @@ MonoBehaviour:
   execute: 0
   active: 0
   forceFinnish: 0
+  counterIsShow: 1
   prefabItem: {fileID: 150059382541785946, guid: 507e49866bdb84d4ea8c0b0cb40a71bd,
     type: 3}
   HotPoint: {fileID: 1839692223}
@@ -7774,6 +7775,7 @@ MonoBehaviour:
   - {fileID: 1765142491}
   indexEvent: 2
   indexIncrement: 0
+  counter: {fileID: 0}
 --- !u!114 &1765142487
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7790,6 +7792,7 @@ MonoBehaviour:
   execute: 0
   active: 0
   forceFinnish: 0
+  counterIsShow: 1
   meteors: []
   ventiladores:
   - {fileID: 1778507450}
@@ -7814,6 +7817,7 @@ MonoBehaviour:
   execute: 0
   active: 0
   forceFinnish: 0
+  counterIsShow: 1
   meteors: []
   feedback: {fileID: 0}
   waitTime: 0.3
@@ -7836,6 +7840,7 @@ MonoBehaviour:
   execute: 0
   active: 0
   forceFinnish: 0
+  counterIsShow: 1
   pieces:
   - {fileID: 1817659800}
   - {fileID: 408203900}
@@ -7865,6 +7870,7 @@ MonoBehaviour:
   execute: 0
   active: 0
   forceFinnish: 0
+  counterIsShow: 1
   smoke: {fileID: 1378080815}
   transfInitial: {fileID: 1911609754}
   waitTime: 2
@@ -7886,6 +7892,7 @@ MonoBehaviour:
   execute: 0
   active: 0
   forceFinnish: 0
+  counterIsShow: 1
   ventiladores:
   - {fileID: 1778507450}
   - {fileID: 1923135684}
@@ -8372,7 +8379,7 @@ Light:
   serializedVersion: 8
   m_Type: 3
   m_Color: {r: 0.55724543, g: 0.51998043, b: 0.8962264, a: 1}
-  m_Intensity: 3
+  m_Intensity: 5
   m_Range: 10
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -8922,7 +8929,7 @@ Light:
   serializedVersion: 8
   m_Type: 3
   m_Color: {r: 0.55724543, g: 0.51998043, b: 0.8962264, a: 1}
-  m_Intensity: 3
+  m_Intensity: 5
   m_Range: 10
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -9923,7 +9930,7 @@ Light:
   serializedVersion: 8
   m_Type: 3
   m_Color: {r: 0.55724543, g: 0.51998043, b: 0.8962264, a: 1}
-  m_Intensity: 3
+  m_Intensity: 5
   m_Range: 10
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -11147,7 +11154,7 @@ PrefabInstance:
     - target: {fileID: 4534227954140067148, guid: d70f9f4ed8099d34393ba8ad46fc8c00,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.99990845
+      value: 0.9998779
       objectReference: {fileID: 0}
     - target: {fileID: 4534227954073672478, guid: d70f9f4ed8099d34393ba8ad46fc8c00,
         type: 3}
