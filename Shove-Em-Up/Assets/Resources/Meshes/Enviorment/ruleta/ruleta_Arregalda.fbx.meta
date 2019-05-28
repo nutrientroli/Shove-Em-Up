@@ -1,0 +1,152 @@
+fileFormatVersion: 2
+guid: 919cd9890f0c37841995af5a7e16bbbf
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: rails_low
+    100002: //RootNode
+    100004: ruleta_low
+    400000: rails_low
+    400002: //RootNode
+    400004: ruleta_low
+    2100000: metalic
+    2100002: checker
+    2300000: rails_low
+    2300002: ruleta_low
+    3300000: rails_low
+    3300002: ruleta_low
+    4300000: rails_low
+    4300002: ruleta_low
+    7400000: rails_low|Rail1|Take 001|BaseLayer
+    7400002: rails_low|Rail1|Take 001|BaseLayer.001
+    7400004: rails_low|Rail2|Take 001|BaseLayer
+    7400006: rails_low|Rail2|Take 001|BaseLayer.001
+    7400008: rails_low|Rail3|Take 001|BaseLayer
+    7400010: rails_low|Rail3|Take 001|BaseLayer.001
+    7400012: rails_low|Rail4|Take 001|BaseLayer
+    7400014: rails_low|Rail4|Take 001|BaseLayer.001
+    7400016: rails_low|Rail5|Take 001|BaseLayer
+    7400018: rails_low|Rail5|Take 001|BaseLayer.001
+    7400020: rails_low|Rail5|Take 001|BaseLayer.002
+    7400022: rails_low|Rail6|Take 001|BaseLayer
+    7400024: rails_low|Rail6|Take 001|BaseLayer.001
+    7400026: rails_low|Ruleta|Take 001|BaseLayer
+    7400028: rails_low|Ruleta|Take 001|BaseLayer.001
+    7400030: rails_low|Ruleta|Take 001|BaseLayer.002
+    7400032: rails_low|Ruleta|Take 001|BaseLayer.003
+    7400034: rails_low|Ruleta|Take 001|BaseLayer.004
+    7400036: ruleta_low|Rail1|Take 001|BaseLayer
+    7400038: ruleta_low|Rail1|Take 001|BaseLayer.001
+    7400040: ruleta_low|Rail2|Take 001|BaseLayer
+    7400042: ruleta_low|Rail2|Take 001|BaseLayer.001
+    7400044: ruleta_low|Rail3|Take 001|BaseLayer
+    7400046: ruleta_low|Rail3|Take 001|BaseLayer.001
+    7400048: ruleta_low|Rail4|Take 001|BaseLayer
+    7400050: ruleta_low|Rail4|Take 001|BaseLayer.001
+    7400052: ruleta_low|Rail5|Take 001|BaseLayer
+    7400054: ruleta_low|Rail5|Take 001|BaseLayer.001
+    7400056: ruleta_low|Rail5|Take 001|BaseLayer.002
+    7400058: ruleta_low|Rail6|Take 001|BaseLayer
+    7400060: ruleta_low|Rail6|Take 001|BaseLayer.001
+    7400062: ruleta_low|Ruleta|Take 001|BaseLayer
+    7400064: ruleta_low|Ruleta|Take 001|BaseLayer.001
+    7400066: ruleta_low|Ruleta|Take 001|BaseLayer.002
+    7400068: ruleta_low|Ruleta|Take 001|BaseLayer.003
+    7400070: ruleta_low|Ruleta|Take 001|BaseLayer.004
+    9500000: //RootNode
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: checker
+    second: {fileID: 2100000, guid: 4acbbe1cada75124ab4de9183e87a8bb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: metalic
+    second: {fileID: 2100000, guid: 1c218ad37e20f2c448b09f4a0ded2d58, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
