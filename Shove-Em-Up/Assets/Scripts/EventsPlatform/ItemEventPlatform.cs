@@ -31,7 +31,7 @@ public class ItemEventPlatform : EventPlatformScript
         AddPositions();
         type = TypeEvent.TIME;
         listEvent.Add(Action2);
-        for (int i=0; i<16; i++) {
+        for (int i=0; i<12; i++) {
             if(i%2==0) listEvent.Add(SpawnItem);
             else listEvent.Add(Wait);
         }
@@ -83,15 +83,13 @@ public class ItemEventPlatform : EventPlatformScript
     }
 
     private void AddPositions() {
-        listRandomPositions.Add(new Vector3(transInitial.position.x + 10, transInitial.position.y + 0.5f, 0));
-        listRandomPositions.Add(new Vector3(transInitial.position.x - 10, transInitial.position.y + 0.5f, 0));
-        listRandomPositions.Add(new Vector3(0, transInitial.position.y + 0.5f, transInitial.position.z + 10));
-        listRandomPositions.Add(new Vector3(0, transInitial.position.y + 0.5f, transInitial.position.z - 10));
-        listRandomPositions.Add(new Vector3(transInitial.position.x + 7.071f, transInitial.position.y + 0.5f, transInitial.position.z + 7.071f));
-        listRandomPositions.Add(new Vector3(transInitial.position.x + 7.071f, transInitial.position.y + 0.5f, transInitial.position.z - 7.071f));
-        listRandomPositions.Add(new Vector3(transInitial.position.x - 7.071f, transInitial.position.y + 0.5f, transInitial.position.z + 7.071f));
-        listRandomPositions.Add(new Vector3(transInitial.position.x - 7.071f, transInitial.position.y + 0.5f, transInitial.position.z - 7.071f));
-        for (int i=0; i<8; i++)  listRandomPositionsOcuped.Add(false);
+        listRandomPositions.Add(new Vector3(3.12f, 3.69f, -1.19f));
+        listRandomPositions.Add(new Vector3(-3.61f, 3.69f, -1.19f));
+        listRandomPositions.Add(new Vector3(-3.25f, 3.69f, -13.04f));
+        listRandomPositions.Add(new Vector3(3.19f, 3.69f, -12.97f));
+        listRandomPositions.Add(new Vector3(6.53f, 3.69f, -6.77f));
+        listRandomPositions.Add(new Vector3(-6.72f, 3.69f, -6.77f));
+        for (int i=0; i<6; i++)  listRandomPositionsOcuped.Add(false);
     }
 
     private Vector3 GetRandomPosition() {
@@ -104,7 +102,7 @@ public class ItemEventPlatform : EventPlatformScript
                 if (pos) iCheck++;
             }
             if (iCheck < (listRandomPositionsOcuped.Count * 3)) {
-                int random = UnityEngine.Random.Range(0, 8);
+                int random = UnityEngine.Random.Range(0, 6);
                 if (!listRandomPositionsOcuped[random]) {
                     check = true;
                     report = listRandomPositions[random];
