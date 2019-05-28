@@ -10,6 +10,7 @@ public class EventPlatformScript : MonoBehaviour
     public bool execute = false;
     public bool active = false;
     public bool forceFinnish = false;
+    public bool counterIsShow = true;
     public delegate float MethodEvent();
     public List<MethodEvent> listEvent = new List<MethodEvent>();
 
@@ -22,6 +23,7 @@ public class EventPlatformScript : MonoBehaviour
         execute = true;
         active = true;
         forceFinnish = false;
+        counterIsShow = true;
     }
 
     public void Finnish() {

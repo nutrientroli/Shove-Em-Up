@@ -1,6 +1,7 @@
 ﻿
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class EventManager : MonoBehaviour {
     [SerializeField] private List<Renderer> listPieces = new List<Renderer>();
@@ -15,6 +16,9 @@ public class EventManager : MonoBehaviour {
     private float timeWait = 1.5f;
     private float currentTime = 0;
     private bool wait = false;
+    private float timeCounter = 0;
+
+    public Text counter;
 
     private void Start() {
         unSelectedMaterial = ((Renderer)listPieces[indexEvent]).material;
@@ -40,15 +44,19 @@ public class EventManager : MonoBehaviour {
             {
                 if (CheckEndEvent()) FinnishEvent();
                 else if (CheckForceEndEvent()) ForceFinnishEvent();
-                else if (eventPlatform.execute)
-                {
-                    switch (eventPlatform.type)
-                    {
-                        case EventPlatformScript.TypeEvent.TIME:
-                            if (eventPlatform.execute) eventPlatform.Run(Time.deltaTime);
-                            break;
-                        case EventPlatformScript.TypeEvent.STEP: break;
-                        default: break;
+                else if (eventPlatform.execute) {
+                    if (!eventPlatform.counterIsShow) {
+                        Debug.Log("Event finnish Counter");
+                        switch (eventPlatform.type) {
+                            case EventPlatformScript.TypeEvent.TIME:
+                                if (eventPlatform.execute) eventPlatform.Run(Time.deltaTime);
+                                break;
+                            case EventPlatformScript.TypeEvent.STEP: break;
+                            default: break;
+                        }
+                    } else {
+                        Debug.Log("Event show Counter");
+                        ShowNumberCounter(Time.deltaTime);
                     }
                 }
                 else if (eventPlatform == null)
@@ -102,8 +110,31 @@ public class EventManager : MonoBehaviour {
     }
 
     public bool CheckForceEndEvent() {
+        //Comentar para testear.
         //return (PlayersManager.GetInstance().CheckLimitPlayersDeathInEvent() && eventPlatform != null && !eventPlatform.forceFinnish);
         return false;
+    }
+
+    public void ShowNumberCounter(float _dt)
+    {
+        timeCounter += _dt;
+
+        if (counter.IsActive()) {
+            Debug.Log("IsActive Counter");
+            if (timeCounter < 1) counter.text = "3";
+            else if (timeCounter >= 1 && timeCounter < 2) counter.text = "2";
+            else if (timeCounter >= 2 && timeCounter < 3)  counter.text = "1";
+            else {
+                timeCounter = 0;
+                eventPlatform.counterIsShow = false;
+                counter.text = "3";
+                counter.gameObject.SetActive(false);
+            }
+        } else {
+            Debug.Log("Active Counter");
+            counter.gameObject.SetActive(true);
+        }
+
     }
     
 }
