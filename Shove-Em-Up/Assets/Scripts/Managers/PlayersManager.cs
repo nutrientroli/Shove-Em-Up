@@ -167,9 +167,8 @@ public class PlayersManager {
         return tableOfPlayerData.Count;
     }
 
-    public void SetRespawnPoint(Transform initPosToRespawn)
-    {
-
+    public void SetRespawnPoint(Transform initPosToRespawn) {
+        respawnPoint = initPosToRespawn;
     }
     #endregion
 }

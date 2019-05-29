@@ -2,26 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-/*
- * SoundManager
- * La idea es tener una hastable con los eventos del sonido.
- * Con un enum, se marca la realación, ya que son las keys.
- * Faltara mirar de integrar fmod
- * 
- * 
- */
-
-
 public class SoundManager
 {
     public enum SoundEvent {
         SOUND_1= 0,
-        SOUND_2= 1
+        CHANGECHARACTER_MENUSELECTION= 1,
+        PRESSREADY_MENUSELECTION = 2,
     }
 
     #region Singleton Pattern
     private static SoundManager instance;
-    private SoundManager() { }
+    private SoundManager() {
+        Init();
+    }
     public static SoundManager GetInstance() {
         if (instance == null) instance = new SoundManager();
         return instance;
@@ -36,12 +29,14 @@ public class SoundManager
     #region Methods
 
     public void Init() {
-        //Setear tabla.
+        tableOfSoundEvents.Add(SoundEvent.SOUND_1, "event:/Character/GainPoint2");
+        tableOfSoundEvents.Add(SoundEvent.CHANGECHARACTER_MENUSELECTION, "event:/Menu/ChangeCharacter");
+        tableOfSoundEvents.Add(SoundEvent.PRESSREADY_MENUSELECTION, "event:/Menu/pressButton");
+
     }
 
     public void PlaySound(SoundEvent _event) {
-        //llamar a evento del fmod
-        FMODUnity.RuntimeManager.PlayOneShot("event:/Points/GainPoint2");
+        FMODUnity.RuntimeManager.PlayOneShot(tableOfSoundEvents[_event].ToString());
     }
 
     public void StopSound(SoundEvent _event)
