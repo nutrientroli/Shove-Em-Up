@@ -8,7 +8,7 @@ public class ItemScript : MonoBehaviour
     private float currentTime = 0;
     [SerializeField] private float maxTimeSpawn = 20;
     public GameObject item;
-    public float rotationSpeed = 10;
+    public float rotationSpeed = 360;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -37,7 +37,7 @@ public class ItemScript : MonoBehaviour
     {
         if (active)
         {
-            item.transform.Rotate(Vector3.up, rotationSpeed);
+            item.transform.Rotate(Vector3.forward, rotationSpeed * Time.deltaTime);
         }
         //else
         //{
@@ -50,6 +50,6 @@ public class ItemScript : MonoBehaviour
         //    }
         //}
 
-        item.transform.Rotate(Vector3.up, rotationSpeed);
+        //item.transform.Rotate(Vector3.up, rotationSpeed);
     }
 }
