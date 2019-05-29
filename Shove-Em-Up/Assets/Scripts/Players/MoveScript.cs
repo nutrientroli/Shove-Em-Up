@@ -156,10 +156,10 @@ public class MoveScript : MonoBehaviour
         toMove = Vector3.zero;
     }
 
-    public void RestartPosition()
+    public void RestartPosition(Vector3 _pos)
     {
         characterController.enabled = false;
-        transform.parent.position = new Vector3(0, 50, 0);
+        transform.parent.position = _pos;
         transform.localPosition = Vector3.zero;
         ResetMove();
         characterController.enabled = true;

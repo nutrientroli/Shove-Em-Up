@@ -24,6 +24,7 @@ public class PlayersManager {
     private Hashtable tableOfSelectPlayers = new Hashtable();
     public List<int> listOfPlayersToRespawnFinnishEvent = new List<int>();
     private int limitPlayerDeathInEvent = 1;
+    private Transform respawnPoint;
 
     #region Selectable Methods
     public void AddPlayerSelect(int _player, PlayerSelectData _selection) {
@@ -72,7 +73,18 @@ public class PlayersManager {
                 data.gameObject.GetComponent<HabilityScript>().RestartHability();
                 data.light.DefaultLight();
             }
-            if (moveScript != null) moveScript.RestartPosition();
+            if (moveScript != null) {
+                Vector3 vec = respawnPoint.position;
+                Debug.Log(_player);
+                switch (_player) {
+                    case 1: vec = new Vector3(vec.x + 5, vec.y + 50, vec.z + 5); break;
+                    case 2: vec = new Vector3(vec.x - 5, vec.y + 50, vec.z + 5); break;
+                    case 3: vec = new Vector3(vec.x + 5, vec.y + 50, vec.z - 5); break;
+                    case 4: vec = new Vector3(vec.x - 5, vec.y + 50, vec.z - 5); break;
+                    default: vec = new Vector3(vec.x + 0, vec.y + 50, vec.z + 0); break;
+                }
+                moveScript.RestartPosition(vec);
+            }
             if (playerSript != null) playerSript.Fall();
         }
     }
@@ -134,8 +146,7 @@ public class PlayersManager {
         _data.SetPlayer(_player);
         _data.SetTypePlayer(_select.type);
 
-        switch(_player)
-        {
+        switch(_player) {
             case 1:
                 _data.GetComponentInChildren<Renderer>().materials[0].color = Color.red;
                 break;
@@ -154,6 +165,11 @@ public class PlayersManager {
     public int GetNumberOfPlayers()
     {
         return tableOfPlayerData.Count;
+    }
+
+    public void SetRespawnPoint(Transform initPosToRespawn)
+    {
+
     }
     #endregion
 }
