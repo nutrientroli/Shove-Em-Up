@@ -18,4 +18,4 @@ MonoBehaviour:
   description: Lanza un cono de 3 platanos, si impacta alguno con alguien, lo estunea
     durante un periodo de tiempo.
   type: 2
-  material: {fileID: 2100000, guid: ae0a6dafc3efd45478b313cab9c26b28, type: 2}
+  material: {fileID: 2100000, guid: 0917ec119eaaf644ab2581a0c2cf14d4, type: 2}

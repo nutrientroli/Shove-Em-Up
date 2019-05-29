@@ -18,4 +18,4 @@ MonoBehaviour:
   description: Lanza bolas de miel alrededor suyo cada 45 grados que ralentizan mucho
     al resto de jugadores
   type: 3
-  material: {fileID: 2100000, guid: ae0a6dafc3efd45478b313cab9c26b28, type: 2}
+  material: {fileID: 2100000, guid: 095df6c225b5f8642ad39d74086c61f5, type: 2}

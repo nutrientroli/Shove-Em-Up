@@ -17,4 +17,4 @@ MonoBehaviour:
   name: BullCharacter
   description: Hace un dash de muy larga distancia y fuerte potencia.
   type: 1
-  material: {fileID: 2100000, guid: de6eaa30d6219d3479fa2cf54a4398a8, type: 2}
+  material: {fileID: 2100000, guid: 555e2d2721c347b4fa525b4e5df22aaf, type: 2}
