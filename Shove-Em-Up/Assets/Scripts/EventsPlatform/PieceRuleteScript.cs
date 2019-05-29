@@ -6,7 +6,7 @@ public class PieceRuleteScript : MonoBehaviour
 {
     private bool active = false;
     private bool revert = false;
-    private float speed = 60;
+    private float speed = 75;
     private Vector3 startPos;
     public Material mat;
     // Start is called before the first frame update
@@ -21,14 +21,16 @@ public class PieceRuleteScript : MonoBehaviour
     {
         if(active)
         {
-            if (gameObject.transform.position.y >= -100)
+            if (gameObject.transform.position.y >= -150)
                 gameObject.transform.position += Vector3.down * speed * Time.deltaTime;
         }
 
         if(revert)
         {
-            if (gameObject.transform.position.y == startPos.y)
+            if (startPos.y - gameObject.transform.position.y <= 0.005f)
+            {
                 revert = false;
+            }
 
             gameObject.transform.position = Vector3.MoveTowards(gameObject.transform.position, startPos, speed * Time.deltaTime);
 
