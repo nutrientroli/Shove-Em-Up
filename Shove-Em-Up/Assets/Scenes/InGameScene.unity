@@ -17,7 +17,7 @@ RenderSettings:
   m_Fog: 1
   m_FogColor: {r: 0.066037714, g: 0.066037714, b: 0.066037714, a: 1}
   m_FogMode: 3
-  m_FogDensity: 0.04
+  m_FogDensity: 0.01
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
   m_AmbientSkyColor: {r: 0.4811321, g: 0.39716092, b: 0.3983958, a: 1}
@@ -13088,6 +13088,36 @@ PrefabInstance:
         type: 3}
       propertyPath: m_CastShadows
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1820674854356102025, guid: 73efd4373b952664aa64e915152c3baf,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.6862093
+      objectReference: {fileID: 0}
+    - target: {fileID: 1820674854356102025, guid: 73efd4373b952664aa64e915152c3baf,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.17063649
+      objectReference: {fileID: 0}
+    - target: {fileID: 1820674854356102025, guid: 73efd4373b952664aa64e915152c3baf,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.1706365
+      objectReference: {fileID: 0}
+    - target: {fileID: 1820674854356102025, guid: 73efd4373b952664aa64e915152c3baf,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.6862093
+      objectReference: {fileID: 0}
+    - target: {fileID: 1820674854356102025, guid: 73efd4373b952664aa64e915152c3baf,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -27.929
+      objectReference: {fileID: 0}
+    - target: {fileID: 1820674854356102025, guid: 73efd4373b952664aa64e915152c3baf,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90.00001
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 73efd4373b952664aa64e915152c3baf, type: 3}
