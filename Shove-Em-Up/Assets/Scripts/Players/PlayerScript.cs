@@ -15,7 +15,8 @@ public class PlayerScript : MonoBehaviour
     public HabilityScript habilityScript;
     public CanvasPush canvasPlayer;
     public ParticleSystem particlesDash;
-    public ParticleSystem particlesConfusion; 
+    public ParticleSystem particlesConfusion;
+    public ParticleSystem particlesStun;
 
     private CapsuleCollider capsuleCollider;
     private float radiusCapsule;
@@ -85,6 +86,11 @@ public class PlayerScript : MonoBehaviour
             particlesConfusion.Play();
         if (!inverted && particlesConfusion.isPlaying)
             particlesConfusion.Stop();
+        if (!GetIsMovible() && !isPushable && !particlesStun.isPlaying)
+            particlesStun.Play();
+        if (GetIsMovible() && isPushable && particlesStun.isPlaying)
+            particlesStun.Stop();
+    
 
         if(killer != null)
         {
