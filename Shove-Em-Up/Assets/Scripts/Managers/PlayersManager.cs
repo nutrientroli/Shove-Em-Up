@@ -75,7 +75,6 @@ public class PlayersManager {
             }
             if (moveScript != null) {
                 Vector3 vec = respawnPoint.position;
-                Debug.Log(_player);
                 switch (_player) {
                     case 1: vec = new Vector3(vec.x + 5, vec.y + 50, vec.z + 5); break;
                     case 2: vec = new Vector3(vec.x - 5, vec.y + 50, vec.z + 5); break;

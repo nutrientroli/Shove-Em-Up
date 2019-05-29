@@ -55,6 +55,7 @@ public class PushScript : MonoBehaviour
 
     public void Push()
     {
+        SoundManager.GetInstance().PlaySound(SoundManager.SoundEvent.DASH);
         currentForce = (Mathf.Pow(timeChargePush / (maxTimeChargePush - maxTimeChargePush / dividentBase), exponentBase));
         if (currentForce < forceBase)
             currentForce = forceBase;
@@ -108,6 +109,9 @@ public class PushScript : MonoBehaviour
         float totalSpeedPush = speedPush * _force;
         Instantiate(particlesChoque, gameObject.transform.position + (_direction * (gameObject.transform.position - _player.transform.position).magnitude), particlesChoque.transform.rotation);
         _player.GetComponent<KnockbackScript>().StartKnockback(_force, forceBase, totalSpeedPush, _direction);
+        SoundManager.GetInstance().PlaySound(SoundManager.SoundEvent.KNOCKBACK);
+        if (Random.Range(0, 10) > 8) SoundManager.GetInstance().PlaySound(SoundManager.SoundEvent.PRESENTADOR_9);
+        else if (Random.Range(0, 10) < 2) SoundManager.GetInstance().PlaySound(SoundManager.SoundEvent.PRESENTADOR_8);
     }
 
     

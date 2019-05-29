@@ -47,6 +47,15 @@ public class PlayerData : MonoBehaviour {
         }
         go.GetComponent<CanvasPoints>().Init(_score,gameObject);
         ScoreManager.GetInstance().SetPoints(player, score);
+
+        if (GetScore() % 2 == 0) {
+            if (Random.Range(0, 10) <= 1) SoundManager.GetInstance().PlaySound(SoundManager.SoundEvent.PRESENTADOR_2);
+        } else if (GetScore() % 3 == 0) {
+            if (Random.Range(0, 10) <= 1) SoundManager.GetInstance().PlaySound(SoundManager.SoundEvent.PRESENTADOR_1);
+        } else {
+            if (Random.Range(0, 100) <= 15) SoundManager.GetInstance().PlaySound(SoundManager.SoundEvent.PRESENTADOR_6);
+        }
+
     }
 
 

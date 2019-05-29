@@ -31,6 +31,8 @@ public class EventsManager : MonoBehaviour {
                 if (currentTime >= timeToChangeRulette) {
                     DuringSelectEvent();
                     currentTime = 0;
+                    if (Random.Range(0, 10) > 9) SoundManager.GetInstance().PlaySound(SoundManager.SoundEvent.PRESENTADOR_10);
+
                 }
             } else {
                 currentTime += Time.deltaTime;
@@ -77,11 +79,14 @@ public class EventsManager : MonoBehaviour {
 
     private void ForceFinnishEvent() {
         eventPlatform.ForceFinnish();
+        SoundManager.GetInstance().PlaySound(SoundManager.SoundEvent.PRESENTADOR_3);
     }
 
     private void StartSelectEvent() {
         inSelection = true;
         indexIncrement = Random.Range(10, 40);
+        if (Random.Range(0, 10) > 5) SoundManager.GetInstance().PlaySound(SoundManager.SoundEvent.PRESENTADOR_5);
+        else SoundManager.GetInstance().PlaySound(SoundManager.SoundEvent.PRESENTADOR_4);
     }
 
     private void DuringSelectEvent() {
