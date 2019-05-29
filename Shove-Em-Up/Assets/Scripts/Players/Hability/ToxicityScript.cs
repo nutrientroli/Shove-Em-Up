@@ -6,7 +6,7 @@ public class ToxicityScript : MonoBehaviour
 {
     public bool exit = false;
     private Vector3 scaleVector = new Vector3(0.1f, 0.1f, 0.1f);
-    private float maxX = 16;
+    private float maxX = 10;
     private List<PlayerScript> players = new List<PlayerScript>();
     private ParticleSystem particles;
 

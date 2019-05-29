@@ -5221,6 +5221,8 @@ MonoBehaviour:
   habilityScript: {fileID: 5916597150765594833}
   canvasPlayer: {fileID: 7084958168828280647}
   particlesDash: {fileID: 5916597150841093681}
+  particlesConfusion: {fileID: 4511172101472797341, guid: 18465e97b0ddd0b449d30c4477333075,
+    type: 3}
 --- !u!114 &8199751795054882410
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5362,6 +5364,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8199751795054882408}
     m_Modifications:
+    - target: {fileID: 9164087891434669467, guid: 16a40e0f85b683644b5f662b772b5e7a,
+        type: 3}
+      propertyPath: m_Name
+      value: ParticlesChargeHability
+      objectReference: {fileID: 0}
     - target: {fileID: 6145207111222273188, guid: 16a40e0f85b683644b5f662b772b5e7a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5416,11 +5423,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9164087891434669467, guid: 16a40e0f85b683644b5f662b772b5e7a,
-        type: 3}
-      propertyPath: m_Name
-      value: ParticlesChargeHability
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 16a40e0f85b683644b5f662b772b5e7a, type: 3}
@@ -5605,10 +5607,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7084958168828280643}
     m_Modifications:
-    - target: {fileID: 8845479731522831805, guid: da234fb368b34af4c8758baf4ffd24fc,
+    - target: {fileID: 8845479731522831806, guid: da234fb368b34af4c8758baf4ffd24fc,
         type: 3}
-      propertyPath: m_FillAmount
-      value: 1
+      propertyPath: m_Name
+      value: ChargeHability
       objectReference: {fileID: 0}
     - target: {fileID: 8845479731522831803, guid: da234fb368b34af4c8758baf4ffd24fc,
         type: 3}
@@ -5715,10 +5717,10 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 8845479731522831806, guid: da234fb368b34af4c8758baf4ffd24fc,
+    - target: {fileID: 8845479731522831805, guid: da234fb368b34af4c8758baf4ffd24fc,
         type: 3}
-      propertyPath: m_Name
-      value: ChargeHability
+      propertyPath: m_FillAmount
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: da234fb368b34af4c8758baf4ffd24fc, type: 3}
@@ -5747,6 +5749,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8199751795054882408}
     m_Modifications:
+    - target: {fileID: 100000, guid: 56926c539d5083242ba8d76d3f89747c, type: 3}
+      propertyPath: m_Name
+      value: characterCustomModel
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 56926c539d5083242ba8d76d3f89747c, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0
@@ -5811,10 +5817,6 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 5be135336ac87014aadec1e31d2174cd, type: 2}
-    - target: {fileID: 100000, guid: 56926c539d5083242ba8d76d3f89747c, type: 3}
-      propertyPath: m_Name
-      value: characterCustomModel
-      objectReference: {fileID: 0}
     - target: {fileID: 13700000, guid: 56926c539d5083242ba8d76d3f89747c, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 

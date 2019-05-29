@@ -15,6 +15,7 @@ public class PlayerScript : MonoBehaviour
     public HabilityScript habilityScript;
     public CanvasPush canvasPlayer;
     public ParticleSystem particlesDash;
+    public ParticleSystem particlesConfusion; 
 
     private CapsuleCollider capsuleCollider;
     private float radiusCapsule;
@@ -74,6 +75,8 @@ public class PlayerScript : MonoBehaviour
                 particlesDash.startColor = Color.yellow;
                 break;
         }
+        particlesConfusion.gameObject.transform.position = gameObject.transform.position + new Vector3(0, 0.5f, 0);
+        particlesConfusion.gameObject.transform.parent = gameObject.transform;
     }
 
     private void Update()
@@ -252,6 +255,8 @@ public class PlayerScript : MonoBehaviour
     public void AddOtherMod(ModifierScript _mod)
     {
         listMods.Add(_mod);
+        if (_mod.inverted == true)
+            particlesConfusion.Play();
     }
 
     public void RemoveMod(ModifierScript _mod)
@@ -266,6 +271,8 @@ public class PlayerScript : MonoBehaviour
         }
         foreach (ModifierScript mod in listRemoveMods)
         {
+            if (mod.inverted == true)
+                particlesConfusion.Stop();
             listMods.Remove(mod);
             Destroy(mod);
         }
