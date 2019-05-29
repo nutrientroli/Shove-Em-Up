@@ -14,17 +14,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: 114237896896377732}
-  - {fileID: 114376924930258344}
+  - {fileID: 114739402252617418}
   EditorEvents:
   - {fileID: 114758750663780546}
   - {fileID: 114695902116483176}
   - {fileID: 114493066200389900}
   - {fileID: 114120077937977288}
   MasterBanks:
-  - {fileID: 114376924930258344}
+  - {fileID: 114739402252617418}
   StringsBanks:
   - {fileID: 114237896896377732}
-  stringsBankWriteTime: 636947400265240953
+  stringsBankWriteTime: 636946860566463670
   cacheVersion: 3
 --- !u!114 &114120077937977288
 MonoBehaviour:
@@ -41,7 +41,7 @@ MonoBehaviour:
   Path: event:/Points/GainPoint4
   guid: ff3afc927140934c9685276a17c07e59
   Banks:
-  - {fileID: 114376924930258344}
+  - {fileID: 114739402252617418}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -82,7 +82,7 @@ MonoBehaviour:
   m_Name: bank:/Master Bank.strings.bank
   m_EditorClassIdentifier: 
   Path: Assets\Build_FMOD\Desktop\Master Bank.strings.bank
-  lastModified: 636947400265240953
+  lastModified: 636946860566463670
   LoadResult: 0
   FileSizes:
   - Name: 
@@ -107,7 +107,7 @@ MonoBehaviour:
   FileSizes:
   - Name: 
     Value: 39168
-  Exists: 1
+  Exists: 0
 --- !u!114 &114493066200389900
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -123,7 +123,7 @@ MonoBehaviour:
   Path: event:/Points/GainPoint2
   guid: ae12b072e7d67a439eeeb2b28b8db258
   Banks:
-  - {fileID: 114376924930258344}
+  - {fileID: 114739402252617418}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -146,7 +146,7 @@ MonoBehaviour:
   Path: event:/Points/GainPoints1
   guid: 6b367a665aae994e87b6cb58df7db7b7
   Banks:
-  - {fileID: 114376924930258344}
+  - {fileID: 114739402252617418}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -154,6 +154,26 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 277
+--- !u!114 &114739402252617418
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master Bank.bank
+  m_EditorClassIdentifier: 
+  Path: C:\Users\laura\OneDrive\Documentos\GitHub\Shove-Em-Up\Shove-Em-Up\Assets\Build_FMOD\Desktop\Master
+    Bank.bank
+  lastModified: 636946860566433869
+  LoadResult: 0
+  FileSizes:
+  - Name: 
+    Value: 39168
+  Exists: 1
 --- !u!114 &114758750663780546
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -169,7 +189,7 @@ MonoBehaviour:
   Path: event:/Points/GainPoint3
   guid: 68948979e8100046a3a304427e378696
   Banks:
-  - {fileID: 114376924930258344}
+  - {fileID: 114739402252617418}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
