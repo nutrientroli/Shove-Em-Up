@@ -75,7 +75,7 @@ public class PlayerScript : MonoBehaviour
                 particlesDash.startColor = Color.yellow;
                 break;
         }
-        particlesConfusion.gameObject.transform.position = gameObject.transform.position + new Vector3(0, 0.5f, 0);
+        particlesConfusion = Instantiate(particlesConfusion, gameObject.transform.position + new Vector3(0, 0.5f, 0), particlesConfusion.gameObject.transform.rotation);
         particlesConfusion.gameObject.transform.parent = gameObject.transform;
     }
 
@@ -83,7 +83,11 @@ public class PlayerScript : MonoBehaviour
     {
         //Modificadores Por habilidades
         CheckMods(Time.deltaTime);
-        canvasPlayer.StatusConfused(inverted);
+        if(inverted && !particlesConfusion.isPlaying)
+            particlesConfusion.Play();
+        if (!inverted && particlesConfusion.isPlaying)
+            particlesConfusion.Stop();
+
         if(killer != null)
         {
             timeToKillMe += Time.deltaTime;
@@ -255,8 +259,6 @@ public class PlayerScript : MonoBehaviour
     public void AddOtherMod(ModifierScript _mod)
     {
         listMods.Add(_mod);
-        if (_mod.inverted == true)
-            particlesConfusion.Play();
     }
 
     public void RemoveMod(ModifierScript _mod)
@@ -271,8 +273,6 @@ public class PlayerScript : MonoBehaviour
         }
         foreach (ModifierScript mod in listRemoveMods)
         {
-            if (mod.inverted == true)
-                particlesConfusion.Stop();
             listMods.Remove(mod);
             Destroy(mod);
         }
