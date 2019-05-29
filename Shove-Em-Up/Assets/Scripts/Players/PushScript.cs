@@ -18,6 +18,7 @@ public class PushScript : MonoBehaviour
 
     private CharacterController characterController;
     public CanvasPush canvasPush;
+    public GameObject particlesChoque;
 
 
     private bool canPush = true;
@@ -105,7 +106,7 @@ public class PushScript : MonoBehaviour
         if (_force == 0)
             _force = forceBase * 3.5f;
         float totalSpeedPush = speedPush * _force;
-
+        Instantiate(particlesChoque, gameObject.transform.position + (_direction * (gameObject.transform.position - _player.transform.position).magnitude), particlesChoque.transform.rotation);
         _player.GetComponent<KnockbackScript>().StartKnockback(_force, forceBase, totalSpeedPush, _direction);
     }
 

@@ -51,19 +51,8 @@ public class ToxicityScript : MonoBehaviour
     private void OnTriggerEnter(Collider other) {
         if (other.gameObject.tag == "Player")
         {
-            bool inside = false;
-            PlayerScript _player =  other.gameObject.GetComponent<PlayerScript>();
-            foreach(PlayerScript p in players)
-            {
-                if (p == _player)
-                    inside = true;
-            }
-            if (!inside)
-            {
-                players.Add(_player);
-                if (other.gameObject.GetComponent<ToxicityModifierScript>() == null)
-                    _player.AddOtherMod(_player.gameObject.AddComponent<ToxicityModifierScript>());
-            }
+             if (other.gameObject.GetComponent<PlayerScript>() != null)
+                    other.GetComponent<PlayerScript>().AddOtherMod(other.gameObject.AddComponent<ToxicityModifierScript>());
         }
     }
 

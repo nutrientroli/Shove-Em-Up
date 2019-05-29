@@ -5295,6 +5295,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvasPush: {fileID: 8055260119067250054}
+  particlesChoque: {fileID: 3255047500104550323, guid: 9b8beec23a0dc274e9fff4646f58782d,
+    type: 3}
 --- !u!114 &8958650717598588052
 MonoBehaviour:
   m_ObjectHideFlags: 0
