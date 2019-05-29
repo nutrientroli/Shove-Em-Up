@@ -6,7 +6,7 @@ public class ToxicityScript : MonoBehaviour
 {
     public bool exit = false;
     private Vector3 scaleVector = new Vector3(0.1f, 0.1f, 0.1f);
-    private float maxX = 10;
+    private float maxX = 16;
     private List<PlayerScript> players = new List<PlayerScript>();
     private ParticleSystem particles;
 
@@ -67,25 +67,4 @@ public class ToxicityScript : MonoBehaviour
         }
     }
 
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.gameObject.tag == "Player")
-        {
-            bool inside = false;
-            PlayerScript _player = other.gameObject.GetComponent<PlayerScript>();
-            foreach (PlayerScript p in players)
-            {
-                if (p == _player)
-                    inside = true;
-            }
-            if (inside)
-            {
-                players.Remove(_player);
-                if (other.gameObject.GetComponent<ToxicityModifierScript>() != null)
-                {
-                    _player.RemoveMod(other.gameObject.GetComponent<ToxicityModifierScript>());
-                }
-            }
-        }
-    }
 }

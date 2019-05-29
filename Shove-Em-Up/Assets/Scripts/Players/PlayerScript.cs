@@ -75,8 +75,6 @@ public class PlayerScript : MonoBehaviour
                 particlesDash.startColor = Color.yellow;
                 break;
         }
-        particlesConfusion = Instantiate(particlesConfusion, gameObject.transform.position + new Vector3(0, 0.5f, 0), particlesConfusion.gameObject.transform.rotation);
-        particlesConfusion.gameObject.transform.parent = gameObject.transform;
     }
 
     private void Update()
