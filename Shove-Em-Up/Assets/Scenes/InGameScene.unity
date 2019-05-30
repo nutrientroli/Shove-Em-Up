@@ -10544,6 +10544,7 @@ GameObject:
   - component: {fileID: 1765142484}
   - component: {fileID: 1765142483}
   - component: {fileID: 1765142486}
+  - component: {fileID: 1765142492}
   - component: {fileID: 1765142485}
   - component: {fileID: 1765142487}
   - component: {fileID: 1765142488}
@@ -10652,11 +10653,11 @@ MonoBehaviour:
   selectedMaterial: {fileID: 2100000, guid: 677860f0441bdd342ad084302e12bd2b, type: 2}
   listEvents:
   - {fileID: 1765142485}
-  - {fileID: 1765142485}
-  - {fileID: 1765142485}
-  - {fileID: 1765142485}
-  - {fileID: 1765142485}
-  - {fileID: 1765142485}
+  - {fileID: 1765142487}
+  - {fileID: 1765142491}
+  - {fileID: 1765142488}
+  - {fileID: 1765142490}
+  - {fileID: 1765142489}
   indexEvent: 2
   indexIncrement: 0
   counter: {fileID: 1731968532}
@@ -10785,6 +10786,19 @@ MonoBehaviour:
   waitTime: 2
   timeToAction: 15
   timeVariaton: 1
+--- !u!114 &1765142492
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1765142482}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3d18df81d6a7e84093e48b8a197a52e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  description: "0 - Items\n1 - Doble\n2 - Ventilador\n3 - Pelotas\n4 - Gas\n5 - Ca\xEDda\n"
 --- !u!1 &1765584109
 GameObject:
   m_ObjectHideFlags: 0
