@@ -51,6 +51,7 @@ public class PlayerSelectionScript : MonoBehaviour
         obj = Instantiate(mesh, transform, false);
         obj.transform.localScale = scaleMesh;
         obj.transform.localRotation = Quaternion.Euler(rotationMesh);
+        obj.transform.position = obj.transform.position + new Vector3(0, 0, -0.7f);
         obj.GetComponentInChildren<Renderer>().material = listData[defaultData].material;
         obj.GetComponentInChildren<Renderer>().material.color = listColor[player - 1];
     }

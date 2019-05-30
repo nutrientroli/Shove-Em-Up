@@ -114,8 +114,8 @@ public class EventsManager : MonoBehaviour {
 
     public bool CheckForceEndEvent() {
         //Comentar para testear.
-        //return (PlayersManager.GetInstance().CheckLimitPlayersDeathInEvent() && eventPlatform != null && !eventPlatform.forceFinnish);
-        return false;
+        return (PlayersManager.GetInstance().CheckLimitPlayersDeathInEvent() && eventPlatform != null && !eventPlatform.forceFinnish);
+        //return false;
     }
 
     public void ShowNumberCounter(float _dt) {
