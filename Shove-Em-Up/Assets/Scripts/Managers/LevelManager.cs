@@ -18,6 +18,7 @@ public class LevelManager{
     public void FinnishGame() {
         //Cambiar a mostrar puntuaciones
         ScenesManager.ChangeScene(ScenesManager.SceneCode.ENDGAME);
+        currentEvent = 0;
     }
 
     public void PassEvent() {
