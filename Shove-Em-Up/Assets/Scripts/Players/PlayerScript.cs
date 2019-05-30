@@ -17,6 +17,7 @@ public class PlayerScript : MonoBehaviour
     public ParticleSystem particlesDash;
     public ParticleSystem particlesConfusion;
     public ParticleSystem particlesStun;
+    public ParticleSystem particlePowerUp;
 
     private CapsuleCollider capsuleCollider;
     private float radiusCapsule;
@@ -378,5 +379,10 @@ public class PlayerScript : MonoBehaviour
     public void AddScore(int _score = 0)
     {
         selfData.AddScore(_score);
+    }
+
+    public void StartItemParticles()
+    {
+        particlePowerUp.Play();
     }
 }
