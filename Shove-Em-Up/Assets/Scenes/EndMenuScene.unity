@@ -670,8 +670,8 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: QUIT
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 668b433f7e0bc5a458144932c806dd92, type: 2}
-  m_sharedMaterial: {fileID: 21442039562267150, guid: 668b433f7e0bc5a458144932c806dd92,
+  m_fontAsset: {fileID: 11400000, guid: af9cc8f31213f3948bbadea9a1ba56bb, type: 2}
+  m_sharedMaterial: {fileID: 21278487472175506, guid: af9cc8f31213f3948bbadea9a1ba56bb,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -697,8 +697,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 80
-  m_fontSizeBase: 80
+  m_fontSize: 40
+  m_fontSizeBase: 40
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -843,8 +843,8 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: SELECT
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 668b433f7e0bc5a458144932c806dd92, type: 2}
-  m_sharedMaterial: {fileID: 21442039562267150, guid: 668b433f7e0bc5a458144932c806dd92,
+  m_fontAsset: {fileID: 11400000, guid: af9cc8f31213f3948bbadea9a1ba56bb, type: 2}
+  m_sharedMaterial: {fileID: 21278487472175506, guid: af9cc8f31213f3948bbadea9a1ba56bb,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -870,8 +870,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 80
-  m_fontSizeBase: 80
+  m_fontSize: 40
+  m_fontSizeBase: 40
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1581,7 +1581,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -718.7, y: 329}
+  m_AnchoredPosition: {x: -595, y: 329}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1655676120
@@ -1606,8 +1606,8 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: 'Results:'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 668b433f7e0bc5a458144932c806dd92, type: 2}
-  m_sharedMaterial: {fileID: 21442039562267150, guid: 668b433f7e0bc5a458144932c806dd92,
+  m_fontAsset: {fileID: 11400000, guid: af9cc8f31213f3948bbadea9a1ba56bb, type: 2}
+  m_sharedMaterial: {fileID: 21278487472175506, guid: af9cc8f31213f3948bbadea9a1ba56bb,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -1633,8 +1633,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 120
-  m_fontSizeBase: 120
+  m_fontSize: 60
+  m_fontSizeBase: 60
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1898,14 +1898,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.5058824, b: 0.5058824, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: ff8d23d8f9a11ea4797f3802b6b59d8f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 74a5d91e8e3feb749bb7e4e7bea9f7d8, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1981,8 +1981,8 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: REPLAY
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 668b433f7e0bc5a458144932c806dd92, type: 2}
-  m_sharedMaterial: {fileID: 21442039562267150, guid: 668b433f7e0bc5a458144932c806dd92,
+  m_fontAsset: {fileID: 11400000, guid: af9cc8f31213f3948bbadea9a1ba56bb, type: 2}
+  m_sharedMaterial: {fileID: 21278487472175506, guid: af9cc8f31213f3948bbadea9a1ba56bb,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -2008,8 +2008,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 80
-  m_fontSizeBase: 80
+  m_fontSize: 40
+  m_fontSizeBase: 40
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18

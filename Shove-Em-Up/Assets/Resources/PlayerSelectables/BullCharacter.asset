@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   geometry: {fileID: 3136033018580642016, guid: 19934940af49aa54dacde8278d87f885,
     type: 3}
-  name: BullCharacter
-  description: Hace un dash de muy larga distancia y fuerte potencia.
+  name: Toro
+  description: Realiza una carga fuerte y veloz que deja fuera de juego a sus rivales
+    con facilidad.
   type: 1
   material: {fileID: 2100000, guid: 555e2d2721c347b4fa525b4e5df22aaf, type: 2}

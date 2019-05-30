@@ -14,8 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   geometry: {fileID: 8144534535114906219, guid: e93d2421d96a98345932c6bff346d445,
     type: 3}
-  name: ChickenCharacter
-  description: "Hace un escudo alrededor suyo que lo protege de cualquier dash, pero
-    mientras est\xE9 con el escudo se ve ralentizado."
+  name: Gallina
+  description: Se cubre tras un huevo que la protege de empujones.
   type: 0
   material: {fileID: 2100000, guid: 0aa356a547c0a0648b660c139c3bae4d, type: 2}

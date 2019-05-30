@@ -14,9 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   geometry: {fileID: 3143405826551315993, guid: ce5026333b3da5148974e17d5299e512,
     type: 3}
-  name: WallrusCharacter
-  description: "Hace un \xE1rea, quien haya en ella ser\xE1 empujado, cuanto m\xE1s
-    cerca est\xE9 del lanzador, mayor ser\xE1 su potencia. Puede er interrumpido en
-    medio del lanzamiento."
+  name: Morsa
+  description: F morsa
   type: 3
   material: {fileID: 2100000, guid: ae0a6dafc3efd45478b313cab9c26b28, type: 2}
