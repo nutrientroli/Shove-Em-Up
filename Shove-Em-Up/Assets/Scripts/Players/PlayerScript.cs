@@ -83,14 +83,26 @@ public class PlayerScript : MonoBehaviour
     {
         //Modificadores Por habilidades
         CheckMods(Time.deltaTime);
-        if(inverted && !particlesConfusion.isPlaying)
+        if (inverted && !particlesConfusion.isPlaying)
+        {
+            particlesConfusion.gameObject.SetActive(true);
             particlesConfusion.Play();
+        }
         if (!inverted && particlesConfusion.isPlaying)
+        {
+            particlesConfusion.gameObject.SetActive(false);
             particlesConfusion.Stop();
-        if (!GetIsMovible() && !isPushable && !particlesStun.isPlaying)
+        }
+        if (!GetIsMovible() && !isPushable && !particlesStun.isPlaying && habilityScript.GetCurrentEnergy() != 0)
+        {
+            particlesStun.gameObject.SetActive(true);
             particlesStun.Play();
+        }
         if (GetIsMovible() && isPushable && particlesStun.isPlaying)
+        {
+            particlesStun.gameObject.SetActive(false);
             particlesStun.Stop();
+        }
     
 
         if(killer != null)
@@ -219,6 +231,9 @@ public class PlayerScript : MonoBehaviour
         if (_vector.Equals(Vector3.zero)) animator.SetFloat("Speed", 0);
         else if(moveScript.CheckCharging()) animator.SetFloat("Speed", 0.5f);
         else animator.SetFloat("Speed", 1);
+
+        if(!isPushable && !GetIsMovible())
+            animator.SetFloat("Speed", 0);
     }
 
     public MoveScript GetMovement()

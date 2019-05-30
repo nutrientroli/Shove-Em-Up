@@ -33,7 +33,17 @@ public class HoneyScript : MonoBehaviour
             gravity = false;
         }
         else
-            gravity = true;
+        {
+            if (Physics.Raycast(gameObject.transform.position + Vector3.right, Vector3.down, out rayHit, collider.radius * 1.5f, layerMask))
+            {
+                gravity = false;
+            }
+            else if (Physics.Raycast(gameObject.transform.position + Vector3.left, Vector3.down, out rayHit, collider.radius * 1.5f, layerMask))
+            {
+                gravity = false;
+            }
+            else gravity = true;
+        }
 
         if (gravity)
             gameObject.transform.position += forward * Time.deltaTime * speed + Vector3.down * speed * Time.deltaTime * 3;

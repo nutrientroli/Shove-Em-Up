@@ -89,6 +89,8 @@ public class DashHabilityScript : HabilityScript
                 if (rotation < 1.3f)
                 {
                     //calcular el angulo con el que toca el player en un futuro
+                    if(player.gameObject.GetComponent<DashModifierScript>() != null)
+                        player.RemoveMod(player.gameObject.GetComponent<DashModifierScript>());
                     pushScript.PushSomeone(other.gameObject, direction * 10f);
                     player.PushSomeoneOther();
                     player.ChangeState(PlayerScript.State.MOVING);
