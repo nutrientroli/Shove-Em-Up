@@ -130,6 +130,8 @@ public class FanScript : MonoBehaviour
     {
         if(other.gameObject.tag == "Player")
         {
+            
+
             PlayerScript newPlayer = other.gameObject.GetComponent<PlayerScript>();
             bool find = false;
             int num = 0;

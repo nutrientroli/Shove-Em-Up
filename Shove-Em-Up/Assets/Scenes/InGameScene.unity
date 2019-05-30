@@ -10322,7 +10322,7 @@ MonoBehaviour:
   - {fileID: 791140442673671975, guid: 6d529bc0f75da1d46a9c6cb8e7ed966c, type: 3}
   - {fileID: 3910046780167907123, guid: 98756b5f5b449cf47a698a4228ed8436, type: 3}
   eventsToFinnish: 10
-  initPosToRespawn: {fileID: 0}
+  initPosToRespawn: {fileID: 386235139}
 --- !u!4 &1765142484
 Transform:
   m_ObjectHideFlags: 0
@@ -10389,12 +10389,12 @@ MonoBehaviour:
   - {fileID: 1490611584}
   selectedMaterial: {fileID: 2100000, guid: 677860f0441bdd342ad084302e12bd2b, type: 2}
   listEvents:
-  - {fileID: 1765142485}
-  - {fileID: 1765142485}
-  - {fileID: 1765142485}
-  - {fileID: 1765142485}
-  - {fileID: 1765142485}
-  - {fileID: 1765142485}
+  - {fileID: 1765142491}
+  - {fileID: 1765142491}
+  - {fileID: 1765142491}
+  - {fileID: 1765142491}
+  - {fileID: 1765142491}
+  - {fileID: 1765142491}
   indexEvent: 2
   indexIncrement: 0
   counter: {fileID: 1731968532}

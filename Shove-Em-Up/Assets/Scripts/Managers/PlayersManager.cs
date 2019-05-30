@@ -168,7 +168,7 @@ public class PlayersManager {
 
     public void SetRespawnPoint(Transform initPosToRespawn)
     {
-
+        respawnPoint = initPosToRespawn;
     }
     #endregion
 }
