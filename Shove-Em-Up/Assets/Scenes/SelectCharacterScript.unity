@@ -5288,6 +5288,26 @@ PrefabInstance:
       propertyPath: m_margin.z
       value: -407.8018
       objectReference: {fileID: 0}
+    - target: {fileID: 4435348219408747590, guid: 46da80f7458b9c7498cd296438a38fe4,
+        type: 3}
+      propertyPath: m_text
+      value: Press "B" To Go Back
+      objectReference: {fileID: 0}
+    - target: {fileID: 4435348219408747590, guid: 46da80f7458b9c7498cd296438a38fe4,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 4435348219408747590, guid: 46da80f7458b9c7498cd296438a38fe4,
+        type: 3}
+      propertyPath: m_textInfo.spaceCount
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4435348219408747590, guid: 46da80f7458b9c7498cd296438a38fe4,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 4435348218970578752, guid: 46da80f7458b9c7498cd296438a38fe4,
         type: 3}
       propertyPath: m_AnchoredPosition.x
