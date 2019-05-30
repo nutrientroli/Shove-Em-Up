@@ -92,6 +92,7 @@ public class FanScript : MonoBehaviour
                     foreach (ParticleSystem p in particles)
                         p.Play();
                     air = true;
+                    collider.enabled = true;
                     currentTime = 0;
                     light.enabled = false;
                 }
@@ -130,8 +131,6 @@ public class FanScript : MonoBehaviour
     {
         if(other.gameObject.tag == "Player")
         {
-            
-
             PlayerScript newPlayer = other.gameObject.GetComponent<PlayerScript>();
             bool find = false;
             int num = 0;
