@@ -14,6 +14,7 @@ public class ItemEventPlatform : EventPlatformScript
     private List<bool> listRandomPositionsOcuped = new List<bool>();
     private List<GameObject> listItems = new List<GameObject>();
     [SerializeField] private Transform transInitial;
+    [SerializeField] private List<Transform> itemSpawnPositions_Lst;
 
 
     [Header("Event Configuration")]
@@ -36,6 +37,7 @@ public class ItemEventPlatform : EventPlatformScript
             else listEvent.Add(Wait);
         }
         listEvent.Add(End);
+
     }
 
     public override void ForceFinnish() {
@@ -83,12 +85,21 @@ public class ItemEventPlatform : EventPlatformScript
     }
 
     private void AddPositions() {
-        listRandomPositions.Add(new Vector3(3.12f, 3.69f, -1.19f));
-        listRandomPositions.Add(new Vector3(-3.61f, 3.69f, -1.19f));
-        listRandomPositions.Add(new Vector3(-3.25f, 3.69f, -13.04f));
-        listRandomPositions.Add(new Vector3(3.19f, 3.69f, -12.97f));
-        listRandomPositions.Add(new Vector3(6.53f, 3.69f, -6.77f));
-        listRandomPositions.Add(new Vector3(-6.72f, 3.69f, -6.77f));
+
+        // Manual
+        //listRandomPositions.Add(new Vector3(3.12f, 3.69f, -1.19f));
+        //listRandomPositions.Add(new Vector3(-3.61f, 3.69f, -1.19f));
+        //listRandomPositions.Add(new Vector3(-3.25f, 3.69f, -13.04f));
+        //listRandomPositions.Add(new Vector3(3.19f, 3.69f, -12.97f));
+        //listRandomPositions.Add(new Vector3(6.53f, 3.69f, -6.77f));
+        //listRandomPositions.Add(new Vector3(-6.72f, 3.69f, -6.77f));
+
+        // auto
+        foreach (Transform transform in itemSpawnPositions_Lst)
+        {
+            listRandomPositions.Add(transform.position);
+        }
+
         for (int i=0; i<6; i++)  listRandomPositionsOcuped.Add(false);
     }
 
