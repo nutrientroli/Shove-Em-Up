@@ -37,7 +37,11 @@ public class SoundManager
     private static SoundManager instance;
     private SoundManager() { }
     public static SoundManager GetInstance() {
-        if (instance == null) instance = new SoundManager();
+        if (instance == null)
+        {
+            instance = new SoundManager();
+            instance.Init();
+        }
         return instance;
     }
     #endregion
@@ -70,7 +74,7 @@ public class SoundManager
 
     public void PlaySound(SoundEvent _event) {
         //llamar a evento del fmod
- 
+        FMODUnity.RuntimeManager.PlayOneShot(tableOfSoundEvents[_event].ToString());
     }
 
     public void StopSound(SoundEvent _event)
