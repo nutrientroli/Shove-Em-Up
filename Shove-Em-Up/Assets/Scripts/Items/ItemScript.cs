@@ -16,7 +16,9 @@ public class ItemScript : MonoBehaviour
             active = false;
             SetActive();
             currentTime = 0;
-            other.GetComponent<PlayerScript>().habilityScript.IncrementPerItem();
+            PlayerScript player = other.GetComponent<PlayerScript>();
+            player.habilityScript.IncrementPerItem();
+            player.StartItemParticles();
         }
 
     }
