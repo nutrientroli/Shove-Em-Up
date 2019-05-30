@@ -70,7 +70,7 @@ public class SoundManager
 
     public void PlaySound(SoundEvent _event) {
         //llamar a evento del fmod
-        FMODUnity.RuntimeManager.PlayOneShot(tableOfSoundEvents[_event].toString());
+ 
     }
 
     public void StopSound(SoundEvent _event)
