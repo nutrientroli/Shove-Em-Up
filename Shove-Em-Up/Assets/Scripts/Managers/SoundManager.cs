@@ -35,12 +35,11 @@ public class SoundManager
 
     #region Singleton Pattern
     private static SoundManager instance;
-    private SoundManager() { }
+    private SoundManager() { Init(); }
     public static SoundManager GetInstance() {
         if (instance == null)
         {
             instance = new SoundManager();
-            instance.Init();
         }
         return instance;
     }
@@ -54,7 +53,6 @@ public class SoundManager
     #region Methods
 
     public void Init() {
-        tableOfSoundEvents.Add(SoundEvent.SOUND_1, "event:/Character/GainPoint2");
         tableOfSoundEvents.Add(SoundEvent.CHANGECHARACTER_MENUSELECTION, "event:/Menu/ChangeCharacter");
         tableOfSoundEvents.Add(SoundEvent.PRESSREADY_MENUSELECTION, "event:/Menu/pressButton");
         tableOfSoundEvents.Add(SoundEvent.DASH, "event:/Character/FssSound1");
