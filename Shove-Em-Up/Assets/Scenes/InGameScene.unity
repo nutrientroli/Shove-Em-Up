@@ -4020,7 +4020,7 @@ MonoBehaviour:
   antialiasingMode: 0
   temporalAntialiasing:
     jitterSpread: 0.75
-    sharpness: 0.25
+    sharpness: 0.55
     stationaryBlending: 0.95
     motionBlending: 0.85
   subpixelMorphologicalAntialiasing:
@@ -8522,7 +8522,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 765e3c00ead784f4897a68a497affc75, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7139f90359634744285669d72d7f1149, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0.8627451}
   m_FlipX: 0
   m_FlipY: 0
