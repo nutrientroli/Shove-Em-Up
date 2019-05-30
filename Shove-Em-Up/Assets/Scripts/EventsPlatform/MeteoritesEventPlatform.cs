@@ -82,35 +82,15 @@ public class MeteoritesEventPlatform : EventPlatformScript
     private float Action() {
         for(int i = 0; i < meteors.Count; i++)
         {
-            if(!poolMeteors[i])
+            if (!poolMeteors[i])
             {
-                bool valido = false;
-                if (i % 2 == 0)
-                {
 
-                }
-                else
-                {
-                    while (!valido)
-                    {
-                        int randomNum = 0;
-                        randomNum = Random.Range(0, players.Length);
-                        if ((posicionCentral.transform.position - players[randomNum].transform.position).magnitude <= 15)
-                            valido = true;
-                        if (players.Length == PlayersManager.GetInstance().listOfPlayersToRespawnFinnishEvent.Count)
-                            valido = true;
-                    }
-                    meteors[i].gameObject.transform.position = new Vector3(players[Random.Range(0, players.Length)].transform.position.x, meteors[i].transform.position.y, players[Random.Range(0, players.Length)].transform.position.z);
-                    meteors[i].Active(1f);
-                    poolMeteors[i] = true;
-                    break; 
-                }
-
-                /*
                 int randomNum = 0;
                 bool vivo = true;
                 bool valido = false;
                 int iteraciones = 0;
+
+
                 while (!valido)
                 {
                     iteraciones++;
@@ -125,20 +105,24 @@ public class MeteoritesEventPlatform : EventPlatformScript
                         }
                         if (players.Length == PlayersManager.GetInstance().listOfPlayersToRespawnFinnishEvent.Count)
                             valido = true;
+
+                        if ((posicionCentral.transform.position - players[randomNum].transform.position).magnitude >= 14)
+                            vivo = false;
                     }
-                    if (vivo)
+                    if (vivo || iteraciones >= 50)
                         valido = true;
 
                 }
-                if (players.Length == PlayersManager.GetInstance().listOfPlayersToRespawnFinnishEvent.Count)
+                if (players.Length == PlayersManager.GetInstance().listOfPlayersToRespawnFinnishEvent.Count || iteraciones >= 50)
                 {
-                    meteors[i].gameObject.transform.position = meteors[i].gameObject.transform.position;
+                    meteors[i].gameObject.transform.position = new Vector3(posicionCentral.transform.position.x + Random.Range(-12, 12), meteors[i].transform.position.y, posicionCentral.transform.position.z + Random.Range(-15, 16));
                 }
                 else
-                    meteors[i].gameObject.transform.position = new Vector3(players[Random.Range(0, players.Length)].transform.position.x, meteors[i].transform.position.y, players[Random.Range(0, players.Length)].transform.position.z) ;
+                    meteors[i].gameObject.transform.position = new Vector3(players[randomNum].transform.position.x, meteors[i].transform.position.y, players[randomNum].transform.position.z);
                 meteors[i].Active(1f);
                 poolMeteors[i] = true;
-                break;*/
+                break;
+                
             }
         }
 

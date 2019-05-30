@@ -10681,6 +10681,7 @@ MonoBehaviour:
   ventiladores:
   - {fileID: 1778507450}
   - {fileID: 1923135684}
+  posicionCentral: {fileID: 1911609753}
   waitTime: 0.3
   timeToAction: 0
   timeVariaton: 0
@@ -10704,7 +10705,7 @@ MonoBehaviour:
   counterIsShow: 1
   meteors: []
   feedback: {fileID: 0}
-  posicionCentral: {fileID: 0}
+  posicionCentral: {fileID: 1911609753}
   waitTime: 0.3
   timeToAction: 0.1
   timeVariaton: 0.2

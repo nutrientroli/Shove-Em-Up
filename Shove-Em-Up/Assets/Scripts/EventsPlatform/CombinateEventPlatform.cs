@@ -8,7 +8,7 @@ public class CombinateEventPlatform : EventPlatformScript
     [SerializeField] private List<MeteorScript> meteors = new List<MeteorScript>();
     public List<FanScript> ventiladores;
     private GameObject[] players;
-
+    public GameObject posicionCentral;
     private int randomNum = 0;
 
     private int state = 0; //Estado 0: Ventilador con meteoritos
@@ -109,21 +109,34 @@ public class CombinateEventPlatform : EventPlatformScript
                     bool vivo = true;
                     bool valido = false;
                     int iteraciones = 0;
-                    while(!valido)
+                    while (!valido)
                     {
                         iteraciones++;
                         vivo = true;
                         randomNum = Random.Range(0, players.Length);
+                        print(randomNum);
                         foreach (int j in PlayersManager.GetInstance().listOfPlayersToRespawnFinnishEvent)
                         {
                             if (players[randomNum].GetComponent<PlayerData>().GetPlayer() == j)
+                            {
+                                vivo = false;
+                            }
+                            if (players.Length == PlayersManager.GetInstance().listOfPlayersToRespawnFinnishEvent.Count)
+                                valido = true;
+
+                            if ((posicionCentral.transform.position - players[randomNum].transform.position).magnitude >= 14)
                                 vivo = false;
                         }
-                        if (vivo || iteraciones >= 20)
+                        if (vivo || iteraciones >= 50)
                             valido = true;
-                        
+
                     }
-                    meteors[i].gameObject.transform.position = new Vector3(players[randomNum].transform.position.x, meteors[i].transform.position.y, players[randomNum].transform.position.z);
+                    if (players.Length == PlayersManager.GetInstance().listOfPlayersToRespawnFinnishEvent.Count || iteraciones >= 50)
+                    {
+                        meteors[i].gameObject.transform.position = new Vector3(posicionCentral.transform.position.x + Random.Range(-12, 12), meteors[i].transform.position.y, posicionCentral.transform.position.z + Random.Range(-15, 16));
+                    }
+                    else
+                        meteors[i].gameObject.transform.position = new Vector3(players[randomNum].transform.position.x, meteors[i].transform.position.y, players[randomNum].transform.position.z);
                     meteors[i].Active(1f);
                     poolMeteors[i] = true;
                     break;
