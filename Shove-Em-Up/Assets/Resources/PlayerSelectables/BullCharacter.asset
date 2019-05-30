@@ -15,6 +15,7 @@ MonoBehaviour:
   geometry: {fileID: 3136033018580642016, guid: 19934940af49aa54dacde8278d87f885,
     type: 3}
   name: Toro
+  nameObject: BullCharacter
   description: Realiza una carga fuerte y veloz que deja fuera de juego a sus rivales
     con facilidad.
   type: 1

@@ -15,6 +15,7 @@ MonoBehaviour:
   geometry: {fileID: 8144534535114906219, guid: e93d2421d96a98345932c6bff346d445,
     type: 3}
   name: Gallina
+  nameObject: ChickenCharacter
   description: Se cubre tras un huevo que la protege de empujones.
   type: 0
   material: {fileID: 2100000, guid: 0aa356a547c0a0648b660c139c3bae4d, type: 2}

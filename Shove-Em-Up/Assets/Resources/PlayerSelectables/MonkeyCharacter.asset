@@ -15,6 +15,7 @@ MonoBehaviour:
   geometry: {fileID: 8506658240134258179, guid: a299dd745c9e96f4b9460f0a2256245b,
     type: 3}
   name: Mono
+  nameObject: MonkeyCharacter
   description: Lanza platanos que dejan aturdidos a los rivales alcanzados.
   type: 2
   material: {fileID: 2100000, guid: 0917ec119eaaf644ab2581a0c2cf14d4, type: 2}

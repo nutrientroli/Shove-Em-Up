@@ -45,7 +45,7 @@ public class PlayersManager {
         tableOfPlayerData.Clear();
         for (int i=1; i<=tableOfSelectPlayers.Count; i++) {
             PlayerSelectData selectData = (PlayerSelectData)tableOfSelectPlayers[i];
-            GameObject prefab = ((GameObject)tableOfCharacters[selectData.name]);
+            GameObject prefab = ((GameObject)tableOfCharacters[selectData.nameObject]);
             GameObject obj = GameObject.Instantiate(prefab);
             PlayerData objData = obj.GetComponentInChildren<PlayerData>();
             objData = ResetValuesPlayerData(i, objData, selectData);
