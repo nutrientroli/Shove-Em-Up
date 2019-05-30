@@ -9,6 +9,7 @@ public class MeteoritesEventPlatform : EventPlatformScript
     [SerializeField] private GameObject feedback;
     private GameObject[] players;
     private List<bool> poolMeteors = new List<bool>();
+    public GameObject posicionCentral;
     [Header("Event Configuration")]
     [SerializeField] private float waitTime = 0.5f;
     [SerializeField] private float timeToAction = 0.1f;
@@ -83,7 +84,29 @@ public class MeteoritesEventPlatform : EventPlatformScript
         {
             if(!poolMeteors[i])
             {
+                bool valido = false;
+                if (i % 2 == 0)
+                {
 
+                }
+                else
+                {
+                    while (!valido)
+                    {
+                        int randomNum = 0;
+                        randomNum = Random.Range(0, players.Length);
+                        if ((posicionCentral.transform.position - players[randomNum].transform.position).magnitude <= 15)
+                            valido = true;
+                        if (players.Length == PlayersManager.GetInstance().listOfPlayersToRespawnFinnishEvent.Count)
+                            valido = true;
+                    }
+                    meteors[i].gameObject.transform.position = new Vector3(players[Random.Range(0, players.Length)].transform.position.x, meteors[i].transform.position.y, players[Random.Range(0, players.Length)].transform.position.z);
+                    meteors[i].Active(1f);
+                    poolMeteors[i] = true;
+                    break; 
+                }
+
+                /*
                 int randomNum = 0;
                 bool vivo = true;
                 bool valido = false;
@@ -93,6 +116,7 @@ public class MeteoritesEventPlatform : EventPlatformScript
                     iteraciones++;
                     vivo = true;
                     randomNum = Random.Range(0, players.Length);
+                    print(randomNum);
                     foreach (int j in PlayersManager.GetInstance().listOfPlayersToRespawnFinnishEvent)
                     {
                         if (players[randomNum].GetComponent<PlayerData>().GetPlayer() == j)
@@ -109,12 +133,12 @@ public class MeteoritesEventPlatform : EventPlatformScript
                 if (players.Length == PlayersManager.GetInstance().listOfPlayersToRespawnFinnishEvent.Count)
                 {
                     meteors[i].gameObject.transform.position = meteors[i].gameObject.transform.position;
-
                 }
-                meteors[i].gameObject.transform.position = new Vector3(players[Random.Range(0, players.Length)].transform.position.x, meteors[i].transform.position.y, players[Random.Range(0, players.Length)].transform.position.z) ;
+                else
+                    meteors[i].gameObject.transform.position = new Vector3(players[Random.Range(0, players.Length)].transform.position.x, meteors[i].transform.position.y, players[Random.Range(0, players.Length)].transform.position.z) ;
                 meteors[i].Active(1f);
                 poolMeteors[i] = true;
-                break;
+                break;*/
             }
         }
 
