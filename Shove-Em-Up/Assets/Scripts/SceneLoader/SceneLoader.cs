@@ -10,30 +10,23 @@ using UnityEngine.UI;
 
 public class SceneLoader : MonoBehaviour
 {
-    [SerializeField] private const string thisSceneName = "LoadingScene";       // the name of the scene we use as loading scene !!_IMPORTANT_!!
-
+    // setup
+    private const string thisSceneName = "LoadingScene";       // the name of the scene we use as loading scene !!_IMPORTANT_!!
     private static int targetSceneIndex;
     
-    // output
+    // data output
     [SerializeField] private Slider loadingSlider;
     [SerializeField] private TextMeshProUGUI percentageText;
 
-
-    public static void LoadScene(int _sceneIndex)
-    {
-        targetSceneIndex = _sceneIndex;                     // setup of the target scene
-        SceneManager.LoadScene(thisSceneName);              // we load the loading scene 
-    }
-
     public void Start()
     {
-        StartCoroutine(LoadSceneAsync(targetSceneIndex));
+        StartCoroutine(LoadSceneAsync());
     }
 
-    IEnumerator LoadSceneAsync(int _sceneIndex)
+    IEnumerator LoadSceneAsync()
     {
         Debug.Log("LOADING:_ Starting scene loading");
-        AsyncOperation op = SceneManager.LoadSceneAsync(_sceneIndex);        
+        AsyncOperation op = ScenesManager.ChangeSceneLoading();       
         while (!op.isDone)
         {
             float loadingProgress = Mathf.Clamp01(op.progress / 0.9f);
