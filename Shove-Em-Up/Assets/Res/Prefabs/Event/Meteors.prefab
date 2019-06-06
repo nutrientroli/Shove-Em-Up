@@ -1,0 +1,1932 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &924941110146789523
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 924941110146789521}
+  m_Layer: 0
+  m_Name: Meteors
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &924941110146789521
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 924941110146789523}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.0224495, y: 36.013527, z: 4.1238976}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 2120666808907082986}
+  - {fileID: 705519547841339335}
+  - {fileID: 2116173109973406773}
+  - {fileID: 4550187285852784592}
+  - {fileID: 5640518632845429607}
+  - {fileID: 7895202273694250248}
+  - {fileID: 5831650297255853187}
+  - {fileID: 3780826853714393324}
+  - {fileID: 647913364398145667}
+  - {fileID: 3794125218072338560}
+  - {fileID: 2372207793784614444}
+  - {fileID: 1056095454160609395}
+  - {fileID: 6255636068725462042}
+  - {fileID: 2617195191573367640}
+  - {fileID: 2532784785587792584}
+  - {fileID: 3258500314079965419}
+  - {fileID: 1399451336301361535}
+  - {fileID: 7296154171752712347}
+  - {fileID: 3468564687739012907}
+  - {fileID: 7963699689743940234}
+  - {fileID: 7267643772669768446}
+  - {fileID: 8293771797298017459}
+  - {fileID: 1391086871712807773}
+  - {fileID: 3429566068438142827}
+  - {fileID: 5866866331692047763}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &664340721513006183
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 924941110146789521}
+    m_Modifications:
+    - target: {fileID: 544996464288233524, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_Name
+      value: PelotaPlaya2.0 (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -6.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2.375
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0877b0e8209800848a91169bbf85f973, type: 3}
+--- !u!4 &1056095454160609395 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+    type: 3}
+  m_PrefabInstance: {fileID: 664340721513006183}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1034338282174200787
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 924941110146789521}
+    m_Modifications:
+    - target: {fileID: 544996464288233524, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_Name
+      value: PelotaPlaya2.0 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -6.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2.375
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0877b0e8209800848a91169bbf85f973, type: 3}
+--- !u!4 &705519547841339335 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+    type: 3}
+  m_PrefabInstance: {fileID: 1034338282174200787}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1111807054992368791
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 924941110146789521}
+    m_Modifications:
+    - target: {fileID: 544996464288233524, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_Name
+      value: PelotaPlaya2.0 (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -6.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2.375
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0877b0e8209800848a91169bbf85f973, type: 3}
+--- !u!4 &647913364398145667 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+    type: 3}
+  m_PrefabInstance: {fileID: 1111807054992368791}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1503662716678528841
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 924941110146789521}
+    m_Modifications:
+    - target: {fileID: 544996464288233524, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_Name
+      value: PelotaPlaya2.0 (22)
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -6.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2.375
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 22
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0877b0e8209800848a91169bbf85f973, type: 3}
+--- !u!4 &1391086871712807773 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+    type: 3}
+  m_PrefabInstance: {fileID: 1503662716678528841}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1512064844353363307
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 924941110146789521}
+    m_Modifications:
+    - target: {fileID: 544996464288233524, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_Name
+      value: PelotaPlaya2.0 (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -6.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2.375
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0877b0e8209800848a91169bbf85f973, type: 3}
+--- !u!4 &1399451336301361535 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+    type: 3}
+  m_PrefabInstance: {fileID: 1512064844353363307}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1931515782375354401
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 924941110146789521}
+    m_Modifications:
+    - target: {fileID: 544996464288233524, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_Name
+      value: PelotaPlaya2.0 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -6.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2.375
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0877b0e8209800848a91169bbf85f973, type: 3}
+--- !u!4 &2116173109973406773 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+    type: 3}
+  m_PrefabInstance: {fileID: 1931515782375354401}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1945036479812585726
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 924941110146789521}
+    m_Modifications:
+    - target: {fileID: 544996464288233524, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_Name
+      value: PelotaPlaya2.0
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -6.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2.375
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0877b0e8209800848a91169bbf85f973, type: 3}
+--- !u!4 &2120666808907082986 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+    type: 3}
+  m_PrefabInstance: {fileID: 1945036479812585726}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &2576642056922246988
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 924941110146789521}
+    m_Modifications:
+    - target: {fileID: 544996464288233524, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_Name
+      value: PelotaPlaya2.0 (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -6.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2.375
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0877b0e8209800848a91169bbf85f973, type: 3}
+--- !u!4 &2617195191573367640 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+    type: 3}
+  m_PrefabInstance: {fileID: 2576642056922246988}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &2645430690023247580
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 924941110146789521}
+    m_Modifications:
+    - target: {fileID: 544996464288233524, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_Name
+      value: PelotaPlaya2.0 (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -6.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2.375
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0877b0e8209800848a91169bbf85f973, type: 3}
+--- !u!4 &2532784785587792584 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+    type: 3}
+  m_PrefabInstance: {fileID: 2645430690023247580}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &2845132632319593016
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 924941110146789521}
+    m_Modifications:
+    - target: {fileID: 544996464288233524, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_Name
+      value: PelotaPlaya2.0 (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -6.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2.375
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0877b0e8209800848a91169bbf85f973, type: 3}
+--- !u!4 &2372207793784614444 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+    type: 3}
+  m_PrefabInstance: {fileID: 2845132632319593016}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &2884682343317302143
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 924941110146789521}
+    m_Modifications:
+    - target: {fileID: 544996464288233524, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_Name
+      value: PelotaPlaya2.0 (23)
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -6.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2.375
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 23
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0877b0e8209800848a91169bbf85f973, type: 3}
+--- !u!4 &3429566068438142827 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+    type: 3}
+  m_PrefabInstance: {fileID: 2884682343317302143}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &3073904249357587711
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 924941110146789521}
+    m_Modifications:
+    - target: {fileID: 544996464288233524, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_Name
+      value: PelotaPlaya2.0 (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -6.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2.375
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0877b0e8209800848a91169bbf85f973, type: 3}
+--- !u!4 &3258500314079965419 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+    type: 3}
+  m_PrefabInstance: {fileID: 3073904249357587711}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &3690497228833834132
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 924941110146789521}
+    m_Modifications:
+    - target: {fileID: 544996464288233524, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_Name
+      value: PelotaPlaya2.0 (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -6.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2.375
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0877b0e8209800848a91169bbf85f973, type: 3}
+--- !u!4 &3794125218072338560 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+    type: 3}
+  m_PrefabInstance: {fileID: 3690497228833834132}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &3740246742405127416
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 924941110146789521}
+    m_Modifications:
+    - target: {fileID: 544996464288233524, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_Name
+      value: PelotaPlaya2.0 (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -6.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2.375
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0877b0e8209800848a91169bbf85f973, type: 3}
+--- !u!4 &3780826853714393324 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+    type: 3}
+  m_PrefabInstance: {fileID: 3740246742405127416}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &4013523455061009215
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 924941110146789521}
+    m_Modifications:
+    - target: {fileID: 544996464288233524, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_Name
+      value: PelotaPlaya2.0 (18)
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -6.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2.375
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0877b0e8209800848a91169bbf85f973, type: 3}
+--- !u!4 &3468564687739012907 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+    type: 3}
+  m_PrefabInstance: {fileID: 4013523455061009215}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &4086370557350175684
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 924941110146789521}
+    m_Modifications:
+    - target: {fileID: 544996464288233524, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_Name
+      value: PelotaPlaya2.0 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -6.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2.375
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0877b0e8209800848a91169bbf85f973, type: 3}
+--- !u!4 &4550187285852784592 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+    type: 3}
+  m_PrefabInstance: {fileID: 4086370557350175684}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &5320742007222611827
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 924941110146789521}
+    m_Modifications:
+    - target: {fileID: 544996464288233524, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_Name
+      value: PelotaPlaya2.0 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -6.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2.375
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0877b0e8209800848a91169bbf85f973, type: 3}
+--- !u!4 &5640518632845429607 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+    type: 3}
+  m_PrefabInstance: {fileID: 5320742007222611827}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &5854763876410290190
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 924941110146789521}
+    m_Modifications:
+    - target: {fileID: 544996464288233524, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_Name
+      value: PelotaPlaya2.0 (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -6.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2.375
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0877b0e8209800848a91169bbf85f973, type: 3}
+--- !u!4 &6255636068725462042 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+    type: 3}
+  m_PrefabInstance: {fileID: 5854763876410290190}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6267740460501825927
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 924941110146789521}
+    m_Modifications:
+    - target: {fileID: 544996464288233524, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_Name
+      value: PelotaPlaya2.0 (24)
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -6.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2.375
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 24
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0877b0e8209800848a91169bbf85f973, type: 3}
+--- !u!4 &5866866331692047763 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+    type: 3}
+  m_PrefabInstance: {fileID: 6267740460501825927}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6304503371231762583
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 924941110146789521}
+    m_Modifications:
+    - target: {fileID: 544996464288233524, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_Name
+      value: PelotaPlaya2.0 (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -6.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2.375
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0877b0e8209800848a91169bbf85f973, type: 3}
+--- !u!4 &5831650297255853187 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+    type: 3}
+  m_PrefabInstance: {fileID: 6304503371231762583}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &7120493331749530767
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 924941110146789521}
+    m_Modifications:
+    - target: {fileID: 544996464288233524, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_Name
+      value: PelotaPlaya2.0 (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -6.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2.375
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 17
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0877b0e8209800848a91169bbf85f973, type: 3}
+--- !u!4 &7296154171752712347 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+    type: 3}
+  m_PrefabInstance: {fileID: 7120493331749530767}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &7155072900791686890
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 924941110146789521}
+    m_Modifications:
+    - target: {fileID: 544996464288233524, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_Name
+      value: PelotaPlaya2.0 (20)
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -6.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2.375
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0877b0e8209800848a91169bbf85f973, type: 3}
+--- !u!4 &7267643772669768446 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+    type: 3}
+  m_PrefabInstance: {fileID: 7155072900791686890}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &7571828370714566302
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 924941110146789521}
+    m_Modifications:
+    - target: {fileID: 544996464288233524, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_Name
+      value: PelotaPlaya2.0 (19)
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -6.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2.375
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 19
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0877b0e8209800848a91169bbf85f973, type: 3}
+--- !u!4 &7963699689743940234 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+    type: 3}
+  m_PrefabInstance: {fileID: 7571828370714566302}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &7638478555967328540
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 924941110146789521}
+    m_Modifications:
+    - target: {fileID: 544996464288233524, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_Name
+      value: PelotaPlaya2.0 (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -6.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2.375
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0877b0e8209800848a91169bbf85f973, type: 3}
+--- !u!4 &7895202273694250248 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+    type: 3}
+  m_PrefabInstance: {fileID: 7638478555967328540}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &8397334121354891431
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 924941110146789521}
+    m_Modifications:
+    - target: {fileID: 544996464288233524, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_Name
+      value: PelotaPlaya2.0 (21)
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -6.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2.375
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 21
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0877b0e8209800848a91169bbf85f973, type: 3}
+--- !u!4 &8293771797298017459 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 544996464287933460, guid: 0877b0e8209800848a91169bbf85f973,
+    type: 3}
+  m_PrefabInstance: {fileID: 8397334121354891431}
+  m_PrefabAsset: {fileID: 0}

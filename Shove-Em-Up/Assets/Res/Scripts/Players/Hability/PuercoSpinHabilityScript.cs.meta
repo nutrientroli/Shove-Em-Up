@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 220325e1f24b78c4d88d1e1dfb94430c
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - modToOthers: {instanceID: 0}
+  - modToMe: {instanceID: 0}
+  - canvasPush: {instanceID: 0}
+  - particlesSpins: {fileID: 1037876753945929827, guid: f89e0e0d87fe9d44aa7c72d1e57691b9,
+      type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

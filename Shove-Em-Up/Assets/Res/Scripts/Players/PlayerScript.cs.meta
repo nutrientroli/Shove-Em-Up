@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 754715ff2643c5c438090cbcddb5e847
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - animator: {instanceID: 0}
+  - habilityScript: {instanceID: 0}
+  - canvasPlayer: {instanceID: 0}
+  - particlesDash: {instanceID: 0}
+  - particlesConfusion: {fileID: 4511172101472797341, guid: 18465e97b0ddd0b449d30c4477333075,
+      type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
