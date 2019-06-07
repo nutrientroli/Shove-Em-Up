@@ -6299,8 +6299,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1283235539}
   - component: {fileID: 1283235538}
+  - component: {fileID: 1283235540}
   - component: {fileID: 1283235537}
-  - component: {fileID: 1283235536}
   - component: {fileID: 1283235535}
   - component: {fileID: 1283235534}
   - component: {fileID: 1283235533}
@@ -6457,14 +6457,6 @@ MonoBehaviour:
   m_BeforeTransparentBundles: []
   m_BeforeStackBundles: []
   m_AfterStackBundles: []
---- !u!81 &1283235536
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1283235531}
-  m_Enabled: 1
 --- !u!20 &1283235537
 Camera:
   m_ObjectHideFlags: 0
@@ -6534,6 +6526,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 41.528004, y: 0, z: 0}
+--- !u!114 &1283235540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1283235531}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc4f90a204845a04899ef1af1cb22d28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  offset: 0.4
+  speed: 0.4
+  time: 3
 --- !u!1 &1299477149
 GameObject:
   m_ObjectHideFlags: 0
