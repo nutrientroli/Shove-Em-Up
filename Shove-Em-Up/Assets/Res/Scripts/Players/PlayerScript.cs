@@ -172,7 +172,7 @@ public class PlayerScript : MonoBehaviour
             case State.PUSHING:
                 animator.SetTrigger("Dash");
                 capsuleCollider.radius = radiusCapsule * 2f;
-                particlesDash.gameObject.transform.position = capsuleCollider.transform.position + transform.forward * capsuleCollider.radius;
+                particlesDash.gameObject.transform.position = capsuleCollider.transform.position - transform.forward * capsuleCollider.radius;
                 particlesDash.Play();
                 pushScript.Push();
                 break;
