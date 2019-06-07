@@ -17,8 +17,11 @@ public class EventsManager : MonoBehaviour {
     private float currentTime = 0;
     private bool wait = false;
     private float timeCounter = 0;
-
     public Text counter;
+
+    [Header("Params Testing")]
+    [SerializeField] private bool Testing = false;
+    [SerializeField] private int indexTesting = 0;
 
     private void Start() {
         unSelectedMaterial = ((Renderer)listPieces[indexEvent]).material;
@@ -78,7 +81,7 @@ public class EventsManager : MonoBehaviour {
     }
 
     private void ForceFinnishEvent() {
-        eventPlatform.ForceFinnish();
+        if(!Testing) eventPlatform.ForceFinnish();
         SoundManager.GetInstance().PlaySound(SoundManager.SoundEvent.PRESENTADOR_3);
     }
 
@@ -103,7 +106,8 @@ public class EventsManager : MonoBehaviour {
         inSelection = false;
         wait = false; 
         ((Renderer)listPieces[indexEvent]).material = unSelectedMaterial;
-        eventPlatform = listEvents[indexEvent];
+        if(Testing) eventPlatform = listEvents[indexTesting];
+        else eventPlatform = listEvents[indexEvent];
         eventPlatform.Init();
         LevelManager.GetInstance().SetEventState(true);
     }
@@ -114,6 +118,7 @@ public class EventsManager : MonoBehaviour {
 
     public bool CheckForceEndEvent() {
         //Comentar para testear.
+        if (Testing) return false;
         return (PlayersManager.GetInstance().CheckLimitPlayersDeathInEvent() && eventPlatform != null && !eventPlatform.forceFinnish);
         //return false;
     }
