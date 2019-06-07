@@ -18,6 +18,7 @@ public class PlayerScript : MonoBehaviour
     public ParticleSystem particlesConfusion;
     public ParticleSystem particlesStun;
     public ParticleSystem particlePowerUp;
+    public ParticleSystem particleSlow;
 
     private CapsuleCollider capsuleCollider;
     private float radiusCapsule;
@@ -102,6 +103,16 @@ public class PlayerScript : MonoBehaviour
         {
             particlesStun.gameObject.SetActive(false);
             particlesStun.Stop();
+        }
+        if(ralenticed && isKnockable && !particleSlow.isPlaying)
+        {
+            particleSlow.gameObject.SetActive(true);
+            particleSlow.Play();
+        }
+        if(!ralenticed && particleSlow.isPlaying)
+        {
+            particleSlow.gameObject.SetActive(false);
+            particleSlow.Stop();
         }
     
 
