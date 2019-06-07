@@ -265,7 +265,6 @@ Transform:
   m_PrefabInstance: {fileID: 26916302}
   m_PrefabAsset: {fileID: 0}
 <<<<<<< HEAD
-<<<<<<< HEAD
 --- !u!1 &30791787
 GameObject:
   m_ObjectHideFlags: 0
@@ -408,8 +407,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d65f4c019f64e7547baf73332254d91e, type: 3}
-=======
->>>>>>> parent of 14a347b... Merge branch 'master' of https://github.com/nutrientroli/Shove-Em-Up
 =======
 >>>>>>> parent of 14a347b... Merge branch 'master' of https://github.com/nutrientroli/Shove-Em-Up
 --- !u!1 &69051835
@@ -7721,80 +7718,7 @@ RenderTexture:
     m_WrapW: 1
   m_Dimension: 2
   m_VolumeDepth: 1
-<<<<<<< HEAD
 --- !u!1001 &966282219
-=======
---- !u!1001 &913310402
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 1283235539}
-    m_Modifications:
-    - target: {fileID: 100000, guid: ad27dda7b7183eb49af2221d72d9711d, type: 3}
-      propertyPath: m_Name
-      value: HUD
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: ad27dda7b7183eb49af2221d72d9711d, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -11.37
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: ad27dda7b7183eb49af2221d72d9711d, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -4.71
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: ad27dda7b7183eb49af2221d72d9711d, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 13.89
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: ad27dda7b7183eb49af2221d72d9711d, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.20137386
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: ad27dda7b7183eb49af2221d72d9711d, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0.6009231
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: ad27dda7b7183eb49af2221d72d9711d, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0.7568185
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: ad27dda7b7183eb49af2221d72d9711d, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.1598933
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: ad27dda7b7183eb49af2221d72d9711d, type: 3}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: ad27dda7b7183eb49af2221d72d9711d, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: -103.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: ad27dda7b7183eb49af2221d72d9711d, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 150.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: ad27dda7b7183eb49af2221d72d9711d, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: ad27dda7b7183eb49af2221d72d9711d, type: 3}
---- !u!4 &913310403 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 400000, guid: ad27dda7b7183eb49af2221d72d9711d,
-    type: 3}
-  m_PrefabInstance: {fileID: 913310402}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &929377026 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8939759708295045568, guid: 73efd4373b952664aa64e915152c3baf,
-    type: 3}
-  m_PrefabInstance: {fileID: 1820674854089557843}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &929858979
->>>>>>> parent of 14a347b... Merge branch 'master' of https://github.com/nutrientroli/Shove-Em-Up
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -7862,7 +7786,6 @@ PrefabInstance:
       propertyPath: m_FontData.m_Alignment
       value: 4
       objectReference: {fileID: 0}
-<<<<<<< HEAD
     - target: {fileID: 4534227955514474528, guid: d70f9f4ed8099d34393ba8ad46fc8c00,
         type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -7950,62 +7873,6 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4534227954073672479, guid: d70f9f4ed8099d34393ba8ad46fc8c00,
-=======
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 72744fc2b5e137d44b2b57c3aecbe896, type: 3}
---- !u!4 &929858980 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 400004, guid: 72744fc2b5e137d44b2b57c3aecbe896,
-    type: 3}
-  m_PrefabInstance: {fileID: 929858979}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &931539056 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1894626653, guid: 73efd4373b952664aa64e915152c3baf,
-    type: 3}
-  m_PrefabInstance: {fileID: 1820674854089557843}
-  m_PrefabAsset: {fileID: 0}
---- !u!84 &938118226
-RenderTexture:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_ForcedFallbackFormat: 4
-  m_DownscaleFallback: 0
-  m_Width: 256
-  m_Height: 256
-  m_AntiAliasing: 1
-  m_DepthFormat: 0
-  m_ColorFormat: 11
-  m_MipMap: 0
-  m_GenerateMips: 1
-  m_SRGB: 0
-  m_UseDynamicScale: 0
-  m_BindMS: 0
-  m_TextureSettings:
-    serializedVersion: 2
-    m_FilterMode: 1
-    m_Aniso: 1
-    m_MipBias: 0
-    m_WrapU: 1
-    m_WrapV: 1
-    m_WrapW: 1
-  m_Dimension: 2
-  m_VolumeDepth: 1
---- !u!1001 &966282219
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 286716326}
-    m_Modifications:
-    - target: {fileID: 140681405666532436, guid: 095f0eb823303c04984bc97b90ac41c8,
->>>>>>> parent of 14a347b... Merge branch 'master' of https://github.com/nutrientroli/Shove-Em-Up
         type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -8197,9 +8064,6 @@ MonoBehaviour:
     type: 3}
   storePointLightCookieMapShader: {fileID: 4800000, guid: 83815c326d7f2514884f3fc7a05b5aef,
     type: 3}
-<<<<<<< HEAD
->>>>>>> parent of 14a347b... Merge branch 'master' of https://github.com/nutrientroli/Shove-Em-Up
-=======
 >>>>>>> parent of 14a347b... Merge branch 'master' of https://github.com/nutrientroli/Shove-Em-Up
 --- !u!1 &997960264
 GameObject:
@@ -10412,9 +10276,6 @@ Transform:
 <<<<<<< HEAD
 =======
   - {fileID: 913310403}
-<<<<<<< HEAD
->>>>>>> parent of 14a347b... Merge branch 'master' of https://github.com/nutrientroli/Shove-Em-Up
-=======
 >>>>>>> parent of 14a347b... Merge branch 'master' of https://github.com/nutrientroli/Shove-Em-Up
   m_Father: {fileID: 0}
   m_RootOrder: 9
@@ -13724,7 +13585,6 @@ PrefabInstance:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 354e51f2fe9ecf64b8519ee65d637360, type: 3}
 <<<<<<< HEAD
-<<<<<<< HEAD
 --- !u!1001 &1728732190
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13875,8 +13735,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1730442692}
   m_PrefabAsset: {fileID: 0}
-=======
->>>>>>> parent of 14a347b... Merge branch 'master' of https://github.com/nutrientroli/Shove-Em-Up
 =======
 >>>>>>> parent of 14a347b... Merge branch 'master' of https://github.com/nutrientroli/Shove-Em-Up
 --- !u!1 &1743609230
