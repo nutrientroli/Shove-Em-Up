@@ -18,6 +18,7 @@ public class PlayerScript : MonoBehaviour
     public ParticleSystem particlesConfusion;
     public ParticleSystem particlesStun;
     public ParticleSystem particlePowerUp;
+    public ParticleSystem particleSlow;
 
     private CapsuleCollider capsuleCollider;
     private float radiusCapsule;
@@ -103,6 +104,16 @@ public class PlayerScript : MonoBehaviour
             particlesStun.gameObject.SetActive(false);
             particlesStun.Stop();
         }
+        if(ralenticed && isKnockable && !particleSlow.isPlaying)
+        {
+            particleSlow.gameObject.SetActive(true);
+            particleSlow.Play();
+        }
+        if(!ralenticed && particleSlow.isPlaying)
+        {
+            particleSlow.gameObject.SetActive(false);
+            particleSlow.Stop();
+        }
     
 
         if(killer != null)
@@ -172,7 +183,7 @@ public class PlayerScript : MonoBehaviour
             case State.PUSHING:
                 animator.SetTrigger("Dash");
                 capsuleCollider.radius = radiusCapsule * 2f;
-                particlesDash.gameObject.transform.position = capsuleCollider.transform.position + transform.forward * capsuleCollider.radius;
+                particlesDash.gameObject.transform.position = capsuleCollider.transform.position - transform.forward * capsuleCollider.radius;
                 particlesDash.Play();
                 pushScript.Push();
                 break;

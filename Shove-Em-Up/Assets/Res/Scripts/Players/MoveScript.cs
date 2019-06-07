@@ -16,6 +16,7 @@ public class MoveScript : MonoBehaviour
     private float multiplyCharge = 1;
     private float maxMultiplayCharge = 0.5f;
     public bool isMovible = true;
+    public ParticleSystem particleCaida;
 
     private void Awake()
     {
@@ -123,6 +124,9 @@ public class MoveScript : MonoBehaviour
         ResetVectorToMove();
         if ((collisionFlags & CollisionFlags.Below) != 0)
         {
+            if(!onGround && verticalSpeed <= -gravity * 5)
+                particleCaida.Play();
+
             onGround = true;
             player.StopFall();
         }
