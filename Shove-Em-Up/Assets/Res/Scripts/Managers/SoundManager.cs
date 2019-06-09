@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using UnityEngine;
 
-public class SoundManager
+public class SoundManager : MonoBehaviour
 {
     public enum SoundEvent {
         DISQUALIFIED_ALARM = 0,
@@ -76,7 +76,8 @@ public class SoundManager
         MENU_MONKEY_PICK = 69,
         MENU_CHANGE_CHARACTER = 70,
         MENU_PRESS_BUTTON = 71,
-        MUSIC_INGAME = 72
+        MUSIC_INGAME = 72,
+        MUSIC_INIT = 73
     }
     public enum SoundEventType
     {
@@ -99,7 +100,8 @@ public class SoundManager
     #region Variables
     private Hashtable tableOfSoundEvents = new Hashtable();
     private Hashtable tableOfSoundEventsPlaying = new Hashtable();
-    private Hashtable tableOfSoundEventsPlayingToDestroyOnTime = new Hashtable();
+    //private Hashtable tableOfSoundEventsPlayingToDestroyOnTime = new Hashtable();
+    //private bool StartCouroutineChecker = false;
     #endregion
 
     #region Methods
@@ -178,21 +180,27 @@ public class SoundManager
         tableOfSoundEvents.Add(SoundEvent.MENU_MONKEY_PICK, "event:/Menu/MonkeyPick");
         tableOfSoundEvents.Add(SoundEvent.MENU_PRESS_BUTTON, "event:/Menu/PressButton");
         tableOfSoundEvents.Add(SoundEvent.MUSIC_INGAME, "event:/Music/Ingame");
+        tableOfSoundEvents.Add(SoundEvent.MUSIC_INIT, "event:/Music/Inicio");
     }
 
-    public void PlaySound(SoundEvent _event, SoundEventType _type = SoundEventType.ONE) {
+    public void PlaySound(SoundEvent _event, Transform _transform = null, SoundEventType _type = SoundEventType.ONE, float _variationVolume = 1) {
         if (!IsPlaySound(_event)) {
             FMOD.Studio.EventInstance _audio = FMODUnity.RuntimeManager.CreateInstance(tableOfSoundEvents[_event].ToString());
-            _audio.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(Camera.main.transform));
+            if(_transform != null) _audio.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(_transform));
+            else _audio.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(Camera.main.transform));
             switch (_type) {
                 case SoundEventType.ONE:
                 case SoundEventType.MULTI:
-                    //tableOfSoundEventsPlayingToDestroyOnTime.Add(_event);
+                    //Meter un delay
+                    
+                    //tableOfSoundEventsPlayingToDestroyOnTime.Add(_event, 0.0f);
+                    
                     break;
                 case SoundEventType.SCRATT:
                     tableOfSoundEventsPlaying.Add(_event, _audio);
                     break;
             }
+            //AdjustVolume(_event, _audio, _variationVolume);
             _audio.start();
         }
     }
@@ -205,9 +213,41 @@ public class SoundManager
     }
 
     public bool IsPlaySound(SoundEvent _event) {
-        return tableOfSoundEventsPlaying.Contains(_event);
+        return tableOfSoundEventsPlaying.Contains(_event) /*|| tableOfSoundEventsPlayingToDestroyOnTime.Contains(_event)*/;
     }
 
+    public void AdjustVolume(SoundEvent _event, FMOD.Studio.EventInstance _audio, float _variation)
+    {
+        switch (_event)
+        {
+            case SoundEvent.MUSIC_INIT: _audio.setVolume(0.5f * _variation); break;
+            default: break;
+        }
+    }
+
+    /*IEnumerator DestroyOnTime()
+    {
+        Debug.Log("Start Coroutine");
+        float _maxTime = 1;
+        foreach (SoundEvent _event in tableOfSoundEventsPlayingToDestroyOnTime.Keys) {
+            float _currentTime = (float)tableOfSoundEventsPlayingToDestroyOnTime[_event] + Time.deltaTime;
+            if (_currentTime >= _maxTime 
+        }
+
+
+
+ 
+       
+            ;
+        while (!_destroy) {
+            _currentTime += Time.deltaTime;
+            if (_currentTime >= _time) _destroy = true;
+        }
+
+        StopSound(_event);
+        Debug.Log("End Coroutine");
+        yield return null;
+    }*/
     #endregion
 
 }

@@ -3,21 +3,33 @@
 public class MenuScript : MonoBehaviour {
 
     [SerializeField] private Animation anim;
+    [SerializeField] private Transform trnsMusicSelection;
+
+    private void Start() {
+        SoundManager.GetInstance().PlaySound(SoundManager.SoundEvent.MUSIC_INGAME, Camera.main.transform,SoundManager.SoundEventType.SCRATT);
+        SoundManager.GetInstance().PlaySound(SoundManager.SoundEvent.MUSIC_INIT, trnsMusicSelection, SoundManager.SoundEventType.SCRATT);
+    }
+
+
 
     public void OnButtonPlayPress() {
         //Vamos al Selector de personajes
+        SoundManager.GetInstance().PlaySound(SoundManager.SoundEvent.MENU_CHANGE_CHARACTER);
         anim.Play();
     }
 
     public void OnButtonQuitPress() {
         Debug.Log("Quit Game");
+        SoundManager.GetInstance().PlaySound(SoundManager.SoundEvent.MENU_CHANGE_CHARACTER);
     }
 
     public void OnButtonReplayPress() {
         ScenesManager.ChangeScene(ScenesManager.SceneCode.GAME);
+        SoundManager.GetInstance().PlaySound(SoundManager.SoundEvent.MENU_CHANGE_CHARACTER);
     }
 
     public void OnButtonReturnToMenuPress() {
         ScenesManager.ChangeScene(ScenesManager.SceneCode.MENU);
+        SoundManager.GetInstance().PlaySound(SoundManager.SoundEvent.MENU_CHANGE_CHARACTER);
     }
 }

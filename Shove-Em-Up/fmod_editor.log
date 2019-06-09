@@ -7,13 +7,143 @@
 [LOG] OutputWASAPI::init                       : Output buffer size: 4096 samples, latency: 0.00ms, period: 10.00ms, DSP buffer: 1024 * 4
 [LOG] Thread::initThread                       : Init FMOD stream thread. Priority: 2, Stack Size: 65536, Semaphore: No, Sleep Time: 10, Looping: Yes.
 [LOG] Thread::initThread                       : Init FMOD mixer thread. Priority: 3, Stack Size: 49152, Semaphore: No, Sleep Time: 0, Looping: Yes.
-[LOG] AsyncManager::init                       : manager 00000000A734B628 isAsync 0 updatePeriod 0.02
+[LOG] AsyncManager::init                       : manager 00000000D0963218 isAsync 0 updatePeriod 0.02
 [LOG] AsyncManager::init                       : done
 [LOG] PlaybackSystem::init                     : 
 [LOG] Thread::initThread                       : Init FMOD Studio sample load thread. Priority: 0, Stack Size: 65536, Semaphore: No, Sleep Time: 1, Looping: No.
 [LOG] PlaybackSystem::init                     : done
 [LOG] Thread::initThread                       : Init FMOD Studio bank load thread. Priority: 0, Stack Size: 65536, Semaphore: No, Sleep Time: 1, Looping: No.
 [LOG] Manager::init                            : done.
+[LOG] Manager::readBank                        : fileversion = 120, compatVersion = 119 (oldest = 44, newest = 120)
+[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
+[LOG] SystemI::createSound                     : filename = D:\Projects\UniversityProjects\Shove-Em-Up-Code\Shove-Em-Up\Assets\Res\FMOD_build\Desktop\Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] Thread::initThread                       : Init FMOD nonblocking thread (0). Priority: 1, Stack Size: 81920, Semaphore: Yes, Sleep Time: 0, Looping: Yes.
+[LOG] SystemI::createSound                     : setdata soundi = 00000000792DFB68 : node = 000000005BC95130
+[LOG] SystemI::createSound                     : add node to async list : head = 00000000789863A8.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000000792DFB68
+[LOG] SystemI::createSoundInternal             :     Create name='D:\Projects\UniversityProjects\Shove-Em-Up-Code\Shove-Em-Up\Assets\Res\FMOD_build\Desktop\Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 31401184
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 109760
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000005BC95240
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='intro videojoc', format=2, channels=2, frequency=48000, lengthbytes=5941952, lengthpcm=9600000, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.937836.
+[LOG] Thread::initThread                       :     Init FMOD file thread. Priority: 1, Stack Size: 16384, Semaphore: No, Sleep Time: 10, Looping: Yes.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000000792DFB68
+[LOG] SoundI::getSubSound                      : sound 00000000792DFB68.  Subsound index 0 / 1
+[LOG] SoundI::release                          : intro videojoc (00000000792DFB68)
+[LOG] SoundI::release                          :     intro videojoc (0000000078986A78)
+[LOG] SoundI::release                          :     intro videojoc (00000000663FB248)
+[LOG] Manager::readBank                        : fileversion = 120, compatVersion = 119 (oldest = 44, newest = 120)
+[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
+[LOG] SystemI::createSound                     : filename = D:\Projects\UniversityProjects\Shove-Em-Up-Code\Shove-Em-Up\Assets\Res\FMOD_build\Desktop\Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 00000000792DFD18 : node = 000000005BC94EB0
+[LOG] SystemI::createSound                     : add node to async list : head = 00000000789863A8.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000000792DFD18
+[LOG] SystemI::createSoundInternal             :     Create name='D:\Projects\UniversityProjects\Shove-Em-Up-Code\Shove-Em-Up\Assets\Res\FMOD_build\Desktop\Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 31401184
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 109760
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000005BC94FC0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Wild_Pogo', format=2, channels=2, frequency=48000, lengthbytes=6203104, lengthpcm=6286942, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.999969.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000000792DFD18
+[LOG] SoundI::getSubSound                      : sound 00000000792DFD18.  Subsound index 0 / 1
+[LOG] SoundI::release                          : Wild_Pogo (00000000792DFD18)
+[LOG] SoundI::release                          :     Wild_Pogo (0000000078985BD8)
+[LOG] SoundI::release                          :     Wild_Pogo (00000000663FB5A8)
+[LOG] Manager::readBank                        : fileversion = 120, compatVersion = 119 (oldest = 44, newest = 120)
+[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
+[LOG] SystemI::createSound                     : filename = D:\Projects\UniversityProjects\Shove-Em-Up-Code\Shove-Em-Up\Assets\Res\FMOD_build\Desktop\Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 00000000792E0738 : node = 000000005BC95130
+[LOG] SystemI::createSound                     : add node to async list : head = 00000000789863A8.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000000792E0738
+[LOG] SystemI::createSoundInternal             :     Create name='D:\Projects\UniversityProjects\Shove-Em-Up-Code\Shove-Em-Up\Assets\Res\FMOD_build\Desktop\Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 31401184
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 109760
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000005BC95240
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='intro videojoc', format=2, channels=2, frequency=48000, lengthbytes=5941952, lengthpcm=9600000, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.937836.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000000792E0738
+[LOG] SoundI::getSubSound                      : sound 00000000792E0738.  Subsound index 0 / 1
+[LOG] SystemI::createSound                     : filename = D:\Projects\UniversityProjects\Shove-Em-Up-Code\Shove-Em-Up\Assets\Res\FMOD_build\Desktop\Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000000001DB57848 : node = 000000005037B210
+[LOG] SystemI::createSound                     : add node to async list : head = 00000000789863A8.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000001DB57848
+[LOG] SystemI::createSoundInternal             :     Create name='D:\Projects\UniversityProjects\Shove-Em-Up-Code\Shove-Em-Up\Assets\Res\FMOD_build\Desktop\Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 31401184
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 109760
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000005037B320
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='intro videojoc', format=2, channels=2, frequency=48000, lengthbytes=5941952, lengthpcm=9600000, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.937836.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000001DB57848
+[LOG] SoundI::getSubSound                      : sound 000000001DB57848.  Subsound index 0 / 1
+[LOG] SoundI::release                          : intro videojoc (00000000792E0738)
+[LOG] SoundI::release                          :     intro videojoc (0000000078985BD8)
+[LOG] SoundI::release                          :     intro videojoc (00000000663FB098)
+[LOG] SoundI::release                          : intro videojoc (000000001DB57848)
+[LOG] SoundI::release                          :     intro videojoc (0000000078985D78)
+[LOG] SoundI::release                          :     intro videojoc (00000000663FB5A8)
+[LOG] Manager::readBank                        : fileversion = 120, compatVersion = 119 (oldest = 44, newest = 120)
+[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
+[LOG] SystemI::createSound                     : filename = D:\Projects\UniversityProjects\Shove-Em-Up-Code\Shove-Em-Up\Assets\Res\FMOD_build\Desktop\Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 00000000792E0588 : node = 000000005BC95270
+[LOG] SystemI::createSound                     : add node to async list : head = 00000000789863A8.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000000792E0588
+[LOG] SystemI::createSoundInternal             :     Create name='D:\Projects\UniversityProjects\Shove-Em-Up-Code\Shove-Em-Up\Assets\Res\FMOD_build\Desktop\Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 31401184
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 109760
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000005BC95380
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='intro videojoc', format=2, channels=2, frequency=48000, lengthbytes=5941952, lengthpcm=9600000, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.937836.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000000792E0588
+[LOG] SoundI::getSubSound                      : sound 00000000792E0588.  Subsound index 0 / 1
+[LOG] SystemI::createSound                     : filename = D:\Projects\UniversityProjects\Shove-Em-Up-Code\Shove-Em-Up\Assets\Res\FMOD_build\Desktop\Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000000005DDDE8A8 : node = 00000000593DD560
+[LOG] SystemI::createSound                     : add node to async list : head = 00000000789863A8.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000005DDDE8A8
+[LOG] SystemI::createSoundInternal             :     Create name='D:\Projects\UniversityProjects\Shove-Em-Up-Code\Shove-Em-Up\Assets\Res\FMOD_build\Desktop\Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 31401184
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 109760
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000000593DD670
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='intro videojoc', format=2, channels=2, frequency=48000, lengthbytes=5941952, lengthpcm=9600000, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.937836.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000005DDDE8A8
+[LOG] SoundI::getSubSound                      : sound 000000005DDDE8A8.  Subsound index 0 / 1
+[LOG] SoundI::release                          : intro videojoc (00000000792E0588)
+[LOG] SoundI::release                          :     intro videojoc (0000000078986A78)
+[LOG] SoundI::release                          :     intro videojoc (00000000663FB5A8)
+[LOG] SoundI::release                          : intro videojoc (000000005DDDE8A8)
+[LOG] SoundI::release                          :     intro videojoc (0000000078985BD8)
+[LOG] SoundI::release                          :     intro videojoc (00000000663FB248)
 [LOG] Manager::readBank                        : fileversion = 120, compatVersion = 119 (oldest = 44, newest = 120)
 [LOG] Manager::readBank                        : fileversion = 120, compatVersion = 119 (oldest = 44, newest = 120)
 [LOG] Manager::readBank                        : fileversion = 120, compatVersion = 119 (oldest = 44, newest = 120)
@@ -24,4 +154,6 @@
 [LOG] LiveUpdate::reset                        : Reset connection (reason Disconnected)
 [LOG] Thread::callback                         : FMOD stream thread finished.
 [LOG] Thread::callback                         : FMOD mixer thread finished.
+[LOG] Thread::callback                         : FMOD nonblocking thread (0) finished.
+[LOG] Thread::callback                         : FMOD file thread finished.
 [LOG] SystemI::close                           : Closed.
