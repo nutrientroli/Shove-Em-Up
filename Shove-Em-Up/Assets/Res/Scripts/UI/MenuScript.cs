@@ -8,6 +8,7 @@ public class MenuScript : MonoBehaviour {
     private void Start() {
         SoundManager.GetInstance().PlaySound(SoundManager.SoundEvent.MUSIC_INGAME, Camera.main.transform,SoundManager.SoundEventType.SCRATT);
         SoundManager.GetInstance().PlaySound(SoundManager.SoundEvent.MUSIC_INIT, trnsMusicSelection, SoundManager.SoundEventType.SCRATT);
+        SoundManager.GetInstance().PlaySound(SoundManager.SoundEvent.PRESENTADOR_11);
     }
 
 
