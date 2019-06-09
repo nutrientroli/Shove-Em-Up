@@ -58,6 +58,6 @@ public class CameraScript : MonoBehaviour {
 
     private void GetFinalPosition() {
         finalPosition = finalsPositions[Random.Range(0, finalsPositions.Count - 1)];
-        Debug.Log(finalPosition);
+        //Debug.Log(finalPosition);
     }
 }

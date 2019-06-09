@@ -59,14 +59,14 @@ public class PlayerSelectionScript : MonoBehaviour
     private void LeftSelection() {
         defaultData--;
         if (defaultData < 0) defaultData = listData.Count - 1;
-        SoundManager.GetInstance().PlaySound(SoundManager.SoundEvent.CHANGECHARACTER_MENUSELECTION);
+        SoundManager.GetInstance().PlaySound(SoundManager.SoundEvent.MENU_CHANGE_CHARACTER);
         Show();
     }
 
     private void RightSelection() {
         defaultData++;
         if (defaultData >= listData.Count) defaultData = 0;
-        SoundManager.GetInstance().PlaySound(SoundManager.SoundEvent.CHANGECHARACTER_MENUSELECTION);
+        SoundManager.GetInstance().PlaySound(SoundManager.SoundEvent.MENU_CHANGE_CHARACTER);
         Show();
     }
 
@@ -75,19 +75,25 @@ public class PlayerSelectionScript : MonoBehaviour
         else if (activePlayer) activePlayer = false;
         else ScenesManager.ChangeScene(ScenesManager.SceneCode.MENU);
         UpdateStates();
-        SoundManager.GetInstance().PlaySound(SoundManager.SoundEvent.CHANGECHARACTER_MENUSELECTION);
+        SoundManager.GetInstance().PlaySound(SoundManager.SoundEvent.MENU_CHANGE_CHARACTER);
     }
 
     private void Confirm() {
         if (activePlayer) Ready();
         else ActivePlayer();
         UpdateStates();
-        SoundManager.GetInstance().PlaySound(SoundManager.SoundEvent.CHANGECHARACTER_MENUSELECTION);
+        SoundManager.GetInstance().PlaySound(SoundManager.SoundEvent.MENU_CHANGE_CHARACTER);
     }
 
     private void Ready() {
         readyPlayer = true;
-        SoundManager.GetInstance().PlaySound(SoundManager.SoundEvent.CHANGECHARACTER_MENUSELECTION);
+        switch (listData[defaultData].name) {
+            case "Abeja": SoundManager.GetInstance().PlaySound(SoundManager.SoundEvent.MENU_BEE_PICK); break;
+            case "Toro": SoundManager.GetInstance().PlaySound(SoundManager.SoundEvent.MENU_BULL_PICK); break;
+            case "Gallina": SoundManager.GetInstance().PlaySound(SoundManager.SoundEvent.MENU_CHICKEN_PICK); break;
+            case "Mono": SoundManager.GetInstance().PlaySound(SoundManager.SoundEvent.MENU_MONKEY_PICK); break;
+            default: SoundManager.GetInstance().PlaySound(SoundManager.SoundEvent.MENU_CHANGE_CHARACTER); break;
+        }
         Material mat = listData[defaultData].material;
         mat.color = listColor[player - 1];
         listData[defaultData].material = mat;
