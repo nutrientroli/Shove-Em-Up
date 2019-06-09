@@ -46,6 +46,8 @@ public class CheckAllReadyScript : MonoBehaviour
         allready = true;
         currentTime = timeToStart;
         counter.gameObject.SetActive(true);
+        if (Random.Range(0, 10) > 5) SoundManager.GetInstance().PlaySound(SoundManager.SoundEvent.PRESENTADOR_33);
+        else SoundManager.GetInstance().PlaySound(SoundManager.SoundEvent.PRESENTADOR_31);
     }
 
     private void UpdateCountDown(float _time) {

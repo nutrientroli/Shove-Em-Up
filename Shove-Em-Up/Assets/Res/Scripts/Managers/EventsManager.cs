@@ -22,6 +22,7 @@ public class EventsManager : MonoBehaviour {
 
     private void Start() {
         unSelectedMaterial = ((Renderer)listPieces[indexEvent]).material;
+        SoundManager.GetInstance().PlaySound(SoundManager.SoundEvent.PRESENTADOR_32);
     }
 
     private void Update() {
@@ -85,8 +86,8 @@ public class EventsManager : MonoBehaviour {
     private void StartSelectEvent() {
         inSelection = true;
         indexIncrement = Random.Range(10, 40);
-        if (Random.Range(0, 10) > 5) SoundManager.GetInstance().PlaySound(SoundManager.SoundEvent.PRESENTADOR_5);
-        else SoundManager.GetInstance().PlaySound(SoundManager.SoundEvent.PRESENTADOR_4);
+        //if (Random.Range(0, 10) > 5) SoundManager.GetInstance().PlaySound(SoundManager.SoundEvent.PRESENTADOR_5);
+        //else SoundManager.GetInstance().PlaySound(SoundManager.SoundEvent.PRESENTADOR_4);
     }
 
     private void DuringSelectEvent() {

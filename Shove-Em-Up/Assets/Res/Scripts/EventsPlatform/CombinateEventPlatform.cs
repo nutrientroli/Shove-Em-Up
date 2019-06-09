@@ -114,7 +114,6 @@ public class CombinateEventPlatform : EventPlatformScript
                         iteraciones++;
                         vivo = true;
                         randomNum = Random.Range(0, players.Length);
-                        print(randomNum);
                         foreach (int j in PlayersManager.GetInstance().listOfPlayersToRespawnFinnishEvent)
                         {
                             if (players[randomNum].GetComponent<PlayerData>().GetPlayer() == j)
