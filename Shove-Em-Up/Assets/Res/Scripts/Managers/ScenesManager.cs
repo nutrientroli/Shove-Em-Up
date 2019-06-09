@@ -5,10 +5,9 @@ public static class ScenesManager {
 
     public enum SceneCode {
         MENU = 0,
-        CHARACTER_SELECTOR = 1,
-        GAME = 4,
-        ENDGAME = 3,
-        LOAD_SCENE = 5
+        GAME = 1,
+        ENDGAME = 2,
+        LOAD_SCENE = 3
     }
 
     private static SceneCode currentScene;
@@ -20,8 +19,7 @@ public static class ScenesManager {
         SceneManager.LoadScene((int)currentScene);
     }
 
-    public static AsyncOperation ChangeSceneLoading()
-    {
+    public static AsyncOperation ChangeSceneLoading() {
         currentScene = loadScene;
         return SceneManager.LoadSceneAsync((int)currentScene);
     }
@@ -30,8 +28,7 @@ public static class ScenesManager {
         return currentScene;
     }
 
-    public static SceneCode GetLoadScene()
-    {
+    public static SceneCode GetLoadScene() {
         return loadScene;
     }
 }

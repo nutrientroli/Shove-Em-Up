@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de24322f62f166f4fb855640516139c2, type: 3}
   m_Name: BeeCharacter
   m_EditorClassIdentifier: 
-  geometry: {fileID: 1822028592178203197, guid: 7ca7eed20aad3ee4f9aa5fe941696a59,
+  geometry: {fileID: 1822028592178203197, guid: 78c41be081df99c43bfc763a2b1dd6b8,
     type: 3}
   name: Abeja
   nameObject: BeeCharacter

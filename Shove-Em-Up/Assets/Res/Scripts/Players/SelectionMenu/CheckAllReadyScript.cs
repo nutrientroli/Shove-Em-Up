@@ -5,10 +5,9 @@ using UnityEngine;
 public class CheckAllReadyScript : MonoBehaviour
 {
     #region Attributes
-    [Header("Test Value")] [SerializeField] private int playerToReady = 1;
-
     [Header("Configuration")]
-    [SerializeField] private List<PlayerSelectionScript> listOfPlayers;
+    [SerializeField] private int playerToReady = 1;
+    [SerializeField] private List<PlayerSelectionIntegratedScript> listOfPlayers;
     private bool allready = false;
     [SerializeField] private TextMeshProUGUI counter;
     [SerializeField] private string textCounter;
@@ -29,9 +28,9 @@ public class CheckAllReadyScript : MonoBehaviour
 
     private void Update() {
         if (!allready) {
-            if (/*CheckReady() ||*/ CheckReadyTest()) AllReady();
+            if (CheckReady()) AllReady();
         } else {
-            if (/*!CheckReady() || */!CheckReadyTest()) StopReady();
+            if (!CheckReady()) StopReady();
             UpdateCountDown(Time.deltaTime);
         }
     }
@@ -49,21 +48,13 @@ public class CheckAllReadyScript : MonoBehaviour
         counter.gameObject.SetActive(true);
     }
 
-    private bool CheckReady() {
-        bool report = true;
-        for (int i = 0; i < listOfPlayers.Count; i++) {
-            if (report && !listOfPlayers[i].GetReady()) report = false;
-        }
-        return report;
-    }
-
     private void UpdateCountDown(float _time) {
         currentTime -= _time;
         counter.text = textCounter + currentTime.ToString("0");
         if (currentTime <= 0) ScenesManager.ChangeScene(ScenesManager.SceneCode.GAME);
     }
 
-    private bool CheckReadyTest() {
+    private bool CheckReady() {
         int check = 0;
         for (int i = 0; i < listOfPlayers.Count; i++) {
             if (listOfPlayers[i].GetReady()) check++;

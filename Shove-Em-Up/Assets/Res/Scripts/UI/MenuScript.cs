@@ -1,8 +1,12 @@
 ﻿using UnityEngine;
 
 public class MenuScript : MonoBehaviour {
+
+    [SerializeField] private Animation anim;
+
     public void OnButtonPlayPress() {
-        ScenesManager.ChangeScene(ScenesManager.SceneCode.CHARACTER_SELECTOR);
+        //Vamos al Selector de personajes
+        anim.Play();
     }
 
     public void OnButtonQuitPress() {

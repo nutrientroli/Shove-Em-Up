@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de24322f62f166f4fb855640516139c2, type: 3}
   m_Name: MonkeyCharacter
   m_EditorClassIdentifier: 
-  geometry: {fileID: 8506658240134258179, guid: a299dd745c9e96f4b9460f0a2256245b,
+  geometry: {fileID: 8506658240134258179, guid: ff3669d994ad9d1479a09606ae7be2d0,
     type: 3}
   name: Mono
   nameObject: MonkeyCharacter
