@@ -35,7 +35,7 @@ sysinfo.txt
 *.apk
 *.unitypackage
 
-Assets/FMODStudioCache.asset
-Assets/StreamingAssets/*.bank
-fmod.log
-fmod_editor.log
+Shove-Em-Up/Assets/FMODStudioCache.asset
+Shove-Em-Up/Assets/StreamingAssets/*.bank
+Shove-Em-Up/fmod.log
+Shove-Em-Up/fmod_editor.log
