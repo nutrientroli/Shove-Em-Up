@@ -18,6 +18,7 @@ public class PlayerScript : MonoBehaviour
     public ParticleSystem particlesConfusion;
     public ParticleSystem particlesStun;
     public ParticleSystem particlePowerUp;
+    public ParticleSystem particlePowerUP2;
     public ParticleSystem particleSlow;
 
     private CapsuleCollider capsuleCollider;
@@ -410,5 +411,6 @@ public class PlayerScript : MonoBehaviour
     public void StartItemParticles()
     {
         particlePowerUp.Play();
+        particlePowerUP2.Play();
     }
 }
