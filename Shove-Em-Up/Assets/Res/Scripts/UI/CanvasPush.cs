@@ -19,6 +19,7 @@ public class CanvasPush : MonoBehaviour
     public List<Sprite> sprites;
     public PlayerData playerData;
     public ParticleSystem particleHability;
+    public ParticleSystem particleStarHability;
     // Start is called before the first frame update
     void Start()
     {
@@ -70,6 +71,9 @@ public class CanvasPush : MonoBehaviour
             TimeChargeHability.fillAmount = habilityScript.GetCurrentEnergy() / habilityScript.GetMaxEnergy();
             if (TimeChargeHability.fillAmount < 1)
             {
+                if(!TimeChargeHability.gameObject.activeSelf)
+                    TimeChargeHability.gameObject.SetActive(true);
+
                 if (particleHability.isPlaying)
                 {
                     TimeChargeHability.color = firstColor;
@@ -79,6 +83,8 @@ public class CanvasPush : MonoBehaviour
             else if (!particleHability.isPlaying)
             {
                 particleHability.Play();
+                particleStarHability.Play();
+                TimeChargeHability.gameObject.SetActive(false);
             }
         }
 
