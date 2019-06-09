@@ -35,23 +35,10 @@ public class ItemScript : MonoBehaviour
 
 
     // Update is called once per frame
-    void Update()
-    {
-        if (active)
-        {
-            item.transform.Rotate(Vector3.forward, rotationSpeed * Time.deltaTime);
+    void Update() {
+        if (active) {
+            //item.transform.Rotate(Vector3.forward, rotationSpeed * Time.deltaTime);
+            transform.Rotate(Vector3.up, rotationSpeed * Time.deltaTime);
         }
-        //else
-        //{
-        //    currentTime += Time.deltaTime;
-        //    if (currentTime >= maxTimeSpawn)
-        //    {
-        //        currentTime = 0;
-        //        active = true;
-        //        SetActive();
-        //    }
-        //}
-
-        //item.transform.Rotate(Vector3.up, rotationSpeed);
     }
 }
