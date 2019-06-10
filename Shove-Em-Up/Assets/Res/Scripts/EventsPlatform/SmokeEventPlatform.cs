@@ -31,6 +31,7 @@ public class SmokeEventPlatform : EventPlatformScript
         listEvent.Add(StartSmoke);
         listEvent.Add(EndSmoke);
         listEvent.Add(End);
+        PresenterSound.PresenterTalks(SoundManager.SoundEvent.PRESENTADOR_17, true);
     }
 
     public override void ForceFinnish()
@@ -47,7 +48,7 @@ public class SmokeEventPlatform : EventPlatformScript
         smoke.transform.position = transfInitial.position;
         smoke.gameObject.SetActive(true);
         smoke.Active();
-        
+        if (Random.Range(0, 10) > 5) PresenterSound.PresenterTalks(SoundManager.SoundEvent.PRESENTADOR_23);
         return timeToAction * timeVariaton;
     }
 

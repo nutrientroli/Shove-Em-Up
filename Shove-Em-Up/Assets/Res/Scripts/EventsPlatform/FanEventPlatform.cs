@@ -26,6 +26,8 @@ public class FanEventPlatform : EventPlatformScript
         type = TypeEvent.TIME;
         listEvent.Add(Action);
         listEvent.Add(End);
+        listEvent.Add(Wait);
+        PresenterSound.PresenterTalks(SoundManager.SoundEvent.PRESENTADOR_22, true);
     }
 
     public override void ForceFinnish()
@@ -47,7 +49,7 @@ public class FanEventPlatform : EventPlatformScript
 
     private float End() {
         ventiladores[randomNum].Hide();
-        return -1;
+        return waitTime;
     }
     #endregion
 

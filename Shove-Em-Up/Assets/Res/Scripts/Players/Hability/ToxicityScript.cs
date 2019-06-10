@@ -46,13 +46,16 @@ public class ToxicityScript : MonoBehaviour
         exit = false;
         gameObject.transform.localScale = Vector3.one;
         particles.Play();
+        SoundManager.GetInstance().PlaySound(SoundManager.SoundEvent.EVENT_SMOKE);
     }
 
     private void OnTriggerEnter(Collider other) {
         if (other.gameObject.tag == "Player")
         {
-             if (other.gameObject.GetComponent<PlayerScript>() != null)
-                    other.GetComponent<PlayerScript>().AddOtherMod(other.gameObject.AddComponent<ToxicityModifierScript>());
+            if (other.gameObject.GetComponent<PlayerScript>() != null)
+            {
+                other.GetComponent<PlayerScript>().AddOtherMod(other.gameObject.AddComponent<ToxicityModifierScript>());
+            }
         }
     }
 

@@ -32,7 +32,7 @@ public class EventsManager : MonoBehaviour {
                 if (currentTime >= timeToChangeRulette) {
                     DuringSelectEvent();
                     currentTime = 0;
-                    if (Random.Range(0, 10) > 9) PresenterSound.PresenterTalks(SoundManager.SoundEvent.PRESENTADOR_10);
+                    if (Random.Range(0, 10) > 8) PresenterSound.PresenterTalks(SoundManager.SoundEvent.PRESENTADOR_10);
 
                 }
             } else {
@@ -80,15 +80,15 @@ public class EventsManager : MonoBehaviour {
 
     private void ForceFinnishEvent() {
         eventPlatform.ForceFinnish();
-        PresenterSound.PresenterTalks(SoundManager.SoundEvent.PRESENTADOR_3);
+        if (Random.Range(0, 10) > 5) PresenterSound.PresenterTalks(SoundManager.SoundEvent.PRESENTADOR_3);
+        else PresenterSound.PresenterTalks(SoundManager.SoundEvent.PRESENTADOR_33);
     }
 
     private void StartSelectEvent() {
         inSelection = true;
         indexIncrement = Random.Range(10, 40);
-        Debug.Log(PresenterSound.IsPresenterTalks());
-        if (Random.Range(0, 10) > 5) PresenterSound.PresenterTalks(SoundManager.SoundEvent.PRESENTADOR_5);
-        else PresenterSound.PresenterTalks(SoundManager.SoundEvent.PRESENTADOR_4);
+        if (Random.Range(0, 10) > 5) PresenterSound.PresenterTalks(SoundManager.SoundEvent.PRESENTADOR_6);
+        else PresenterSound.PresenterTalks(SoundManager.SoundEvent.PRESENTADOR_9);
         SoundManager.GetInstance().PlaySound(SoundManager.SoundEvent.RULETA_4);
     }
 
@@ -119,8 +119,8 @@ public class EventsManager : MonoBehaviour {
 
     public bool CheckForceEndEvent() {
         //Comentar para testear.
-        return (PlayersManager.GetInstance().CheckLimitPlayersDeathInEvent() && eventPlatform != null && !eventPlatform.forceFinnish);
-        //return false;
+        //return (PlayersManager.GetInstance().CheckLimitPlayersDeathInEvent() && eventPlatform != null && !eventPlatform.forceFinnish);
+        return false;
     }
 
     public void ShowNumberCounter(float _dt) {

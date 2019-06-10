@@ -46,9 +46,15 @@ public class MeteoritesEventPlatform : EventPlatformScript
             listEvent.Add(Wait);
 
         }
-        listEvent.Add(Wait);
+        for (int i = 0; i < 10; i++)
+        {
+            listEvent.Add(Wait);
+        }
+       
         //listEvent.Add(Restart);
         listEvent.Add(End);
+
+        PresenterSound.PresenterTalks(SoundManager.SoundEvent.PRESENTADOR_16, true);
     }
 
     public override void ForceFinnish() {
@@ -80,7 +86,7 @@ public class MeteoritesEventPlatform : EventPlatformScript
     }
 
     private float Action() {
-        for(int i = 0; i < meteors.Count; i++)
+        for (int i = 0; i < meteors.Count; i++)
         {
             if (!poolMeteors[i])
             {
@@ -121,10 +127,13 @@ public class MeteoritesEventPlatform : EventPlatformScript
                 meteors[i].Active(1f);
                 poolMeteors[i] = true;
                 break;
-                
+
             }
         }
-
+        if (Random.Range(0, 10) > 8) {
+            if (Random.Range(0, 10) > 5) PresenterSound.PresenterTalks(SoundManager.SoundEvent.PRESENTADOR_13);
+            else if(Random.Range(0, 10) > 5) PresenterSound.PresenterTalks(SoundManager.SoundEvent.PRESENTADOR_13_2);
+        }
         return timeToAction * timeVariaton;
     }
 

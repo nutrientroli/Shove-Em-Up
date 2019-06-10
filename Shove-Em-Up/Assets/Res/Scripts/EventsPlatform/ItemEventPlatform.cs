@@ -37,7 +37,7 @@ public class ItemEventPlatform : EventPlatformScript
             else listEvent.Add(Wait);
         }
         listEvent.Add(End);
-
+        PresenterSound.PresenterTalks(SoundManager.SoundEvent.PRESENTADOR_14, true);
     }
 
     public override void ForceFinnish() {
@@ -55,6 +55,7 @@ public class ItemEventPlatform : EventPlatformScript
             item.transform.position = vector;
             listItems.Add(item);
         }
+        if (UnityEngine.Random.Range(0,10) > 7) PresenterSound.PresenterTalks(SoundManager.SoundEvent.PRESENTADOR_18);
         return timeToAction * timeVariaton;
     }
 

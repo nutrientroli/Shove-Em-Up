@@ -50,6 +50,8 @@ public class FallRuleteEventPlatform : EventPlatformScript
         listEvent.Add(Restore);
         listEvent.Add(Wait);
         listEvent.Add(End);
+
+        PresenterSound.PresenterTalks(SoundManager.SoundEvent.PRESENTADOR_15, true);
     }
     public override void ForceFinnish()
     {
@@ -67,6 +69,7 @@ public class FallRuleteEventPlatform : EventPlatformScript
         {
             pieces[i].GetComponent<Renderer>().material = ((PieceRuleteScript)pieces[i]).mat;
         }
+        SoundManager.GetInstance().PlaySound(SoundManager.SoundEvent.EVENT_FALLFLOOR_2);
         return waitTime;
     }
 
@@ -77,7 +80,7 @@ public class FallRuleteEventPlatform : EventPlatformScript
             if(i != randomNum1 && i != randomNum2 && i != randomNum3)
                 pieces[i].Activate();
         }
-
+        SoundManager.GetInstance().PlaySound(SoundManager.SoundEvent.EVENT_FALLFLOOR_1);
         return timeToAction * timeVariaton;
     }
 
@@ -109,7 +112,7 @@ public class FallRuleteEventPlatform : EventPlatformScript
             if (i != randomNum1 && i != randomNum2 && i != randomNum3)
                 pieces[i].Reverted();
         }
-
+        if (UnityEngine.Random.Range(0, 10) > 5) PresenterSound.PresenterTalks(SoundManager.SoundEvent.PRESENTADOR_12);
         return -2;
     }
     private float End() {

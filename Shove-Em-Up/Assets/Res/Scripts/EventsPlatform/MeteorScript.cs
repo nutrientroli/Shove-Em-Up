@@ -35,6 +35,7 @@ public class MeteorScript : MonoBehaviour
                 gameObject.transform.position += Vector3.down * speed * Time.deltaTime;
                 if(gameObject.transform.position.y <= posImpact.transform.position.y + 1)
                 {
+                    SoundManager.GetInstance().PlaySound(SoundManager.SoundEvent.EVENT_FALLBALLS);
                     explosion = true;
                     collider.enabled = true;
                     currentTime = 0;

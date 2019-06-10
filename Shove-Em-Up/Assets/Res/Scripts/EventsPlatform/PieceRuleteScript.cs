@@ -21,7 +21,7 @@ public class PieceRuleteScript : MonoBehaviour
     {
         if(active)
         {
-            if (gameObject.transform.position.y >= -75)
+            if (gameObject.transform.position.y >= -85)
                 gameObject.transform.position += Vector3.down * speed * Time.deltaTime;
         }
 

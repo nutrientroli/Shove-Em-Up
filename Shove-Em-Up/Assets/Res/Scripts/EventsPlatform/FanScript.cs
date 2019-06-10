@@ -48,6 +48,8 @@ public class FanScript : MonoBehaviour
                 {
                     side *= -1;
                     currentTime = 0;
+                    if (Random.Range(0, 10) > 5) PresenterSound.PresenterTalks(SoundManager.SoundEvent.PRESENTADOR_20);
+                    else PresenterSound.PresenterTalks(SoundManager.SoundEvent.PRESENTADOR_21);
                 }
 
                 for (int i = 0; i < players.Count; i++)
