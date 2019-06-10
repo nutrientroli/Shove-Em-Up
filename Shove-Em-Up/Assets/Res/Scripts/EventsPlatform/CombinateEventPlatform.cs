@@ -60,8 +60,12 @@ public class CombinateEventPlatform : EventPlatformScript
                 listEvent.Add(Action);
                 listEvent.Add(Wait);
             }
+            for (int i = 0; i < 12; i++) {
+                listEvent.Add(Wait);
+            }
             //listEvent.Add(Restart);
             listEvent.Add(End);
+            PresenterSound.PresenterTalks(SoundManager.SoundEvent.PRESENTADOR_19, true);
         }
     }
     public override void ForceFinnish()
@@ -140,6 +144,10 @@ public class CombinateEventPlatform : EventPlatformScript
                     poolMeteors[i] = true;
                     break;
                 }
+            }
+            if (Random.Range(0, 10) > 8)  {
+                if (Random.Range(0, 10) > 5) PresenterSound.PresenterTalks(SoundManager.SoundEvent.PRESENTADOR_13);
+                else if (Random.Range(0, 10) > 5) PresenterSound.PresenterTalks(SoundManager.SoundEvent.PRESENTADOR_13_2);
             }
         }
 
