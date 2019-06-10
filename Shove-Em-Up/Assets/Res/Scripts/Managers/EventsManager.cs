@@ -22,7 +22,7 @@ public class EventsManager : MonoBehaviour {
 
     private void Start() {
         unSelectedMaterial = ((Renderer)listPieces[indexEvent]).material;
-        SoundManager.GetInstance().PlaySound(SoundManager.SoundEvent.PRESENTADOR_32);
+        PresenterSound.PresenterTalks(SoundManager.SoundEvent.PRESENTADOR_32);
     }
 
     private void Update() {
@@ -32,7 +32,7 @@ public class EventsManager : MonoBehaviour {
                 if (currentTime >= timeToChangeRulette) {
                     DuringSelectEvent();
                     currentTime = 0;
-                    if (Random.Range(0, 10) > 9) SoundManager.GetInstance().PlaySound(SoundManager.SoundEvent.PRESENTADOR_10);
+                    if (Random.Range(0, 10) > 9) PresenterSound.PresenterTalks(SoundManager.SoundEvent.PRESENTADOR_10);
 
                 }
             } else {
@@ -80,14 +80,16 @@ public class EventsManager : MonoBehaviour {
 
     private void ForceFinnishEvent() {
         eventPlatform.ForceFinnish();
-        SoundManager.GetInstance().PlaySound(SoundManager.SoundEvent.PRESENTADOR_3);
+        PresenterSound.PresenterTalks(SoundManager.SoundEvent.PRESENTADOR_3);
     }
 
     private void StartSelectEvent() {
         inSelection = true;
         indexIncrement = Random.Range(10, 40);
-        //if (Random.Range(0, 10) > 5) SoundManager.GetInstance().PlaySound(SoundManager.SoundEvent.PRESENTADOR_5);
-        //else SoundManager.GetInstance().PlaySound(SoundManager.SoundEvent.PRESENTADOR_4);
+        Debug.Log(PresenterSound.IsPresenterTalks());
+        if (Random.Range(0, 10) > 5) PresenterSound.PresenterTalks(SoundManager.SoundEvent.PRESENTADOR_5);
+        else PresenterSound.PresenterTalks(SoundManager.SoundEvent.PRESENTADOR_4);
+        SoundManager.GetInstance().PlaySound(SoundManager.SoundEvent.RULETA_4);
     }
 
     private void DuringSelectEvent() {
@@ -98,6 +100,7 @@ public class EventsManager : MonoBehaviour {
         unSelectedMaterial = ((Renderer)listPieces[indexEvent]).material;
         ((Renderer)listPieces[indexEvent]).material = selectedMaterial;
         if (indexIncrement <= 0) wait = true;
+        SoundManager.GetInstance().PlaySound(SoundManager.SoundEvent.RULETA_2);
     }
 
     private void EndSelectEvent() {
@@ -107,6 +110,7 @@ public class EventsManager : MonoBehaviour {
         eventPlatform = listEvents[indexEvent];
         eventPlatform.Init();
         LevelManager.GetInstance().SetEventState(true);
+        SoundManager.GetInstance().PlaySound(SoundManager.SoundEvent.RULETA_3);
     }
 
     public bool CheckEndEvent() {
