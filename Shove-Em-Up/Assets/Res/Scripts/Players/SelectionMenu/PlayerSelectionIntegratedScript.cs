@@ -21,6 +21,10 @@ public class PlayerSelectionIntegratedScript : MonoBehaviour
     [SerializeField] private Light focus;
     private float currentTime = 0;
     private float waitTime = 0.5f;
+
+    private float currentSoundTime = 0;
+    [SerializeField] private float maxSoundTime = 2;
+    private bool soundEmit = false;
     #endregion
 
     #region MonoBehaviour Methods
@@ -34,9 +38,17 @@ public class PlayerSelectionIntegratedScript : MonoBehaviour
             CheckButtons();
             currentTime += Time.deltaTime;
             if (activePlayer && !readyPlayer) CheckAxis(currentTime);
+            if (soundEmit) {
+                currentSoundTime += Time.deltaTime;
+                if (currentSoundTime >= maxSoundTime) {
+                    currentSoundTime = 0;
+                    MuteSound();
+                }
+            }
         } else {
             activePlayer = false;
             readyPlayer = false;
+            UpdateStates();
         }
     }
     #endregion
@@ -80,6 +92,7 @@ public class PlayerSelectionIntegratedScript : MonoBehaviour
     }
 
     private void LeftSelection() {
+        MuteSound();
         defaultData--;
         if (defaultData < 0) defaultData = listData.Count - 1;
         SoundManager.GetInstance().PlaySound(SoundManager.SoundEvent.MENU_CHANGE_CHARACTER);
@@ -87,6 +100,7 @@ public class PlayerSelectionIntegratedScript : MonoBehaviour
     }
 
     private void RightSelection() {
+        MuteSound();
         defaultData++;
         if (defaultData >= listData.Count) defaultData = 0;
         SoundManager.GetInstance().PlaySound(SoundManager.SoundEvent.MENU_CHANGE_CHARACTER);
@@ -113,13 +127,7 @@ public class PlayerSelectionIntegratedScript : MonoBehaviour
     private void Ready() {
         readyPlayer = true;
         readyPlayer = true;
-        switch (listData[defaultData].name) {
-            case "Abeja": SoundManager.GetInstance().PlaySound(SoundManager.SoundEvent.MENU_BEE_PICK); break;
-            case "Toro": SoundManager.GetInstance().PlaySound(SoundManager.SoundEvent.MENU_BULL_PICK); break;
-            case "Gallina": SoundManager.GetInstance().PlaySound(SoundManager.SoundEvent.MENU_CHICKEN_PICK); break;
-            case "Mono": SoundManager.GetInstance().PlaySound(SoundManager.SoundEvent.MENU_MONKEY_PICK); break;
-            default: SoundManager.GetInstance().PlaySound(SoundManager.SoundEvent.MENU_CHANGE_CHARACTER); break;
-        }
+        PlaySound();
         Material mat = listData[defaultData].material;
         mat.color = listColor[player - 1];
         listData[defaultData].material = mat;
@@ -149,6 +157,29 @@ public class PlayerSelectionIntegratedScript : MonoBehaviour
 
     public bool GetReady() {
         return readyPlayer;
+    }
+
+    private void PlaySound()
+    {
+        switch (listData[defaultData].name) {
+            case "Abeja": SelectionSoundScript.PlaySoundPlayerSelection(player, SoundManager.SoundEvent.MENU_BEE_PICK); break;
+            case "Toro": SelectionSoundScript.PlaySoundPlayerSelection(player, SoundManager.SoundEvent.MENU_BULL_PICK); break;
+            case "Gallina": SelectionSoundScript.PlaySoundPlayerSelection(player, SoundManager.SoundEvent.MENU_CHICKEN_PICK); break;
+            case "Mono": SelectionSoundScript.PlaySoundPlayerSelection(player, SoundManager.SoundEvent.MENU_MONKEY_PICK); break;
+            default: SoundManager.GetInstance().PlaySound(SoundManager.SoundEvent.MENU_CHANGE_CHARACTER); break;
+        }
+        soundEmit = true;
+    }
+
+    private void MuteSound() {
+        switch (listData[defaultData].name) {
+            case "Abeja": SelectionSoundScript.StopSoundPlayerSelection(player); break;
+            case "Toro": SelectionSoundScript.StopSoundPlayerSelection(player); break;
+            case "Gallina": SelectionSoundScript.StopSoundPlayerSelection(player); break;
+            case "Mono": SelectionSoundScript.StopSoundPlayerSelection(player); break;
+            default: break;
+        }
+        soundEmit = false;
     }
     #endregion
 }

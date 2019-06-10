@@ -6,9 +6,9 @@ public class MenuScript : MonoBehaviour {
     [SerializeField] private Transform trnsMusicSelection;
 
     private void Start() {
-        SoundManager.GetInstance().PlaySound(SoundManager.SoundEvent.MUSIC_INGAME, Camera.main.transform,SoundManager.SoundEventType.SCRATT);
-        SoundManager.GetInstance().PlaySound(SoundManager.SoundEvent.MUSIC_INIT, trnsMusicSelection, SoundManager.SoundEventType.SCRATT);
-        SoundManager.GetInstance().PlaySound(SoundManager.SoundEvent.PRESENTADOR_11);
+        SoundManager.GetInstance().PlaySound(SoundManager.SoundEvent.MUSIC_INGAME, Camera.main.transform, false, "", SoundManager.SoundEventType.SCRATT);
+        SoundManager.GetInstance().PlaySound(SoundManager.SoundEvent.MUSIC_INIT, trnsMusicSelection, false, "", SoundManager.SoundEventType.SCRATT);
+        PresenterSound.PresenterTalks(SoundManager.SoundEvent.PRESENTADOR_11);
     }
 
 
