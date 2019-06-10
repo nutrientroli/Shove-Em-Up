@@ -6059,51 +6059,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4301538926289532482, guid: 342724ad31ce0b343ae133623adcee75,
-        type: 3}
-      propertyPath: ColorModule.gradient.maxGradient.key0.r
-      value: 0.7735849
-      objectReference: {fileID: 0}
-    - target: {fileID: 4301538926289532482, guid: 342724ad31ce0b343ae133623adcee75,
-        type: 3}
-      propertyPath: ColorModule.gradient.maxGradient.key0.g
-      value: 0.7735849
-      objectReference: {fileID: 0}
-    - target: {fileID: 4301538926289532482, guid: 342724ad31ce0b343ae133623adcee75,
-        type: 3}
-      propertyPath: ColorModule.gradient.maxGradient.key0.b
-      value: 0.7735849
-      objectReference: {fileID: 0}
-    - target: {fileID: 4301538926289532482, guid: 342724ad31ce0b343ae133623adcee75,
-        type: 3}
-      propertyPath: ColorModule.gradient.maxGradient.ctime1
-      value: 65535
-      objectReference: {fileID: 0}
-    - target: {fileID: 4301538926289532482, guid: 342724ad31ce0b343ae133623adcee75,
-        type: 3}
-      propertyPath: ColorModule.gradient.maxGradient.m_NumColorKeys
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4301538926289532482, guid: 342724ad31ce0b343ae133623adcee75,
-        type: 3}
-      propertyPath: ColorModule.gradient.maxGradient.key1.r
-      value: 0.46226418
-      objectReference: {fileID: 0}
-    - target: {fileID: 4301538926289532482, guid: 342724ad31ce0b343ae133623adcee75,
-        type: 3}
-      propertyPath: ColorModule.gradient.maxGradient.key1.g
-      value: 0.46226418
-      objectReference: {fileID: 0}
-    - target: {fileID: 4301538926289532482, guid: 342724ad31ce0b343ae133623adcee75,
-        type: 3}
-      propertyPath: ColorModule.gradient.maxGradient.key1.b
-      value: 0.46226418
-      objectReference: {fileID: 0}
-    - target: {fileID: 4301538926289532482, guid: 342724ad31ce0b343ae133623adcee75,
-        type: 3}
-      propertyPath: InitialModule.startSpeed.scalar
-      value: 2
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 342724ad31ce0b343ae133623adcee75, type: 3}
 --- !u!4 &1410852611584552102 stripped
