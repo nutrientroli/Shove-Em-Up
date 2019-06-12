@@ -6,21 +6,33 @@ ModelImporter:
     100000: rails_low
     100002: //RootNode
     100004: ruleta_low
+    100006: lights_low
     400000: rails_low
     400002: //RootNode
     400004: ruleta_low
+    400006: lights_low
     2100000: checker
+    2100002: other
+    2100004: lights
     2300000: rails_low
     2300002: ruleta_low
+    2300004: lights_low
     3300000: rails_low
     3300002: ruleta_low
+    3300004: lights_low
     4300000: ruleta_low
     4300002: rails_low
+    4300004: lights_low
   externalObjects:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: checker
+    second: {fileID: 2100000, guid: e16f9542f70251340a2816887cf324fd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: other
     second: {fileID: 2100000, guid: e16f9542f70251340a2816887cf324fd, type: 2}
   materials:
     importMaterials: 1
