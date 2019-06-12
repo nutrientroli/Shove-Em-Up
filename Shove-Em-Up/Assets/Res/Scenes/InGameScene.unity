@@ -121,14 +121,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1765584110}
     m_Modifications:
-    - target: {fileID: 100000, guid: f35ae524eb5832c4ba1c2305acd78774, type: 3}
-      propertyPath: m_Name
-      value: longCables (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: f35ae524eb5832c4ba1c2305acd78774, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f35ae524eb5832c4ba1c2305acd78774, type: 3}
       propertyPath: m_LocalRotation.x
       value: -0
@@ -176,6 +168,14 @@ PrefabInstance:
     - target: {fileID: 400000, guid: f35ae524eb5832c4ba1c2305acd78774, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 76.054
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: f35ae524eb5832c4ba1c2305acd78774, type: 3}
+      propertyPath: m_Name
+      value: longCables (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: f35ae524eb5832c4ba1c2305acd78774, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: f35ae524eb5832c4ba1c2305acd78774, type: 3}
       propertyPath: m_CastShadows
@@ -2122,10 +2122,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1765584110}
     m_Modifications:
-    - target: {fileID: 100000, guid: f35ae524eb5832c4ba1c2305acd78774, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f35ae524eb5832c4ba1c2305acd78774, type: 3}
       propertyPath: m_LocalRotation.x
       value: -0
@@ -2169,6 +2165,10 @@ PrefabInstance:
     - target: {fileID: 400000, guid: f35ae524eb5832c4ba1c2305acd78774, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 76.054
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: f35ae524eb5832c4ba1c2305acd78774, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: f35ae524eb5832c4ba1c2305acd78774, type: 3}
       propertyPath: m_CastShadows
@@ -5340,14 +5340,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1765584110}
     m_Modifications:
-    - target: {fileID: 100000, guid: f35ae524eb5832c4ba1c2305acd78774, type: 3}
-      propertyPath: m_Name
-      value: longCables (2)
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: f35ae524eb5832c4ba1c2305acd78774, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f35ae524eb5832c4ba1c2305acd78774, type: 3}
       propertyPath: m_LocalRotation.x
       value: -0
@@ -5395,6 +5387,14 @@ PrefabInstance:
     - target: {fileID: 400000, guid: f35ae524eb5832c4ba1c2305acd78774, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 76.054
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: f35ae524eb5832c4ba1c2305acd78774, type: 3}
+      propertyPath: m_Name
+      value: longCables (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: f35ae524eb5832c4ba1c2305acd78774, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: f35ae524eb5832c4ba1c2305acd78774, type: 3}
       propertyPath: m_CastShadows
@@ -8894,14 +8894,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 883244985}
     m_Modifications:
-    - target: {fileID: 100000, guid: f35ae524eb5832c4ba1c2305acd78774, type: 3}
-      propertyPath: m_Name
-      value: longCables (2)
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: f35ae524eb5832c4ba1c2305acd78774, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f35ae524eb5832c4ba1c2305acd78774, type: 3}
       propertyPath: m_LocalRotation.x
       value: -0
@@ -8949,6 +8941,14 @@ PrefabInstance:
     - target: {fileID: 400000, guid: f35ae524eb5832c4ba1c2305acd78774, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 76.054
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: f35ae524eb5832c4ba1c2305acd78774, type: 3}
+      propertyPath: m_Name
+      value: longCables (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: f35ae524eb5832c4ba1c2305acd78774, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: f35ae524eb5832c4ba1c2305acd78774, type: 3}
       propertyPath: m_CastShadows
@@ -11790,14 +11790,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 883244985}
     m_Modifications:
-    - target: {fileID: 100000, guid: f35ae524eb5832c4ba1c2305acd78774, type: 3}
-      propertyPath: m_Name
-      value: longCables (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: f35ae524eb5832c4ba1c2305acd78774, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f35ae524eb5832c4ba1c2305acd78774, type: 3}
       propertyPath: m_LocalRotation.x
       value: -0
@@ -11846,6 +11838,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 76.054
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: f35ae524eb5832c4ba1c2305acd78774, type: 3}
+      propertyPath: m_Name
+      value: longCables (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: f35ae524eb5832c4ba1c2305acd78774, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: f35ae524eb5832c4ba1c2305acd78774, type: 3}
       propertyPath: m_CastShadows
       value: 0
@@ -11865,10 +11865,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 883244985}
     m_Modifications:
-    - target: {fileID: 100000, guid: f35ae524eb5832c4ba1c2305acd78774, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f35ae524eb5832c4ba1c2305acd78774, type: 3}
       propertyPath: m_LocalRotation.x
       value: -0
@@ -11912,6 +11908,10 @@ PrefabInstance:
     - target: {fileID: 400000, guid: f35ae524eb5832c4ba1c2305acd78774, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 76.054
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: f35ae524eb5832c4ba1c2305acd78774, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: f35ae524eb5832c4ba1c2305acd78774, type: 3}
       propertyPath: m_CastShadows
