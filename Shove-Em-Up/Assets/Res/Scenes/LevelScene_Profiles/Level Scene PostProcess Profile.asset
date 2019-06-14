@@ -113,7 +113,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: adb84e30e02715445aeb9959894e3b4d, type: 3}
   m_Name: ColorGrading
   m_EditorClassIdentifier: 
-  active: 0
+  active: 1
   enabled:
     overrideState: 1
     value: 1
@@ -126,7 +126,7 @@ MonoBehaviour:
     defaultState: 1
   tonemapper:
     overrideState: 1
-    value: 3
+    value: 1
   toneCurveToeStrength:
     overrideState: 0
     value: 0
@@ -166,16 +166,16 @@ MonoBehaviour:
     value: 0
   saturation:
     overrideState: 1
-    value: 0
+    value: 19
   brightness:
     overrideState: 0
     value: 0
   postExposure:
-    overrideState: 0
-    value: 2.09
+    overrideState: 1
+    value: 0.49
   contrast:
-    overrideState: 0
-    value: 8
+    overrideState: 1
+    value: 15
   mixerRedOutRedIn:
     overrideState: 0
     value: 100
@@ -204,14 +204,14 @@ MonoBehaviour:
     overrideState: 0
     value: 100
   lift:
-    overrideState: 1
-    value: {x: 0.9594381, y: 1, z: 0.99051106, w: 0}
-  gamma:
     overrideState: 0
-    value: {x: 1, y: 1, z: 1, w: 0}
+    value: {x: 0.9594381, y: 1, z: 0.99051106, w: 0.019474195}
+  gamma:
+    overrideState: 1
+    value: {x: 1, y: 1, z: 1, w: 0.2726387}
   gain:
     overrideState: 1
-    value: {x: 1, y: 0.98082554, z: 0.70941263, w: 0.54360145}
+    value: {x: 1, y: 0.98082554, z: 0.70941263, w: 0.3407984}
   masterCurve:
     overrideState: 0
     value:
@@ -1430,16 +1430,16 @@ MonoBehaviour:
     value: 1
   mode:
     overrideState: 1
-    value: 1
+    value: 0
   intensity:
     overrideState: 1
-    value: 0
+    value: 1.2
   color:
     overrideState: 1
     value: {r: 0, g: 0, b: 0, a: 1}
   ambientOnly:
     overrideState: 1
-    value: 1
+    value: 0
   noiseFilterTolerance:
     overrideState: 0
     value: 0
@@ -1451,13 +1451,13 @@ MonoBehaviour:
     value: -12
   thicknessModifier:
     overrideState: 1
-    value: 1
+    value: 4.28
   directLightingStrength:
     overrideState: 0
     value: 0
   radius:
-    overrideState: 0
-    value: 0.25
+    overrideState: 1
+    value: 0.73
   quality:
     overrideState: 0
     value: 2

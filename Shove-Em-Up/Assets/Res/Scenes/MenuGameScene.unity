@@ -20,25 +20,25 @@ RenderSettings:
   m_FogDensity: 0.01
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: 0.120588236, g: 0.09901961, b: 0.1, a: 1}
+  m_AmbientSkyColor: {r: 0.084905684, g: 0.04525633, b: 0.05186457, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
-  m_AmbientMode: 3
+  m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 0}
+  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
   m_HaloTexture: {fileID: 0}
   m_SpotCookie: {fileID: 10001, guid: 0000000000000000e000000000000000, type: 0}
-  m_DefaultReflectionMode: 1
+  m_DefaultReflectionMode: 0
   m_DefaultReflectionResolution: 128
   m_ReflectionBounces: 1
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 8900000, guid: 551736c7d9065fb418e2997182d53cd0, type: 3}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.1273174, g: 0.13414761, b: 0.12107885, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -51,7 +51,7 @@ LightmapSettings:
     m_IndirectOutputScale: 1
     m_AlbedoBoost: 1
     m_EnvironmentLightingMode: 1
-    m_EnableBakedLightmaps: 1
+    m_EnableBakedLightmaps: 0
     m_EnableRealtimeLightmaps: 1
   m_LightmapEditorSettings:
     serializedVersion: 10
@@ -72,7 +72,7 @@ LightmapSettings:
     m_FinalGatherRayCount: 256
     m_ReflectionCompression: 2
     m_MixedBakeMode: 2
-    m_BakeBackend: 1
+    m_BakeBackend: 0
     m_PVRSampling: 1
     m_PVRDirectSampleCount: 32
     m_PVRSampleCount: 500
@@ -89,7 +89,7 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaIndirect: 2
     m_PVRFilteringAtrousPositionSigmaAO: 1
     m_ShowResolutionOverlay: 1
-  m_LightingDataAsset: {fileID: 112000000, guid: 5cfc71a4442bd74488b099a7e6c1509a,
+  m_LightingDataAsset: {fileID: 112000000, guid: 756c14bc9f6e24e4d96f5d0d77153d9c,
     type: 2}
   m_UseShadowmask: 1
 --- !u!196 &4
@@ -3091,7 +3091,7 @@ PrefabInstance:
     - target: {fileID: 8639963176595555702, guid: 095f0eb823303c04984bc97b90ac41c8,
         type: 3}
       propertyPath: m_Intensity
-      value: 3.32
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8639963176595555702, guid: 095f0eb823303c04984bc97b90ac41c8,
         type: 3}
@@ -3112,6 +3112,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Color.b
       value: 0.8396226
+      objectReference: {fileID: 0}
+    - target: {fileID: 8639963176595555702, guid: 095f0eb823303c04984bc97b90ac41c8,
+        type: 3}
+      propertyPath: m_Range
+      value: 46.38765
+      objectReference: {fileID: 0}
+    - target: {fileID: 8639963176595555702, guid: 095f0eb823303c04984bc97b90ac41c8,
+        type: 3}
+      propertyPath: m_SpotAngle
+      value: 36
+      objectReference: {fileID: 0}
+    - target: {fileID: 2661677427104610696, guid: 095f0eb823303c04984bc97b90ac41c8,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 095f0eb823303c04984bc97b90ac41c8, type: 3}
@@ -3636,7 +3651,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -779.9999, y: -454.50018}
+  m_AnchoredPosition: {x: -779.99994, y: -454.50018}
   m_SizeDelta: {x: -1420, y: -891}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &512232129
@@ -6968,17 +6983,17 @@ PrefabInstance:
     - target: {fileID: 8639963176595555702, guid: 095f0eb823303c04984bc97b90ac41c8,
         type: 3}
       propertyPath: m_Color.r
-      value: 0.83137256
+      value: 0.0627451
       objectReference: {fileID: 0}
     - target: {fileID: 8639963176595555702, guid: 095f0eb823303c04984bc97b90ac41c8,
         type: 3}
       propertyPath: m_Color.g
-      value: 0.7217524
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8639963176595555702, guid: 095f0eb823303c04984bc97b90ac41c8,
         type: 3}
       propertyPath: m_Color.b
-      value: 0.4509804
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8639963176595555702, guid: 095f0eb823303c04984bc97b90ac41c8,
         type: 3}
@@ -10622,7 +10637,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1426423793}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cdcd06815c47d30489f70df42db56a48, type: 3}
   m_Name: 
@@ -10842,7 +10857,7 @@ Transform:
   - {fileID: 1517970870}
   m_Father: {fileID: 1564456311}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 1.115, y: 61.328003, z: 2.039}
+  m_LocalEulerAnglesHint: {x: 1.4579077, y: 38.677464, z: 1.2879431}
 --- !u!114 &1426423802
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18006,21 +18021,26 @@ PrefabInstance:
     - target: {fileID: 8639963176595555702, guid: 095f0eb823303c04984bc97b90ac41c8,
         type: 3}
       propertyPath: m_Color.r
-      value: 0.83137256
+      value: 0.058823533
       objectReference: {fileID: 0}
     - target: {fileID: 8639963176595555702, guid: 095f0eb823303c04984bc97b90ac41c8,
         type: 3}
       propertyPath: m_Color.g
-      value: 0.7217524
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8639963176595555702, guid: 095f0eb823303c04984bc97b90ac41c8,
         type: 3}
       propertyPath: m_Color.b
-      value: 0.4509804
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8639963176595555702, guid: 095f0eb823303c04984bc97b90ac41c8,
         type: 3}
       propertyPath: m_Shadows.m_Type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2661677427104610696, guid: 095f0eb823303c04984bc97b90ac41c8,
+        type: 3}
+      propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
@@ -20030,7 +20050,7 @@ ReflectionProbe:
   m_Enabled: 1
   serializedVersion: 2
   m_Type: 0
-  m_Mode: 1
+  m_Mode: 0
   m_RefreshMode: 0
   m_TimeSlicingMode: 0
   m_Resolution: 64
@@ -21080,7 +21100,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2146915689
 Transform:
   m_ObjectHideFlags: 0
@@ -21165,10 +21185,10 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 1
+  m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
-  m_BounceIntensity: 1
+  m_BounceIntensity: 0
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
@@ -23156,8 +23176,8 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 3a2db4b29b5baa345b5315fa37f326cb, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
