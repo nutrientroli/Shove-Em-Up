@@ -127,7 +127,7 @@ public class CombinateEventPlatform : EventPlatformScript
                             if (players.Length == PlayersManager.GetInstance().listOfPlayersToRespawnFinnishEvent.Count)
                                 valido = true;
 
-                            if ((posicionCentral.transform.position - players[randomNum].transform.position).magnitude >= 14)
+                            if ((posicionCentral.transform.position - players[randomNum].transform.position).magnitude >= 12)
                                 vivo = false;
                         }
                         if (vivo || iteraciones >= 50)
@@ -136,7 +136,7 @@ public class CombinateEventPlatform : EventPlatformScript
                     }
                     if (players.Length == PlayersManager.GetInstance().listOfPlayersToRespawnFinnishEvent.Count || iteraciones >= 50)
                     {
-                        meteors[i].gameObject.transform.position = new Vector3(posicionCentral.transform.position.x + Random.Range(-12, 12), meteors[i].transform.position.y, posicionCentral.transform.position.z + Random.Range(-15, 16));
+                        meteors[i].gameObject.transform.position = new Vector3(posicionCentral.transform.position.x + Random.Range(-12, 12), meteors[i].transform.position.y, posicionCentral.transform.position.z + Random.Range(-12, 12));
                     }
                     else
                         meteors[i].gameObject.transform.position = new Vector3(players[randomNum].transform.position.x, meteors[i].transform.position.y, players[randomNum].transform.position.z);
