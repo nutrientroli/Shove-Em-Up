@@ -1,50 +1,22 @@
 fileFormatVersion: 2
-guid: 1cc39b896a8d144418492011b3c8bcae
+guid: 88bd337b7d0e5304794838693754eefd
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: aspas_low
-    100002: estructura_low
-    100004: //RootNode
-    100006: Camera
-    100008: Light
-    100010: pie_low
-    100012: pie_low.001
-    100014: pie_low.002
-    400000: aspas_low
-    400002: estructura_low
-    400004: //RootNode
-    400006: Camera
-    400008: Light
-    400010: pie_low
-    400012: pie_low.001
-    400014: pie_low.002
-    2000000: Camera
-    2100000: checkler
-    2300000: aspas_low
-    2300002: estructura_low
-    2300004: //RootNode
-    2300006: pie_low
-    2300008: pie_low.001
-    2300010: pie_low.002
-    3300000: aspas_low
-    3300002: estructura_low
-    3300004: //RootNode
-    3300006: pie_low
-    3300008: pie_low.001
-    3300010: pie_low.002
-    4300000: pie_low
-    4300002: estructura_low
-    4300004: aspas_low
-    4300006: pie_low.001
-    4300008: pie_low.002
-    10800000: Light
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: checkler
-    second: {fileID: 2100000, guid: 5a6c6885b5a17e4448ae341dc7891850, type: 2}
+    100000: pieza_low.002
+    100002: //RootNode
+    400000: pieza_low.002
+    400002: //RootNode
+    2100000: other
+    2100002: colored
+    2100004: emisive
+    2300000: pieza_low.002
+    2300002: //RootNode
+    3300000: pieza_low.002
+    3300002: //RootNode
+    4300000: pieza_low
+    4300002: pieza_low.002
+  externalObjects: {}
   materials:
     importMaterials: 1
     materialName: 0
@@ -75,7 +47,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 10
+    globalScale: 1
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
