@@ -7,7 +7,7 @@ public class HoneyScript : MonoBehaviour
 
     private Vector3 forward = Vector3.forward;
     private float rotationSpeed = 360;
-    private float speed = 5;
+    private float speed = 15;
     private float currentTime = 0;
     private Vector3 firstScale;
     private GameObject myPlayer;
@@ -22,7 +22,6 @@ public class HoneyScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        gameObject.transform.position += forward * Time.deltaTime * speed;
         currentTime += Time.deltaTime;
         gameObject.transform.Rotate(Vector3.right, rotationSpeed * Time.deltaTime);
         gameObject.transform.localScale -= Time.deltaTime * Vector3.one * 1.2f;

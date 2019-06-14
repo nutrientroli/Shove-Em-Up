@@ -7,7 +7,7 @@ public class HoneyHabilityScript : HabilityScript
     public GameObject honeyPrefab;
     private List<HoneyScript> honey = new List<HoneyScript>();
 
-    protected override void Start()
+    private void Awake()
     {
         base.Start();
         duration = 0.5f;
@@ -40,7 +40,7 @@ public class HoneyHabilityScript : HabilityScript
             forward = gameObject.transform.rotation * forward;
             honey[i].Restart();
             honey[i].gameObject.SetActive(true);
-            honey[i].gameObject.transform.position = transform.position + forward;
+            honey[i].gameObject.transform.position = transform.position + forward + Vector3.up * 0.5f;
             honey[i].SetForward((forward).normalized);
 
         }

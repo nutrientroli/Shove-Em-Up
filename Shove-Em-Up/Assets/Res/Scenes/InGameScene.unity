@@ -2066,6 +2066,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: piezaRuleta_low (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5e2142aeadcc2024b87dc2374d4d493e, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5e2142aeadcc2024b87dc2374d4d493e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -2735,7 +2739,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 599513459}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Piezas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4412,13 +4416,25 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: b9e33fab945746848a26019235e2c156, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 100006, guid: b9e33fab945746848a26019235e2c156, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 100006, guid: b9e33fab945746848a26019235e2c156, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: b9e33fab945746848a26019235e2c156, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b9e33fab945746848a26019235e2c156, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 100004, guid: b9e33fab945746848a26019235e2c156, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -6439,6 +6455,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 5e2142aeadcc2024b87dc2374d4d493e, type: 3}
       propertyPath: m_Name
       value: piezaRuleta_low (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5e2142aeadcc2024b87dc2374d4d493e, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5e2142aeadcc2024b87dc2374d4d493e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9578,6 +9598,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: piezaRuleta_low
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5e2142aeadcc2024b87dc2374d4d493e, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5e2142aeadcc2024b87dc2374d4d493e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -10297,6 +10321,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: piezaRuleta_low (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5e2142aeadcc2024b87dc2374d4d493e, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5e2142aeadcc2024b87dc2374d4d493e, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0
@@ -10657,6 +10685,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 5e2142aeadcc2024b87dc2374d4d493e, type: 3}
       propertyPath: m_Name
       value: piezaRuleta_low (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5e2142aeadcc2024b87dc2374d4d493e, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5e2142aeadcc2024b87dc2374d4d493e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -11376,7 +11408,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1783478251}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RuletaFinal_DANI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13154,6 +13186,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 5e2142aeadcc2024b87dc2374d4d493e, type: 3}
       propertyPath: m_Name
       value: piezaRuleta_low (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5e2142aeadcc2024b87dc2374d4d493e, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5e2142aeadcc2024b87dc2374d4d493e, type: 3}
       propertyPath: m_LocalPosition.x
