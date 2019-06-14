@@ -8,11 +8,12 @@ public class PieceRuleteScript : MonoBehaviour
     private bool revert = false;
     private float speed = 60;
     private Vector3 startPos;
-    public Material mat;
+    public Material unselectMaterial;
+    public Material selectMaterial;
+    public Renderer pieceEmiter;
     // Start is called before the first frame update
     void Start()
     {
-        mat = GetComponent<Renderer>().material;
         startPos = gameObject.transform.position;
     }
 
@@ -47,5 +48,15 @@ public class PieceRuleteScript : MonoBehaviour
         //gameObject.transform.position = new Vector3(gameObject.transform.position.x, 50, gameObject.transform.position.z);
         active = false;
         revert = true;
+    }
+
+    public void SelectPiece()
+    {
+        pieceEmiter.material = selectMaterial;
+    }
+
+    public void UnSelectPiece()
+    {
+        pieceEmiter.material = unselectMaterial;
     }
 }

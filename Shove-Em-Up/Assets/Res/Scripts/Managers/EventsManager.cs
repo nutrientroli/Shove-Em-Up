@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class EventsManager : MonoBehaviour {
-    [SerializeField] private List<Renderer> listPieces = new List<Renderer>();
+    [SerializeField] private List<PieceRuleteScript> listPieces = new List<PieceRuleteScript>();
     [SerializeField] private Material selectedMaterial;
     private Material unSelectedMaterial;
     [SerializeField] private List<EventPlatformScript> listEvents = new List<EventPlatformScript>();
@@ -21,7 +21,7 @@ public class EventsManager : MonoBehaviour {
     public Text counter;
 
     private void Start() {
-        unSelectedMaterial = ((Renderer)listPieces[indexEvent]).material;
+        listPieces[indexEvent].UnSelectPiece();
         PresenterSound.PresenterTalks(SoundManager.SoundEvent.PRESENTADOR_32);
     }
 
@@ -94,11 +94,10 @@ public class EventsManager : MonoBehaviour {
 
     private void DuringSelectEvent() {
         indexIncrement--;
-        ((Renderer)listPieces[indexEvent]).material = unSelectedMaterial;
+        listPieces[indexEvent].UnSelectPiece();
         indexEvent++;
         if (indexEvent >= listEvents.Count) indexEvent = 0;
-        unSelectedMaterial = ((Renderer)listPieces[indexEvent]).material;
-        ((Renderer)listPieces[indexEvent]).material = selectedMaterial;
+        listPieces[indexEvent].SelectPiece();
         if (indexIncrement <= 0) wait = true;
         SoundManager.GetInstance().PlaySound(SoundManager.SoundEvent.RULETA_2);
     }
@@ -106,7 +105,12 @@ public class EventsManager : MonoBehaviour {
     private void EndSelectEvent() {
         inSelection = false;
         wait = false; 
-        ((Renderer)listPieces[indexEvent]).material = unSelectedMaterial;
+        listPieces[indexEvent].UnSelectPiece();
+        foreach (PieceRuleteScript piece in listPieces)
+        {
+            piece.SelectPiece();
+        }
+
         eventPlatform = listEvents[indexEvent];
         eventPlatform.Init();
         LevelManager.GetInstance().SetEventState(true);
