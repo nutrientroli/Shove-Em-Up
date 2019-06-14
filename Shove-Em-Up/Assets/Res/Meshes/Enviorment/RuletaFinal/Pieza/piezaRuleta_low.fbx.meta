@@ -4,15 +4,21 @@ ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
+    100002: pieza_low.002
     400000: //RootNode
+    400002: pieza_low.002
     2100000: checker
     2100002: other
     2100004: emisive
     2100006: colored
     2300000: //RootNode
+    2300002: pieza_low.002
     3300000: //RootNode
+    3300002: pieza_low.002
     4300000: pieza_low
+    4300002: pieza_low.002
     6400000: //RootNode
+    6400002: pieza_low.002
   externalObjects:
   - first:
       type: UnityEngine:Material
