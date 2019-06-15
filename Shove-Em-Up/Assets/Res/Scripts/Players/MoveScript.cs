@@ -129,7 +129,7 @@ public class MoveScript : MonoBehaviour
         ResetVectorToMove();
         if ((collisionFlags & CollisionFlags.Below) != 0)
         {
-            if(!onGround && verticalSpeed <= -gravity * 5)
+            if(!onGround && verticalSpeed <= -gravity * 6.5f)
                 particleCaida.Play();
 
             onGround = true;

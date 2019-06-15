@@ -22,7 +22,7 @@ public class MeteorScript : MonoBehaviour
     {
         collider = GetComponent<SphereCollider>();
         collider.enabled = false;
-        collider.radius = 2;
+        collider.radius = 0.9f;
         posInitial = transform.position;
     }
 
