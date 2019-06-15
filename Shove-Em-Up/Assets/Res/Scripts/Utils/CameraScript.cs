@@ -14,6 +14,10 @@ public class CameraScript : MonoBehaviour {
     private float currentTime = 0;
     private float variationTime;
     private bool wait = true;
+    private bool end = false;
+
+    [SerializeField] private Animation anim;
+
 
     // Start is called before the first frame update
     void Start() {
@@ -24,29 +28,32 @@ public class CameraScript : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
-        if (!wait) {
-            if (increaseValue) {
-                lerpValue += (Time.deltaTime * speed);
-                if (lerpValue > 1) {
-                    increaseValue = false;
-                    wait = true;
-                    variationTime = Random.Range(time * 0.5f, time);
+        if (!end) { 
+            if (!wait) {
+                if (increaseValue) {
+                    lerpValue += (Time.deltaTime * speed);
+                    if (lerpValue > 1) {
+                        increaseValue = false;
+                        wait = true;
+                        variationTime = Random.Range(time * 0.5f, time);
+                    }
+                } else {
+                    lerpValue -= (Time.deltaTime * speed);
+                    if (lerpValue < 0)
+                    {
+                        increaseValue = true;
+                        GetFinalPosition();
+                        wait = true;
+                        variationTime = Random.Range(time * 0.5f, time);
+                    }
                 }
+                transform.position = Vector3.Lerp(initPosition, finalPosition, lerpValue);
             } else {
-                lerpValue -= (Time.deltaTime * speed);
-                if (lerpValue < 0) {
-                    increaseValue = true;
-                    GetFinalPosition();
-                    wait = true;
-                    variationTime = Random.Range(time * 0.5f, time);
+                currentTime += Time.deltaTime;
+                if (currentTime >= variationTime) {
+                    currentTime = 0;
+                    wait = false;
                 }
-            }
-            transform.position = Vector3.Lerp(initPosition, finalPosition, lerpValue);
-        } else {
-            currentTime += Time.deltaTime;
-            if (currentTime >= variationTime) {
-                currentTime = 0;
-                wait = false;
             }
         }
     }
@@ -58,6 +65,12 @@ public class CameraScript : MonoBehaviour {
 
     private void GetFinalPosition() {
         finalPosition = finalsPositions[Random.Range(0, finalsPositions.Count - 1)];
-        //Debug.Log(finalPosition);
+    }
+
+    public void PlayAnimationEndGame()
+    {
+        end = true;
+        anim.CrossFade(anim.clip.name);
+        //anim.Play();
     }
 }

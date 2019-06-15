@@ -16,14 +16,13 @@ public class LevelManager{
     public bool eventActive;
 
     public void FinnishGame() {
-        //Cambiar a mostrar puntuaciones
-        ScenesManager.ChangeScene(ScenesManager.SceneCode.ENDGAME);
+        
         currentEvent = 0;
     }
 
-    public void PassEvent() {
+    public bool PassEvent() {
         currentEvent++;
-        if (events <= currentEvent) FinnishGame();
+        return events <= currentEvent;
     }
 
     public void SetEventState(bool _active) {
