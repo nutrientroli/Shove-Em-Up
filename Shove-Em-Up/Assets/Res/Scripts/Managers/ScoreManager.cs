@@ -50,6 +50,14 @@ public class ScoreManager
     {
         int score = 0;
         if (players != null) score = players[_player - 1];
+
+        /*Test*/
+        /*switch (_player) {
+            case 1: score = 50; break;
+            case 2: score = 100; break;
+            case 3: score = 30; break;
+            case 4: score = 50; break;
+        }*/
         return score;
     }
 
@@ -60,6 +68,8 @@ public class ScoreManager
                 if (score < players[i]) score = players[i];
             }
         }
+        //test
+        //return 100;
         return score;
     }
 }

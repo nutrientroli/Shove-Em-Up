@@ -13,6 +13,7 @@ public class ScreenCanvasScript : MonoBehaviour
     public GameObject txtEnd;
 
     private CameraScript mcamera;
+    public GameObject gobjResults;
 
     private void Awake() {
         mcamera = Camera.main.gameObject.GetComponent<CameraScript>();
@@ -49,5 +50,11 @@ public class ScreenCanvasScript : MonoBehaviour
         yield return new WaitForSeconds(5f);
         txtEnd.SetActive(true);
         mcamera.PlayAnimationEndGame();
+        yield return new WaitForSeconds(2f);
+        txtEnd.SetActive(false);
+        gobjResults.SetActive(true);
+        foreach(ProgressBarScript bar in gobjResults.GetComponentsInChildren<ProgressBarScript>()) {
+            bar.ShowScore();
+        }
     }
 }

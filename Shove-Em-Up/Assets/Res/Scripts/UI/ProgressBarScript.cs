@@ -10,23 +10,10 @@ public class ProgressBarScript : MonoBehaviour
     public Color color;
     public Image bar;
     [SerializeField] private float speed = 0.2f;
-    private bool runAnimation = true;
+    private bool runAnimation = false;
     [SerializeField] private float maxvalue = 50;
     [SerializeField] private float maxvalueglobal = 100;
     private float lerpvalue = 0;
-
-    void Start() {
-        if(player <= PlayersManager.GetInstance().GetNumberOfPlayers()) {
-            maxvalue = ScoreManager.GetInstance().GetPoints(player);
-            maxvalueglobal = ScoreManager.GetInstance().GetMaxPoints();
-            bar.color = color;
-            SetProgress(0);
-        }
-        else
-        {
-            gameObject.SetActive(false);
-        }
-    }
 
     void Update() {
         if (runAnimation) {
@@ -46,5 +33,17 @@ public class ProgressBarScript : MonoBehaviour
     private void SetProgress(float _percent) {
         if (_percent >= 1)   _percent = 1;
         bar.fillAmount = _percent;
+    }
+
+    public void ShowScore() {
+        if (player <= PlayersManager.GetInstance().GetNumberOfPlayers()) {
+            maxvalue = ScoreManager.GetInstance().GetPoints(player);
+            maxvalueglobal = ScoreManager.GetInstance().GetMaxPoints();
+            bar.color = color;
+            SetProgress(0);
+            runAnimation = true;
+        } else {
+            gameObject.SetActive(false);
+        }
     }
 }
