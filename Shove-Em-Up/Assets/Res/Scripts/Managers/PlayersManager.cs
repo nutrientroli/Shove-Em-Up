@@ -88,7 +88,11 @@ public class PlayersManager {
                 }
                 moveScript.RestartPosition(vec);
             }
-            if (playerSript != null) playerSript.Fall();
+            if (playerSript != null)
+            {
+                playerSript.Fall();
+                playerSript.RemoveAllMods();
+            }
         }
     }
 

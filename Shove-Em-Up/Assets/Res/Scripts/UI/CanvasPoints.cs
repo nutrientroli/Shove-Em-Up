@@ -61,4 +61,8 @@ public class CanvasPoints : MonoBehaviour
 
         }
     }
+    private void FixedUpdate()
+    {
+        gameObject.transform.forward = Camera.main.transform.position - gameObject.transform.position;
+    }
 }

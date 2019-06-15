@@ -98,7 +98,8 @@ public class FallRuleteEventPlatform : EventPlatformScript
         while (randomNum1 == randomNum3 || randomNum2 == randomNum3) randomNum3 = UnityEngine.Random.Range(0, pieces.Count - 1);
 
         for (int i=0; i<pieces.Count; i++) {
-            if(i != randomNum1 && i != randomNum2 && i != randomNum3) pieces[i].SelectPiece();
+            pieces[i].UnSelectPiece();
+            if (i != randomNum1 && i != randomNum2 && i != randomNum3) pieces[i].SelectPiece();
         }
 
         return waitTime;

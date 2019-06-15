@@ -13,12 +13,14 @@ public class SceneLoader : MonoBehaviour
     }
 
     IEnumerator LoadSceneAsync() {
+        percentageText.text = "0 " + "%";
+        yield return new WaitForSeconds(5f);
         AsyncOperation op = ScenesManager.ChangeSceneLoading();       
         while (!op.isDone) {
             float loadingProgress = Mathf.Clamp01(op.progress / 0.9f);
             loadingSlider.value = loadingProgress;
             percentageText.text = (loadingProgress * 100) + " " + "%";
-            yield return new WaitForSeconds(0.1f);
+            yield return new WaitForSeconds(0.07f);
         }
     }
 

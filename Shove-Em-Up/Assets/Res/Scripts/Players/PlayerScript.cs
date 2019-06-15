@@ -330,6 +330,21 @@ public class PlayerScript : MonoBehaviour
         Modification();
     }
 
+    public void RemoveAllMods()
+    {
+        List<ModifierScript> listRemoveMods = new List<ModifierScript>();
+        foreach (ModifierScript mod in listMods)
+        {
+                listRemoveMods.Add(mod);
+        }
+        foreach (ModifierScript mod in listRemoveMods)
+        {
+            listMods.Remove(mod);
+            Destroy(mod);
+        }
+        Modification();
+    }
+
     private void Modification()
     {
         ResetValues();
