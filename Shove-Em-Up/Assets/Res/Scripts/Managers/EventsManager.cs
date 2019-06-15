@@ -116,7 +116,7 @@ public class EventsManager : MonoBehaviour {
         inSelection = false;
         wait = false; 
         listPieces[indexEvent].UnSelectPiece();
-        foreach (PieceRuleteScript piece in listPieces) piece.SelectPiece();
+        //foreach (PieceRuleteScript piece in listPieces) piece.SelectPiece();
         if (test) indexEvent = indexTest;
         eventPlatform = listEvents[indexEvent];
         listExecutedEvents.Add(listEvents[indexEvent]);

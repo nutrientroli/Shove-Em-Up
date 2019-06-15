@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ScreenCanvasScript : MonoBehaviour
 {
+    [Header("Screen InGame Configuration")]
     public GameObject txtMeteorites;
     public GameObject txtFallRoulette;
     public GameObject txtFan;
@@ -12,8 +13,11 @@ public class ScreenCanvasScript : MonoBehaviour
     public GameObject txtSmoke;
     public GameObject txtEnd;
 
+    [Header("Screen Results Configuration")]
     private CameraScript mcamera;
     public GameObject gobjResults;
+
+    
 
     private void Awake() {
         mcamera = Camera.main.gameObject.GetComponent<CameraScript>();
