@@ -40,6 +40,11 @@ public class PlayersManager {
         }
     }
 
+    public PlayerSelectData GetTableOfSelectPlayers(int _player)
+    {
+        return (PlayerSelectData)tableOfSelectPlayers[_player];
+    }
+
     public void Init() {
         limitPlayerDeathInEvent = 0;
         tableOfPlayerData.Clear();
