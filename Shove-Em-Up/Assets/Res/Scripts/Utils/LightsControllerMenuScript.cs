@@ -19,10 +19,10 @@ public class LightsControllerMenuScript : MonoBehaviour
     }
 
     private void FadeOut() {
-        foreach(LightController _light in lights) _light.DisableLight(15.0f);
+        //foreach(LightController _light in lights) _light.DisableLight(15.0f);
     }
 
     private void FadeIn() {
-        foreach (LightController _light in lights) _light.EnableLight(15.0f);
+        //foreach (LightController _light in lights) _light.EnableLight(15.0f);
     }
 }
