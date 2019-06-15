@@ -32,7 +32,7 @@ public class MeteorScript : MonoBehaviour
         if(activate)
         {
             currentTime += Time.deltaTime;
-            if(posImpact.transform.localScale.x < 6.6f && currentTime >= delay )
+            if(posImpact.transform.localScale.x < 6.6f && currentTime >= delay - 0.3f )
                 posImpact.transform.localScale = new Vector3(posImpact.transform.localScale.x + Time.deltaTime * scale, posImpact.transform.localScale.y, posImpact.transform.localScale.z + Time.deltaTime * scale); 
             else if(posImpact.transform.localScale.x > 6.6f)
                 posImpact.transform.localScale = new Vector3(6.6f, posImpact.transform.localScale.y, 6.6f); 
