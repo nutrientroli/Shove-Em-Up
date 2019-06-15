@@ -106,9 +106,31 @@ public class ItemEventPlatform : EventPlatformScript
 
     private Vector3 GetRandomPosition() {
         Vector3 report = Vector3.zero;
-        bool check = false;
+        List<int> numerosViables = new List<int>();
         int icheck = 0;
-        while (!check && icheck<=listRandomPositions.Count) {
+        bool check = false;
+        while (icheck < listRandomPositionsOcuped.Count && !check)
+        {
+            icheck = 0;
+            for (int i = 0; i < listRandomPositionsOcuped.Count; i++)
+            {
+                if (listRandomPositionsOcuped[i])
+                {
+                    icheck++;
+                }
+                else
+                    numerosViables.Add(i);
+            }
+            if(icheck < listRandomPositions.Count)
+            {
+                int numRandom = UnityEngine.Random.Range(0, numerosViables.Count - 1);
+                report = listRandomPositions[numerosViables[numRandom]];
+                listRandomPositionsOcuped[numerosViables[numRandom]] = true;
+                check = true;
+                numerosViables.Clear();
+            }
+        }
+        /*while (!check && icheck<=listRandomPositions.Count) {
             int iCheck = 1;
             foreach (bool pos in listRandomPositionsOcuped) {
                 if (pos) iCheck++;
@@ -121,8 +143,8 @@ public class ItemEventPlatform : EventPlatformScript
                     listRandomPositionsOcuped[random] = true;
                 }
             }
-            icheck++;
-        }
+            //icheck++;
+        }*/
         return report;
     }
     #endregion
