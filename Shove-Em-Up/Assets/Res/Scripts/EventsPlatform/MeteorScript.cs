@@ -5,6 +5,7 @@ using UnityEngine;
 public class MeteorScript : MonoBehaviour
 {
     public GameObject posImpact;
+    public GameObject futureposImact;
     public float speed = 30;
     public LayerMask layerMask;
     public ParticleSystem[] particles;
@@ -85,6 +86,10 @@ public class MeteorScript : MonoBehaviour
         {
             posImpact.transform.position = rayHit.point + new Vector3(0, 0.35f, 0);
             posImpact.transform.parent = null;
+            if (futureposImact != null && Mathf.Abs(posImpact.transform.position.y - futureposImact.transform.position.y) >= 1)
+            {
+                posImpact.transform.position = new Vector3(gameObject.transform.position.x, futureposImact.transform.position.y, gameObject.transform.position.z);
+            }
         }
         activate = true;
     }

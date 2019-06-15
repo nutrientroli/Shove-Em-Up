@@ -124,6 +124,7 @@ public class MeteoritesEventPlatform : EventPlatformScript
                 }
                 else
                     meteors[i].gameObject.transform.position = new Vector3(players[randomNum].transform.position.x, meteors[i].transform.position.y, players[randomNum].transform.position.z);
+                meteors[i].futureposImact = posicionCentral;
                 meteors[i].Active(1f);
                 poolMeteors[i] = true;
                 break;
