@@ -19,6 +19,8 @@ public class EventsManager : MonoBehaviour {
     private float timeCounter = 0;
 
     public Text counter;
+    [SerializeField] private bool test = false;
+    [SerializeField] private int indexTest = 0;
 
     private void Start() {
         listPieces[indexEvent].UnSelectPiece();
@@ -110,7 +112,7 @@ public class EventsManager : MonoBehaviour {
         {
             piece.SelectPiece();
         }
-
+        if (test) indexEvent = indexTest;
         eventPlatform = listEvents[indexEvent];
         eventPlatform.Init();
         LevelManager.GetInstance().SetEventState(true);
