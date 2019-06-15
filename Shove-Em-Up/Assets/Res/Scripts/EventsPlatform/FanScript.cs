@@ -59,10 +59,6 @@ public class FanScript : MonoBehaviour
                         players[i].Movement(gameObject.transform.forward, true);
                     }
                 }
-                if (totalTime >= timeToDisapear - 1.5f)
-                {
-                    collider.enabled = false;
-                }
 
                 if (totalTime >= timeToDisapear)
                     Hide();
@@ -103,7 +99,7 @@ public class FanScript : MonoBehaviour
         {
             rotador.transform.Rotate(Vector3.up, 360 * Time.deltaTime);
             transform.position = Vector3.MoveTowards(transform.position, goBack.position, Time.deltaTime * 2);
-            if ((transform.position - goBack.position).magnitude <= 0.01f)
+            if ((transform.position - goBack.position).magnitude <= 0.02f)
             {
                 air = false;
                 gameObject.transform.rotation = startRotation;

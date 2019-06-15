@@ -8,7 +8,7 @@ public class ItemScript : MonoBehaviour
     private float currentTime = 0;
     [SerializeField] private float maxTimeSpawn = 20;
     public GameObject item;
-    public float rotationSpeed = 360;
+    public float rotationSpeed;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -26,6 +26,7 @@ public class ItemScript : MonoBehaviour
     // Start is called before the first frame update
     void Start() {
         SetActive();
+        rotationSpeed = Random.Range(250, 600);
     }
 
     private void SetActive() {
