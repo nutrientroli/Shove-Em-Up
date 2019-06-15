@@ -14,16 +14,20 @@ public class LightCollorChangerController : MonoBehaviour
     [SerializeField] private Color standardStateColor;
     [SerializeField] private Color triggerStateColor;
 
+    public bool isOnTrigger = false;
+
     public void SetStandardState ()
     {
         SetLightColor(standardStateColor);
+        isOnTrigger = false;
     }
     public void SetTriggerState ()
     {
         SetLightColor(triggerStateColor);
+        isOnTrigger = true;
     }
 
-    public void SetLightColor(Color _colorToSet)
+    private void SetLightColor(Color _colorToSet)
     {
         // light
         lightToManage.color = _colorToSet;
@@ -46,7 +50,10 @@ public class LightCollorChangerController : MonoBehaviour
     {
         if (Input.GetKeyUp(KeyCode.Space))
         {
-
+            if (isOnTrigger)
+                SetStandardState();
+            else
+                SetTriggerState();
         }
     }
 
