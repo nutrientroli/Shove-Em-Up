@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class ScreenCanvasScript : MonoBehaviour
 {
@@ -11,9 +10,15 @@ public class ScreenCanvasScript : MonoBehaviour
     public GameObject txtDoubleEvent;
     public GameObject txtItems;
     public GameObject txtSmoke;
-   
+    public GameObject txtEnd;
+
+    private CameraScript mcamera;
+
+    private void Awake() {
+        mcamera = Camera.main.gameObject.GetComponent<CameraScript>();
+    }
+
     public void SetEvent(int _indexEvent) {
-        Debug.Log(_indexEvent + " Screen");
         HideAll();
         switch (_indexEvent) {
             case 0: txtItems.SetActive(true); break;
@@ -25,6 +30,11 @@ public class ScreenCanvasScript : MonoBehaviour
         }
     }
 
+    public void SetEndGame() {
+        HideAll();
+        StartCoroutine(EndGame());
+    }
+
     public void HideAll() {
         txtMeteorites.SetActive(false);
         txtFallRoulette.SetActive(false);
@@ -32,5 +42,12 @@ public class ScreenCanvasScript : MonoBehaviour
         txtDoubleEvent.SetActive(false);
         txtItems.SetActive(false);
         txtSmoke.SetActive(false);
+        txtEnd.SetActive(false);
+    }
+
+    IEnumerator EndGame() {
+        yield return new WaitForSeconds(5f);
+        txtEnd.SetActive(true);
+        mcamera.PlayAnimationEndGame();
     }
 }

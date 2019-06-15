@@ -16,6 +16,7 @@ public class EventsManager : MonoBehaviour {
     private float timeWait = 1.5f;
     private float currentTime = 0;
     private bool wait = false;
+    private bool finnishgame = false;
     private float timeCounter = 0;
 
     public Text counter;
@@ -30,43 +31,45 @@ public class EventsManager : MonoBehaviour {
     }
 
     private void Update() {
-        if (inSelection) {
-            if (!wait) {
-                currentTime += Time.deltaTime;
-                if (currentTime >= timeToChangeRulette) {
-                    DuringSelectEvent();
-                    currentTime = 0;
-                    if (Random.Range(0, 10) > 8) PresenterSound.PresenterTalks(SoundManager.SoundEvent.PRESENTADOR_10);
+        if (!finnishgame) {
+            if (inSelection) {
+                if (!wait) {
+                    currentTime += Time.deltaTime;
+                    if (currentTime >= timeToChangeRulette) {
+                        DuringSelectEvent();
+                        currentTime = 0;
+                        if (Random.Range(0, 10) > 8) PresenterSound.PresenterTalks(SoundManager.SoundEvent.PRESENTADOR_10);
 
+                    }
+                } else {
+                    currentTime += Time.deltaTime;
+                    if (currentTime >= timeWait) {
+                        EndSelectEvent();
+                        currentTime = 0;
+                    }
                 }
             } else {
-                currentTime += Time.deltaTime;
-                if (currentTime >= timeWait) {
-                    EndSelectEvent();
-                    currentTime = 0;
-                }
-            }
-        } else {
-            if (eventPlatform != null) {
-                if (CheckEndEvent()) FinnishEvent();
-                else if (CheckForceEndEvent()) ForceFinnishEvent();
-                else if (eventPlatform.execute) {
-                    if (!eventPlatform.counterIsShow) {
-                        switch (eventPlatform.type) {
-                            case EventPlatformScript.TypeEvent.TIME:
-                                if (eventPlatform.execute) eventPlatform.Run(Time.deltaTime);
-                                break;
-                            case EventPlatformScript.TypeEvent.STEP: break;
-                            default: break;
+                if (eventPlatform != null) {
+                    if (CheckEndEvent()) FinnishEvent();
+                    else if (CheckForceEndEvent()) ForceFinnishEvent();
+                    else if (eventPlatform.execute) {
+                        if (!eventPlatform.counterIsShow) {
+                            switch (eventPlatform.type) {
+                                case EventPlatformScript.TypeEvent.TIME:
+                                    if (eventPlatform.execute) eventPlatform.Run(Time.deltaTime);
+                                    break;
+                                case EventPlatformScript.TypeEvent.STEP: break;
+                                default: break;
+                            }
+                        } else {
+                            ShowNumberCounter(Time.deltaTime);
                         }
-                    } else {
-                        ShowNumberCounter(Time.deltaTime);
+                    } else if (eventPlatform == null) {
+                        StartSelectEvent();
                     }
-                } else if (eventPlatform == null) {
+                } else {
                     StartSelectEvent();
                 }
-            } else {
-                StartSelectEvent();
             }
         }
     }
@@ -75,7 +78,8 @@ public class EventsManager : MonoBehaviour {
         eventPlatform.active = false;
         eventPlatform = null;
         LevelManager.GetInstance().SetEventState(false);
-        LevelManager.GetInstance().PassEvent();
+        finnishgame = LevelManager.GetInstance().PassEvent();
+        if(finnishgame) screen.SetEndGame();
         PlayersManager.GetInstance().RespawnFinnishEvent();
     }
 
@@ -143,7 +147,6 @@ public class EventsManager : MonoBehaviour {
         } else {
             counter.gameObject.SetActive(true);
         }
-
     }
     
 }
