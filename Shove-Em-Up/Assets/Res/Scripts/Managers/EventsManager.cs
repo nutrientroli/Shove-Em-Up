@@ -137,7 +137,7 @@ public class EventsManager : MonoBehaviour {
     }
 
     public void ShowNumberCounter(float _dt) {
-        timeCounter += _dt;
+        /*timeCounter += _dt;
         if (counter.IsActive()) {
             if (timeCounter < 1) counter.text = "3";
             else if (timeCounter >= 1 && timeCounter < 2) counter.text = "2";
@@ -150,7 +150,7 @@ public class EventsManager : MonoBehaviour {
             }
         } else {
             counter.gameObject.SetActive(true);
-        }
+        }*/
     }
 
     private bool CheckEventNextEvent(int _increment, int _index) {

@@ -18,19 +18,16 @@ public class ScoreManager
         return instance;
     }
     #endregion
-    private List<int> players = new List<int>(); 
+    private List<int> players = new List<int>();
+    private UIInGameScript canvasScore;
 
-    public void Init()
-    {
+    public void Init() {
         GameObject[] _players;
         _players = GameObject.FindGameObjectsWithTag("Player");
-
-        //Mejorar rendimiento. Hastable en PlayersManagers
-
-
         if (_players != null && _players.Length>0) {
             foreach (GameObject p in _players) {
                 if (p.GetComponent<PlayerData>() != null) players.Add(0);
+                Debug.Log("PLAYER ENCONTRADO");
             }
         } else {
             //for(int i=0; i<4; i++) players.Add(0);
@@ -41,35 +38,29 @@ public class ScoreManager
         }
     }
 
-    public void SetPoints(int _player, int score)
-    {
-        players[_player - 1] = score;
+    public void SetPoints(int _player, int _score) {
+        if (players != null && players.Count != 0) players[_player - 1] = _score;
+        if(canvasScore != null) canvasScore.UpdateScores();
     }
 
-    public int GetPoints(int _player)
-    {
-        int score = 0;
-        if (players != null) score = players[_player - 1];
-
-        /*Test*/
-        /*switch (_player) {
-            case 1: score = 50; break;
-            case 2: score = 100; break;
-            case 3: score = 30; break;
-            case 4: score = 50; break;
-        }*/
-        return score;
+    public int GetPoints(int _player) {
+        int _score = 0;
+        if (players != null && players.Count != 0) _score = players[_player - 1];
+        return _score;
     }
 
     public int GetMaxPoints() {
-        int score = 0;
+        int _score = 0;
         if (players.Count > 0) {
             for (int i = 0; i < players.Count; i++) {
-                if (score < players[i]) score = players[i];
+                if (_score < players[i]) _score = players[i];
             }
         }
-        //test
-        //return 100;
-        return score;
+        return _score;
+    }
+
+    public void SetCanvasScore(UIInGameScript _canvasScore) {
+        Debug.Log("SETEO CANVAS SCORE");
+        canvasScore = _canvasScore;
     }
 }
