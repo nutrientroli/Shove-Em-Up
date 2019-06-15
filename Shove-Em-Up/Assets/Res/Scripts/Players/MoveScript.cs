@@ -87,17 +87,27 @@ public class MoveScript : MonoBehaviour
     {
         if (isMovible && !_air)
         {
-            toMove += _toMove * speed * multiplyCharge;
+            if (player.GetRalenticed() && player.currentState != PlayerScript.State.KNOCKBACK && player.GetKnockable())
+                toMove += _toMove * speed * multiplyCharge * 0.2f;
+            else if (player.GetRalenticed() && !player.GetKnockable())
+            {
+                toMove += _toMove * speed * multiplyCharge * 0.4f;
+            }
+            else
+                toMove += _toMove * speed * multiplyCharge;
 
             if (new Vector3(_toMove.x, 0, _toMove.z) != Vector3.zero)
             {
                
                 forward = new Vector3(_toMove.x, 0, _toMove.z).normalized;
-             
             }
         }else if(_air)
         {
-            toMove += _toMove * speedAir;
+            if (player.GetRalenticed() && !player.GetKnockable())
+            {
+                toMove += _toMove * speedAir * 0.4f;
+            }else
+                toMove += _toMove * speedAir;
         }
 
     }
@@ -113,12 +123,7 @@ public class MoveScript : MonoBehaviour
         toMove *= _time;
         if(isMovible)
             gameObject.transform.forward = forward;
-        if (player.GetRalenticed() && player.currentState != PlayerScript.State.KNOCKBACK && player.GetKnockable())
-            toMove *= 0.2f;
-        else if(player.GetRalenticed() && !player.GetKnockable())
-        {
-            toMove *= 0.4f;
-        }
+
 
         CollisionFlags collisionFlags = characterController.Move(toMove);
         ResetVectorToMove();

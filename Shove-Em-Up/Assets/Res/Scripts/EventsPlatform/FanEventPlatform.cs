@@ -24,7 +24,6 @@ public class FanEventPlatform : EventPlatformScript
         base.Init();
         randomNum = Random.Range(0, ventiladores.Count);
         type = TypeEvent.TIME;
-        print("init");
         listEvent.Add(Action);
         listEvent.Add(End);
         listEvent.Add(Wait);
@@ -44,7 +43,6 @@ public class FanEventPlatform : EventPlatformScript
     }
 
     private float Action() {
-        print("action");
         ventiladores[randomNum].Active();
         return timeToAction * timeVariaton;
     }

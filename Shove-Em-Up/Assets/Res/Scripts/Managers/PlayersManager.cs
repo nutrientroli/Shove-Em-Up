@@ -71,7 +71,6 @@ public class PlayersManager {
                 moveScript = data.gameObject.GetComponent<MoveScript>();
                 playerSript = data.gameObject.GetComponent<PlayerScript>();
                 data.gameObject.GetComponent<HabilityScript>().RestartHability();
-                data.light.DefaultLight();
             }
             if (moveScript != null) {
                 Vector3 vec = respawnPoint.position;

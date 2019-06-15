@@ -7,7 +7,6 @@ public class DeadFallZone : MonoBehaviour {
             PlayerData data = other.GetComponentInChildren<PlayerData>();
             if (data != null)
             {
-                data.light.RedLight();
                 PlayersManager.GetInstance().Dead(data.GetPlayer());
             }
         }
