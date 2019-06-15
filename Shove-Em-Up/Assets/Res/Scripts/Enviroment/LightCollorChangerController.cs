@@ -39,7 +39,15 @@ public class LightCollorChangerController : MonoBehaviour
     {
         lightToManage = GetComponentInChildren<Light>();
         lightMaterial = GetComponentInChildren<Renderer>().material;
+    }
 
+
+    private void Update()
+    {
+        if (Input.GetKeyUp(KeyCode.Space))
+        {
+
+        }
     }
 
 
