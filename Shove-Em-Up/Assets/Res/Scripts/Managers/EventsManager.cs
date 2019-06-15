@@ -159,10 +159,6 @@ public class EventsManager : MonoBehaviour {
             _index++;
             if (_index >= listEvents.Count) _index = 0;
         }
-        Debug.Log("Evento a seleccionar: " + listEvents[_index]);
-        foreach (EventPlatformScript _event in listExecutedEvents) {
-            Debug.Log("Evento en lista: " + _event);
-        }
         if (listExecutedEvents.Count == listEvents.Count) listExecutedEvents.Clear();
         return !(listExecutedEvents.Contains(listEvents[_index]));
     }
