@@ -13,10 +13,19 @@ public class SpectatorScript : MonoBehaviour
 
     // Start is called before the first frame update
     void Start() {
+        PublicoManager.GetInstance().AddToList(this);
         type = Random.Range(0.0f, 1.0f);
         anim.SetFloat("Type", type);
+        anim.speed = Random.Range(0.7f, 1.0f);
         index = Random.Range(0, 5);
         GetComponentInChildren<Renderer>().material.color = colors[index];
+    }
+
+    public void ChangeAnimation()
+    {
+        type = Random.Range(0.0f, 1.0f);
+        anim.SetFloat("Type", type);
+        anim.speed = Random.Range(0.7f, 1.0f);
     }
 
 }

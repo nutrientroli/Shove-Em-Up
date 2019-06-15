@@ -27,6 +27,7 @@ public class EventPlatformScript : MonoBehaviour
     }
 
     public void Finnish() {
+        PublicoManager.GetInstance().ChangeAnimations();
         execute = false;
     }
 
