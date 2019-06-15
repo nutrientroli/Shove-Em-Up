@@ -43,7 +43,7 @@ public class FanScript : MonoBehaviour
                 currentTime += Time.deltaTime;
                 totalTime += Time.deltaTime;
                 gameObject.transform.Rotate(Vector3.up, rotationSpeed * Time.deltaTime * side);
-                rotador.transform.Rotate(Vector3.forward, 1800 * Time.deltaTime);
+                rotador.transform.Rotate(Vector3.up, 1800 * Time.deltaTime);
                 if (currentTime >= maxTimeToOtherSide)
                 {
                     side *= -1;
@@ -69,7 +69,7 @@ public class FanScript : MonoBehaviour
             }
             else
             {
-                rotador.transform.Rotate(Vector3.forward, 360 * Time.deltaTime);
+                rotador.transform.Rotate(Vector3.up, 360 * Time.deltaTime);
 
                 currentTime += Time.deltaTime;
                 if(light.enabled)
@@ -101,7 +101,7 @@ public class FanScript : MonoBehaviour
             }
         }else if(air)
         {
-            rotador.transform.Rotate(Vector3.forward, 360 * Time.deltaTime);
+            rotador.transform.Rotate(Vector3.up, 360 * Time.deltaTime);
             transform.position = Vector3.MoveTowards(transform.position, goBack.position, Time.deltaTime * 2);
             if ((transform.position - goBack.position).magnitude <= 0.01f)
             {

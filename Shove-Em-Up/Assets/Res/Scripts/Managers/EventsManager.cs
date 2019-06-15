@@ -22,6 +22,8 @@ public class EventsManager : MonoBehaviour {
     [SerializeField] private bool test = false;
     [SerializeField] private int indexTest = 0;
 
+    [SerializeField] private ScreenCanvasScript screen;
+
     private void Start() {
         listPieces[indexEvent].UnSelectPiece();
         PresenterSound.PresenterTalks(SoundManager.SoundEvent.PRESENTADOR_32);
@@ -45,8 +47,7 @@ public class EventsManager : MonoBehaviour {
                 }
             }
         } else {
-            if (eventPlatform != null)
-            {
+            if (eventPlatform != null) {
                 if (CheckEndEvent()) FinnishEvent();
                 else if (CheckForceEndEvent()) ForceFinnishEvent();
                 else if (eventPlatform.execute) {
@@ -61,9 +62,7 @@ public class EventsManager : MonoBehaviour {
                     } else {
                         ShowNumberCounter(Time.deltaTime);
                     }
-                }
-                else if (eventPlatform == null)
-                {
+                } else if (eventPlatform == null) {
                     StartSelectEvent();
                 }
             } else {
@@ -87,6 +86,8 @@ public class EventsManager : MonoBehaviour {
     }
 
     private void StartSelectEvent() {
+        screen.HideAll();
+        foreach (PieceRuleteScript piece in listPieces) piece.UnSelectPiece();
         inSelection = true;
         indexIncrement = Random.Range(10, 40);
         if (Random.Range(0, 10) > 5) PresenterSound.PresenterTalks(SoundManager.SoundEvent.PRESENTADOR_6);
@@ -108,13 +109,11 @@ public class EventsManager : MonoBehaviour {
         inSelection = false;
         wait = false; 
         listPieces[indexEvent].UnSelectPiece();
-        foreach (PieceRuleteScript piece in listPieces)
-        {
-            piece.SelectPiece();
-        }
+        foreach (PieceRuleteScript piece in listPieces) piece.SelectPiece();
         if (test) indexEvent = indexTest;
         eventPlatform = listEvents[indexEvent];
         eventPlatform.Init();
+        screen.SetEvent(indexEvent);
         LevelManager.GetInstance().SetEventState(true);
         SoundManager.GetInstance().PlaySound(SoundManager.SoundEvent.RULETA_3);
     }
