@@ -5,7 +5,7 @@ using UnityEngine;
 public class HotPointEvent : MonoBehaviour
 {
     private float currentTime = 0;
-    private float timeToPoint = 1;
+    private float timeToPoint = 0.45f;
     private List<PlayerData> playersData = new List<PlayerData>();
     // Start is called before the first frame update
     void Start()
