@@ -20,10 +20,14 @@ public class ToxicityScript : MonoBehaviour
             if (gameObject.transform.localScale.x < maxX)
                 gameObject.transform.localScale += scaleVector;
             if (gameObject.transform.localScale.x > maxX)
-                gameObject.transform.localScale = new Vector3(maxX,maxX, maxX);
+            {
+                gameObject.transform.localScale = new Vector3(maxX, maxX, maxX);
+                particles.Stop();
+            }
         }
 
         if(exit) {
+            particles.Stop();
             gameObject.transform.localScale -= scaleVector;
             if (gameObject.transform.localScale.x <= 5)
                 Desactive();
