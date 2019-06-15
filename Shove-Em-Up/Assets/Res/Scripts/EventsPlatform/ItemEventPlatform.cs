@@ -61,6 +61,7 @@ public class ItemEventPlatform : EventPlatformScript
 
     private float Action2()
     {
+        HotPoint.GetComponent<HotPointEvent>().ResetListPlayers();
         HotPoint.SetActive(true);
         return 0;
     }
