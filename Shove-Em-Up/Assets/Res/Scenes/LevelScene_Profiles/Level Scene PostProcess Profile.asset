@@ -1459,7 +1459,7 @@ MonoBehaviour:
     overrideState: 1
     value: 0.73
   quality:
-    overrideState: 0
+    overrideState: 1
     value: 2
 --- !u!114 &114506192520065180
 MonoBehaviour:
