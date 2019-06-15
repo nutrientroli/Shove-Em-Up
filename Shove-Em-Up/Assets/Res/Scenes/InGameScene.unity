@@ -14,7 +14,7 @@ OcclusionCullingSettings:
 RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 9
-  m_Fog: 1
+  m_Fog: 0
   m_FogColor: {r: 0.066037714, g: 0.066037714, b: 0.066037714, a: 1}
   m_FogMode: 3
   m_FogDensity: 0.005
@@ -51,7 +51,7 @@ LightmapSettings:
     m_IndirectOutputScale: 1
     m_AlbedoBoost: 1
     m_EnvironmentLightingMode: 0
-    m_EnableBakedLightmaps: 0
+    m_EnableBakedLightmaps: 1
     m_EnableRealtimeLightmaps: 1
   m_LightmapEditorSettings:
     serializedVersion: 10
@@ -293,7 +293,7 @@ Light:
   serializedVersion: 8
   m_Type: 3
   m_Color: {r: 0.55724543, g: 0.51998043, b: 0.8962264, a: 1}
-  m_Intensity: 7
+  m_Intensity: 3
   m_Range: 10
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -3970,6 +3970,52 @@ MonoBehaviour:
     type: 3}
   storePointLightCookieMapShader: {fileID: 4800000, guid: 83815c326d7f2514884f3fc7a05b5aef,
     type: 3}
+--- !u!1 &436210931 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7124236185073646794, guid: de8d4a154abda2841b50e5ec701e2a8c,
+    type: 3}
+  m_PrefabInstance: {fileID: 1150648530}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &436210933
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 436210931}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f01d29d88278f45458d99e6b5199e920, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  strength: 0.06
+  overrideColor: 0
+  overridingColor: {r: 0.9999, g: 0.9999, b: 0.9999, a: 1}
+  useShadow: 1
+  shadowMapRenderTexture: {fileID: 964229748}
+  useCookie: 1
+  cookieMapRenderTexture: {fileID: 0}
+  enableOutOfPhaseColor: 0
+  outOfPhaseColorStrength: 0.1
+  outOfPhaseColor: {r: 0, g: 1, b: 1, a: 1}
+  storeShadowDataShader: {fileID: 4800000, guid: fff19db2423616b4dbabe995cd97279e,
+    type: 3}
+  shadowDataRenderTexture: {fileID: 0}
+  customDistanceFalloffThreshold: 0.5
+  customDistanceFalloffPower: 2
+  storeDirectionalSpotLightCookieMapShader: {fileID: 4800000, guid: ffdac5434c39f7545b910c253007c8fc,
+    type: 3}
+  customCookieDistanceFalloffStartThreshold: 0.1
+  customCookieDistanceFalloffEndThreshold: 0.25
+  customCookieDistanceFalloffPower: 2
+  customAngularFalloffThreshold: 0.8
+  customAngularFalloffPower: 2
+  storePointLightShadowMapShader: {fileID: 4800000, guid: f1531a9bd4087ff468de8de09f6ba126,
+    type: 3}
+  storePointLightShadowMapMesh: {fileID: 4300000, guid: d68bec3f4c08e40468fad98606344ea6,
+    type: 3}
+  storePointLightCookieMapShader: {fileID: 4800000, guid: 83815c326d7f2514884f3fc7a05b5aef,
+    type: 3}
 --- !u!4 &448581142 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 3dec3dd8ab0e3e64eb850bb40962bc9f,
@@ -7587,7 +7633,7 @@ Light:
   serializedVersion: 8
   m_Type: 3
   m_Color: {r: 0.55724543, g: 0.51998043, b: 0.8962264, a: 1}
-  m_Intensity: 7
+  m_Intensity: 3
   m_Range: 10
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -8051,7 +8097,7 @@ Light:
   serializedVersion: 8
   m_Type: 3
   m_Color: {r: 0.55724543, g: 0.51998043, b: 0.8962264, a: 1}
-  m_Intensity: 7
+  m_Intensity: 3
   m_Range: 10
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -8342,6 +8388,38 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1820674854089557843}
   m_PrefabAsset: {fileID: 0}
+--- !u!84 &964229748
+RenderTexture:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_ImageContentsHash:
+    serializedVersion: 2
+    Hash: 00000000000000000000000000000000
+  m_ForcedFallbackFormat: 4
+  m_DownscaleFallback: 0
+  m_Width: 256
+  m_Height: 256
+  m_AntiAliasing: 1
+  m_DepthFormat: 0
+  m_ColorFormat: 11
+  m_MipMap: 0
+  m_GenerateMips: 1
+  m_SRGB: 0
+  m_UseDynamicScale: 0
+  m_BindMS: 0
+  m_TextureSettings:
+    serializedVersion: 2
+    m_FilterMode: 1
+    m_Aniso: 1
+    m_MipBias: 0
+    m_WrapU: 1
+    m_WrapV: 1
+    m_WrapW: 1
+  m_Dimension: 2
+  m_VolumeDepth: 1
 --- !u!1001 &979311010
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11075,6 +11153,52 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1150648530}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1173469715 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7124236185073646794, guid: de8d4a154abda2841b50e5ec701e2a8c,
+    type: 3}
+  m_PrefabInstance: {fileID: 473093506}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1173469717
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1173469715}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f01d29d88278f45458d99e6b5199e920, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  strength: 0.1
+  overrideColor: 0
+  overridingColor: {r: 0.9999, g: 0.9999, b: 0.9999, a: 1}
+  useShadow: 1
+  shadowMapRenderTexture: {fileID: 0}
+  useCookie: 1
+  cookieMapRenderTexture: {fileID: 0}
+  enableOutOfPhaseColor: 0
+  outOfPhaseColorStrength: 0.1
+  outOfPhaseColor: {r: 0, g: 1, b: 1, a: 1}
+  storeShadowDataShader: {fileID: 4800000, guid: fff19db2423616b4dbabe995cd97279e,
+    type: 3}
+  shadowDataRenderTexture: {fileID: 0}
+  customDistanceFalloffThreshold: 0.5
+  customDistanceFalloffPower: 2
+  storeDirectionalSpotLightCookieMapShader: {fileID: 4800000, guid: ffdac5434c39f7545b910c253007c8fc,
+    type: 3}
+  customCookieDistanceFalloffStartThreshold: 0.1
+  customCookieDistanceFalloffEndThreshold: 0.25
+  customCookieDistanceFalloffPower: 2
+  customAngularFalloffThreshold: 0.8
+  customAngularFalloffPower: 2
+  storePointLightShadowMapShader: {fileID: 4800000, guid: f1531a9bd4087ff468de8de09f6ba126,
+    type: 3}
+  storePointLightShadowMapMesh: {fileID: 4300000, guid: d68bec3f4c08e40468fad98606344ea6,
+    type: 3}
+  storePointLightCookieMapShader: {fileID: 4800000, guid: 83815c326d7f2514884f3fc7a05b5aef,
+    type: 3}
 --- !u!1001 &1175499921
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12191,17 +12315,17 @@ PrefabInstance:
     - target: {fileID: 8639963176595555702, guid: 095f0eb823303c04984bc97b90ac41c8,
         type: 3}
       propertyPath: m_Color.r
-      value: 0.83137256
+      value: 0.058823533
       objectReference: {fileID: 0}
     - target: {fileID: 8639963176595555702, guid: 095f0eb823303c04984bc97b90ac41c8,
         type: 3}
       propertyPath: m_Color.g
-      value: 0.7217524
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8639963176595555702, guid: 095f0eb823303c04984bc97b90ac41c8,
         type: 3}
       propertyPath: m_Color.b
-      value: 0.4509804
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8639963176595555702, guid: 095f0eb823303c04984bc97b90ac41c8,
         type: 3}
@@ -12317,7 +12441,7 @@ Light:
   serializedVersion: 8
   m_Type: 3
   m_Color: {r: 0.55724543, g: 0.51998043, b: 0.8962264, a: 1}
-  m_Intensity: 7
+  m_Intensity: 3
   m_Range: 10
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -12787,10 +12911,10 @@ GameObject:
   - component: {fileID: 1283235539}
   - component: {fileID: 1283235538}
   - component: {fileID: 1283235537}
+  - component: {fileID: 1283235532}
   - component: {fileID: 1283235535}
   - component: {fileID: 1283235534}
   - component: {fileID: 1283235533}
-  - component: {fileID: 1283235532}
   - component: {fileID: 1283235536}
   - component: {fileID: 1283235540}
   - component: {fileID: 1283235541}
@@ -12808,7 +12932,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1283235531}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cdcd06815c47d30489f70df42db56a48, type: 3}
   m_Name: 
@@ -12831,10 +12955,10 @@ MonoBehaviour:
       temporalReprojectionFactor: 0.9
       resolution: {x: 160, y: 88, z: 128}
       farClipPlaneDistance: 50
-      density: 0.1
-      anisotropy: 0.712
-      color: {r: 0.25, g: 0.25, b: 0.25, a: 1}
-      colorStrength: 0
+      density: 0
+      anisotropy: 0.558
+      color: {r: 0.24542518, g: 0.24433284, b: 0.25, a: 1}
+      colorStrength: 0.09
     _computeMaximumDepthComputeShader: {fileID: 7200000, guid: a5d52c8a306e8b746ab60b306575aa3e,
       type: 3}
     _processOcclusionMapShader: {fileID: 4800000, guid: b9b5b0990ea6cfa4d96c89a9c1cec3e9,
@@ -13560,7 +13684,7 @@ Light:
   serializedVersion: 8
   m_Type: 3
   m_Color: {r: 0.55724543, g: 0.51998043, b: 0.8962264, a: 1}
-  m_Intensity: 7
+  m_Intensity: 3
   m_Range: 10
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -13617,6 +13741,52 @@ Transform:
   m_Father: {fileID: 2127950119}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1373159496 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7124236185073646794, guid: de8d4a154abda2841b50e5ec701e2a8c,
+    type: 3}
+  m_PrefabInstance: {fileID: 1875465418}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1373159498
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1373159496}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f01d29d88278f45458d99e6b5199e920, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  strength: 0.06
+  overrideColor: 0
+  overridingColor: {r: 0.9999, g: 0.9999, b: 0.9999, a: 1}
+  useShadow: 1
+  shadowMapRenderTexture: {fileID: 1832945337}
+  useCookie: 1
+  cookieMapRenderTexture: {fileID: 0}
+  enableOutOfPhaseColor: 0
+  outOfPhaseColorStrength: 0.1
+  outOfPhaseColor: {r: 0, g: 1, b: 1, a: 1}
+  storeShadowDataShader: {fileID: 4800000, guid: fff19db2423616b4dbabe995cd97279e,
+    type: 3}
+  shadowDataRenderTexture: {fileID: 0}
+  customDistanceFalloffThreshold: 0.5
+  customDistanceFalloffPower: 2
+  storeDirectionalSpotLightCookieMapShader: {fileID: 4800000, guid: ffdac5434c39f7545b910c253007c8fc,
+    type: 3}
+  customCookieDistanceFalloffStartThreshold: 0.1
+  customCookieDistanceFalloffEndThreshold: 0.25
+  customCookieDistanceFalloffPower: 2
+  customAngularFalloffThreshold: 0.8
+  customAngularFalloffPower: 2
+  storePointLightShadowMapShader: {fileID: 4800000, guid: f1531a9bd4087ff468de8de09f6ba126,
+    type: 3}
+  storePointLightShadowMapMesh: {fileID: 4300000, guid: d68bec3f4c08e40468fad98606344ea6,
+    type: 3}
+  storePointLightCookieMapShader: {fileID: 4800000, guid: 83815c326d7f2514884f3fc7a05b5aef,
+    type: 3}
 --- !u!1001 &1385768861
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13958,7 +14128,7 @@ Light:
   serializedVersion: 8
   m_Type: 3
   m_Color: {r: 0.55724543, g: 0.51998043, b: 0.8962264, a: 1}
-  m_Intensity: 7
+  m_Intensity: 3
   m_Range: 10
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -14794,7 +14964,7 @@ Light:
   serializedVersion: 8
   m_Type: 3
   m_Color: {r: 0.55724543, g: 0.51998043, b: 0.8962264, a: 1}
-  m_Intensity: 7
+  m_Intensity: 3
   m_Range: 10
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -16138,17 +16308,17 @@ PrefabInstance:
     - target: {fileID: 8639963176595555702, guid: 095f0eb823303c04984bc97b90ac41c8,
         type: 3}
       propertyPath: m_Color.r
-      value: 0.83137256
+      value: 0.058823533
       objectReference: {fileID: 0}
     - target: {fileID: 8639963176595555702, guid: 095f0eb823303c04984bc97b90ac41c8,
         type: 3}
       propertyPath: m_Color.g
-      value: 0.7217524
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8639963176595555702, guid: 095f0eb823303c04984bc97b90ac41c8,
         type: 3}
       propertyPath: m_Color.b
-      value: 0.4509804
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8639963176595555702, guid: 095f0eb823303c04984bc97b90ac41c8,
         type: 3}
@@ -16209,6 +16379,52 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1708633113}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1712319981 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7124236185073646794, guid: de8d4a154abda2841b50e5ec701e2a8c,
+    type: 3}
+  m_PrefabInstance: {fileID: 150815883}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1712319983
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1712319981}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f01d29d88278f45458d99e6b5199e920, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  strength: 0.1
+  overrideColor: 0
+  overridingColor: {r: 0.9999, g: 0.9999, b: 0.9999, a: 1}
+  useShadow: 1
+  shadowMapRenderTexture: {fileID: 0}
+  useCookie: 1
+  cookieMapRenderTexture: {fileID: 0}
+  enableOutOfPhaseColor: 0
+  outOfPhaseColorStrength: 0.1
+  outOfPhaseColor: {r: 0, g: 1, b: 1, a: 1}
+  storeShadowDataShader: {fileID: 4800000, guid: fff19db2423616b4dbabe995cd97279e,
+    type: 3}
+  shadowDataRenderTexture: {fileID: 0}
+  customDistanceFalloffThreshold: 0.5
+  customDistanceFalloffPower: 2
+  storeDirectionalSpotLightCookieMapShader: {fileID: 4800000, guid: ffdac5434c39f7545b910c253007c8fc,
+    type: 3}
+  customCookieDistanceFalloffStartThreshold: 0.1
+  customCookieDistanceFalloffEndThreshold: 0.25
+  customCookieDistanceFalloffPower: 2
+  customAngularFalloffThreshold: 0.8
+  customAngularFalloffPower: 2
+  storePointLightShadowMapShader: {fileID: 4800000, guid: f1531a9bd4087ff468de8de09f6ba126,
+    type: 3}
+  storePointLightShadowMapMesh: {fileID: 4300000, guid: d68bec3f4c08e40468fad98606344ea6,
+    type: 3}
+  storePointLightCookieMapShader: {fileID: 4800000, guid: 83815c326d7f2514884f3fc7a05b5aef,
+    type: 3}
 --- !u!1001 &1712674494
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -41383,6 +41599,52 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 293544317}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1757860367 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7124236185073646794, guid: de8d4a154abda2841b50e5ec701e2a8c,
+    type: 3}
+  m_PrefabInstance: {fileID: 1786597594}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1757860369
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1757860367}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f01d29d88278f45458d99e6b5199e920, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  strength: 0.1
+  overrideColor: 0
+  overridingColor: {r: 0.9999, g: 0.9999, b: 0.9999, a: 1}
+  useShadow: 1
+  shadowMapRenderTexture: {fileID: 0}
+  useCookie: 1
+  cookieMapRenderTexture: {fileID: 0}
+  enableOutOfPhaseColor: 0
+  outOfPhaseColorStrength: 0.1
+  outOfPhaseColor: {r: 0, g: 1, b: 1, a: 1}
+  storeShadowDataShader: {fileID: 4800000, guid: fff19db2423616b4dbabe995cd97279e,
+    type: 3}
+  shadowDataRenderTexture: {fileID: 0}
+  customDistanceFalloffThreshold: 0.5
+  customDistanceFalloffPower: 2
+  storeDirectionalSpotLightCookieMapShader: {fileID: 4800000, guid: ffdac5434c39f7545b910c253007c8fc,
+    type: 3}
+  customCookieDistanceFalloffStartThreshold: 0.1
+  customCookieDistanceFalloffEndThreshold: 0.25
+  customCookieDistanceFalloffPower: 2
+  customAngularFalloffThreshold: 0.8
+  customAngularFalloffPower: 2
+  storePointLightShadowMapShader: {fileID: 4800000, guid: f1531a9bd4087ff468de8de09f6ba126,
+    type: 3}
+  storePointLightShadowMapMesh: {fileID: 4300000, guid: d68bec3f4c08e40468fad98606344ea6,
+    type: 3}
+  storePointLightCookieMapShader: {fileID: 4800000, guid: 83815c326d7f2514884f3fc7a05b5aef,
+    type: 3}
 --- !u!1 &1765142482
 GameObject:
   m_ObjectHideFlags: 0
@@ -42533,6 +42795,38 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1823148688}
   m_PrefabAsset: {fileID: 0}
+--- !u!84 &1832945337
+RenderTexture:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_ImageContentsHash:
+    serializedVersion: 2
+    Hash: 00000000000000000000000000000000
+  m_ForcedFallbackFormat: 4
+  m_DownscaleFallback: 0
+  m_Width: 256
+  m_Height: 256
+  m_AntiAliasing: 1
+  m_DepthFormat: 0
+  m_ColorFormat: 11
+  m_MipMap: 0
+  m_GenerateMips: 1
+  m_SRGB: 0
+  m_UseDynamicScale: 0
+  m_BindMS: 0
+  m_TextureSettings:
+    serializedVersion: 2
+    m_FilterMode: 1
+    m_Aniso: 1
+    m_MipBias: 0
+    m_WrapU: 1
+    m_WrapV: 1
+    m_WrapW: 1
+  m_Dimension: 2
+  m_VolumeDepth: 1
 --- !u!1 &1839692223 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1735881159476684276, guid: 260c0221ed5491f4aa3833b610c6ba00,
@@ -43569,7 +43863,7 @@ Light:
   serializedVersion: 8
   m_Type: 3
   m_Color: {r: 0.55724543, g: 0.51998043, b: 0.8962264, a: 1}
-  m_Intensity: 7
+  m_Intensity: 3
   m_Range: 10
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -43899,7 +44193,7 @@ Light:
   serializedVersion: 8
   m_Type: 3
   m_Color: {r: 0.55724543, g: 0.51998043, b: 0.8962264, a: 1}
-  m_Intensity: 7
+  m_Intensity: 3
   m_Range: 10
   m_SpotAngle: 30
   m_CookieSize: 10
