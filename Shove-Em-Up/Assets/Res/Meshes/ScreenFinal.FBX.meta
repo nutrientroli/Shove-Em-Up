@@ -4,17 +4,34 @@ ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
+    100002: Pantalla
+    100004: Pantalla.001
     400000: //RootNode
+    400002: Pantalla
+    400004: Pantalla.001
     2100000: 09 - Default
     2100002: 'Material #303'
     2100004: 'Material #307'
     2100006: 'Material #306'
     2100008: 'Material #308'
     2100010: 'Material #305'
+    2100012: 'Material #303.002'
+    2100014: 'Material #307.002'
+    2100016: 'Material #306.002'
+    2100018: 'Material #308.002'
+    2100020: 'Material #305.002'
+    2100022: 09 - Default.002
     2300000: //RootNode
+    2300002: Pantalla
+    2300004: Pantalla.001
     3300000: //RootNode
+    3300002: Pantalla
+    3300004: Pantalla.001
     4300000: Pantalla
+    4300002: Pantalla.001
     7400000: Take 001
+    7400002: Pantalla|Pantalla|Take 001|BaseLayer
+    7400004: Pantalla.001|Pantalla|Take 001|BaseLayer
     9500000: //RootNode
   externalObjects:
   - first:
@@ -25,8 +42,18 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: 09 - Default.002
+    second: {fileID: 2100000, guid: 8180b2addf618b843907bdbc3fda67e5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: 'Material #303'
     second: {fileID: 2100000, guid: 5d3dc93bf779baf438e73158449926cc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 'Material #303.002'
+    second: {fileID: 2100000, guid: ac33e64626d2ff84381e659afe2a3c69, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -35,13 +62,33 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: 'Material #305.002'
+    second: {fileID: 2100000, guid: 303cd8eb000a0094c9743bf291f38c55, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: 'Material #306'
     second: {fileID: 2100000, guid: 0ddcf31e2f531c24cafb867ce95ef9e7, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: 'Material #306.002'
+    second: {fileID: 2100000, guid: d665d4a1bf3473949b52ebdba33b3579, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 'Material #307.002'
+    second: {fileID: 2100000, guid: fd393dc827d77b14eaec352e48aa6920, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: 'Material #308'
     second: {fileID: 2100000, guid: 14493e7ede7dae243b1f026317e83991, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 'Material #308.002'
+    second: {fileID: 2100000, guid: 6d437f06de2da93448f90648835df1f1, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
@@ -72,7 +119,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 170
+    globalScale: 1
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
@@ -92,8 +139,8 @@ ModelImporter:
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
-    useFileScale: 1
-    previousCalculatedGlobalScale: 4.572
+    useFileScale: 0
+    previousCalculatedGlobalScale: 0.95
     hasPreviousCalculatedGlobalScale: 1
   tangentSpace:
     normalSmoothAngle: 60

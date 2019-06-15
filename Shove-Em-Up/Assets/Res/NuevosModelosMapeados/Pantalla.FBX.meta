@@ -11,6 +11,12 @@ ModelImporter:
     2100006: 'Material #306'
     2100008: 'Material #308'
     2100010: 'Material #305'
+    2100012: checker
+    2100014: 'Material #303.001'
+    2100016: 'Material #307.001'
+    2100018: 'Material #306.001'
+    2100020: 'Material #308.001'
+    2100022: 'Material #305.001'
     2300000: //RootNode
     3300000: //RootNode
     4300000: Box001
