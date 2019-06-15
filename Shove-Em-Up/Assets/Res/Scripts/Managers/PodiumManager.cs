@@ -1,97 +1,58 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class PodiumManager : MonoBehaviour
 {
-    private List<PlayerData> playersData = new List<PlayerData>();
     public List<GameObject> playersPref;
     private List<GameObject> ourPlayers = new List<GameObject>();
     public List<Transform> positions;
-    // Start is called before the first frame update
-    void Start()
-    {
+    private List<float> scores = new List<float>();
+    private List<int> players = new List<int>();
+    public List<Color> colors = new List<Color>();
 
-    }
+    public void OrderPlayers() {
+        int maxPLayers = PlayersManager.GetInstance().GetNumberOfPlayers();
+        List<float> playersScores = new List<float>();
+        for (int i=0; i< maxPLayers; i++) playersScores.Add(ScoreManager.GetInstance().GetPoints(i + 1) + (0.01f * i));
+        scores = playersScores.ToList<float>();
+        scores.Sort();
+        scores.Reverse();
+        for(int i = 0; i < scores.Count; i++) {
+            for (int j = 0; j < playersScores.Count; j++) {
+                if (scores[i] == playersScores[j]) {
+                    players.Add(j + 1);
 
-    public void OrderPlayers()
-    {
-        GameObject[] _players = GameObject.FindGameObjectsWithTag("Player");
-        for (int i = 0; i < _players.Length; i++)
-        {
-            playersData.Add(_players[i].GetComponent<PlayerData>());
-        }
-
-        bool done = false;
-        int maxNum = -100;
-        List<PlayerData> _playersPD = new List<PlayerData>();
-        PlayerData _player = new PlayerData();
-        int iterations = 0;
-        while(!done && iterations <= 100)
-        {
-            iterations++;
-            for (int i = 0; i < playersData.Count; i++)
-            {
-                for (int j = 0; j < _playersPD.Count; j++)
-                {
-                    if (maxNum < playersData[i].GetScore() && playersData[i].GetPlayer() != _playersPD[j].GetPlayer())
-                    {
-                        _player = playersData[i];
-                        maxNum = playersData[i].GetScore();
-                    }
                 }
             }
-            _playersPD.Add(_player);
-            maxNum = -100;
-            if (_playersPD.Count == playersData.Count)
-                done = true;
         }
-        for (int i = 0; i < _playersPD.Count; i++)
-            playersData[i] = _playersPD[i];
-
         CreatePlayers();
-        ColorPlayer();
     }
 
-    private void CreatePlayers()
-    {
-        for(int i = 0; i < playersData.Count; i++)
-        {
+    private void CreatePlayers() {
+        for(int i = 0; i < players.Count; i++) {
             int character = 0;
-            print(playersData[i].GetPlayer());
-            /*print(PlayersManager.GetInstance().GetTableOfSelectPlayers(playersData[i].GetPlayer()).name);
-            switch(PlayersManager.GetInstance().GetTableOfSelectPlayers(playersData[i].GetPlayer()).name)
-            {
-                case "Gallina":
-                    character = 0;
-                    break;
-                case "Abeja":
-                    character = 3;
-                    break;
-                case "Toro":
-                    character = 1;
-                    break;
-                case "Mono":
-                    character = 2;
-                    break;
+            switch(PlayersManager.GetInstance().GetTableOfSelectPlayers((players[i])).name) {
+                case "Gallina": character = 0; break;
+                case "Abeja": character = 3; break;
+                case "Toro": character = 1; break;
+                case "Mono": character = 2; break;
+                default: character = 0; break;
             }
+             
             ourPlayers.Add(Instantiate(playersPref[character], positions[i].position, playersPref[character].transform.rotation));
-        */
-    }
+            ColorPlayer(players[i], ourPlayers[ourPlayers.Count - 1]);
+        }
     }
 
-    private void ColorPlayer()
-    {
-        for(int i = 0; i < ourPlayers.Count; i++)
-        {
-            ourPlayers[i].GetComponentInChildren<Renderer>().material.color = PlayersManager.GetInstance().GetTableOfSelectPlayers(playersData[i].GetPlayer()).material.color;
-        }
+    private void ColorPlayer(int _player, GameObject obj) {
+        obj.GetComponentInChildren<Renderer>().material.color = colors[_player-1];
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        if (Input.GetMouseButtonDown(0))
-            OrderPlayers();
+    void Update() {
+        if (Input.GetMouseButtonDown(0)) OrderPlayers();
     }
 }
