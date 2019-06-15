@@ -41689,7 +41689,7 @@ MonoBehaviour:
   - {fileID: 4796688763117138864, guid: d8e204fed254f8c46a2adbea58d9fe03, type: 3}
   - {fileID: 791140442673671975, guid: 6d529bc0f75da1d46a9c6cb8e7ed966c, type: 3}
   - {fileID: 3910046780167907123, guid: 98756b5f5b449cf47a698a4228ed8436, type: 3}
-  eventsToFinnish: 1
+  eventsToFinnish: 10
   initPosToRespawn: {fileID: 386235139}
 --- !u!4 &1765142484
 Transform:
@@ -41774,7 +41774,7 @@ MonoBehaviour:
   indexEvent: 2
   indexIncrement: 0
   counter: {fileID: 107958505}
-  test: 1
+  test: 0
   indexTest: 0
   screen: {fileID: 798741481}
 --- !u!114 &1765142487
@@ -48454,6 +48454,18 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: -9.55
+      objectReference: {fileID: 0}
+    - target: {fileID: 1062247884, guid: 73efd4373b952664aa64e915152c3baf, type: 3}
+      propertyPath: m_Size.y
+      value: 8.038269
+      objectReference: {fileID: 0}
+    - target: {fileID: 1062247884, guid: 73efd4373b952664aa64e915152c3baf, type: 3}
+      propertyPath: m_Size.z
+      value: 0.9999995
+      objectReference: {fileID: 0}
+    - target: {fileID: 1062247884, guid: 73efd4373b952664aa64e915152c3baf, type: 3}
+      propertyPath: m_Center.y
+      value: -8.543191
       objectReference: {fileID: 0}
     - target: {fileID: 1820674854354200665, guid: 73efd4373b952664aa64e915152c3baf,
         type: 3}

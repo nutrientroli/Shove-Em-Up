@@ -21,6 +21,7 @@ public class PlayerSelectionIntegratedScript : MonoBehaviour
     [SerializeField] private Light focus;
     private float currentTime = 0;
     private float waitTime = 0.5f;
+    private float speedNoSelect = 0;
 
     private float currentSoundTime = 0;
     [SerializeField] private float maxSoundTime = 2;
@@ -29,6 +30,7 @@ public class PlayerSelectionIntegratedScript : MonoBehaviour
 
     #region MonoBehaviour Methods
     private void Start() {
+        speedNoSelect = Random.Range(0.25f, 0.55f);
         Show();
         InputManager.GetInstance().AddPlayer(player);
     }
@@ -87,6 +89,7 @@ public class PlayerSelectionIntegratedScript : MonoBehaviour
         obj.transform.SetPositionAndRotation(defaultTransform.position, defaultTransform.rotation);
         obj.GetComponentInChildren<Renderer>().material = listData[defaultData].material;
         obj.GetComponentInChildren<Renderer>().material.color = listColor[player - 1];
+        obj.GetComponent<SelectionScript>().SpeedAnimation(speedNoSelect);
         focus = obj.GetComponent<PlayerHelperSelectionScript>().focus;
         SetLight();
     }
@@ -109,9 +112,17 @@ public class PlayerSelectionIntegratedScript : MonoBehaviour
 
     private void Back() {
         if (!activeMenu) {
-            if (readyPlayer) readyPlayer = false;
-            else if (activePlayer) activePlayer = false;
-            else  transform.parent.parent.gameObject.GetComponent<Animation>().Play("SelectionToMenu");
+            if (readyPlayer)
+            {
+                obj.GetComponent<SelectionScript>().SpeedAnimation(speedNoSelect);
+                readyPlayer = false;
+            }
+            else if (activePlayer)
+            {
+                obj.GetComponent<SelectionScript>().SpeedAnimation(speedNoSelect);
+                activePlayer = false;
+            }
+            else transform.parent.parent.gameObject.GetComponent<Animation>().Play("SelectionToMenu");
             UpdateStates();
             SoundManager.GetInstance().PlaySound(SoundManager.SoundEvent.MENU_CHANGE_CHARACTER);
         }
@@ -125,6 +136,8 @@ public class PlayerSelectionIntegratedScript : MonoBehaviour
     }
 
     private void Ready() {
+        obj.GetComponent<SelectionScript>().SetReady();
+        obj.GetComponent<SelectionScript>().SpeedAnimation(1f);
         readyPlayer = true;
         readyPlayer = true;
         PlaySound();

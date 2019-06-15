@@ -43,6 +43,7 @@ public class CheckAllReadyScript : MonoBehaviour
     }
 
     private void AllReady() {
+        PublicoManager.GetInstance().Reset();
         allready = true;
         currentTime = timeToStart;
         counter.gameObject.SetActive(true);

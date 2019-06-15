@@ -27,4 +27,9 @@ public class PublicoManager
             sp.ChangeAnimation();
         
     }
+
+    public void Reset()
+    {
+        spectators.Clear();
+    }
 }

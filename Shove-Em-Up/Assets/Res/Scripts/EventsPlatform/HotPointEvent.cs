@@ -60,5 +60,10 @@ public class HotPointEvent : MonoBehaviour
         }
     }
 
+    public void ResetListPlayers()
+    {
+        playersData.Clear();
+    }
+
 
 }

@@ -24,6 +24,7 @@ public class EventsManager : MonoBehaviour {
     [SerializeField] private int indexTest = 0;
 
     [SerializeField] private ScreenCanvasScript screen;
+    private List<EventPlatformScript> listExecutedEvents = new List<EventPlatformScript>();
 
     private void Start() {
         listPieces[indexEvent].UnSelectPiece();
@@ -93,7 +94,9 @@ public class EventsManager : MonoBehaviour {
         screen.HideAll();
         foreach (PieceRuleteScript piece in listPieces) piece.UnSelectPiece();
         inSelection = true;
-        indexIncrement = Random.Range(10, 40);
+        do {
+            indexIncrement = Random.Range(10, 40);
+        } while (!CheckEventNextEvent(indexIncrement, indexEvent));
         if (Random.Range(0, 10) > 5) PresenterSound.PresenterTalks(SoundManager.SoundEvent.PRESENTADOR_6);
         else PresenterSound.PresenterTalks(SoundManager.SoundEvent.PRESENTADOR_9);
         SoundManager.GetInstance().PlaySound(SoundManager.SoundEvent.RULETA_4);
@@ -116,6 +119,7 @@ public class EventsManager : MonoBehaviour {
         foreach (PieceRuleteScript piece in listPieces) piece.SelectPiece();
         if (test) indexEvent = indexTest;
         eventPlatform = listEvents[indexEvent];
+        listExecutedEvents.Add(listEvents[indexEvent]);
         eventPlatform.Init();
         screen.SetEvent(indexEvent);
         LevelManager.GetInstance().SetEventState(true);
@@ -147,6 +151,16 @@ public class EventsManager : MonoBehaviour {
         } else {
             counter.gameObject.SetActive(true);
         }
+    }
+
+    private bool CheckEventNextEvent(int _increment, int _index) {
+        while (_increment>0) {
+            _increment--;
+            _index++;
+            if (_index >= listEvents.Count) _index = 0;
+        }
+        if (listExecutedEvents.Count == listEvents.Count) listExecutedEvents.Clear();
+        return !(listExecutedEvents.Contains(listEvents[_index]));
     }
     
 }

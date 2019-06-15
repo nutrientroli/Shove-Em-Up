@@ -11,12 +11,9 @@ public class LightsControllerMenuScript : MonoBehaviour
     private void Update() {
         if(darkness && firstCall) {
             firstCall = false;
-            Debug.Log("Apagar luces");
             FadeOut();
-        }
-        else if(!darkness && !firstCall) {
+        } else if(!darkness && !firstCall) {
             firstCall = true;
-            Debug.Log("Encender luces");
             FadeIn();
         }
     }
