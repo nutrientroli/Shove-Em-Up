@@ -24,9 +24,7 @@ public class PublicoManager
     public void ChangeAnimations()
     {
         foreach(SpectatorScript sp in spectators)
-        {
-            if (Random.Range(0, 5) <= 1)
-                sp.ChangeAnimation();
-        }
+            sp.ChangeAnimation();
+        
     }
 }

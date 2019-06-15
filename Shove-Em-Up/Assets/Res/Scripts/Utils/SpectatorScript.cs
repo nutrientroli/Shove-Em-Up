@@ -5,11 +5,13 @@ using UnityEngine;
 public class SpectatorScript : MonoBehaviour
 {
     private float type = 0;
+    private float otherType = 0;
     
     public Animator anim;
 
     public List<Color> colors = new List<Color>();
     private int index = 0;
+    private bool ir = true;
 
     // Start is called before the first frame update
     void Start() {
@@ -23,8 +25,19 @@ public class SpectatorScript : MonoBehaviour
 
     public void ChangeAnimation()
     {
-        type = Random.Range(0.0f, 1.0f);
-        anim.SetFloat("Type", type);
+        anim.SetTrigger("Go");
+        if (ir)
+        {
+            otherType = Random.Range(0.0f, 1.0f);
+            anim.SetFloat("OtherType", otherType);
+            ir = false;
+        }
+        else
+        {
+            type = Random.Range(0.0f, 1.0f);
+            anim.SetFloat("Type", type);
+            ir = true;
+        }
         anim.speed = Random.Range(0.7f, 1.0f);
     }
 
