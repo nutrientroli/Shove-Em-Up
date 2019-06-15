@@ -15,7 +15,7 @@ public class ShieldHabilityScript : HabilityScript
     {
         shield = Instantiate(prefabShield);
         shield.GetComponent<ShieldScript>().me = gameObject.GetComponent<PlayerScript>();
-        shield.transform.position = transform.position;
+        shield.transform.position = transform.position + Vector3.up ;
         shield.SetActive(false);
     }
 
