@@ -31,7 +31,7 @@ public class CheckAllReadyScript : MonoBehaviour
             if (CheckReady()) AllReady();
         } else {
             if (!CheckReady()) StopReady();
-            UpdateCountDown(Time.deltaTime);
+            else UpdateCountDown(Time.deltaTime);
         }
     }
     #endregion
@@ -39,7 +39,8 @@ public class CheckAllReadyScript : MonoBehaviour
     #region CheckAllReady Methods
     private void StopReady() {
         allready = false;
-        counter.gameObject.SetActive(false);
+        //counter.gameObject.SetActive(false);
+        counter.text = "TODOS LISTOS?";
     }
 
     private void AllReady() {
