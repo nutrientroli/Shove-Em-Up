@@ -10,13 +10,15 @@ public class LightCollorChangerController : MonoBehaviour
     [SerializeField] private Color standardStateColor;
     [SerializeField] private Color triggerStateColor;
     private bool isOn = false;
-    private float maxTime = 2.0f;
+    private float maxTime = 1.0f;
     private float currentTime = 0;
+    private float intens = 0;
 
 
     private void Awake() {
         lightToManage = GetComponentInChildren<Light>();
         lightMaterial = GetComponentInChildren<Renderer>().material;
+        intens = lightToManage.intensity;
     }
 
     private void Update() {
@@ -36,12 +38,14 @@ public class LightCollorChangerController : MonoBehaviour
     }
 
     private void SetTriggerState() {
-        SetLightColor(triggerStateColor);
+        SetLightColor(triggerStateColor, true);
     }
 
-    private void SetLightColor(Color _colorToSet) {
+    private void SetLightColor(Color _colorToSet, bool intensified = false) {
         lightToManage.color = _colorToSet;
         lightMaterial.SetColor("_EmissionColor", _colorToSet);
+        if (intensified) lightToManage.intensity = intens * 6;
+        else lightToManage.intensity = intens;
     }
 
     public void DeadPlayer() {

@@ -12,6 +12,7 @@ public class PodiumManager : MonoBehaviour
     private List<float> scores = new List<float>();
     private List<int> players = new List<int>();
     public List<Color> colors = new List<Color>();
+    public bool check = false;
 
     public void OrderPlayers() {
         int maxPLayers = PlayersManager.GetInstance().GetNumberOfPlayers();
@@ -52,8 +53,13 @@ public class PodiumManager : MonoBehaviour
         obj.GetComponentInChildren<Renderer>().material.color = colors[_player-1];
     }
 
-    // Update is called once per frame
-    void Update() {
-        if (Input.GetMouseButtonDown(0)) OrderPlayers();
+    public void ActivePodium() {
+        OrderPlayers();
+        check = true;
     }
+
+    public bool IsActivePosium()
+    {
+        return check;
+    } 
 }

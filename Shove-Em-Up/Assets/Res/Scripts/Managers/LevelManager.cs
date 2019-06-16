@@ -14,9 +14,10 @@ public class LevelManager{
     public int currentEvent;
     public int events;
     public bool eventActive;
+    public bool finnishGame = false;
 
     public void FinnishGame() {
-        
+        finnishGame = true;
         currentEvent = 0;
     }
 
@@ -35,6 +36,7 @@ public class LevelManager{
 
     public void ResetGame(int _events) {
         events = _events;
+        finnishGame = false;
     }
 
 }

@@ -18,6 +18,9 @@ public class EventsManager : MonoBehaviour {
     private bool wait = false;
     private bool finnishgame = false;
     private float timeCounter = 0;
+    private float timeToPodium = 5;
+    public PodiumManager podium;
+    
 
     public Text counter;
     [SerializeField] private bool test = false;
@@ -72,6 +75,14 @@ public class EventsManager : MonoBehaviour {
                     StartSelectEvent();
                 }
             }
+        } else {
+            if (!podium.IsActivePosium()) {
+                currentTime += Time.deltaTime;
+                if (currentTime >= timeToPodium) {
+                    podium.ActivePodium();
+                    LevelManager.GetInstance().FinnishGame();
+                }
+            }
         }
     }
 
@@ -80,7 +91,10 @@ public class EventsManager : MonoBehaviour {
         eventPlatform = null;
         LevelManager.GetInstance().SetEventState(false);
         finnishgame = LevelManager.GetInstance().PassEvent();
-        if(finnishgame) screen.SetEndGame();
+        if (finnishgame) {
+            screen.SetEndGame();
+            currentTime = 0;
+        }
         PlayersManager.GetInstance().RespawnFinnishEvent();
     }
 

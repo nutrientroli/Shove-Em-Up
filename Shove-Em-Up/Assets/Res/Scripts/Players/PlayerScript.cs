@@ -83,6 +83,7 @@ public class PlayerScript : MonoBehaviour
 
     private void Update()
     {
+        if (LevelManager.GetInstance().finnishGame) gameObject.SetActive(false);
         //Modificadores Por habilidades
         CheckMods(Time.deltaTime);
         if (inverted && !particlesConfusion.isPlaying)
