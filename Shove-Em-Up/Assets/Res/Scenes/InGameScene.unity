@@ -42468,8 +42468,8 @@ MonoBehaviour:
   indexEvent: 2
   indexIncrement: 0
   counter: {fileID: 0}
-  test: 0
-  indexTest: 0
+  test: 1
+  indexTest: 3
   screen: {fileID: 798741481}
 --- !u!114 &1765142487
 MonoBehaviour:
@@ -44832,6 +44832,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_isInputParsingRequired
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1500651598747076194, guid: 66b6fcffe50d66e4984e6f0b6a7ec188,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 1272781985041707454, guid: 66b6fcffe50d66e4984e6f0b6a7ec188,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 1736692219819580692, guid: 66b6fcffe50d66e4984e6f0b6a7ec188,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 7422408659143469138, guid: 66b6fcffe50d66e4984e6f0b6a7ec188,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5139320471925240875, guid: 66b6fcffe50d66e4984e6f0b6a7ec188, type: 3}

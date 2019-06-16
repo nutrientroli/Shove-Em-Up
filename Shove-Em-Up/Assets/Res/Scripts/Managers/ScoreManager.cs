@@ -10,8 +10,7 @@ public class ScoreManager
     private ScoreManager() { }
     public static ScoreManager GetInstance()
     {
-        if (instance == null)
-        {
+        if (instance == null) {
             instance = new ScoreManager();
             instance.Init();
         }
@@ -22,19 +21,9 @@ public class ScoreManager
     private UIInGameScript canvasScore;
 
     public void Init() {
-        GameObject[] _players;
-        _players = GameObject.FindGameObjectsWithTag("Player");
-        if (_players != null && _players.Length>0) {
-            foreach (GameObject p in _players) {
-                if (p.GetComponent<PlayerData>() != null) players.Add(0);
-                Debug.Log("PLAYER ENCONTRADO");
-            }
-        } else {
-            //for(int i=0; i<4; i++) players.Add(0);
-            players.Add(5);
-            players.Add(20);
-            players.Add(50);
-            players.Add(17);
+        int _players = PlayersManager.GetInstance().GetNumberOfPlayers();
+        for(int i = 0; i<_players; i++) {
+            players.Add(0);
         }
     }
 
@@ -60,7 +49,6 @@ public class ScoreManager
     }
 
     public void SetCanvasScore(UIInGameScript _canvasScore) {
-        Debug.Log("SETEO CANVAS SCORE");
         canvasScore = _canvasScore;
     }
 }

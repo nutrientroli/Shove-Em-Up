@@ -97,15 +97,12 @@ public class MeteoritesEventPlatform : EventPlatformScript
                 int iteraciones = 0;
 
 
-                while (!valido)
-                {
+                while (!valido) {
                     iteraciones++;
                     vivo = true;
                     randomNum = Random.Range(0, players.Length);
-                    foreach (int j in PlayersManager.GetInstance().listOfPlayersToRespawnFinnishEvent)
-                    {
-                        if (players[randomNum].GetComponent<PlayerData>().GetPlayer() == j)
-                        {
+                    foreach (int j in PlayersManager.GetInstance().listOfPlayersToRespawnFinnishEvent) {
+                        if (players[randomNum].GetComponent<PlayerData>().GetPlayer() == j) {
                             vivo = false;
                         }
                         if (players.Length == PlayersManager.GetInstance().listOfPlayersToRespawnFinnishEvent.Count)
