@@ -137,8 +137,8 @@ public class EventsManager : MonoBehaviour {
     }
 
     public void ShowNumberCounter(float _dt) {
-        /*timeCounter += _dt;
-        if (counter.IsActive()) {
+        timeCounter += _dt;
+        if (counter != null && counter.IsActive()) {
             if (timeCounter < 1) counter.text = "3";
             else if (timeCounter >= 1 && timeCounter < 2) counter.text = "2";
             else if (timeCounter >= 2 && timeCounter < 3)  counter.text = "1";
@@ -149,8 +149,9 @@ public class EventsManager : MonoBehaviour {
                 counter.gameObject.SetActive(false);
             }
         } else {
-            counter.gameObject.SetActive(true);
-        }*/
+            if (counter != null) counter.gameObject.SetActive(true);
+        }
+        eventPlatform.counterIsShow = false;
     }
 
     private bool CheckEventNextEvent(int _increment, int _index) {
