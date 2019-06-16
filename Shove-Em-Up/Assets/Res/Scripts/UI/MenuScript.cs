@@ -4,12 +4,12 @@ public class MenuScript : MonoBehaviour {
 
     [SerializeField] private Animation anim;
     [SerializeField] private Transform trnsMusicSelection;
+    public FMOD.Studio.EventInstance audio1 = new FMOD.Studio.EventInstance();
+    public FMOD.Studio.EventInstance audio2 = new FMOD.Studio.EventInstance();
 
     private void Start() {
-        SoundManager.GetInstance().StopSound(SoundManager.SoundEvent.MUSIC_INGAME);
-        SoundManager.GetInstance().StopSound(SoundManager.SoundEvent.MUSIC_INIT);
-        SoundManager.GetInstance().PlaySound(SoundManager.SoundEvent.MUSIC_INGAME, Camera.main.transform, false, "", SoundManager.SoundEventType.SCRATT);
-        SoundManager.GetInstance().PlaySound(SoundManager.SoundEvent.MUSIC_INIT, trnsMusicSelection, false, "", SoundManager.SoundEventType.SCRATT);
+        audio1 = SoundManager.GetInstance().PlaySoundAndGetSound(SoundManager.SoundEvent.MUSIC_INGAME, Camera.main.transform);
+        audio2 = SoundManager.GetInstance().PlaySoundAndGetSound(SoundManager.SoundEvent.MUSIC_INIT, trnsMusicSelection);
         PresenterSound.PresenterTalks(SoundManager.SoundEvent.PRESENTADOR_11);
     }
 
@@ -34,5 +34,11 @@ public class MenuScript : MonoBehaviour {
     public void OnButtonReturnToMenuPress() {
         ScenesManager.ChangeScene(ScenesManager.SceneCode.MENU);
         SoundManager.GetInstance().PlaySound(SoundManager.SoundEvent.MENU_CHANGE_CHARACTER);
+    }
+
+    public void Exit()
+    {
+        audio1.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+        audio2.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
     }
 }

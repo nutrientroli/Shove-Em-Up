@@ -420,9 +420,11 @@ public class PlayerScript : MonoBehaviour
             killer.AddScore(3);
             killer = null;
             timeToKillMe = 0;
-        }
-        else
+        } else {
             AddScore(-1);
+            if (Random.Range(0, 10) > 5) PresenterSound.PresenterTalks(SoundManager.SoundEvent.PRESENTADOR_29);
+            else PresenterSound.PresenterTalks(SoundManager.SoundEvent.PRESENTADOR_30);
+        }
     }
 
     public void AddScore(int _score = 0)

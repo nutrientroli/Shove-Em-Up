@@ -22,6 +22,8 @@ public class FanScript : MonoBehaviour
     public Light light;
     public GameObject rotador;
     public AudioSource audio;
+    FMOD.Studio.EventInstance fmodAudio;
+    private bool firstTime = true;
 
     // Start is called before the first frame update
     void Start()
@@ -41,6 +43,10 @@ public class FanScript : MonoBehaviour
             
             if (air)
             {
+                if (firstTime) {
+                    firstTime = false;
+                    fmodAudio = SoundManager.GetInstance().PlaySoundAndGetSound(SoundManager.SoundEvent.EVENT_WIND_2);
+                }
                 currentTime += Time.deltaTime;
                 totalTime += Time.deltaTime;
                 gameObject.transform.Rotate(Vector3.up, rotationSpeed * Time.deltaTime * side);
@@ -62,7 +68,10 @@ public class FanScript : MonoBehaviour
                 }
 
                 if (totalTime >= timeToDisapear)
+                {
                     Hide();
+                    fmodAudio.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+                }
             }
             else
             {
@@ -120,11 +129,13 @@ public class FanScript : MonoBehaviour
         currentTime = 0;
         side = 1;
         totalTime = 0;
+        fmodAudio.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
     }
 
     public void Active()
     {
         inAction = true;
+        firstTime = true;
     }
 
 

@@ -13,6 +13,7 @@ public class CheckAllReadyScript : MonoBehaviour
     [SerializeField] private string textCounter;
     [SerializeField] private float timeToStart = 3;
     private float currentTime;
+    public MenuScript menu;
     #endregion
 
     #region MonoBehaviour Methods
@@ -55,9 +56,11 @@ public class CheckAllReadyScript : MonoBehaviour
     private void UpdateCountDown(float _time) {
         currentTime -= _time;
         counter.text = textCounter + currentTime.ToString("0");
-        SoundManager.GetInstance().StopSound(SoundManager.SoundEvent.MUSIC_INGAME);
-        SoundManager.GetInstance().StopSound(SoundManager.SoundEvent.MUSIC_INIT);
-        if (currentTime <= 0) ScenesManager.ChangeScene(ScenesManager.SceneCode.GAME);
+
+        if (currentTime <= 0) {
+            ScenesManager.ChangeScene(ScenesManager.SceneCode.GAME);
+            menu.Exit();
+        }
     }
 
     private bool CheckReady() {

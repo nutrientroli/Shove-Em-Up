@@ -246,6 +246,12 @@ public class SoundManager : MonoBehaviour
     private string CreateTagSound(SoundEvent _event, string _tag) {
         return _tag + _event;
     }
+
+    public void StopAllSounds() {
+        foreach( SoundEvent _event in tableOfSoundEventsPlaying.Keys) {
+            ((FMOD.Studio.EventInstance)tableOfSoundEventsPlaying[_event]).stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+        }
+    }
     #endregion
 
 }

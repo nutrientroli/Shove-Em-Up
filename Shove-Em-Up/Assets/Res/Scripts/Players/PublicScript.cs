@@ -29,11 +29,11 @@ public class PublicScript : MonoBehaviour {
     [SerializeField] private float time = 5;
 
     void Update() {
-        if (PresenterSound.IsPresenterTalks()) {
+        if (PublicSound.IsPresenterTalks()) {
             currentTime += Time.deltaTime;
             if (currentTime >= time) {
                 currentTime = 0;
-                PresenterSound.PresenterMute();
+                PublicSound.PresenterMute();
             }
         } else {
             currentTime = 0;

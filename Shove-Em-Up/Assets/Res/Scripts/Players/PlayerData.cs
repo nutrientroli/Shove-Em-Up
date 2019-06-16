@@ -51,9 +51,7 @@ public class PlayerData : MonoBehaviour {
         if (GetScore() % 2 == 0) {
             if (Random.Range(0, 10) <= 1) PresenterSound.PresenterTalks(SoundManager.SoundEvent.PRESENTADOR_2);
         } else if (GetScore() % 3 == 0) {
-            if (Random.Range(0, 10) <= 1) PresenterSound.PresenterTalks(SoundManager.SoundEvent.PRESENTADOR_1);
-        } else {
-            if (Random.Range(0, 100) <= 15) PresenterSound.PresenterTalks(SoundManager.SoundEvent.PRESENTADOR_6);
+            if (Random.Range(0, 10) <= 5) PresenterSound.PresenterTalks(SoundManager.SoundEvent.PRESENTADOR_1);
         }
 
     }

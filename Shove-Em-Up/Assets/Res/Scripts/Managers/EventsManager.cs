@@ -43,7 +43,7 @@ public class EventsManager : MonoBehaviour {
                         DuringSelectEvent();
                         currentTime = 0;
                         if (Random.Range(0, 10) > 8) PresenterSound.PresenterTalks(SoundManager.SoundEvent.PRESENTADOR_10);
-
+                        else if (Random.Range(0, 10) > 8) PresenterSound.PresenterTalks(SoundManager.SoundEvent.PRESENTADOR_9);
                     }
                 } else {
                     currentTime += Time.deltaTime;
@@ -81,9 +81,11 @@ public class EventsManager : MonoBehaviour {
                 if (currentTime >= timeToPodium) {
                     podium.ActivePodium();
                     LevelManager.GetInstance().FinnishGame();
+                    PresenterSound.PresenterTalks(SoundManager.SoundEvent.PRESENTADOR_25, true);
                 }
             }
         }
+        if (Random.Range(0, 10) > 5) PublicSound.PresenterTalks(SoundManager.SoundEvent.CROWD_FLIPANDING);
     }
 
     private void FinnishEvent() {
@@ -96,12 +98,12 @@ public class EventsManager : MonoBehaviour {
             currentTime = 0;
         }
         PlayersManager.GetInstance().RespawnFinnishEvent();
+        PublicSound.PresenterTalks(SoundManager.SoundEvent.CROWD_CLAP, true);
     }
 
     private void ForceFinnishEvent() {
         eventPlatform.ForceFinnish();
-        if (Random.Range(0, 10) > 5) PresenterSound.PresenterTalks(SoundManager.SoundEvent.PRESENTADOR_3);
-        else PresenterSound.PresenterTalks(SoundManager.SoundEvent.PRESENTADOR_33);
+        PresenterSound.PresenterTalks(SoundManager.SoundEvent.PRESENTADOR_3);
     }
 
     private void StartSelectEvent() {
