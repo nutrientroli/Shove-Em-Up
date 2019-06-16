@@ -21,7 +21,7 @@ public class SceneLoader : MonoBehaviour
             loadingSlider.value = loadingProgress;
             //percentageText.text = ((loadingProgress * 100) + " " + "%").ToString();
             //percentageText.text = string.Format("{0:0}", ((loadingProgress * 100) + " " + "%"));   
-            percentageText.text =  (((int)loadingProgress * 100) + " " + "%");   
+            percentageText.text =  (((int)(loadingProgress * 100)) + " " + "%");   
 
             yield return new WaitForSeconds(0.07f);
         }
