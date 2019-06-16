@@ -73,6 +73,8 @@ public class FanScript : MonoBehaviour
                 {
                     if(currentTime >= 0.15f)
                     {
+                        if (audio.isPlaying)
+                        audio.Play();
                         currentTime = 0;
                         light.enabled = false;
                     }
@@ -123,7 +125,6 @@ public class FanScript : MonoBehaviour
     public void Active()
     {
         inAction = true;
-        audio.Play();
     }
 
 
