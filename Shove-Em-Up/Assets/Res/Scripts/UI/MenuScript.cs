@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 
+
 public class MenuScript : MonoBehaviour {
 
     [SerializeField] private Animation anim;
@@ -24,6 +25,7 @@ public class MenuScript : MonoBehaviour {
     public void OnButtonQuitPress() {
         Debug.Log("Quit Game");
         SoundManager.GetInstance().PlaySound(SoundManager.SoundEvent.MENU_CHANGE_CHARACTER);
+        Application.Quit();
     }
 
     public void OnButtonReplayPress() {
