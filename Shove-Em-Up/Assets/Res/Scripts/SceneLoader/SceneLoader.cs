@@ -19,7 +19,8 @@ public class SceneLoader : MonoBehaviour
         while (!op.isDone) {
             float loadingProgress = Mathf.Clamp01(op.progress / 0.9f);
             loadingSlider.value = loadingProgress;
-            percentageText.text = (loadingProgress * 100) + " " + "%";
+            //percentageText.text = ((loadingProgress * 100) + " " + "%").ToString();
+            percentageText.text = string.Format("{0:0}", ((loadingProgress * 100) + " " + "%"));       
             yield return new WaitForSeconds(0.07f);
         }
     }
