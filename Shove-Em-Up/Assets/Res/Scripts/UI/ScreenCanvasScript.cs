@@ -20,6 +20,7 @@ public class ScreenCanvasScript : MonoBehaviour
     public Animation anim;
     
 
+
     private void Awake() {
         mcamera = Camera.main.gameObject.GetComponent<CameraScript>();
     }

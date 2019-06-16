@@ -55,7 +55,8 @@ public class ItemEventPlatform : EventPlatformScript
             item.transform.position = vector;
             listItems.Add(item);
         }
-        if (UnityEngine.Random.Range(0,10) > 7) PresenterSound.PresenterTalks(SoundManager.SoundEvent.PRESENTADOR_18);
+        if (UnityEngine.Random.Range(0,10) > 7) PresenterSound.PresenterTalks(SoundManager.SoundEvent.PRESENTADOR_8);
+        else if (UnityEngine.Random.Range(0, 10) > 7) PresenterSound.PresenterTalks(SoundManager.SoundEvent.PRESENTADOR_18);
         return timeToAction * timeVariaton;
     }
 

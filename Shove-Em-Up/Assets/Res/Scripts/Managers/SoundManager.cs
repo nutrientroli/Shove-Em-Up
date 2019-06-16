@@ -78,7 +78,8 @@ public class SoundManager : MonoBehaviour
         MENU_PRESS_BUTTON = 71,
         MUSIC_INGAME = 72,
         MUSIC_INIT = 73,
-        NONE = 74
+        NONE = 74,
+        ALARM_FAN = 75
     }
     public enum SoundEventType
     {
@@ -181,6 +182,7 @@ public class SoundManager : MonoBehaviour
         tableOfSoundEvents.Add(SoundEvent.MENU_PRESS_BUTTON, "event:/Menu/PressButton");
         tableOfSoundEvents.Add(SoundEvent.MUSIC_INGAME, "event:/Music/Ingame");
         tableOfSoundEvents.Add(SoundEvent.MUSIC_INIT, "event:/Music/Inicio");
+        tableOfSoundEvents.Add(SoundEvent.ALARM_FAN, "event:/Evento/AlarmFan");
     }
 
     public void PlaySound(SoundEvent _event, Transform _transform = null, bool _destroyTime = false, string _tag = "", SoundEventType _type = SoundEventType.ONE, float _variationVolume = 1) {

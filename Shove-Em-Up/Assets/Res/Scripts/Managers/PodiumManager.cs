@@ -41,6 +41,25 @@ public class PodiumManager : MonoBehaviour
                 case "Mono": character = 2; break;
                 default: character = 0; break;
             }
+
+            if(i == 0)
+            {
+                switch(players[i])
+                {
+                    case 1:
+                        PresenterSound.PresenterTalks(SoundManager.SoundEvent.PRESENTADOR_26_3);
+                        break;
+                    case 2:
+                        PresenterSound.PresenterTalks(SoundManager.SoundEvent.PRESENTADOR_26_2);
+                        break;
+                    case 3:
+                        PresenterSound.PresenterTalks(SoundManager.SoundEvent.PRESENTADOR_26_4);
+                        break;
+                    case 4:
+                        PresenterSound.PresenterTalks(SoundManager.SoundEvent.PRESENTADOR_26_1);
+                        break;
+                }
+            }
              
             ourPlayers.Add(Instantiate(playersPref[character], positions[i].position, playersPref[character].transform.rotation));
             ourPlayers[ourPlayers.Count - 1].GetComponent<SelectionScript>().SetPlayerPodium(ourPlayers.Count - 1);

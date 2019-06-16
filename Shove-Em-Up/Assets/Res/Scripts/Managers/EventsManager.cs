@@ -80,7 +80,11 @@ public class EventsManager : MonoBehaviour {
         eventPlatform = null;
         LevelManager.GetInstance().SetEventState(false);
         finnishgame = LevelManager.GetInstance().PassEvent();
-        if(finnishgame) screen.SetEndGame();
+        if (finnishgame)
+        {
+            screen.SetEndGame();
+            PresenterSound.PresenterTalks(SoundManager.SoundEvent.PRESENTADOR_25);
+        }
         PlayersManager.GetInstance().RespawnFinnishEvent();
     }
 

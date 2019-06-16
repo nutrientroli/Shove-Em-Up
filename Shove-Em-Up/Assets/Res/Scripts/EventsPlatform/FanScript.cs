@@ -48,7 +48,7 @@ public class FanScript : MonoBehaviour
                 {
                     side *= -1;
                     currentTime = 0;
-                    if (Random.Range(0, 10) > 5) PresenterSound.PresenterTalks(SoundManager.SoundEvent.PRESENTADOR_20);
+                    if (Random.Range(0, 10) > 4) PresenterSound.PresenterTalks(SoundManager.SoundEvent.PRESENTADOR_20);
                     else PresenterSound.PresenterTalks(SoundManager.SoundEvent.PRESENTADOR_21);
                 }
 
@@ -78,10 +78,11 @@ public class FanScript : MonoBehaviour
                 }
                 else
                 {
-                    if (currentTime >= 0.5f)
+                    if (currentTime >= 0.9f)
                     {
                         currentTime = 0;
                         light.enabled = true;
+                        SoundManager.GetInstance().PlaySound(SoundManager.SoundEvent.ALARM_FAN);
                     }
                 }
                 transform.position = Vector3.MoveTowards(transform.position, toGo.position, Time.deltaTime * 2.5f);

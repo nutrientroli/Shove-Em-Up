@@ -26,6 +26,8 @@ public static class PresenterSound {
 
 public class PresenterScript : MonoBehaviour {
     private float currentTime = 0;
+    private float otherCurrentTime = 0;
+
     [SerializeField] private float time = 5;
 
     void Update() {
@@ -38,5 +40,40 @@ public class PresenterScript : MonoBehaviour {
         } else {
             currentTime = 0;
         }
-    } 
+        otherCurrentTime += Time.deltaTime;
+        if (otherCurrentTime >= 10)
+        {
+            otherCurrentTime = 0;
+            if (UnityEngine.Random.Range(0, 10) > 6)
+            {
+                int puntuaciónMax = -100;
+                int player = 0;
+                for (int i = 0; i < PlayersManager.GetInstance().GetNumberOfPlayers(); i++)
+                {
+                    if (puntuaciónMax < ScoreManager.GetInstance().GetPoints(i + 1))
+                    {
+                        puntuaciónMax = ScoreManager.GetInstance().GetPoints(i + 1);
+                        player = i + 1;
+                    }
+                }
+                switch (player)
+                {
+                    case 1:
+                        PresenterSound.PresenterTalks(SoundManager.SoundEvent.PRESENTADOR_24_3);
+                        break;
+                    case 2:
+                        PresenterSound.PresenterTalks(SoundManager.SoundEvent.PRESENTADOR_24_2);
+                        break;
+                    case 3:
+                        PresenterSound.PresenterTalks(SoundManager.SoundEvent.PRESENTADOR_24_4);
+                        break;
+                    case 4:
+                        PresenterSound.PresenterTalks(SoundManager.SoundEvent.PRESENTADOR_24_1);
+                        break;
+
+                }
+
+            }
+        }
+    }
 }
