@@ -113,7 +113,7 @@ public class FallRuleteEventPlatform : EventPlatformScript
             if (i != randomNum1 && i != randomNum2 && i != randomNum3)
                 pieces[i].Reverted();
         }
-        if (UnityEngine.Random.Range(0, 10) > 5) PresenterSound.PresenterTalks(SoundManager.SoundEvent.PRESENTADOR_12);
+        if (UnityEngine.Random.Range(0, 10) > 3) PresenterSound.PresenterTalks(SoundManager.SoundEvent.PRESENTADOR_12);
         return -2;
     }
     private float End() {

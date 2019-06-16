@@ -53,11 +53,8 @@ public class ScreenCanvasScript : MonoBehaviour
     }
 
     IEnumerator EndGame() {
-        yield return new WaitForSeconds(5f);
-        txtEnd.SetActive(true);
+        yield return new WaitForSeconds(4f);
         mcamera.PlayAnimationEndGame();
-        yield return new WaitForSeconds(2f);
-        txtEnd.SetActive(false);
         gobjResults.SetActive(true);
         foreach(ProgressBarScript bar in gobjResults.GetComponentsInChildren<ProgressBarScript>()) {
             bar.ShowScore();

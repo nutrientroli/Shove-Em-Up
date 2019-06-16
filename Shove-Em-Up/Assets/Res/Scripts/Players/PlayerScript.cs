@@ -422,7 +422,7 @@ public class PlayerScript : MonoBehaviour
             timeToKillMe = 0;
         } else {
             AddScore(-1);
-            if (Random.Range(0, 10) > 5) PresenterSound.PresenterTalks(SoundManager.SoundEvent.PRESENTADOR_29);
+            if (Random.Range(0, 10) > 6) PresenterSound.PresenterTalks(SoundManager.SoundEvent.PRESENTADOR_29);
             else PresenterSound.PresenterTalks(SoundManager.SoundEvent.PRESENTADOR_30);
         }
     }

@@ -13,6 +13,8 @@ public class PodiumManager : MonoBehaviour
     private List<int> players = new List<int>();
     public List<Color> colors = new List<Color>();
     public bool check = false;
+    private bool otherCheck = false;
+    private float currentTime = 0;
 
     public void OrderPlayers() {
         int maxPLayers = PlayersManager.GetInstance().GetNumberOfPlayers();
@@ -54,12 +56,24 @@ public class PodiumManager : MonoBehaviour
     }
 
     public void ActivePodium() {
-        OrderPlayers();
-        check = true;
+        otherCheck = true;
     }
 
     public bool IsActivePosium()
     {
         return check;
     } 
+
+    private void Update()
+    {
+        if(otherCheck)
+        {
+            if(currentTime > 3 && !check)
+            {
+                OrderPlayers();
+                check = true;
+            }else if(!check)
+                currentTime += Time.deltaTime;
+        }
+    }
 }

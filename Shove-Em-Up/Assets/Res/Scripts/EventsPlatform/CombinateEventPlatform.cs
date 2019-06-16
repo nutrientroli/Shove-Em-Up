@@ -145,7 +145,7 @@ public class CombinateEventPlatform : EventPlatformScript
                     break;
                 }
             }
-            if (Random.Range(0, 10) > 8)  {
+            if (Random.Range(0, 10) > 2)  {
                 if (Random.Range(0, 10) > 5) PresenterSound.PresenterTalks(SoundManager.SoundEvent.PRESENTADOR_13);
                 else if (Random.Range(0, 10) > 5) PresenterSound.PresenterTalks(SoundManager.SoundEvent.PRESENTADOR_13_2);
             }

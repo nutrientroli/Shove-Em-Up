@@ -18,8 +18,9 @@ public class EventsManager : MonoBehaviour {
     private bool wait = false;
     private bool finnishgame = false;
     private float timeCounter = 0;
-    private float timeToPodium = 5;
+    private float timeToPodium = 2;
     public PodiumManager podium;
+    private bool done = false;
     
 
     public Text counter;
@@ -78,10 +79,11 @@ public class EventsManager : MonoBehaviour {
         } else {
             if (!podium.IsActivePosium()) {
                 currentTime += Time.deltaTime;
-                if (currentTime >= timeToPodium) {
+                if (currentTime >= timeToPodium && !done) {
                     podium.ActivePodium();
                     LevelManager.GetInstance().FinnishGame();
                     PresenterSound.PresenterTalks(SoundManager.SoundEvent.PRESENTADOR_25, true);
+                    done = true;
                 }
             }
         }
