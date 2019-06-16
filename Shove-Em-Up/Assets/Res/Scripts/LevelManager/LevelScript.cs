@@ -14,6 +14,7 @@ public class LevelScript : MonoBehaviour
         PlayersManager.GetInstance().SetRespawnPoint(initPosToRespawn);
         PlayersManager.GetInstance().SetListOfCharacters(Characters);
         PlayersManager.GetInstance().Init();
+        ScoreManager.GetInstance().Init();
     }
 
     private void Start() {

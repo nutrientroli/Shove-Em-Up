@@ -22,6 +22,7 @@ public class UIInGameScript : MonoBehaviour
     public bool activeInputCheck = false;
 
     void Start() {
+        ResetScores();
         ScoreManager.GetInstance().SetCanvasScore(this);
         UpdateScores();
         UpdatePlayers();
@@ -34,6 +35,13 @@ public class UIInGameScript : MonoBehaviour
     }
 
     #region HUD Ingame
+    public void ResetScores() {
+        txtScore1.text = "0";
+        txtScore2.text = "0";
+        txtScore3.text = "0";
+        txtScore4.text = "0";
+    }
+
     public void UpdateScores() {
         int players = PlayersManager.GetInstance().GetNumberOfPlayers();
         if (players >= 1) txtScore1.text = "" + ScoreManager.GetInstance().GetPoints(1);
@@ -99,11 +107,15 @@ public class UIInGameScript : MonoBehaviour
     }
 
     public void GotoMenu() {
-        Debug.Log("Go To Menu");
+        ScoreManager.GetInstance().Reset();
+        PublicoManager.GetInstance().Reset();
+        ScenesManager.ChangeScene(ScenesManager.SceneCode.MENU);
     }
 
     public void GotoGame() {
-        Debug.Log("Go To Game");
+        ScoreManager.GetInstance().Reset();
+        PublicoManager.GetInstance().Reset();
+        ScenesManager.ChangeScene(ScenesManager.SceneCode.GAME);
     }
     #endregion
 }

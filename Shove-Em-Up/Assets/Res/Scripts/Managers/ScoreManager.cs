@@ -21,10 +21,15 @@ public class ScoreManager
     private UIInGameScript canvasScore;
 
     public void Init() {
+        players.Clear();
         int _players = PlayersManager.GetInstance().GetNumberOfPlayers();
         for(int i = 0; i<_players; i++) {
             players.Add(0);
         }
+    }
+
+    public void Reset() {
+        players.Clear();
     }
 
     public void SetPoints(int _player, int _score) {

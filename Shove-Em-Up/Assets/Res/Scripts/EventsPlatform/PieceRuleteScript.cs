@@ -10,6 +10,7 @@ public class PieceRuleteScript : MonoBehaviour
     private Vector3 startPos;
     public Material unselectMaterial;
     public Material selectMaterial;
+    public Material selectMaterialToFall;
     public Renderer pieceEmiter;
     // Start is called before the first frame update
     void Start()
@@ -58,5 +59,10 @@ public class PieceRuleteScript : MonoBehaviour
     public void UnSelectPiece()
     {
         pieceEmiter.material = unselectMaterial;
+    }
+
+    public void SelectPieceToFall()
+    {
+        pieceEmiter.material = selectMaterialToFall;
     }
 }

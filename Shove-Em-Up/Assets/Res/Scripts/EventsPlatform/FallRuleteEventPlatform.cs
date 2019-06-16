@@ -99,7 +99,7 @@ public class FallRuleteEventPlatform : EventPlatformScript
 
         for (int i=0; i<pieces.Count; i++) {
             pieces[i].UnSelectPiece();
-            if (i != randomNum1 && i != randomNum2 && i != randomNum3) pieces[i].SelectPiece();
+            if (i != randomNum1 && i != randomNum2 && i != randomNum3) pieces[i].SelectPieceToFall();
         }
 
         return waitTime;
