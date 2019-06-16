@@ -55,6 +55,8 @@ public class CheckAllReadyScript : MonoBehaviour
     private void UpdateCountDown(float _time) {
         currentTime -= _time;
         counter.text = textCounter + currentTime.ToString("0");
+        SoundManager.GetInstance().StopSound(SoundManager.SoundEvent.MUSIC_INGAME);
+        SoundManager.GetInstance().StopSound(SoundManager.SoundEvent.MUSIC_INIT);
         if (currentTime <= 0) ScenesManager.ChangeScene(ScenesManager.SceneCode.GAME);
     }
 
