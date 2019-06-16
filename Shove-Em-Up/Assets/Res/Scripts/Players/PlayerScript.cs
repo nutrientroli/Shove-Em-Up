@@ -35,9 +35,11 @@ public class PlayerScript : MonoBehaviour
     private PlayerData selfData;
     private PlayerData killer = null;
     private float timeToKillMe = 0;
+    private AudioSource audio;
 
     private void Awake()
     {
+        audio = GetComponent<AudioSource>();
         capsuleCollider = GetComponent<CapsuleCollider>();
         radiusCapsule = capsuleCollider.radius;
         moveScript = GetComponent<MoveScript>();
@@ -193,6 +195,7 @@ public class PlayerScript : MonoBehaviour
                 pushScript.Push();
                 break;
             case State.KNOCKBACK:
+                audio.Play();
                 moveScript.CanMove(false);
                 animator.SetTrigger("Impact");
                 pushScript.RestartCharge();
