@@ -15895,7 +15895,7 @@ MonoBehaviour:
   offset: 0.5
   speed: 0.5
   time: 5
-  anim: {fileID: 0}
+  anim: {fileID: 2066274066}
 --- !u!20 &1283235537
 Camera:
   m_ObjectHideFlags: 0
