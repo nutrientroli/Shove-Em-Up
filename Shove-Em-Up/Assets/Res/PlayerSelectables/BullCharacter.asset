@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de24322f62f166f4fb855640516139c2, type: 3}
   m_Name: BullCharacter
   m_EditorClassIdentifier: 
-  geometry: {fileID: 3136033018580642016, guid: 26c7b5a23412e4e45a719990cd83bb66,
+  geometry: {fileID: 3136033018580642016, guid: 870382ad44b2cbb4e9e2f0bb99cad5a7,
     type: 3}
   name: Toro
   nameObject: BullCharacter
