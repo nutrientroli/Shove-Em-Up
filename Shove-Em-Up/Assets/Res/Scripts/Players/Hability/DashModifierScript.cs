@@ -2,7 +2,7 @@
 {
     protected void Start()
     {
-        maxTime = 0.2f;
+        maxTime = 0.25f;
         isMovible = false;
         inverted = false;
         isPushable = false;

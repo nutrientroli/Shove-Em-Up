@@ -5,7 +5,7 @@ using UnityEngine;
 public class DashHabilityScript : HabilityScript
 {
     private Vector3 forward;
-    private float speed = 1.5f;
+    private float speed = 1.7f;
     private float dashTime = 0;
     private bool usada = false;
     private CharacterController characterController;
@@ -46,7 +46,7 @@ public class DashHabilityScript : HabilityScript
         if (usada)
         {
             dashTime += Time.deltaTime;
-            if (dashTime <= 0.2f)
+            if (dashTime <= 0.25f)
             {
                 CollisionFlags collisionFlags = characterController.Move(gameObject.transform.forward.normalized * speed);
             }
