@@ -17,6 +17,7 @@ public class ScreenCanvasScript : MonoBehaviour
     private CameraScript mcamera;
     public GameObject gobjResults;
 
+    public Animation anim;
     
 
     private void Awake() {
@@ -33,6 +34,7 @@ public class ScreenCanvasScript : MonoBehaviour
             case 4: txtSmoke.SetActive(true); break;
             case 5: txtFallRoulette.SetActive(true); break;
         }
+        anim.Play();
     }
 
     public void SetEndGame() {
