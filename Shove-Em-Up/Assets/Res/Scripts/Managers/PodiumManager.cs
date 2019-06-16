@@ -43,6 +43,7 @@ public class PodiumManager : MonoBehaviour
             }
              
             ourPlayers.Add(Instantiate(playersPref[character], positions[i].position, playersPref[character].transform.rotation));
+            ourPlayers[ourPlayers.Count - 1].GetComponent<SelectionScript>().SetPlayerPodium(ourPlayers.Count - 1);
             ColorPlayer(players[i], ourPlayers[ourPlayers.Count - 1]);
         }
     }

@@ -26,4 +26,10 @@ public class SelectionScript : MonoBehaviour
     {
         anim.SetTrigger("Ready");
     }
+
+    public void SetPlayerPodium(int _player)
+    {
+        anim.SetFloat("Position", _player);
+        anim.SetFloat("Blend", 0.4f);
+    }
 }
