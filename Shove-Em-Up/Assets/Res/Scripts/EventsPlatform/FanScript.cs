@@ -21,6 +21,7 @@ public class FanScript : MonoBehaviour
     public Transform goBack;
     public Light light;
     public GameObject rotador;
+    public AudioSource audio;
 
     // Start is called before the first frame update
     void Start()
@@ -70,7 +71,7 @@ public class FanScript : MonoBehaviour
                 currentTime += Time.deltaTime;
                 if(light.enabled)
                 {
-                    if(currentTime >= 0.2f)
+                    if(currentTime >= 0.15f)
                     {
                         currentTime = 0;
                         light.enabled = false;
@@ -78,7 +79,7 @@ public class FanScript : MonoBehaviour
                 }
                 else
                 {
-                    if (currentTime >= 0.5f)
+                    if (currentTime >= 0.3f)
                     {
                         currentTime = 0;
                         light.enabled = true;
@@ -122,6 +123,7 @@ public class FanScript : MonoBehaviour
     public void Active()
     {
         inAction = true;
+        audio.Play();
     }
 
 
