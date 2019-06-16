@@ -27,7 +27,7 @@ public class HoneyScript : MonoBehaviour
         gameObject.transform.localScale -= Time.deltaTime * Vector3.one * 1.2f;
 
         RaycastHit rayHit;
-        if (Physics.Raycast(gameObject.transform.position, Vector3.down, out rayHit, collider.radius * 1.5f, layerMask))
+        if (Physics.Raycast(gameObject.transform.position, Vector3.down, out rayHit, collider.radius * 2f, layerMask))
         {
             gravity = false;
         }
@@ -45,7 +45,7 @@ public class HoneyScript : MonoBehaviour
         }
 
         if (gravity)
-            gameObject.transform.position += forward * Time.deltaTime * speed + Vector3.down * speed * Time.deltaTime * 3;
+            gameObject.transform.position += forward * Time.deltaTime * speed + Vector3.down * speed * Time.deltaTime / 5;
         else
             gameObject.transform.position += forward * Time.deltaTime * speed;
 
