@@ -12,6 +12,7 @@ TagManager:
   - P2Hud
   - P3Hud
   - P4Hud
+  - HotPoint
   layers:
   - Default
   - TransparentFX
@@ -23,7 +24,7 @@ TagManager:
   - 
   - PostProcessing
   - Ground
-  - 
+  - Screen
   - 
   - 
   - 
