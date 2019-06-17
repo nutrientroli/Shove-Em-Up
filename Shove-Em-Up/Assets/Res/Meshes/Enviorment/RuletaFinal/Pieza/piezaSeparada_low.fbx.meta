@@ -16,7 +16,12 @@ ModelImporter:
     3300002: //RootNode
     4300000: pieza_low
     4300002: pieza_low.002
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: other
+    second: {fileID: 2100000, guid: 910bf54dc740644469230fc1f8d94861, type: 2}
   materials:
     importMaterials: 1
     materialName: 0

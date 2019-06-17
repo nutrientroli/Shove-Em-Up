@@ -5,20 +5,33 @@ ModelImporter:
   fileIDToRecycleName:
     100000: //RootNode
     100002: pieza_low.002
+    100004: piezaModificada_low.000
+    100006: piezaModificada_low.001
     400000: //RootNode
     400002: pieza_low.002
+    400004: piezaModificada_low.000
+    400006: piezaModificada_low.001
     2100000: checker
     2100002: other
     2100004: emisive
     2100006: colored
+    2100008: Other
     2300000: //RootNode
     2300002: pieza_low.002
+    2300004: piezaModificada_low.000
+    2300006: piezaModificada_low.001
     3300000: //RootNode
     3300002: pieza_low.002
+    3300004: piezaModificada_low.000
+    3300006: piezaModificada_low.001
     4300000: pieza_low
     4300002: pieza_low.002
+    4300004: piezaModificada_low.001
+    4300006: piezaModificada_low.000
     6400000: //RootNode
     6400002: pieza_low.002
+    6400004: piezaModificada_low.000
+    6400006: piezaModificada_low.001
   externalObjects:
   - first:
       type: UnityEngine:Material
@@ -85,7 +98,7 @@ ModelImporter:
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
-    useFileScale: 0
+    useFileScale: 1
     previousCalculatedGlobalScale: 1
     hasPreviousCalculatedGlobalScale: 0
   tangentSpace:
