@@ -102,14 +102,19 @@ public class MeteoritesEventPlatform : EventPlatformScript
                     vivo = true;
                     randomNum = Random.Range(0, players.Length);
                     foreach (int j in PlayersManager.GetInstance().listOfPlayersToRespawnFinnishEvent) {
-                        if (players[randomNum].GetComponent<PlayerData>().GetPlayer() == j) {
-                            vivo = false;
-                        }
-                        if (players.Length == PlayersManager.GetInstance().listOfPlayersToRespawnFinnishEvent.Count)
-                            valido = true;
+                        if (players[randomNum].GetComponent<PlayerData>() != null)
+                        {
+                            if (players[randomNum].GetComponent<PlayerData>().GetPlayer() == j)
+                            {
+                                vivo = false;
+                            }
+                            if (players.Length == PlayersManager.GetInstance().listOfPlayersToRespawnFinnishEvent.Count)
+                                valido = true;
 
-                        if ((posicionCentral.transform.position - players[randomNum].transform.position).magnitude >= 12)
-                            vivo = false;
+                            if ((posicionCentral.transform.position - players[randomNum].transform.position).magnitude >= 12)
+                                vivo = false;
+                        }
+                        else vivo = false;
                     }
                     if (vivo || iteraciones >= 50)
                         valido = true;

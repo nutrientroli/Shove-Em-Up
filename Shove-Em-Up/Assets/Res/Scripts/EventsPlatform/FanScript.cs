@@ -24,6 +24,7 @@ public class FanScript : MonoBehaviour
     public AudioSource audio;
     FMOD.Studio.EventInstance fmodAudio;
     private bool firstTime = true;
+    public GameObject otherLight;
 
     // Start is called before the first frame update
     void Start()
@@ -45,6 +46,7 @@ public class FanScript : MonoBehaviour
             {
                 if (firstTime) {
                     firstTime = false;
+                    otherLight.SetActive(true);
                     fmodAudio = SoundManager.GetInstance().PlaySoundAndGetSound(SoundManager.SoundEvent.EVENT_WIND_2);
                 }
                 currentTime += Time.deltaTime;
@@ -82,8 +84,6 @@ public class FanScript : MonoBehaviour
                 {
                     if(currentTime >= 0.15f)
                     {
-                        if (!audio.isPlaying)
-                        audio.Play();
                         currentTime = 0;
                         light.enabled = false;
                     }
@@ -122,6 +122,7 @@ public class FanScript : MonoBehaviour
 
     public void Hide()
     {
+        otherLight.SetActive(false);
         collider.enabled = false;
         inAction = false;
         foreach (ParticleSystem p in particles)
@@ -135,6 +136,7 @@ public class FanScript : MonoBehaviour
     public void Active()
     {
         inAction = true;
+        audio.Play();
         firstTime = true;
     }
 
