@@ -8,6 +8,7 @@ public class SelectionScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        SpeedAnimation(Random.Range(0.2f,0.6f));
     }
 
     // Update is called once per frame
@@ -19,7 +20,6 @@ public class SelectionScript : MonoBehaviour
     public void SpeedAnimation(float _speed)
     {
         anim.speed = _speed;
-
     }
 
     public void SetReady()
