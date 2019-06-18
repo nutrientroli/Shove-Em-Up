@@ -3,6 +3,7 @@
 
 public static class PresenterSound {
     private static SoundManager.SoundEvent soundActive = SoundManager.SoundEvent.NONE;
+    private static FMOD.Studio.EventInstance audio;
 
     public static bool IsPresenterTalks() {
         return soundActive != SoundManager.SoundEvent.NONE;
@@ -12,12 +13,12 @@ public static class PresenterSound {
         if (_force) PresenterMute();
         if (!IsPresenterTalks()) {
             soundActive = _event;
-            SoundManager.GetInstance().PlaySound(soundActive, null, true);
+            audio = SoundManager.GetInstance().PlaySoundAndGetSound(soundActive);
         }
     }
 
     public static void PresenterMute() {
-        SoundManager.GetInstance().StopSoundOnTime(soundActive);
+        audio.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
         soundActive = SoundManager.SoundEvent.NONE;
     }
 }
