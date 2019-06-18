@@ -21,7 +21,6 @@ public class EventsManager : MonoBehaviour {
     private float timeToPodium = 2;
     public PodiumManager podium;
     private bool done = false;
-    
 
     public Text counter;
     [SerializeField] private bool test = false;
@@ -90,6 +89,42 @@ public class EventsManager : MonoBehaviour {
         if (Random.Range(0, 10) > 5) PublicSound.PresenterTalks(SoundManager.SoundEvent.CROWD_FLIPANDING);
     }
 
+    private  void PresenterOrder()
+    {
+        if (UnityEngine.Random.Range(0, 10) > 1)
+        {
+            int puntuaciónMax = -100;
+            int player = 0;
+            for (int i = 0; i < PlayersManager.GetInstance().GetNumberOfPlayers(); i++)
+            {
+                if (puntuaciónMax < ScoreManager.GetInstance().GetPoints(i + 1))
+                {
+                    puntuaciónMax = ScoreManager.GetInstance().GetPoints(i + 1);
+                    player = i + 1;
+                }
+            }
+            switch (player)
+            {
+                case 1:
+                    PresenterSound.PresenterTalks(SoundManager.SoundEvent.PRESENTADOR_24_3);
+                    break;
+                case 2:
+                    PresenterSound.PresenterTalks(SoundManager.SoundEvent.PRESENTADOR_24_2);
+                    break;
+                case 3:
+                    PresenterSound.PresenterTalks(SoundManager.SoundEvent.PRESENTADOR_24_4);
+                    break;
+                case 4:
+                    PresenterSound.PresenterTalks(SoundManager.SoundEvent.PRESENTADOR_24_1);
+                    break;
+
+            }
+
+        }
+        
+    }
+
+
     private void FinnishEvent() {
         eventPlatform.active = false;
         eventPlatform = null;
@@ -99,6 +134,8 @@ public class EventsManager : MonoBehaviour {
             screen.SetEndGame();
             currentTime = 0;
         }
+        else
+        PresenterOrder();
         PlayersManager.GetInstance().RespawnFinnishEvent();
         PublicSound.PresenterTalks(SoundManager.SoundEvent.CROWD_CLAP, true);
     }
