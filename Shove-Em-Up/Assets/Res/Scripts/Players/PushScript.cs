@@ -109,9 +109,9 @@ public class PushScript : MonoBehaviour
         Instantiate(particlesChoque, gameObject.transform.position + (_direction * (gameObject.transform.position - _player.transform.position).magnitude), particlesChoque.transform.rotation);
         _player.GetComponent<KnockbackScript>().StartKnockback(_force, forceBase, totalSpeedPush, _direction);
         SoundManager.GetInstance().PlaySound(SoundManager.SoundEvent.KNOCKBACK_SOUND);
-        if(Random.Range(0, 10) > 8) PresenterSound.PresenterTalks(SoundManager.SoundEvent.PRESENTADOR_27);
-        else if (Random.Range(0, 10) > 8) PresenterSound.PresenterTalks(SoundManager.SoundEvent.PRESENTADOR_28);
-        else if (Random.Range(0, 10) > 8) PresenterSound.PresenterTalks(SoundManager.SoundEvent.PRESENTADOR_7);
+        if(Random.Range(0, 10) > 7) PresenterSound.PresenterTalks(SoundManager.SoundEvent.PRESENTADOR_27);
+        else if (Random.Range(0, 10) > 7) PresenterSound.PresenterTalks(SoundManager.SoundEvent.PRESENTADOR_28);
+        else if (Random.Range(0, 10) > 7) PresenterSound.PresenterTalks(SoundManager.SoundEvent.PRESENTADOR_7);
         else if (Random.Range(0, 10) < 6) PresenterSound.PresenterTalks(SoundManager.SoundEvent.PRESENTADOR_5);
         else if (Random.Range(0, 10) < 6) PresenterSound.PresenterTalks(SoundManager.SoundEvent.PRESENTADOR_4);
     }
